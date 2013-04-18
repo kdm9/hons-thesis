@@ -1,0 +1,47 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{datetime}
+\usepackage{graphicx}
+\usepackage{mathptmx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{csvsimple}
+\usepackage{datatool}
+\usepackage{longtable}
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\bf\huge}{\thechapter}{2pc}{}
+\begin{document}
+
+\begin{titlepage}
+  \begin{center}
+    \null
+    \vfill
+    \textsc{\Large Natural gene expression variation under dynamic light in \textit{Arabidopsis
+    thaliana}}\\[1.5cm]
+    \textit{\Large Kevin Murray\\Borevitz Lab, ANU\\[1.5cm]}
+    \today
+    \vfill
+    \textit{Word Counts:\\
+    \begin{tabular}{ll}
+      Introduction: &  x words\\
+      Results: & y words\\
+      Discussion: & z words\\
+    \end{tabular}
+    }
+  \end{center}
+\end{titlepage}
+
+
+\begin{abstract}
+  This is the abstract.\\
+\end{abstract}
+
+\tableofcontents
+
+\chapter{Introduction}
+  \section{Overview}
+\chapter{Methods}
+
+\chapter{Results}
+
+\chapter{Discussion}
+
+\end{document}
