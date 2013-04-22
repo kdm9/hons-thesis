@@ -1,4 +1,6 @@
 \documentclass[12pt,a4paper]{report}
+
+%packages
 \usepackage{datetime}
 \usepackage{graphicx}
 \usepackage{mathptmx}
@@ -8,9 +10,16 @@
 \usepackage{longtable}
 \usepackage{titlesec}
 \usepackage{fontspec}
+\usepackage[labelfont=bf,footnotesize]{caption}
+
+%bib/citations
 \usepackage[backend=biber,style=authoryear,url=false,isbn=false]{biblatex}
 \addbibresource{thesis.bib}
+
+%global commands
+\linespread{2}
 \titleformat{\chapter}[hang]{\bf\huge}{\thechapter}{2pc}{}
+
 \begin{document}
 
 \begin{titlepage}
@@ -28,7 +37,6 @@
       \footnotesize Results: & y words\\
       \footnotesize Discussion: & z words\\
     \end{tabular}
-
   \end{center}
 \end{titlepage}
 
@@ -56,30 +64,32 @@
 
   Several mechanisms of photoprotection occur within the chloroplast. Non-photochemical quenching
   (NPQ) dissipates excess energy from excited state chlorophyll molecules as heat
-  \autocite{muller_non-photochemical_2001}. It occurs in photosystem II , and is particularly important
-  during rapid changes in intensity \autocite{kulheim_rapid_2002}. Cyclic electron flow occurs in
-  photosystem I and acts by decreasing the pH of the thylakoid lumen, which in turn is thought to
-  stabilise the oxygen evolving complex and aid NPQ \autocite{takahashi_how_2009}. State transitions
-  act by phosphorylation of photosystem II and light harvesting complex II proteins. State
-  transitions reversibly alter the balance of excitation energy between photosystems I and II
+  \autocite{muller_non-photochemical_2001}. It occurs in photosystem II , and is particularly
+  important during rapid changes in intensity \autocite{kulheim_rapid_2002}. Cyclic electron flow
+  occurs in photosystem I and acts by decreasing the pH of the thylakoid lumen, which in turn is
+  thought to stabilise the oxygen evolving complex and aid NPQ \autocite{takahashi_how_2009}. State
+  transitions act by phosphorylation of photosystem II and light harvesting complex II proteins.
+  State transitions reversibly alter the balance of excitation energy between photosystems I and II
   \autocite{tikkanen_state_2006}. Through reversible dissociation of the light harvesting complex II
   and photosystem II , state transitions lower the light harvesting ability of photosystem II  and
   prevent absorption of excess light by photosystem II  \autocite{johnson_photoprotective_2011}. The
-  mutants \textit{\underline{N}on-\underline{p}hotochemical \underline{Q}uenching \underline{1}}
-  (\textit{npq1}) and \textit{npq4}, \textit{\underline{p}roton \underline{g}radient
-  \underline{r}egulator \underline{5}} (\textit{pgr5}) and \textit{\underline{s}tate
-  \underline{t}ransition \underline{7}} (\textit{stn7}) and \textit{stn8} are defective in these
-  three mechanisms respectively.\\
+  mutants \textit{\underline{N}ON-\underline{P}HOTOCHEMICAL \underline{Q}UENCHING \underline{1}}
+  (\textit{NPQ1}) and \textit{\underline{N}ON-\underline{P}HOTOCHEMICAL \underline{Q}UENCHING
+  \underline{4}} (\textit{NPQ4}), \textit{\underline{P}ROTON \underline{G}RADIENT
+  \underline{R}EGULATOR \underline{5}} (\textit{PGR5}) and \textit{\underline{S}TATE
+  \underline{T}RANSITIO\underline{N} \underline{7}} (\textit{STN7}) and \textit{\underline{S}TATE
+  \underline{T}RANSITIO\underline{N} \underline{8}} (\textit{STN8}) are defective in these three
+  mechanisms respectively.\\
 
   In addition to these chloroplastic photoprotective mechanisms, plants can respond to high light on
   a cellular scale. Chloroplast avoidance movement, the movement of chloroplasts parallel to
   sunlight, decreases the amount of absorbed light \autocite{kasahara_chloroplast_2002}.
   Transcriptional induction of heat shock proteins, antioxidant scavenging and photodamage repair
   occur following excess light, and help to minimise oxidative damage
-  \autocite{niyogi_photoprotection_1999}. Production of anthocyanins, a protective class of pigments,
-  is induced by the production of reactive oxygen species due to excess light
-  \autocite{vanderauwera_genome-wide_2005}. Together, these responses serve to reduce the photodamage
-  of cells and tissues due to excess light.
+  \autocite{niyogi_photoprotection_1999}. Production of anthocyanins, a protective class of
+  pigments, is induced by the production of reactive oxygen species due to excess light
+  \autocite{vanderauwera_genome-wide_2005}. Together, these responses serve to reduce the
+  photodamage of cells and tissues due to excess light.
 
 
   \section{Dynamic and Fluctuating Light}
@@ -90,59 +100,64 @@
   day as cloud and canopy shade intermittently shade a plant. The time scale of this fluctuation
   varies from minutes to hours depending on its source; clouds may pass over plants in minutes,
   whereas canopy shade will move over plants slowly as the sun tracks from east to west (Figure
-  \ref{fig:dynamic_fluctuating_light_A}; \autocite{kulheim_rapid_2002}).\\
+  \ref{fig:intro-kulheim_solar_output}; \autocite{kulheim_rapid_2002}).\\
 
-  \begin{figure}[h]
-    \begin{center}
-      \includegraphics[width=0.9\textwidth]{./figures/intro/dynamic_fluctuating_light_A}
-    \end{center}
+
+  \begin{figure}[h] \begin{center}
+    \includegraphics[width=0.9\textwidth]{./figures/intro/kulheim_solar_output} \end{center}
+
     \caption{Daily variation in solar intensity and light intensity in artificial growth chambers.
-      \textcite{kulheim_rapid_2002} the solar intensity during one day in a garden at Ume\aa, Sweden
-      (black line), and one day in a typical growth cabinet at the University of Ume\aa (red line).
-      Reproduced from \textcite{kulheim_rapid_2002}.}
-    \label{fig:dynamic_fluctuating_light_A}
+      \textcite{kulheim_rapid_2002} measured the solar intensity during one day in a garden at
+      Ume{\aa}, Sweden (black line), and one day in a laboratory growth cabinet at the University of
+      Ume{\aa} (red line). Adapted from \textcite{kulheim_rapid_2002} with permission.}
+
+    \label{fig:intro-kulheim_solar_output}
   \end{figure}
 
+
   \begin{figure}[h]
     \begin{center}
-      \includegraphics[width=0.9\textwidth]{./figures/intro/dynamic_fluctuating_light_B}
+      \includegraphics[width=0.9\textwidth]{./figures/intro/all_spectra}
     \end{center}
+
     \caption{Spectral response of growth chamber lighting compared to sunlight. The power density of
       sunlight (grey) is relatively even across the visible spectrum. However, the power density of
       fluorescent lamps (orange), as used in many lab growth chambers, is far from even, containing
       large peaks corresponding to mercury’s emission spectrum, and areas of little density. While the
       spectrum of the multispectral LED arrays (blue) is not as even as that of the sun, it contains
       broader density peaks and fewer areas of low power density.}
-    \label{fig:dynamic_fluctuating_light_B}
+
+    \label{fig:intro-dynamic_fluctuating_light_B}
   \end{figure}
 
   Plant biologists use laboratory growth chambers to provide repeatable experimental conditions.
   These growth environments have allowed us to manipulate and observe plants away from the random
   influences such as weather and predation. However, these cabinets typically have conditions very
-  different to those experienced in the field (Figures 1A and 1B). As both field and lab experiments
-  have value, both have continued in parallel, leading to a gap in knowledge between the lab and
-  field in some areas of plant biology.\\
+  different to those experienced in the field (Figures \ref{fig:intro-kulheim_solar_output} and 1B). As
+  both field and lab experiments have value, both have continued in parallel, leading to a gap in
+  knowledge between the lab and field in some areas of plant biology.\\
 
   Field-grown plants tend to demonstrate reduced survival, reproduction and altered transcriptional
   responses compared to those grown in comparable lab conditions. For example, in Arabidopsis
-  thaliana the reduction in reproductive success caused by the npq1 and npq4 mutants was severe in
-  the field but had no impact under constant light in the lab \autocite{kulheim_rapid_2002}.
-  Photoinhibition, physiological symptoms of abiotic stress and expression of high light-induced
-  transcripts were more severe in field-grown Solidago altissima than those grown in comparable lab
-  conditions \autocite{barua_interactive_2006}. Light quality is particularly important in studies of
-  photodamage, as the extent of photosystem II damage is not consistent across the visible spectrum
-  \autocite{takahashi_solar_2010}. Photodamage is relatively more severe under light of wavelengths
-  between 580-620nm than in the remainder of the visible spectrum, which overlaps with a density
-  peak in the spectral power density of fluorescent lamps (Figure 1A).\\
+  thaliana the reduction in reproductive success caused by the \textit{npq1} and \textit{npq4}
+  mutants was severe in the field but had no impact under constant light in the lab
+  \autocite{kulheim_rapid_2002}.  Photoinhibition, physiological symptoms of abiotic stress and
+  expression of high light-induced transcripts were more severe in field-grown Solidago altissima
+  than those grown in comparable lab conditions \autocite{barua_interactive_2006}. Light quality is
+  particularly important in studies of photodamage, as the extent of photosystem II damage is not
+  consistent across the visible spectrum \autocite{takahashi_solar_2010}. Photodamage is relatively
+  more severe under light of wavelengths between 580-620nm than in the remainder of the visible
+  spectrum, which overlaps with a density peak in the spectral power density of fluorescent lamps
+  (Figure \ref{fig:intro-kulheim_solar_output}).\\
 
   Recent advances in light emitting diode (LED) technology, and recent investments by the ANU’s
   Research School of Biology, have lead to the provision of computer-controllable growth chambers
   and multi-spectral LED arrays capable of simulating natural conditions with greater accuracy
   compared to traditional growth cabinets. The light quality of the new LED arrays is more
-  consistent across the visible spectrum compared to fluorescent lamps (Figure 1A). These cabinets
-  are also able to control temperature and humidity on a diurnal cycle, enabling study of
-  interactions between light and cold temperatures (such as those observed by
-  \textcite{armstrong_assessing_2007}).\\
+  consistent across the visible spectrum compared to fluorescent lamps (Figure
+  \ref{fig:intro-kulheim_solar_output}). These cabinets are also able to control temperature and humidity
+  on a diurnal cycle, enabling study of interactions between light and cold temperatures (such as
+  those observed by \textcite{armstrong_assessing_2007}).\\
 
 
   \section{Transcriptional Responses to Excess Light}
@@ -195,8 +210,8 @@
 
 \chapter{Discussion}
 
-\chapter{References}
 \printbibliography
 
 \chapter{Appendix}
+
 \end{document}
