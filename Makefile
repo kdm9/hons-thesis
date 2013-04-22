@@ -1,8 +1,11 @@
 COMPILER=lualatex --interaction=batchmode
-BIB_COMPILER=biber
+BIB_COMPILER=biber -q
 LATEX_SRC=$(wildcard *.latex)
 BIB_SRC=$(wildcard *.bib)
 PIE=perl -pi -e
+
+TEXTMP=$(wildcard *.bcf *.aux *.bbl *.dvi *.blg *.log *.bak *.idx *.run.xml *-blx.bib *.nav *.out *.snm *.toc)
+
 all: latex
 
 latex:
@@ -14,4 +17,6 @@ latex:
 	ls -lh $(patsubst %.latex,%.pdf,$(LATEX_SRC))
 
 clean:
-	rm -v *.bcf *.aux *.bbl *.dvi *.blg *.log *.bak *.idx *.run.xml *-blx.bib *.nav *.out *.snm *.toc 2>/dev/null
+ifneq ($(TEXTMP), )
+	rm $(TEXTMP)
+endif
