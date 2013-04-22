@@ -1,13 +1,16 @@
+*.swp
+*.bak
+.~*#
+
+# Tex temps
+*.bcf
 *.log
 *.aux
 *.dvi
-*.swp
 *-blx.bib
 *.bbl
 *.blg
-*.bak
 *.run.xml
-.~*#
 *.nav
 *.snm
 *.out
