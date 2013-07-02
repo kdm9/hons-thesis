@@ -13,7 +13,15 @@
 \usepackage[labelfont=bf,footnotesize]{caption}
 
 %bib/citations
-\usepackage[backend=biber,style=authoryear,url=false,isbn=false]{biblatex}
+\usepackage[
+  uniquename=false,
+  uniquelist=false,
+  backend=biber,
+  style=authoryear,
+  natbib=true,
+  url=false,
+  isbn=false]
+  {biblatex}
 \addbibresource{thesis.bib}
 
 %global commands
