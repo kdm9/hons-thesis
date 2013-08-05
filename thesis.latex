@@ -18,10 +18,8 @@
   uniquelist=false,
   backend=biber,
   style=authoryear,
-  natbib=true,
   url=false,
-  isbn=false]
-  {biblatex}
+  isbn=false]{biblatex}
 \addbibresource{thesis.bib}
 
 %global commands
