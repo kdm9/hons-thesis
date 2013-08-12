@@ -4,13 +4,21 @@
 \usepackage{datetime}
 \usepackage{graphicx}
 \usepackage{mathptmx}
-\usepackage[margin=2cm]{geometry}
+\usepackage[
+  margin=2cm  % 2cm page margins
+  ]{geometry} % alter document geometry
 \usepackage{csvsimple}
 \usepackage{datatool}
 \usepackage{longtable}
 \usepackage{titlesec}
 \usepackage{fontspec}
-\usepackage[labelfont=bf,footnotesize]{caption}
+
+
+\usepackage[
+  labelfont=bf, % bold for the ``Figure X'' bit
+  footnotesize, % smaller
+  hypcap % allow hyperlinks
+  ]{caption} % customise captions
 
 %bib/citations
 \usepackage[
@@ -19,35 +27,52 @@
   backend=biber,
   style=authoryear,
   url=false,
-  isbn=false]{biblatex}
+  isbn=false
+  ]{biblatex}
 \addbibresource{thesis.bib}
 
+\usepackage{blindtext}
+
+% Keep hyperref as the last package
 \usepackage{hyperref}
 
+%%%%%%%%%%%%%%%%%%%%% global commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hypersetup{
-  bookmarks=false,         % show bookmarks bar?
-  unicode=true,          % non-Latin characters in Acrobat’s bookmarks
-  pdftoolbar=true,        % show Acrobat’s toolbar?
-  pdfmenubar=true,        % show Acrobat’s menu?
-  pdffitwindow=false,     % window fit to page when opened
-  pdfstartview={FitW},    % fits the width of the page to the window
-  pdftitle={Kevin Murray Honours Thesis},    % title
+  bookmarks=false,                        % show bookmarks bar?
+  unicode=true,                           % non-Latin characters in Acrobat’s bookmarks
+  pdftoolbar=true,                        % show Acrobat’s toolbar?
+  pdfmenubar=true,                        % show Acrobat’s menu?
+  pdffitwindow=false,                     % window fit to page when opened
+  pdfstartview={FitW},                    % fits the width of the page to the window
+  pdftitle={Kevin Murray Honours Thesis}, % title
   pdfauthor={Kevin Murray},               % author
   pdfsubject={},                          % subject of the document
   pdfcreator={},                          % creator of the document
   pdfproducer={},                         % producer of the document
   pdfkeywords={keyword1} {key2} {key3},   % list of keywords
-  pdfnewwindow=true,      % links in new window
-  colorlinks=true,       % false: boxed links; true: colored links
-  linkcolor=red,          % color of internal links (change box color with linkbordercolor)
-  citecolor=green,        % color of links to bibliography
-  filecolor=magenta,      % color of file links
-  urlcolor=cyan           % color of external links
-}
+  pdfnewwindow=true,                      % links in new window
+  colorlinks=true,                        % false: boxed links; true: colored links
+  linkcolor=red,                          % color of internal links (change box color with linkbordercolor)
+  citecolor=green,                        % color of links to bibliography
+  filecolor=magenta,                      % color of file links
+  urlcolor=cyan}                          % color of external links
 
-%global commands
-\linespread{2}
-\titleformat{\chapter}[hang]{\bf\huge}{\thechapter}{2pc}{}
+
+\pagestyle{headings} % activate Chapter heading
+
+\linespread{2} % double spacing
+
+\titleformat{\chapter}  % title format
+  [hang]
+  {\bf\huge}
+  {\thechapter}
+  {2pc}
+  {}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%                      Begin Document                               %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -60,6 +85,9 @@
     \textit{\Large Kevin Murray\\Borevitz Lab, ANU\\[1.5cm]}
     \today
     \vfill
+    \small Thesis submitted in partial fufillment of the requirements of the degree of\\
+    \small Bachelor of Philosophy (Science) (Honours)\\
+    \vfill
     \footnotesize Word Counts:\\
     \begin{tabular}{ll}
       \footnotesize Introduction: &  x words\\
@@ -70,8 +98,14 @@
 \end{titlepage}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%                       Abstract                                %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{abstract}
-  This is the abstract.\\
+  This is the abstract.
+  \blindtext[2] % remove this in reality
 \end{abstract}
 
 \tableofcontents
