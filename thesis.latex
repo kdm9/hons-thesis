@@ -31,7 +31,7 @@
   ]{biblatex}
 \addbibresource{thesis.bib}
 
-\usepackage{blindtext}
+\usepackage{blindtext}  % for lorem ipsum text. remove eventually
 
 % Keep hyperref as the last package
 \usepackage{hyperref}
@@ -117,6 +117,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Introduction}
+
 Nearly all terrestrial biomass, including human life, depends on the ability of plants to create
 organic material from inorganic inputs and sunlight (photosynthesis). This ability is reduced when
 the quality or quantity of light a plant receives is not optimal. Excess light is particularly
@@ -129,7 +130,6 @@ caused \autocite{niyogi_photoprotection_1999}.
 %  Although difficult to quantify on a global scale, the
 %  cost of the  detrimental effects of excess light on primary productivity is high
 %  \autocite{raven_cost_2011}.
-\\
 
 
 \section{Photoprotection}
@@ -152,23 +152,20 @@ mutants \textit{\underline{N}ON-\underline{P}HOTOCHEMICAL \underline{Q}UENCHING 
 \underline{T}RANSITIO\underline{N} \underline{7}} (\textit{STN7}) and \textit{\underline{S}TATE
 \underline{T}RANSITIO\underline{N} \underline{8}} (\textit{STN8}) are defective in these three
 mechanisms respectively.
-\\
 
 In addition to these chloroplastic photoprotective mechanisms, plants can respond to excess light on
 a cellular scale. Chloroplast avoidance movement, the movement of chloroplasts parallel to the
 incident angle of light, decreases the amount of absorbed light
-\autocite{kasahara_chloroplast_2002}.  Transcriptional induction of heat shock proteins, antioxidant
+\autocite{kasahara_chloroplast_2002}. Transcriptional induction of heat shock proteins, antioxidant
 scavenging and photodamage repair occur following excess light, and help to minimise oxidative
 damage \autocite{niyogi_photoprotection_1999}. Production of anthocyanins, a protective class of
 pigments, is induced by the production of reactive oxygen species due to excess light
 \autocite{vanderauwera_genome-wide_2005}. Together, these responses serve to reduce the photodamage
 of cells and tissues due to excess light.
-\\
 
-As comprehensive and persuasive as the published works discovering and elucidating mechanisms of
+As comprehensive as the published works discovering and elucidating mechanisms of
 photoprotecion are, they in general have not examined the extent and effect of natural genetic
-variation, or natural growth conditions. %<+rebuttal to current literature+>
-\\
+variation, or natural growth conditions. %<+rebuttal+>
 
 
 \section{Dynamic and Fluctuating Light}
@@ -180,8 +177,6 @@ day as cloud and canopy shade intermittently shade a plant. The time scale of th
 varies from minutes to hours depending on its source; clouds may pass over plants in minutes,
 whereas canopy shade will move over plants slowly as the sun tracks from east to west (Figure
 \ref{fig:intro-kulheim_solar_output}; \autocite{kulheim_rapid_2002}).
-\\
-
 
 \begin{figure}[h] \begin{center}
   \includegraphics[width=0.9\textwidth]{./figures/intro/kulheim_solar_output} \end{center}
@@ -215,7 +210,6 @@ cabinets typically have conditions very different to those experienced in the fi
 \ref{fig:intro-kulheim_solar_output} and 1B). As both field and lab experiments have value, both
 have continued in parallel, leading to a gap in knowledge between the lab and field in some areas
 of plant biology.
-\\
 
 Field-grown plants tend to demonstrate reduced survival, reproduction and altered transcriptional
 responses compared to those grown in comparable lab conditions. For example, in Arabidopsis
@@ -229,7 +223,6 @@ consistent across the visible spectrum \autocite{takahashi_solar_2010}. Photodam
 more severe under light of wavelengths between 580-620nm than in the remainder of the visible
 spectrum, which overlaps with a density peak in the spectral power density of fluorescent lamps
 (Figure \ref{fig:intro-kulheim_solar_output}).
-\\
 
 Recent advances in light emitting diode (LED) technology, and recent investments by the ANU’s
 Research School of Biology, have lead to the provision of computer-controllable growth chambers
@@ -239,7 +232,6 @@ consistent across the visible spectrum compared to fluorescent lamps (Figure
 \ref{fig:intro-kulheim_solar_output}). These cabinets are also able to control temperature and humidity
 on a diurnal cycle, enabling study of interactions between light and cold temperatures (such as
 those observed by \textcite{armstrong_assessing_2007}).
-\\
 
 
 \section{Transcriptional Responses to Excess Light}
@@ -248,13 +240,12 @@ Transcriptomics, or the global study of gene expression, is one method which can
 the response of plants to excess light. By studying how, when and to what extent each gene in the
 genome is expressed, we can gain insight into the response to any perturbation to a plant's
 environment. To study global expression, two approaches have commonly been used: microarrays and
-RNAseq. Microarrays quantify expression as fluorescence from fluorophore-tagged cDNAs
-complementary to specific small sections of the transcriptome. More modern experiments use RNAseq,
-the high-throughput sequencing of cDNA libraries, and rely on the number of sequence reads being
+RNAseq. Microarrays quantify expression as fluorescence from fluorophore-tagged cDNAs complementary
+to specific small sections of the transcriptome. More modern experiments use RNAseq, the
+high-throughput sequencing of cDNA libraries, and rely on the number of sequence reads being
 proportional to the concentration of a particular transcript within the library. RNAseq allows not
 only quantification, but provides the actual sequence of each transcript, important for analyses
 of sequence variation such as allele specific expression.
-\\
 
 The rapid response of the Arabidopsis transcriptome to changes in lighting has been demonstrated.
 \textcite{rossel_global_2002} demonstrated 185 of 6000 genes were differentially expressed after one
@@ -269,10 +260,10 @@ treatment has been observed \autocite{murchie_acclimation_2005}. Using quantitat
 \textcite{gordon_systemic_2013} have show that high light induced expression was dependent on light
 quality in \textit{Arabidopsis}, and that repeated high light treatments lead to acclimation and
 reduced induction of high light responsive transcripts.
-\\
 
 
 \section{Aims}
+
 The overall goal of this project is to determine if the differentially expression of transcripts
 in previous experiments with artificial light conditions is similar to the differential expression
 observed under more natural conditions. Additionally, I aim to determine if the loci which
