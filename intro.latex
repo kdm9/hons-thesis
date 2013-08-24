@@ -1,0 +1,187 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%                       Introduction                                %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction}
+
+Nearly all terrestrial biomass, including human life, depends on the ability of plants to create
+organic material from inorganic inputs and sunlight (photosynthesis). This ability is reduced when
+the quality or quantity of light a plant receives is not optimal. Excess light is particularly
+damaging, causing both reductions in photosynthetic ability (photoinhibition) and cellular or
+tissue damage and death. Thus, plants have evolved mechanisms by which the detrimental effects of
+excess light can be minimised. These mechanisms, collectively termed photoprotection, work to
+dissipate excess energy, reduce the amount of light absorbed, or prevent or repair any damage
+caused \autocite{niyogi_photoprotection_1999}.
+% Get some measure of the global cost of photodamgage
+%  Although difficult to quantify on a global scale, the
+%  cost of the  detrimental effects of excess light on primary productivity is high
+%  \autocite{raven_cost_2011}.
+
+
+\section{Photoprotection}
+
+Several mechanisms of photoprotection occur within the chloroplast. Non-photochemical quenching
+(NPQ) dissipates excess energy from excited state chlorophyll molecules as heat
+\autocite{muller_non-photochemical_2001}. It occurs in photosystem II , and is particularly
+important during rapid changes in intensity \autocite{kulheim_rapid_2002}. Cyclic electron flow
+occurs in photosystem I and acts by decreasing the pH of the thylakoid lumen, which in turn is
+thought to stabilise the oxygen evolving complex and aid NPQ \autocite{takahashi_how_2009}. State
+transitions act by phosphorylation of photosystem II and light harvesting complex II proteins.
+State transitions reversibly alter the balance of excitation energy between photosystems I and II
+\autocite{tikkanen_state_2006}. Through reversible dissociation of the light harvesting complex II
+and photosystem II , state transitions lower the light harvesting ability of photosystem II  and
+prevent absorption of excess light by photosystem II  \autocite{johnson_photoprotective_2011}. The
+mutants \textit{\underline{N}ON-\underline{P}HOTOCHEMICAL \underline{Q}UENCHING \underline{1}}
+(\textit{NPQ1}) and \textit{\underline{N}ON-\underline{P}HOTOCHEMICAL \underline{Q}UENCHING
+\underline{4}} (\textit{NPQ4}), \textit{\underline{P}ROTON \underline{G}RADIENT
+\underline{R}EGULATOR \underline{5}} (\textit{PGR5}) and \textit{\underline{S}TATE
+\underline{T}RANSITIO\underline{N} \underline{7}} (\textit{STN7}) and \textit{\underline{S}TATE
+\underline{T}RANSITIO\underline{N} \underline{8}} (\textit{STN8}) are defective in these three
+mechanisms respectively.
+
+In addition to these chloroplastic photoprotective mechanisms, plants can respond to excess light on
+a cellular scale. Chloroplast avoidance movement, the movement of chloroplasts parallel to the
+incident angle of light, decreases the amount of absorbed light
+\autocite{kasahara_chloroplast_2002}. Transcriptional induction of heat shock proteins, antioxidant
+scavenging and photodamage repair occur following excess light, and help to minimise oxidative
+damage \autocite{niyogi_photoprotection_1999}. Production of anthocyanins, a protective class of
+pigments, is induced by the production of reactive oxygen species due to excess light
+\autocite{vanderauwera_genome-wide_2005}. Together, these responses serve to reduce the photodamage
+of cells and tissues due to excess light.
+
+As comprehensive as the published works discovering and elucidating mechanisms of
+photoprotecion are, they in general have not examined the extent and effect of natural genetic
+variation, or natural growth conditions. %<+rebuttal+>
+
+
+\section{Dynamic and Fluctuating Light}
+
+The light plants receive in natural environments is dynamic, in that the intensity and spectral
+composition (or quality) of sunlight varies over a day, even in the absence of shading from any
+cloud  or vegetation. In addition, the intensity of sunlight received may fluctuate throughout the
+day as cloud and canopy shade intermittently shade a plant. The time scale of this fluctuation
+varies from minutes to hours depending on its source; clouds may pass over plants in minutes,
+whereas canopy shade will move over plants slowly as the sun tracks from east to west (Figure
+\ref{fig:intro-kulheim_solar_output}; \autocite{kulheim_rapid_2002}).
+
+\begin{figure}[h] \begin{center}
+  \includegraphics[width=0.9\textwidth]{./img/intro/kulheim_solar_output} \end{center}
+  \caption{Daily variation in solar intensity and light intensity in artificial growth chambers.
+    \textcite{kulheim_rapid_2002} measured the solar intensity during one day in a garden at
+    Ume{\aa}, Sweden (black line), and one day in a laboratory growth cabinet at the University of
+    Ume{\aa} (red line). Adapted from \textcite{kulheim_rapid_2002} with permission.}
+  \label{fig:intro-kulheim_solar_output}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{./img/intro/all_spectra}
+  \end{center}
+  \caption{Spectral response of growth chamber lighting compared to sunlight. The power density of
+    sunlight (grey) is relatively even across the visible spectrum. However, the power density of
+    fluorescent lamps (orange), as used in many lab growth chambers, is far from even, containing
+    large peaks corresponding to mercury’s emission spectrum, and areas of little density. While the
+    spectrum of the multispectral LED arrays (blue) is not as even as that of the sun, it contains
+    broader density peaks and fewer areas of low power density.}
+  \label{fig:intro-dynamic_fluctuating_light_B}
+\end{figure}
+
+Plant biologists use laboratory growth chambers to provide repeatable experimental conditions.
+While the elucidation of complex phenotypes, including gene regulation can be studied in the
+field, the ``noise'' experienced by plants in natural environments caused by microclimate, weather
+and biotic interaction, amongst other sources, can cause the interpretation of results to become
+complex and difficult. Laboratory growth conditions  have allowed us to manipulate and observe
+plants away from the random influences of nature such as weather and predation. However, these
+cabinets typically have conditions very different to those experienced in the field (Figures
+\ref{fig:intro-kulheim_solar_output} and 1B). As both field and lab experiments have value, both
+have continued in parallel, leading to a gap in knowledge between the lab and field in some areas
+of plant biology.
+
+Field-grown plants tend to demonstrate reduced survival, reproduction and altered transcriptional
+responses compared to those grown in comparable lab conditions. For example, in Arabidopsis
+thaliana the reduction in reproductive success caused by the \textit{npq1} and \textit{npq4}
+mutants was severe in the field but had no impact under constant light in the lab
+\autocite{kulheim_rapid_2002}.  Photoinhibition, physiological symptoms of abiotic stress and
+expression of high light-induced transcripts were more severe in field-grown Solidago altissima
+than those grown in comparable lab conditions \autocite{barua_interactive_2006}. Light quality is
+particularly important in studies of photodamage, as the extent of photosystem II damage is not
+consistent across the visible spectrum \autocite{takahashi_solar_2010}. Photodamage is relatively
+more severe under light of wavelengths between 580-620nm than in the remainder of the visible
+spectrum, which overlaps with a density peak in the spectral power density of fluorescent lamps
+(Figure \ref{fig:intro-kulheim_solar_output}).
+
+Recent advances in light emitting diode (LED) technology, and recent investments by the ANU’s
+Research School of Biology, have lead to the provision of computer-controllable growth chambers
+and multi-spectral LED arrays capable of simulating natural conditions with greater accuracy
+compared to traditional growth cabinets. The light quality of the new LED arrays is more
+consistent across the visible spectrum compared to fluorescent lamps (Figure
+\ref{fig:intro-kulheim_solar_output}). These cabinets are also able to control temperature and humidity
+on a diurnal cycle, enabling study of interactions between light and cold temperatures (such as
+those observed by \textcite{armstrong_assessing_2007}).
+
+
+\section{Transcriptional Responses to Excess Light}
+%
+%Topics to discuss:
+%\begin{itemize}
+%  \item Why transcriptomics and not physiology
+%  \item How txome responds to
+%    \begin{itemize}
+%      \item Heat
+%      \item Drought
+%      \item ``natural conditions''
+%      \item HL
+%      \item Cold
+%    \end{itemize}
+%\end{itemize}
+%
+Transcriptomics, or the global study of gene expression, is one method which can be used to study
+the response of plants to excess light. By studying how, when and to what extent each gene in the
+genome is expressed, we can gain insight into the response to any perturbation to a plant's
+environment. To study global expression, two approaches have commonly been used: microarrays and
+RNAseq. Microarrays quantify expression as fluorescence from fluorophore-tagged cDNAs complementary
+to specific small sections of the transcriptome. More modern experiments use RNAseq, the
+high-throughput sequencing of cDNA libraries, and rely on the number of sequence reads being
+proportional to the concentration of a particular transcript within the library. RNAseq allows not
+only quantification, but provides the actual sequence of each transcript, important for analyses
+of sequence variation such as allele specific expression.
+
+The rapid response of the Arabidopsis transcriptome to changes in lighting has been demonstrated.
+\textcite{rossel_global_2002} demonstrated 185 of 6000 genes were differentially expressed after one
+hour of high light exposure, including transcripts implicated in response to drought, pathogen or
+oxidative stress as well as hormone response. As existing leaves acclimate to excess light
+conditions, the steady-state level of expression of several classes of genes are altered. In the
+cyanobacterium \textit{Synechocysitis} sp. PCC 6803, some genes involved in light capture are
+down-regulated and some homologues of heat-shock proteins up-regulated after 15 hours of excess
+light treatment \autocite{hihara_dna_2001}.  In rice, similar transcriptional down-regulation of
+light harvesting and up-regulation of photoprotection after 24 or 72 hours of excess light
+treatment has been observed \autocite{murchie_acclimation_2005}. Using quantitative PCR,
+\textcite{gordon_systemic_2013} have show that high light induced expression was dependent on light
+quality in \textit{Arabidopsis}, and that repeated high light treatments lead to acclimation and
+reduced induction of high light responsive transcripts.
+
+
+Expression of \underline{A}SCORBATE \underline{P}ERO\underline{X}IDASE 2 (APX2) is 
+
+
+
+
+\section{Aims}
+
+The overall goal of this project is to determine if the differentially expression of transcripts
+in previous experiments with artificial light conditions is similar to the differential expression
+observed under more natural conditions. Additionally, I aim to determine if the loci which
+regulate response to excess dynamic light are similar to those which have been found to regulate
+transcriptional response to artificial high light. I will generate RNAseq data collected from
+\textit{Arabidopsis} exposed to novel dynamic light growth conditions, and then mine this dataset
+to:
+
+\begin{enumerate}
+  \item Determine the response of Arabidopsis gene expression to novel dynamic light conditions.
+  \item Examine the extent of genetic variation in gene expression under these dynamic light
+    conditions, and elucidate gene regulation networks controlling gene expression.
+  \item Explore the effect of genotype-environment interactions on gene expression under dynamic
+    light conditions.
+\end{enumerate}
+
+

@@ -1,7 +1,7 @@
 COMPILER=lualatex --interaction=batchmode
 BIB_COMPILER=biber -q
-LATEX_SRC=$(wildcard *.latex)
-BIB_SRC=$(wildcard *.bib)
+LATEX_SRC=thesis.latex
+BIB_SRC=thesis.bib
 PIE=perl -pi -e
 
 TEXTMP=$(wildcard *.bcf *.aux *.bbl *.dvi *.blg *.log *.bak *.idx *.run.xml *-blx.bib *.nav *.out *.snm *.toc)

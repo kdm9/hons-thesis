@@ -1,0 +1,24 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%                         Methods                                   %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Methods}
+
+\section{Creation of growth cabinet control software}
+The Research School of Biology has acquired computer-controlled growth cabinets with multispectral
+LED light arrays. These cabinets are digitally controlled growth cabinets (Conviron ; %<+model+>
+Conviron, Winnepeg, Canada) equipt with multispectral LED growth lamps (Heliospectra Model L4A Series 10;
+Heliospectra AB, Sweden) and image-based phenomics systems (in-house solution). This suite of
+equiptment is all computer controllable, however no interface to control these systems as a whole
+exists. Thus, I have created software which is able to control these cabinets, enabling 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%                         Results                                   %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Results}
+
+
+
