@@ -1,0 +1,18 @@
+\section{Source Code Repositories}
+\label{apx:source_code}
+The following source code repositiories have been created as part of this thesis.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{ll}
+    \hline
+    Repository                  & URL \\
+    \hline
+    This thesis                 & \url{http://github.com/kdmurray91/hons-thesis} \\
+    \texttt{spcControl} module    & \url{http://github.com/borevitzlab/spcControl} \\
+    \hline
+  \end{tabular}
+  \caption{Source code repositories}
+  \label{tab:appendix-code-repos}
+\end{table}
+
