@@ -5,14 +5,24 @@
 \usepackage{graphicx}
 \usepackage{mathptmx}
 \usepackage[
-  margin=2cm            % 2cm page margins
+  top=2cm,
+  left=3cm,
+  right=6cm,
+  bottom=2cm
+%  margin=2cm            % 2cm page margins, for final document
   ]{geometry}           % alter document geometry
 \usepackage{csvsimple}
 \usepackage{datatool}
 \usepackage{longtable}
 \usepackage{titlesec}
 \usepackage{fontspec}
+\usepackage[
+  textsize=scriptsize,
+  textwidth=4cm
+  ]{todonotes}          % for the \todo and associated commands
 
+\usepackage{setspace}
+\doublespacing
 
 \usepackage[
   labelfont=bf,         % bold for the ``Figure X'' bit
@@ -57,18 +67,18 @@
   filecolor=magenta,                        % color of file links
   urlcolor=cyan}                            % color of external links
 
+\usepackage[all]{hypcap}
 
 \pagestyle{headings}    % activate Chapter heading
 
-\linespread{2}          % double spacing
 
-\titleformat{\chapter}  % title format
-  [hang]
-  {\bf\huge}
-  {\thechapter}
-  {2pc}
-  {}
-
+%\titleformat{\chapter}  % title format
+%  [hang]
+%  {\bf\huge}
+%  {\thechapter}
+%  {2pc}
+%  {}
+%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                      Begin Document                               %%%%%%%%%%%%%
@@ -110,6 +120,9 @@
 
 \tableofcontents
 
+\todototoc
+\listoftodos
+
 \input{intro.latex}
 
 \input{bioinformatics.latex}
@@ -144,26 +157,11 @@
   \end{minipage}
 }
 
-\section{Source Code Repositories}
-\label{apx:source_code}
-The following source code repositiories have been created as part of this thesis.
+\clearpage
+\input{appendices/coderepos.latex}
 
-\begin{table}[h]
-  \centering
-  \begin{tabular}{ll}
-    \hline
-    Repository                  & URL \\
-    \hline
-    This thesis                 & \url{http://github.com/kdmurray91/hons-thesis} \\
-    \texttt{spcControl} module    & \url{http://github.com/borevitzlab/conviron} \\
-    \hline
-  \end{tabular}
-  \caption{Source code repositories}
-  \label{tab:appendix-code-repos}
-\end{table}
-
-\section{\texttt{spcControl} Module Implementation Details}
-\label{apx:spcControl}
+\clearpage
+\input{appendices/spcControl.latex}
 
 
 \end{document}
