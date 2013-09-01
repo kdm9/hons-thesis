@@ -4,7 +4,7 @@ LATEX_SRC=thesis.latex
 BIB_SRC=thesis.bib
 PIE=perl -pi -e
 
-TEXTMP=$(wildcard *.bcf *.aux *.bbl *.dvi *.blg *.log *.bak *.idx *.run.xml *-blx.bib *.nav *.out *.snm *.toc)
+TEXTMP=$(wildcard *.bcf *.aux *.bbl *.dvi *.blg *.log *.bak *.idx *.run.xml *-blx.bib *.nav *.out *.snm *.toc *.tdo)
 
 all: latex
 
