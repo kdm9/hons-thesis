@@ -7,6 +7,9 @@
 
 \definecolor{bg}{rgb}{0.95,0.95,0.95}
 
+
+% table/figure/code input macros
+
 \newcommand{\kminputcode}[4]{
 \begin{listing}
   \inputminted[
@@ -17,3 +20,25 @@
   \label{#4}
 \end{listing}
 }
+
+
+%\renewcommand*{\dtldisplaystartrow}{\\}
+
+\newcommand{\kmdefaulttable}[7]{
+  \DTLloaddb{#1}{#2}
+  \begin{table}[p]
+    \centering
+    \begin{singlespace}
+      \begin{tabular}{#3}
+        #4 \\
+        \hline
+        \DTLforeach*{#1}{#5}{#6\\}%\DTLiffirstrow{#6}{\\ #6}}
+        \\
+        \hline
+      \end{tabular}
+    \end{singlespace}
+    \caption{#7}
+    \label{tab:#1}
+  \end{table}
+}
+
