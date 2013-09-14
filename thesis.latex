@@ -134,7 +134,7 @@
 
 \input{intro.latex}
 
-\input{bioinformatics.latex}
+\input{informatics.latex}
 
 \input{biology.latex}
 
