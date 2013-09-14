@@ -1,0 +1,43 @@
+Parameter,Temora
+Simulation End Date ,31/12/12
+Simulation Start Date ,01/09/12
+Chamber Max RH ,85
+Chamber Min Temp ,5C
+Chamber Date ,01/03/13
+Date Format ,US
+Site Elevation ,300m
+Site Latitude ,-34.446556
+Site Longitude ,147.53334
+Timezone ,Sydney
+Update Frequency ,1 min
+Weather Year ,2010
+Lighting ,LED
+Set to Threshold ,Yes
+LED1 Power Threshold ,5.00\%
+LED1 Wavelength ,400nm
+LED1 Weight Multiplier ,5.2
+LED2 Power Threshold ,5.00\%
+LED2 Wavelength ,420nm
+LED2 WeightMultiplier ,4.12
+LED3 Power Threshold ,5.00\%
+LED3 Wavelength ,450nm
+LED3 Weight Multiplier ,4
+LED4 Power Threshold ,5.00\%
+LED4 Wavelength ,530nm
+LED4 Weight Multiplier ,3.92
+LED5 Power Threshold ,5.00\%
+LED5 Wavelength ,630nm
+LED5 Weight Multiplier ,4.88
+LED6 Power Threshold ,5.00\%
+LED6 Wavelength ,660nm
+LED6 Weight Multiplier ,0.68
+LED7 Power Threshold ,5.00\%
+LED7 Wavelength ,740nm
+LED7 Weight Multiplier ,3.64
+AOD ,0.27
+Azimuth ,180
+Slope ,10
+Soil Albedo ,0.5
+Solar Tilt ,3.5
+Solar Constant ,1360
+Track Sun ,FALSE
