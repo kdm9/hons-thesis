@@ -10,12 +10,12 @@
 \subsection{Growth cabinet control software}
 
 The Research School of Biology has acquired computer-controlled growth cabinets with multispectral
-LED light arrays. These cabinets are digitally controlled growth cabinets (Conviron ; %<+model+>
-Conviron, Winnepeg, Canada) equipt with multispectral LED growth lamps (Heliospectra Model L4A Series 10;
+LED light arrays. These cabinets are digitally controlled growth cabinets (Conviron PGC20 reach-in
+Chambers; Conviron, Winnepeg, Canada) equipt with multispectral LED growth lamps (Heliospectra Model L4A Series 10;
 Heliospectra AB, Sweden) and image-based phenomics systems (in-house solution). This suite of
-equiptment is all computer controllable, however no interface to control these systems as a whole
+equiptment is computer controllable, however no interface to control these systems as a whole
 exists. Thus, I have created software which is able to control these cabinets, enabling the creation
-of novel growth conditions.
+of dynamic growth conditions.
 
 The software I have created, \texttt{spcControl}, gives control commands to both growth cabinets and
 retrofitted LED light lamps. This software is implemented in the Python programming language, and
@@ -24,74 +24,27 @@ control commands, and sent in concert to all components of the SpectralPhenoClim
 computer situated next to the chambers, and can control many chambers at once <++>
 
 
-\subsection{Design of novel growth conditions}
+\subsection{Design of dynamic growth conditions} \label{sec:bio-mth-growthcond}
 
 Novel growth condiitons were designed to emulate some charachteristics of growth conditions
-experienced by plants in natural environments. Using SolarCalc <+CN+>, I have created simulated
-climates derived from historical observations and models of the climate of the region surrounding
-Temora, New South Wales. This is a trial location for various agricultural crops, and is in the same
-climate zone as much of the native range of \textit{Arabidopsis thaliana}. SolarCalc has an large
-number of parameters which can be set. The settings I used in the creation of the novel conditions
-are described in \autoref{tab:biol-meth-solarcalcsettings}. Solarcalc was run with these model
-parameters, to produce a model of growth conditions which simulate elements of a natural
-environment.
+experienced by plants in natural environments. Using SolarCalc \autocite{spokas_estimating_2006}, I
+have created simulated climates derived from historical observations and models of the climate of
+the region surrounding Temora, New South Wales. This is a trial location for various agricultural
+crops, and is in the same climate zone as much of the native range of \textit{Arabidopsis thaliana}.
+SolarCalc has an large number of parameters which can be set. The settings I used in the creation of
+the dynamic conditions are described in table \ref{tab:bio-mth-solarcalcsettings}. Solarcalc was run
+with these model parameters, to produce a model of growth conditions which simulate elements of a
+natural environment.
 
-\begin{table}
-  \centering
-  \begin{singlespace}
-    \begin{tabular}{lc}
-      Parameter & Temora\\
-      \hline
-      Simulation End Date & 31/12/2012 \\
-      Simulation Start Date & 01/09/2012 \\
-      Chamber Max RH & 85 \\
-      Chamber Min Temp & 5C \\
-      Chamber Date & 01/03/2013 \\
-      Date Format & US \\
-      Site Elevation & 300m \\
-      Site Latitude & -34.446556 \\
-      Site Longitude & 147.53334 \\
-      Timezone & Sydney \\
-      Update Frequency & 1 min \\
-      Weather Year & 2010 \\
-      \hline
-      Lighting & LED \\
-      Set to Threshold & Yes \\
-      LED1 Power Threshold & 5.00\% \\
-      LED1 Wavelength & 400nm \\
-      LED1 Weight Multiplier & 5.2 \\
-      LED2 Power Threshold & 5.00\% \\
-      LED2 Wavelength & 420nm \\
-      LED2 WeightMultiplier & 4.12 \\
-      LED3 Power Threshold & 5.00\% \\
-      LED3 Wavelength & 450nm \\
-      LED3 Weight Multiplier & 4 \\
-      LED4 Power Threshold & 5.00\% \\
-      LED4 Wavelength & 530nm \\
-      LED4 Weight Multiplier & 3.92 \\
-      LED5 Power Threshold & 5.00\% \\
-      LED5 Wavelength & 630nm \\
-      LED5 Weight Multiplier & 4.88 \\
-      LED6 Power Threshold & 5.00\% \\
-      LED6 Wavelength & 660nm \\
-      LED6 Weight Multiplier & 0.68 \\
-      LED7 Power Threshold & 5.00\% \\
-      LED7 Wavelength & 740nm \\
-      LED7 Weight Multiplier & 3.64 \\
-      \hline
-      AOD & 0.27 \\
-      Azimuth & 180 \\
-      Slope & 10 \\
-      Soil Albedo & 0.5 \\
-      Solar Tilt & 3.5 \\
-      Solar Constant & 1360 \\
-      Track Sun & False \\
-      \hline
-    \end{tabular}
-  \end{singlespace}
-  \caption{Parameter settings of SolarCalc used in the creation of novel conditions.}
-  \label{tab:biol-meth-solarcalcsettings}
-\end{table}
+\kmdefaulttable
+{bio-mth-solarcalcsettings}
+{./tables/bio-mth-solarcalcsettings.csv}
+{lc}
+{Parameter & Temora Setting}
+{\param=Parameter, \tem=Temora}
+{\param & \tem}
+{Parameter settings of SolarCalc used in the creation of dynamic conditions.}
+
 
 SolarCalc simulates the climate of a location without any weather, however I aimed to create
 condition which mimic cloudy and intermittently cloudy days. Thus, to create such conditions,
