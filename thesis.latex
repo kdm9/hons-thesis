@@ -21,8 +21,13 @@
   textwidth=4cm
   ]{todonotes}          % for the \todo and associated commands
 
-\usepackage{setspace}
-\doublespacing
+\usepackage{listings}   % for code listings
+\usepackage{minted}     % for pretty code
+
+\usepackage{multirow}   % for \multirow in tables
+
+\usepackage{setspace}   % for line spacings etc
+\doublespacing          % set line spacings to doublespaced
 
 \usepackage[
   labelfont=bf,         % bold for the ``Figure X'' bit
@@ -79,6 +84,10 @@
 %  {2pc}
 %  {}
 %
+
+
+\input{macros.latex}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                      Begin Document                               %%%%%%%%%%%%%
