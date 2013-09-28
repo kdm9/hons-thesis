@@ -3,7 +3,7 @@
 \usepackage{fullpage}
 \usepackage{indentfirst}
 \usepackage{lscape}
-\usepackage[style=authoryear,natbib=true,url=false,isbn=false]{biblatex}
+%\usepackage[style=authoryear,natbib=true,url=false,isbn=false]{biblatex}
 %\addbibresource{}
 
 \begin{document}
@@ -32,8 +32,6 @@
 
 
 
-
-
 \chapter{Challenges in Analysis of the Light-responsive Transcripome}
 
 
@@ -46,7 +44,9 @@
 \section{Results}
 
 
+
 \chapter{Transcriptomic Variation in \textit{Arabidopsis thaliana} Under Novel Growth Conditions}
+
 
 \section{Methods}
 
