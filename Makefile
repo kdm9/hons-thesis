@@ -1,4 +1,4 @@
-COMPILER=lualatex --interaction=batchmode -shell-escape
+COMPILER=lualatex -shell-escape
 BIB_COMPILER=biber -q
 LATEX_SRC=thesis.latex
 BIB_SRC=thesis.bib
