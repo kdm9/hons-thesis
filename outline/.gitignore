@@ -1,6 +1,7 @@
 *.swp
 *.bak
 .~*# # OpenOffice temp files
+*.pdf
 
 # Tex temps
 *.bcf
