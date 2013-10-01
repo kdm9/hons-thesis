@@ -13,7 +13,6 @@
     \textsc{\Large{Thesis Overview and outline}}\\
     \Large{Kevin Murray}\\
     \vfill
-    \large{\today}
   \end{center}
 \end{titlepage}
 
@@ -32,13 +31,6 @@ currently just placeholders.
 \end{itemize}
 
 
-\section{Transcriptional Responses to Growth Condition}
-\begin{itemize}
-  \item lit review of mostly high light transcriptomics
-  \item Also some cold/hot/field condition transcriptomics
-\end{itemize}
-
-
 \section{Dynamic and Fluctuating Light}
 \begin{itemize}
   \item light quality of lab
@@ -47,9 +39,17 @@ currently just placeholders.
 \end{itemize}
 
 
+\section{Transcriptional Responses to Growth Condition}
+\begin{itemize}
+  \item lit review of mostly high light transcriptomics
+  \item Also some cold/hot/field condition transcriptomics
+\end{itemize}
+
+
 \section{RNAseq Methodology and Theory}
 \begin{itemize}
   \item crash course methodology lit review
+  \item include some wet lab theory
 \end{itemize}
 
 
@@ -93,7 +93,8 @@ currently just placeholders.
 \subsection{Creation of growth cabinet control software}
 \begin{itemize}
   \item describe capabilities of spcControl module
-  \item Describe holistic capabilities of the SPC now this module has been written
+  \item Describe holistic capabilities of the SPC now this module has been written (i.e., what
+    advances I facilitated)
 \end{itemize}
 
 \subsection{Novel Dynamic Growth Conditions}
@@ -276,14 +277,16 @@ Discuss:
 \end{itemize}
 
 
+\section{Conclusion}
+
+
 \chapter{Appendix}
 
 
 \section{Source Code Repositories}
 
 
-\section{\texttt{spcControl} Module Implementation Details}
-
+%\section{\texttt{spcControl} Module Implementation Details}
 
 
 \end{document}
