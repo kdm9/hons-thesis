@@ -1,5 +1,5 @@
 COMPILER=lualatex -shell-escape
-BIB_COMPILER=biber -q
+BIB_COMPILER=biber
 LATEX_SRC=thesis.latex
 BIB_SRC=thesis.bib
 PIE=perl -pi -e
@@ -11,10 +11,8 @@ ifneq ($(wildcard $(patsubst %.latex,%.pdf,$(LATEX_SRC))),)
 	rm -v $(patsubst %.latex,%.pdf,$(LATEX_SRC))
 endif
 	$(COMPILER) $(LATEX_SRC)
-ifneq ( $(BIB_SRC), )
 	$(BIB_COMPILER) $(patsubst %.latex,%,$(LATEX_SRC))
 	$(COMPILER) $(LATEX_SRC)
-endif
 	$(COMPILER) $(LATEX_SRC)
 	ls -lh $(patsubst %.latex,%.pdf,$(LATEX_SRC))
 
