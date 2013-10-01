@@ -37,10 +37,16 @@
 
 %bib/citations
 \usepackage[
+  hyperref=true,
   uniquename=false,
   uniquelist=false,
   backend=biber,
   style=authoryear,
+  bibstyle=rsbthesis,
+  sortcites=true,
+  backref=true,
+  maxcitenames=3,
+  maxbibnames=20,
   url=false,
   isbn=false
   ]{biblatex}
@@ -84,6 +90,9 @@
 %  {2pc}
 %  {}
 %
+
+%\providecommand*{\listingautorefname}{Listing} % allow autoref of \label{lst:...}. see:
+% http://tex.stackexchange.com/questions/13760/use-autoref-with-minted-and-its-listing-environment
 
 
 \input{macros.latex}
