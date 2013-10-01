@@ -1,5 +1,5 @@
 \ProvidesFile{rsbthesis.bbx}
-\RequireBibliographyStyle{standard}
+\RequireBibliographyStyle{authoryear}
 
 \DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]
   {citetitle}
@@ -7,6 +7,11 @@
 \DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]
   {title}
   {#1\isdot} 
+\ExecuteBibliographyOptions{
+    firstinits=true,
+    terseinits=true% false
+}
+\DeclareNameAlias{sortname}{last-first}
 
 \DeclareBibliographyDriver{article}{%
   \usebibmacro{bibindex}%
@@ -30,9 +35,9 @@
   \newunit
   \usebibmacro{note+pages}%
   \newunit\newblock
-  \iftoggle{bbx:isbn}
-    {\printfield{issn}}
-    {}%
+%  \iftoggle{bbx:isbn}
+%    {\printfield{issn}}
+%    {}%
   \newunit\newblock
   \usebibmacro{doi+eprint+url}%
   \newunit\newblock
