@@ -143,9 +143,11 @@
 
 \input{intro.latex}
 
-\input{informatics.latex}
+\input{dynamiccond.latex}
 
-\input{biology.latex}
+\input{betterrnaseq.latex}
+
+\input{txomevar.latex}
 
 \input{discussion.latex}
 
