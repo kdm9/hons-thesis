@@ -1,6 +1,6 @@
 \chapter{Design and Implementation of Dynamic Growth Conditions}
 \chaptermark{Dynamic Growth Conditions}
-\label{chap:dynamiccond}
+\label{chap:dc}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                     Background & Aims                             %%%%%%%%%%%%%
@@ -16,10 +16,71 @@
 
 \section{Methods}
 
+\subsection{Growth cabinet control software}
+
+The Research School of Biology has acquired computer-controlled growth cabinets with multispectral
+LED light arrays. These cabinets are digitally controlled growth cabinets (Conviron PGC20 reach-in
+Chambers; Conviron, Winnepeg, Canada) equipt with multispectral LED growth lamps (Heliospectra Model
+L4A Series 10; Heliospectra AB, Sweden) and image-based phenomics systems (in-house solution). This
+suite of equiptment is computer controllable, however no interface to control these systems as a
+whole exists. Thus, I have created software which is able to control these cabinets, enabling the
+creation of dynamic growth conditions.
+
+The software I have created, \texttt{spcControl}, gives control commands to both growth cabinets and
+retrofitted LED light lamps. This software is implemented in the Python programming language, and
+allows conditions generated in a defined format by external software to be parsed, converted to
+control commands, and sent in concert to all components of the SpectralPhenoClimatron. It runs on a
+computer situated next to the chambers, and can control many chambers at once <++>
+
+
+\subsection{Design of dynamic growth conditions}
+\label{subsec:txv-mth-growthcond}
+
+Novel growth condiitons were designed to emulate some charachteristics of growth conditions
+experienced by plants in natural environments. Using SolarCalc \autocite{spokas_estimating_2006}, I
+have created simulated climates derived from historical observations and models of the climate of
+the region surrounding Temora, New South Wales. This is a trial location for various agricultural
+crops, and is in the same climate zone as much of the native range of \textit{Arabidopsis thaliana}.
+SolarCalc has an large number of parameters which can be set. The settings I used in the creation of
+the dynamic conditions are described in \autoref{tab:dc-mth-solarcalcsettings}. Solarcalc was run
+with these model parameters, to produce a model of growth conditions which simulate elements of a
+natural environment.
+
+\kmdefaulttable
+{dc-mth-solarcalcsettings}
+{./tables/bio-mth-solarcalcsettings.csv}
+{lc}
+{Parameter & Temora Setting}
+{\param=Parameter, \tem=Temora}
+{\param & \tem}
+{Parameter settings of SolarCalc used in the creation of dynamic conditions.}
+
+SolarCalc simulates the climate of a location without any weather, however I aimed to create
+condition which mimic cloudy and intermittently cloudy days. Thus, to create such conditions,
+post-processing work is requred. Firstly, SolarCalc was re-run with a neutral density shade
+parameter of 70\%, meaning that the intentisy of each LED channel was 70\% that of the original
+model, forming the shaded model, which aimed to emulate a cloudy day. Then, the result of both the
+original model, and this shaded model were spliced together to form a condtion whose light intensity
+changed between shaded and original models on a two hour shaded, one-hour original rotation,
+creating the fluctating condition designed to emulate an intermittently cloudy day. The temperature,
+humidiy and light quality of these conditions remained unchanged. These additional condtiions allow
+us to compare the effect of different light regimes within the framework of such pseudo-natural
+dynamic growth conditions which SolarCalc creates.
+\todo{This sounds too much like what got destroyed in the initial examiners meeting}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                         Results                                   %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Results}
+\label{sec:dc-results}
+
+\subsection{Sufficient, Excess and Fluctuating Dynamic Growth Conditions}
+
+
+
+\subsection{Novel Dynamic Growth Conditions That Simulate a Continental Gradient}
+
 
