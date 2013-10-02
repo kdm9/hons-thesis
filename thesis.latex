@@ -170,9 +170,10 @@
     Notes:
     \begin{itemize}
       \item Code listings, where included, are illustrative. Full source code of all software
-        developed is large (<+lines+> lines of code), and will be distrubuted as a zip archive. The
-        latest code for all pipleines, scrips, and even this thesis, is available online. See Appendix
-        Table \ref{tab:appendix_code_repos}
+        developed is large (over 5000 lines of code), and will be distrubuted as a gzipped tar
+        archive. The latest code for all pipleines, scrips, and even this thesis, is available
+        online. See Appendix \autoref{sec:appendix-sourcecoderepos} and
+        \autoref{tab:appendix-code-repos}
     \end{itemize}
   \end{minipage}
 }
