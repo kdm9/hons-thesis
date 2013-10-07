@@ -10,7 +10,7 @@ do
 		sample <- basename(getwd())
 		ppc <- sum(pc) / sum(all) * 100
 		ppc.df <- data.frame(sample=sample, protcoding=ppc)
-		write.table(ppc.df, "../ppc.csv", append=T, sep='\t')
+		write.table(ppc.df, "../ppc.csv", append=T, sep='\t', col.names=F)
 END
 	popd
 done
