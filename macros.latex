@@ -11,7 +11,7 @@
 % table/figure/code input macros
 
 \newcommand{\kminputcode}[4]{
-\begin{listing}
+\begin{listing}[p]
   \inputminted[
     linenos=true,
     bgcolor=bg,
