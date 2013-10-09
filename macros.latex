@@ -2,7 +2,7 @@
 % shortcuts for extensions
 \newcommand{\supn}{supernatant}
 \newcommand{\ul}{$\mu \, L$}
-\newcommand{\uE}{$\mu$ mol photons $m^{-2}$ $s^{-1}$}
+\newcommand{\uE}{$\mu$\,mol photons $m^{-2}$\,$s^{-1}$}
 \newcommand{\degc}{$^{\circ}$C~}
 
 \definecolor{bg}{rgb}{0.95,0.95,0.95}
