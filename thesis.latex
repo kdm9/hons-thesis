@@ -1,6 +1,5 @@
 \documentclass[12pt,a4paper]{report}
 
-%packages
 \usepackage{datetime}
 \usepackage{graphicx}
 \usepackage{mathptmx}
@@ -11,9 +10,14 @@
   bottom=2cm
 %  margin=2cm            % 2cm page margins, for final document
   ]{geometry}           % alter document geometry
+\usepackage{lscape}
+
+% tables etc
 \usepackage{csvsimple}
 \usepackage{datatool}
 \usepackage{longtable}
+\usepackage{multirow}   % for \multirow in tables
+
 \usepackage{titlesec}
 \usepackage{fontspec}
 \usepackage[
@@ -21,10 +25,11 @@
   textwidth=4cm
   ]{todonotes}          % for the \todo and associated commands
 
+
+% Code etc
 \usepackage{listings}   % for code listings
 \usepackage{minted}     % for pretty code
 
-\usepackage{multirow}   % for \multirow in tables
 
 \usepackage{setspace}   % for line spacings etc
 \doublespacing          % set line spacings to doublespaced
@@ -54,10 +59,9 @@
 
 \usepackage{blindtext}                      % for lorem ipsum text. remove eventually
 
-% Keep hyperref as the last package
-\usepackage{hyperref}
+% hyperlinks
+\usepackage{hyperref}                       % Keep hyperref as the last package
 
-%%%%%%%%%%%%%%%%%%%%% global commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hypersetup{
   bookmarks=false,                          % show bookmarks bar?
   unicode=true,                             % non-Latin characters in Acrobat’s bookmarks
@@ -70,7 +74,7 @@
   pdfsubject={},                            % subject of the document
   pdfcreator={},                            % creator of the document
   pdfproducer={},                           % producer of the document
-  pdfkeywords={keyword1}{key2}{key3},       % list of keywords
+  pdfkeywords={}{}{},                       % list of keywords
   pdfnewwindow=true,                        % links in new window
   colorlinks=true,                          % false: boxed links; true: colored links
   linkcolor=red,                            % color of internal links (change box color with linkbordercolor)
@@ -79,6 +83,8 @@
   urlcolor=cyan}                            % color of external links
 
 \usepackage[all]{hypcap}
+
+%%%%%%%%%%%%%%%%%%%%% global commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pagestyle{headings}    % activate Chapter heading
 
