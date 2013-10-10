@@ -6,9 +6,9 @@ The following source code repositiories have been created as part of this thesis
   \centering
   \begin{tabular}{ll}
     \hline
-    Repository                  & URL \\
+    Repository                    & URL \\
     \hline
-    This thesis                 & \url{http://github.com/kdmurray91/hons-thesis} \\
+    This thesis                   & \url{http://github.com/kdmurray91/hons-thesis} \\
     \texttt{spcControl} module    & \url{http://github.com/borevitzlab/spcControl} \\
     \hline
   \end{tabular}
