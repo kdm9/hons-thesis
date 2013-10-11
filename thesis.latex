@@ -147,6 +147,18 @@
 \todototoc
 \listoftodos
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%                          Todo list                                %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Todo List}
+
+\todo{Tim: images from Col, Cvi, Ler from all timepoints}
+\todo{Keng: Exact details of planting times}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%                          Imported Chapters                        %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \input{intro.latex}
 
 \input{dynamiccond.latex}
@@ -163,12 +175,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \printbibliography
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                        Appendix                                   %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \chapter{Appendix}
-
 
 \centerline{
   \begin{minipage}[t]{0.8\textwidth}
@@ -177,9 +188,8 @@
     \begin{itemize}
       \item Code listings, where included, are illustrative. Full source code of all software
         developed is large (over 5000 lines of code), and will be distrubuted as a gzipped tar
-        archive. The latest code for all pipleines, scrips, and even this thesis, is available
-        online. See Appendix \autoref{sec:appendix-sourcecoderepos} and
-        \autoref{tab:appendix-code-repos}
+        archive. The latest code for all pipleines, scripts, is available online. See Appendix
+        \autoref{sec:appendix-sourcecoderepos} and \autoref{tab:appendix-code-repos}
     \end{itemize}
   \end{minipage}
 }
@@ -189,6 +199,5 @@
 
 \clearpage
 \input{appendices/spcControl.latex}
-
 
 \end{document}
