@@ -7,15 +7,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Aims and Hypotheses}
+\section{Background, Aims and Hypotheses}
 
-As describing the growth conditions as ``dynamic'' is to an extent ambiguous, or at least the
-meaning is not self-evident, this chapter will start with a definition:
+In this chapter I am to create artificial growth conditions which vary on diurnal and circannual
+cycles in a similar manner to the regional climates cultivated or naturally growing plants
+experience. I hypothesise that plants grown under such conditions will exhibit phenotypes more
+similar to those grown under natural environments, given their growth conditions are more similar to
+natural environments. The Borevitz lab and I are terming this class of laboratory growth condition
+``dynamic growth conditions''. The term dynamic is in contrast with the unnaturally benign, highly
+static growth conditions typically used in the propagation, growth and experimentation of plants in
+laboratory settings. Such static conditions are throughout this thesis referred in the broad sense as
+``static growth conditions''.
 
-\begin{quote}
-  Dynamic growth conditions are laboratory plant growth conditions which aim to emulate some aspects
-  of climates encoutered in natural or agricultural envrionments
-\end{quote}
+As a key driver behind the development of dynamic growth conditions is the ability to simulate
+regional climates in the reliable and reproducible manner required for scientific study, a
+secondary aim for this chapter of my thesis is to create software to allow dynamic growth conditions
+to be implemented with hardware available to the Borevitz lab. This software should be able to use
+the model outputs of software previously written to create models underlying dynamic growth
+conditions to control multi-spectral LED lamps and computerised reach-in growth chambers. Successful
+completion of this sub-aim will allow the implementation of dynamic growth conditions, and their use
+in research.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                         Methods                                   %%%%%%%%%%%%%
@@ -36,7 +47,7 @@ Conviron PGC20 cabinets have a capacity of 320 5cm by 5cm plant growth container
 within the growth cabinets is tightly controlled, with operating range of 5-35 \degc and 50-80 \%
 RH. The Heliospectra L4A Series 10 LED lamps contain 7 LED wavelength channels: 400nm (sub-blue),
 420nm (blue), 450nm (blue), 530nm (green), 630nm (red), 660nm (red) and 735nm (far red); the
-intensity of these channels is not equal (see \autoref{fig:txv-res-heliospectraspectrum} and
+intensity of these channels is not equal (see \autoref{fig:dc-res-heliospectraspectrum} and
 \autoref{subsec:dc-mth-growthcond}).
 \todo{needs concluding sentence}
 
@@ -72,29 +83,33 @@ environment.
 {\param & \tem}
 {Parameter settings of SolarCalc used in the creation of dynamic conditions.}
 
-SolarCalc by default simulates the climate of a location without any weather, however I aimed to create
-condition which mimic cloudy and intermittently cloudy days. Thus, to create such conditions,
+SolarCalc by default simulates the climate of a location without any weather, however I aimed to
+create condition which mimic cloudy and intermittently cloudy days. Thus, to create such conditions,
 post-processing work is required. Firstly, SolarCalc was re-run with a neutral density shade
-parameter of 70\%, meaning that the intensity of each LED channel was 70\% that of the original
-model, forming the shaded model, which aimed to emulate a cloudy day. Then, the result of both the
-original model, and this shaded model were spliced together to form a condition whose light intensity
-changed between shaded and original models on a two hour shaded, one-hour original rotation,
-creating the fluctuating condition designed to emulate an intermittently cloudy day. The temperature,
-humidity and light quality of these conditions remained unchanged. These additional conditions allow
-us to compare the effect of different light regimes within the framework of such pseudo-natural
-dynamic growth conditions which SolarCalc creates.
-\todo{This sounds too much like what got destroyed in the initial examiners meeting}
+parameter of 45\%, meaning that the model sunlight intensity was 45\% that of the original model,
+forming the shaded model, which aimed to emulate a cloudy day. Then, the result of both the original
+model, and this shaded model were spliced together to form a condition whose light intensity changed
+between shaded and original models on a two hour shaded, one-hour original rotation, using the
+\texttt{spliceSolarCalc.py} script described in
+\autoref{subsec:appendix-misccode-spliceSolarCalc.py}.  This created the fluctuating condition
+designed to emulate an intermittently cloudy day. The temperature, humidity and light quality of
+these conditions remained unchanged. These additional conditions allow us to compare the effect of
+different light regimes within the framework of such pseudo-natural dynamic growth conditions which
+SolarCalc creates.
+\todo{This sounds too much like what got destroyed in the initial examiners meeting. Also it's to
+wordy.}
 
 \subsection{Measurement of Spectral Power Density}
-Raw spectral power density data was obatined with assistance from Dr. Pip Wilson of the Borevitz lab
-who using the <+model+> radio spectrophotometer. Sun and shade spectra were obtained on <+date+> at
-the Acton campus of the ANU, in a clear, open space and under heavy shade from mature
-trees of various species, in the courtyard between buildings 46 and 48. Spectra of laboratory growth
-conditions were obtained from a Conviron PGC20 by placing the spectrophotometer on the lowest shelf
-level, while fluorescent lamps or Heliospectra L4A series 10 lamps were illuminated at their highest
-intensities. In the case of the Heliospectra L4A series 10 LED lamps, measurement from directly
-under a single unit were recorded. Intensity-normalised spectral power density was calcualted by
-normalising the intensity between spectra to an intensity of 1 \uEdens.
+Raw spectral power density data was obtained from Dr. Pip Wilson of the Borevitz lab. The 
+<+model+> radio spectrophotometer was used to record spectral power density across the spectrum
+between light of wavelengths 400nm to 800nm, with 2nm wavelength resolution. Sun and shade spectra
+were obtained on <+date+> at the Acton campus of the ANU, in a clear, open space and under heavy
+shade from mature trees of various species, in the courtyard between buildings 46 and 48. Spectra of
+laboratory growth conditions were obtained from a Conviron PGC20 by placing the spectrophotometer on
+the lowest shelf level, while fluorescent lamps or Heliospectra L4A series 10 lamps were illuminated
+at their highest intensities. In the case of the Heliospectra L4A series 10 LED lamps, measurement
+from directly under a single unit were recorded. Intensity-normalised spectral power density was
+calculated by normalising the intensity between spectra to an intensity of 1 \uEdens.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                         Results                                   %%%%%%%%%%%%%
@@ -107,8 +122,8 @@ normalising the intensity between spectra to an intensity of 1 \uEdens.
 \subsection{Computer Control of the SpectralPhenoClimatron}
 \label{subsec:dc-res-spccontrol}
 
-To create dynamic growth conditons which change on diurnal and circuannual cycles, high temporal
-resolution is required. Whilst SpectralPhenoClimatron harware has such capablilities, external
+To create dynamic growth conditions which change on diurnal and circannual cycles, high temporal
+resolution is required. Whilst SpectralPhenoClimatron hardware has such capabilities, external
 software is required to make such control feasible. Thus, I have created software which is able to
 control these cabinets, enabling the creation of dynamic growth conditions. The software I have
 created, \texttt{spcControl}, gives control commands to both growth cabinets and retrofitted LED
@@ -117,29 +132,29 @@ generated in a defined format by external software to be parsed, converted to co
 sent in concert to all components of the SpectralPhenoClimatron. It runs on a computer situated next
 to the chambers, and can control many chambers at once.
 
-This software has many capabilities required for the implementaion of dynamic growht conditions.
-Given a climate model generated by SolarCalc, or a derrived model in the same format,
+This software has many capabilities required for the implementation of dynamic growth conditions.
+Given a climate model generated by SolarCalc, or a derived model in the same format,
 \texttt{spcControl} will, at times specified in the input model, send control commands to both the
-master LED array, and plant growth cabinet, updating lighting and temperature and humitidy
-respecitvely. This process takes around 30-45 seconds, and thus can occur up to every minute, giving
+master LED array, and plant growth cabinet, updating lighting and temperature and humidity
+respectively. This process takes around 30-45 seconds, and thus can occur up to every minute, giving
 extreme temporal resolution in growth condition control. Additionally, as the commands are sent out
-sychronously, lighting, temperature and humidity will never go ``out of sync'' if a power outage or
+synchronously, lighting, temperature and humidity will never go ``out of sync'' if a power outage or
 device failure occurs. Furthermore, to ensure reliable operation and detection of faults, at every
-timepoint specified in the SolarCalc model, the success or failure is communicated to an offsite
-database, and any error messsage is emailed to an administrator. An additional module,
-\texttt{spcControl.monitor}, polls this database and guards agaisnt failure of hardware, control
+time-point specified in the SolarCalc model, the success or failure is communicated to an off site
+database, and any error message is emailed to an administrator. An additional module,
+\texttt{spcControl.monitor}, polls this database and guards against failure of hardware, control
 computers and software, informing an administrator upon any failure. Together, these features allow
-highly reliable control of growth cabinents with temoral resolution suitable for the implementation
+highly reliable control of growth cabinets with temporal resolution suitable for the implementation
 of dynamic growth conditions.
 
-The \texttt{spcControl} module and submodules are implemented in python, and run with python
-versuion 3.2 or later. It is modular in design, with a main program loop which sends a control line
-to each submodule per the schedule given by the SolarCalc model. Submodules then parse this line,
-and a configuration file, to formulate commands sent to the relevant device(s); submodules for
+The \texttt{spcControl} module and sub-modules are implemented in python, and run with python
+version 3.2 or later. It is modular in design, with a main program loop which sends a control line
+to each sub-module per the schedule given by the SolarCalc model. Sub-modules then parse this line,
+and a configuration file, to formulate commands sent to the relevant device(s); sub-modules for
 Heliospectra L4S LED lamps and Conviron PCG20 chambers have been implemented. This modular design
-means that, given hardware specifications, creating new submodules to control other hardware
+means that, given hardware specifications, creating new sub modules to control other hardware
 configurations would be relatively trivial. Status reports are reported to an external PostgreSQL
-database, and email error messages are generaated using the google mail API from within python. In
+database, and email error messages are generated using the Google mail API from within python. In
 all, this consists of over 740 lines of code and configuration, and 134 minor versions (git commits)
 16 releases.
 \todo{concluding sentence}
@@ -154,9 +169,9 @@ emulate a difference in light intensity which may be encountered naturally, that
 shading by clouds. The Sufficient Light dynamic growth condition (hereafter ``Sufficient'')
 corresponds to approximately the same daily integral of light as ``standard growth conditions'' of
 120-150 \uE on a 12-hour photoperiod. The Excess light condition is an approximate 2 times excess
-over the sufficient condition. The Fluctuaing light condition is designed to simulate the pattern of
+over the sufficient condition. The Fluctuating light condition is designed to simulate the pattern of
 light intensity variation caused by partial cloud or patchy sun. These conditions simulate the
-spring season, and display circannnual variation in temperature, light and humidity. As time
+spring season, and display circannual variation in temperature, light and humidity. As time
 progresses, daily minimal and maximal temperature and peak light intensity increase, while minimal
 relative humidity decreases.
 
@@ -164,10 +179,9 @@ relative humidity decreases.
   \begin{figure}[p]
     \begin{center}
       \includegraphics[height=0.8\textheight]{img/dc-res-3cond-light.png}
-%      \includegraphics[width=\textwidth]{img/placeholder.png}
     \end{center}
-    \caption{Diurnal variation in approximate light intensity of Sufficient, Fluctuating and Excess
-      light dynamic growth condtions}
+    \caption{Diurnal variation in approximate light intensity of sufficient, fluctuating and excess
+      light dynamic growth conditions (for model date 1 March).}
     \label{fig:dc-res-3cond-light}
   \end{figure}
 \end{landscape}
@@ -176,7 +190,12 @@ relative humidity decreases.
   \begin{center}
     \includegraphics[width=\textwidth]{img/dc-res-3cond-temp.png}
   \end{center}
-  \caption{Diurnal variation in Dynamic Growth Condition model temperature}
+  \caption{Diurnal variation in dynamic growth condition model temperature (for model date 1 March).
+    Temperatures follow an approximation of those observed in temperate climates, reaching a minimum
+    before sunrise (06:00), steadily increasing after sunrise to a peak immediately prior to sunset
+    (18:00). Growth chamber hardware limitations prevent temperatures falling below 10 \degc for
+    extended periods, thus the model ``bottoms out'' where temperatures below 10 \degc would have
+    occurred (02:00 - 10:00).}
   \label{fig:dc-res-3cond-temp}
 \end{figure}
 
@@ -184,7 +203,11 @@ relative humidity decreases.
   \begin{center}
     \includegraphics[width=\textwidth]{img/dc-res-3cond-rh.png}
   \end{center}
-  \caption{Diurnal variation in Dynamic Growth Condition model relative humidity}
+  \caption{Diurnal variation in Dynamic Growth Condition model relative humidity (for model date 1
+    March). Humidity follows an inverse trend to temperature, peaking before sunrise (06:00) and
+    reaching its minimum at approximately sunset (18:00). Similarly to temperature, growth chamber
+    hardware limitations prevent relative humidities greater than 80\% for long periods, and therefore
+    humidity is capped at 80\% between the hours of 02:00 and 10:00.}
   \label{fig:dc-res-3cond-rh}
 \end{figure}
 
@@ -192,7 +215,7 @@ relative humidity decreases.
   \begin{center}
     \includegraphics[width=\textwidth]{img/dc-res-3cond-annualtemp.png}
   \end{center}
-  \caption{Circannual variation in Dynamic Growth Condition model temperature}
+  \caption{Circannual variation in daily minimal and maximal Dynamic Growth Condition model temperature}
   \label{fig:dc-res-3cond-annualtemp}
 \end{figure}
 
@@ -211,10 +234,11 @@ relative humidity decreases.
   \caption{Diurnal variation in Dynamic Growth Condition model relative humidity}
   \label{fig:dc-res-3cond-annuallight}
 \end{figure}
+\todo{finish captions describing the trends in my conditions}
 
 The light quality of all dynamic growth conditions created using this system are markedly different
 to other light sources. Compared to the fluorescent lamps typically used in laboratory growth
-chambers the spectral power density of LED arrays is less variable across the visible and ajacent
+chambers the spectral power density of LED arrays is less variable across the visible and adjacent
 spectrum, with intensity-normalised spectral power density of fluorescent and LED array light
 sources of 1.00 $\pm$ 1.74 and 1.00 $\pm$ 0.92 \uEdens respectively (means $\pm$ SD; see
 \autoref{fig:dc-res-spectra-norm}). The intensity-normalised spectral power density of sunlight on a
@@ -222,42 +246,43 @@ clear day is remarkably even (1.00 $\pm$ 0.19 \uEdens; \autoref{fig:dc-res-spect
 intensity normalised spectral power density of shaded light is similarly even at wavelengths lower
 than approx 700nm, above which sunlight is not filtered by vegetation and thus is over-represented.
 Overall, the spectral power density of LED lamps is more even than that of fluorescent lamps,
-however is nowhere near as even as that of sunlgiht.
+however is nowhere near as even as that of sunlight.
 
 \begin{figure}[p]
   \begin{center}
     \includegraphics[width=\textwidth]{img/dc-res-spectra-norm.png}
   \end{center}
-  \caption{Intensity-normalised spectral power density of sunlight, shaded sunlight, fluorsent lamps
+  \caption{Intensity-normalised spectral power density of sunlight, shaded sunlight, fluorescent lamps
   and Heliospectra L4A series 10 LED lamps.}
   \label{fig:dc-res-spectra-norm}
 \end{figure}
 
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/dc-res-spectra.png}
+  \end{center}
+  \caption{Spectral power density of sunlight, shaded sunlight, fluorescent lamps
+  and Heliospectra L4A series 10 LED lamps.}
+  \label{fig:dc-res-spectra}
+\end{figure}
+
 The overall light intensity of these light sources varies drastically. Open sunlight is very bright,
-with a total intensity of over 2480 \uE in the visible and ajacent spectrum on the day of
+with a total intensity of over 2480 \uE in the visible and adjacent spectrum on the day of
 measurement. The intensity of naturally shaded sunlight is much lower, at approximately 88 \uE on
 the day of measurement. The light intensity under a single Heliospectra L4A series 10 LED lamp was
 370 \uE, while the intensity of light from fluorescent lamps was 140 \uE (data shown
 graphically in \autoref{fig:dc-res-spectra-norm}). 
 
-\begin{figure}[p]
-  \begin{center}
-    \includegraphics[width=\textwidth]{img/dc-res-spectra-norm.png}
-  \end{center}
-  \caption{Intensity-normalised spectral power density of sunlight, shaded sunlight, fluorsent lamps
-  and Heliospectra L4A series 10 LED lamps.}
-  \label{fig:dc-res-spectra}
-\end{figure}
 
 \subsection{Phenomic dataset generation}
 does this go here or ch4?
-\todo{Tim: images from Col, Cvi, Ler from all timepoints}
+\todo{Tim: images from Col, Cvi, Ler from all time-points}
 
 
 \subsection{Novel Dynamic Growth Conditions That Simulate a Continental Gradient}
 \label{subsec:dc-res-kengcond}
-\todo{should this be included in my thesis?}
 
+\todo{should this be included in my thesis?}
 In addition to conditions created to test hypotheses around altered light intensity, I have created
 conditions to answer others' hypotheses. Two conditions have been created to test the overall effect
 of environments with higher light and more diurnal variation in temperature, such as may be
@@ -266,6 +291,6 @@ diurnal variation in temperature, such as those often encountered in coastal cli
 conditions, named ``NSW inland'' and ``NSW coastal'' respectively, generally are more harsh than
 the sufficient, fluctuating and excess light dynamic growth conditions created for my experiments.
 Plots describing their conditions follow.
-
-\todo{polish this if it is to be included, and input plots.}
+\todo{polish this if it is to be included, and input plots. also needs a subsection in the methods
+section of this chapter if included.}
 
