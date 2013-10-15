@@ -1,13 +1,21 @@
-\chapter{Development of Bioinformatic Pipelines for Analysis of RNAseq Experiments}
-\label{chap:informatics}
+\chapter{Development of Improved Methodology for High-throughput RNAseq Experiments}
+\chaptermark{Improved RNAseq Methodology}
+\label{chap:br}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                     Background & Aims                             %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Background and Aims}
+\section{Aims and Hypotheses}
 
+In this chapter of my thesis, I am to discuss and provide solutions to some bioinformatic challenges in
+the analysis of RNAseq datasets. Specifically, I am to identify issues arising as a result of two
+aspects of biological experiments like the one which I have conducted this year: \textit{a),} the
+dramatic changes in global expression on changing the growth, and particularly the light conditions of
+a plant, and \textit{b),} the need for high throughput, low cost RNAseq experiments to match the
+high throughput required for mapping experiments.
+\todo{reword this}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -16,13 +24,387 @@
 
 \section{Methods}
 
+\subsection{Implementation of a High Throughput RNAseq Library Preparation Method}
+\label{subsec:br-mth-kumaretal}
+
+To increase the throughput and the decrease cost of Illumina RNAseq sequencing library preparation, I
+have attempted to implement the RNAseq library preparation protocol of
+\textcite{kumar_high-throughput_2012}, a published protocol enabling the preparation of RNAseq
+libraries in high throughput using 96 well plates. Specifically, I used a slightly modified version
+of the High-Throughput RNAseq protocol described in Supplementary Methods 1 of
+\textcite{kumar_high-throughput_2012} (hereafter referenced as the HTR protocol). To test and
+optimise this protocol, leaf tissue collected from surplus 5-week old \textit{A. thaliana} Col-0
+from a colleague's experiment was used. This tissue had been collected into Qiagen 1.2mL collection
+tubes (PN:<++>) containing a single steel ball bearing, and snap frozen in \liqn before grinding in
+a TissueLyser (PN <+get details+>) for two one minute pulses at 25Hz at a later date. In collection
+tubes, 750 \ul Dynabeads Lysis/Binding Buffer was added, before sample was ground for a further 30s
+in a TissueLyser as before. Then, lysates were prepared per Steps 1.1.6-1.1.8 of the HTR protocol
+described in Supplementary Methods 1 of \textcite{kumar_high-throughput_2012}.
+
+Isolated mRNA was obtained and cDNA synthesised and fragmented according to steps 1.2 to 3 of the HTR
+protocol of \textcite{kumar_high-throughput_2012}. Working with Dr. Norman Warthmann, the remaining
+steps of the HTR protocol were validated using sonicated genomic DNA as input material, due to it's
+similar size and fragmentation properties to fragmented cDNA, and due to the scarcity of cDNA of
+little value. This DNA was obtained from \textit{Oryza sativa} seedlings, diluted to a concentration
+of approximately 7 \ngul (500 $ng$ in 70 \ul) before being sonicated for <+settings+> on a Diagenode
+Bioruptor DNA sonicator. This sonicated DNA was cleaned up per steps 3.5-3.8 of the HTR protocol,
+with the modification that 3o \ul bead binding buffer and 40 \ul Ampure XP SPRI beads were used.
+Then, a modified step 4 of the HTR protocol was used to create unamplified sequencing libraries. In
+step 4.1 and 4.2, double reactions were performed, however the same quantity of SPRI cleanup reagents
+were used. Before adaptor ligation, the A-tailed libraries were eluted using a mixture of 5 \ul
+diluted adaptor oligonucleotide, 1 \ul 10x ligation buffer and 2 \ul water. The DNA ligase was
+diluted in the remaining 1.5 \ul water and added to each reaction, before proceeding with protocol
+steps 4.3.3 onwards. The adaptors used were not those specified by
+\textcite{kumar_high-throughput_2012}, instead custom bell adaptors were used. These adaptors were
+designed by Dr Norman Warthmann, and are compatible with the T/A overhang ligation method
+\textcite{kumar_high-throughput_2012} utilise. These adaptors are described in
+\autoref{tab:br-mth-normanadaptors}. The protocol described in step 5 of the HTR protocol was used,
+with the forward and index 1 reverse primers (see \autoref{tab:br-mth-normanadaptors}),
+to amplify the libraries.
+
+RNA quality and quantity was assayed using the Agilent BioAnalyser digital electrophoresis system.
+The RNA samples were loaded into a Plant RNA Pico analysis chip and an analysis run per
+manufacturer's protocol. The effectiveness of various steps in this protocol was assayed by digital
+electrophoresis with the Shimadzu MultiNA instrument, using the DNA1000 kit. The pre-mix protocol was
+used: 2\ul sample was added to 4\ul DNA1000 marker solution, the solution mixed, and loaded into the
+instrument, which was run according to manufacturer's DNA1000-PreMix protocol. Quantitative PCR was
+performed to test the ligation and PCR efficiency of each adaptor. To do so, 2\ul of each
+pre-amplification library was combined with 5\ul Sybr Green qPCR master mix, 1\ul each of the
+forward and index 1 reverse primers (see \autoref{tab:br-mth-normanadaptors}), and 1\ul
+Uracil-Specific Excision Reagent (USER) enzyme mix.
+\todo{lots of details missing here}
+
+
+\subsection{External RNAseq Datasets}
+\label{subsec:br-mth-datasets}
+
+\todo{check details of this section from Pete}
+Two RNAseq datasets from collaborators were used both as trial datasets and external references in
+this thesis. I unambiguously disclaim that Peter Crisp, of the Pogson lab, Research School of
+Biology, ANU, created these datasets, and authorised their use in this thesis. 
+
+The Rapid Recovery Gene Silencing excess light time-course experiment (hereafter referred to as the
+RRGS time-course) consists of samples taken in triplicate from an eleven-point excess light stress
+and recovery time-course. \textit{A. thaliana} ecotype Col-0 were grown for 3 weeks under standard
+laboratory growth conditions ($\approx$ 150 \uE light intensity, 12 hour photoperiod, 21 \degc
+daytime temperature, 21 \degc nighttime temperature). Whole rosette samples were taken before any
+treatment, after 30, 60 and 120 minutes of 8x excess light (1000 \uE, unfiltered light from a sodium
+vapour lamp, hereafter EL), after 60 minutes of EL followed by 7.5, 15, 30 and 60 minutes of
+recovery under standard growth conditions, after 60 minutes of EL, followed by 60minutes of
+recovery, followed by another 60 minutes of EL, and before and after 60 minutes of EL 24 hours after
+the original 60 minutes of EL.  This complex time-course is illustrated in
+\autoref{fig:br-mth-pete317timecourse}. RNA extracted from five plants per replicate was pooled,
+before Illumina libraries were created using the TruSeq V2 library preparation kit () per
+manufacturer's instructions. These libraries were sequenced across two Illumina HiSeq 2500 sequencing
+lanes, yielding the RRGS timecourse RNAseq dataset. This dataset studies a timecourse over a
+treatment highly similar to that conducted in the dynamic growth condition experiment, allowing
+development of bioinformatic protocols specific to RNAseq datasets from experiments like these.
+\todo{part numbers etc}
+
+A second dataset, the excess light and drought (EL/D) dataset, was used as a second dataset.  This
+dataset consists of RNAseq libraries sampled in triplicate from plants grown to three week of age
+under standard laboratory growth conditions, per the RRGS timecourse experiment above. Plants were
+harvested before any stress, after 1 hour of 8x excess light, and after one week of drought stress,
+in which water was completely withheld while plants continued to grow under standard laboratory
+growth conditions.
+
+
+\begin{figure}[p]
+  \begin{center}
+    %\includegraphics{img/br-mth-pete317timecourse.png}
+    \includegraphics[width=\textwidth]{img/placeholder.png}
+  \end{center}
+  \caption{Illustration of the RRGS timecourse. This figure was created by Peter Crisp, and is
+    reproduced with his permission}
+  \label{fig:br-mth-pete317timecourse}
+\end{figure}
+\todo{Pete: get this from pete, he said I can use one from his PEB slides.}
+
+\subsection{Development of an Improved Analysis Pipeline}
+\label{subsec:br-mth-pldev}
+
+Bioinformatic experiments were used to validate pipelines against the ``gold standard'' RNAseq analysis
+pipeline. In these experiments, programs selected through both literature review and searches of
+pre-publication software releases (e.g. software on \url{github.com}) were tested against a
+published best-practice pipeline \autocite{van_verk_rna-seq:_2013}. Specifically, the
+computational speed and efficiency, and the results obtained with these newer
+programs were compared to the analysis pipeline of \textcite{van_verk_rna-seq:_2013}. This enables
+the development of higher-performance analysis pipelines suitable to high throughput experiments,
+with no cost to the quality of results obtained.
+
+Comparisons between the computational cost of four pipelines were conducted using a sub-sampled
+dataset. To demonstrate the improved performance of the \texttt{\justify aln\_subread} pipeline, it was
+compared to the \texttt{\justify aln\_tophat}, \texttt{\justify aln\_tophat\_htseq} and \texttt{\justify aln\_subread\_htseq}
+pipelines. The \texttt{\justify time} UNIX command was used to summarise the computational cost of these four
+pipelines across five identical, independent, non-simultaneous runs. Four time-points of the RRGS
+timecourse dataset were sub-sampled to 500,000 reads by running \texttt{\justify seqtk sample -s 10 500000}
+on both forward and reverse read files, which extracts 500000 random read pairs preserving read
+pairing. An ANOVA analysis was performed to find significant differences in runtime and CPU
+utilisation between analysis pipelines (see \autoref{subsec:appendix-misccode-pltimes}).
+
+To ensure that the \texttt{\justify subread} aligner and \texttt{\justify featureCounts} produced comparable results
+to the analysis pipeline of \textcite{van_verk_rna-seq:_2013}, several diagnostic measures were
+used. Firstly, the percentage of reads mapped to the genome, and to protein coding loci within the
+genome was computed and compared. Then, sample-wise correlations between tag-wise counts calculated by
+each pipeline were calculated. Finally, genes called differentially expressed by each pipeline were
+compared. These measures allow verification of pipeline performance at three major stages in an
+analysis pipeline: alignment of short reads to a genome, tag-wise count summarisation, and statiscial
+testing for differential expression
+
+
+\subsection{Measuring the Effect of Sequencing Depth on Analysis of Differential Expression}
+\label{subsec:br-mth-depth}
+
+Six samples from the RRGS-Timecourse experiment (see \autoref{subsec:br-mth-datasets}) were
+sub-sampled to allow investigation of the effect of sequencing depth on statisical power. To do so,
+the command \texttt{\justify seqtk sample -s 10 $X$} was run on each pair of read files for these six samples,
+with $X$ (number of reads to sample) set to 1000, 10000, 20000, 50000, 100000, 200000, 500000,
+1000000, 2000000, 5000000 and 10000000. This sub-sampled dataset allows for titration of the optimal
+sequeing depth (or multiplexing level) for high throughput experiments, balancing sequencing cost
+with statistical power.
+
+For each subsampled dataset, the \texttt{\justify km\_subread} pipeline followed by the
+\texttt{\justify de\_pairwise} pipeline were applied  to find differential expression between the
+control and 30 minute excess light timepoints (these pipelines are described in
+\autoref{subsec:br-res-pipeline}). Several metrics were then used to summarise the effect of
+sequencing depth on the statiscial power of differential expression analysis. The number of tags
+called as differentially expressed at each sequencing depth was calculated, as was the common
+biological coefficient of variation. A third measure, the log-transformed mean expression level of
+the least-expressed differentially expressed gene and the overall least-expressed gene were
+calculated. These metrics were plotted against sequencing depth to give a graphical overview of the
+effect of reduction of sequencing depth.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%                         Results                                   %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%                         Results                                   %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Results}
 
+\subsection{High Throughput RNAseq Library Preparation Protocol}
+\label{subsec:br-res-rnaseqprotocol}
+
+To increase the throughput and the decrease cost of Illumina RNAseq sequencing library preparation,
+non kit-based protocols must be used. This subsection of my thesis describes my attempts to
+implement the RNAseq library preparation protocol of \textcite{kumar_high-throughput_2012}. The
+majority of this protocol was successfully implemented.  Messenger RNA was successfully extracted in
+a 96 well plate format using oligo-d(T) magnetic beads, albeit with low yield (see
+\autoref{fig:br-res-dynabeadsrna}). Complimentary DNA (cDNA) was successfully prepared from this
+mRNA. Enzymatic fragmentation of cDNA was successful, as was end repair and A-tailing. However,
+a cumulation of possible ligation and PCR biases caused order-of-magnitude variation in library 
+abundance. This variation in library abundance was confirmed with diagnostic qPCR. For this reason,
+the use of this protocol in my experiment was abandoned, as the optimisation of these difficulties may
+have been very time consuming and was not feasible in the time remaining in my Honours year.
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/placeholder.png}
+  \end{center}
+  \caption{BioAnalyser digital gels of 10 RNA samples extracted. The extraction or quantification of C1
+    failed.}
+  \label{fig:br-res-dynabeadsrna}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/placeholder.png}
+  \end{center}
+  \caption{BioAnalyser digital electrophoretogram of a representative mRNA sample (Sample B1 in
+    \autoref{fig:br-res-dynabeadsrna}). Note the smear-like quality of the mRNA sample, and the
+    reduced or absent ribosomal RNA peaks, when compared with a total RNA sample such as in
+    \autoref{fig:txv-res-rnaqual}}
+  \label{fig:br-res-electrophoretogram}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/placeholder.png}
+  \end{center}
+  \caption{Ligation bias between indices}
+  \label{fig:br-res-libraryqpcr}
+\end{figure}
+
+\todo{this section needs a re-write. Also questioning if it should go here, or chapter 4.}
+
+\subsection{A Framework for the Creation of RNAseq Analysis Pipelines}
+\label{subsec:br-res-framework}
+
+In order to allow easy creation of diverse analysis pipelines for the multitude of possible
+experimental designs and method, I have implemented a generic framework for the creation of RNAseq
+data analysis pipelines. This framework takes the form of ``wrapper scripts'', which act as wrappers
+around programs which other authors have created, and ``pipeline'' scripts, which combine these
+wrapped programs to perform an analysis.
+
+Wrapper scripts are the workhorses of any pipeline created with this framework.  All wrapper scripts
+accept three arguments: an input directory, and output directory, and arguments to be passed to the
+underlying program. Given these three pieces of information, the wrapper script will run the
+underlying program, automatically detecting input files from the input folder, and automatically
+handling different experimental features such as single vs paired-end sequence data. Wrapper scripts
+abstract away the complexity of command syntax, increasing readability and reproducibility of
+results.
+
+Pipeline scripts describe processes of analysis of RNAseq data. They combine wrapped programs
+together to perform an analysis specific to the process or dataset in question. Several generic and
+some dataset-specific pipelines have been created. These pipelines are described in the following
+subsection (\ref{subsec:br-res-pipeline}).
+
+\subsection{An Improved Analysis Pipeline for Large Plant RNAseq Datasets}
+\label{subsec:br-res-pipeline}
+
+A series of pipelines to analyses RNAseq datasets of different kinds have been developed. As each
+RNAseq experiment has subtle differences in experimental design or library construction, developing
+a one-size-fits-all pipeline is not possible. Thus, a series of pipelines to encompass a variety of
+RNAseq experiments have been created. These pipelines are two-step pipelines; step one takes raw
+sequence reads, and produces summarised gene-wise counts. Step two applies statistical normalisation
+techniques and tests for differential expression. When applied combinatorially, these pipelines
+allow for different experimental designs to be analysed.
+
+\subsubsection{The \texttt{\justify aln\_subread} pipeline}
+\label{subsubsec:br-res-alnsubread}
+This pipeline is built around the \texttt{\justify subread} aligner, a very fast RNAseq-compatible short read
+aligner. Firstly, quality of sequencing data is checked using the \texttt{\justify fastqc} program,
+sequencing adaptors are removed with \texttt{\justify scythe}, and \texttt{\justify seqtk} remove low quality
+sequences, before the quality is again checked using \texttt{\justify fastqc}. The \texttt{\justify subread} aligner
+then aligns reads to the TAIR10 \textit{A. thaliana} genome, accounting for splicing. The resulting
+SAM file is converted to the BAM format, sorted and indexed, as required by some downstream programs
+(e.g. the \texttt{\justify IGV} genome browser). Gene expression is then summarised gene-wise by counting the
+number of reads which align to genic loci with \texttt{\justify featureCounts}, completing this section of
+the analysis and the \texttt{\justify aln\_subread} pipeline.
+
+\subsubsection{The \texttt{\justify aln\_subjunc} and \texttt{\justify aln\_tophat} pipelines}
+\label{subsubsec:br-res-alnsplicing}
+
+For studies examining alternative splicing of mRNA transcripts, an aligner able to detect splicing
+\textit{de novo} is required. \texttt{\justify Tophat2}, one of the most popular RNAseq aligners, is
+able to align short reads while detecting slicing isoforms. \texttt{\justify Subjunc} is an extension
+to the \texttt{\justify subread} aligner which it allows it to do so. The \texttt{\justify
+aln\_subjunc} and \texttt{\justify aln\_tophat} are identical to the \texttt{\justify aln\_subread}
+pipeline, aside from their use of the \texttt{\justify subjunc} and \texttt{\justify Tophat2}
+aligners respectively, in place of the \texttt{\justify subread} aligner, allowing study of
+alternative splicing. However, this \textit{de novo} detection of splicing comes at a performance
+cost, and is not necessary for simple quantitation of gene expression.
+
+\subsubsection{\texttt{\justify de\_pairwise}}
+\label{subsubsec:br-res-depairwise}
+Where the experimental design is simple, statistical tests can be performed pairwise between
+samples. To this end, the \texttt{\justify de\_pairwise} pipeline implements these tests using the
+\texttt{\justify edgeR} R package. This pipeline first reads count files into a \texttt{\justify
+DGEList} object, then normalises counts using the TMM normalisation method of
+\textcite{robinson_scaling_2010}.  Common and tag-wise (i.e. gene-wise) dispersion are then
+calculated using the \texttt{\justify calcNormFactors}, \texttt{\justify estimateCommonDisp} and
+\texttt{\justify estimateTagwiseDisp} functions respectively, yielding a \texttt{\justify DGElist}
+object containing normalised counts and estimates of expression variability. Tests are then conducted
+pairwise between groups described in the keyfile, from data in this \texttt{\justify DGElist}, using
+\texttt{\justify exactTest}. This creates a \texttt{\justify list()} of \texttt{\justify DGEExact}
+objects, from which tables of differential expression and diagnostic plots can be created. A plot
+showing the relationship between the tag-wise Biological Coefficient of Variation (BCV) and tag
+expression.
+
+\subsubsection{\texttt{\justify de\_glm}}
+\label{subsubsec:br-res-deglm}
+If the experimental design is not simplistic, for example if multiple experimental factors
+(variables such as growth condition, treatment, block, or genotype) exist, pairwise analysis is
+inadequate. Thus, the more statistically complex Generalised Linear Model based hypothesis testing
+functions of \texttt{\justify edgeR} are required. This pipeline takes a keyfile describing the
+experimental design as above pipelines do, however it takes and additional R script which describes
+the statistical model to be fitted, and contrasts within this model to be tested for differential
+expression. Tag-wise read counts are normalised and dispersions calculated with the GLM-based
+analogous of the functions used to do so in the \texttt{\justify de\_pairwise} pipeline. Then, a
+generalised linear model is fitted with \texttt{\justify glmFit}, creating a \texttt{\justify glm}
+object. Then, \texttt{\justify glmLRT} is used to test each constant specified in the model script
+for differential expression. Analogous plots and tables to those produced in the \texttt{\justify
+de\_pairwise} pipeline are then produced.
+
+\subsection{Comparison of Differential Expression Pipelines}
+\label{subsec:br-res-plcommpare}
+
+There was a highly significant difference between the computational cost of four pipelines
+(\texttt{\justify aln\_subread}, \texttt{\justify aln\_tophat}, \texttt{\justify aln\_tophat\_htseq}
+and \texttt{\justify \justify aln\_subread\_htseq}). Using an ANOVA model with Tukey's HSD post-hoc
+testing, significant differences in ``real'' time, ``user'' time and ``sys'' time were uncovered. As
+is shown graphically in \autoref{fig:br-res-pltimes}, the \texttt{\justify aln\_subread} is the
+fastest, taking an average of 3.48 $\pm$ 0.10 minutes to complete, followed by the \texttt{\justify
+aln\_subread\_htseq} pipeline, which took 4.88 $\pm$ 0.07 minutes. The \texttt{\justify aln\_tophat}
+and \texttt{\justify aln\_tophat\_htseq} were almost 400\% slower, taking 12.9 $\pm$ 0.12 and 13.77
+$\pm$ 0.07 minutes of real time respectively. The computational cost of user code and kernel
+processes in CPU-minutes followed similar patterns, as detailed in \autoref{fig:br-res-pltimes}.
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/br-res-pltimes.pdf}
+  \end{center}
+  \caption{Computational cost of the \texttt{\justify aln\_subread}, \texttt{\justify aln\_tophat},
+  \texttt{\justify aln\_tophat\_htseq} and \texttt{\justify aln\_subread\_htseq} RNAseq analysis pipelines differs
+    significantly. The ``real'' computational cost describes the number of seconds each pipeline took to
+    complete. The ``user'' and ``sys'' metrics describe the number of CPU-minutes spent running user
+    code (i.e. the pipeline components) and performing kernel operations on behalf of user code (e.g.
+    input/output, memory (de)allocation and other system calls) for each pipeline execution.}
+  \label{fig:br-res-pltimes}
+\end{figure}
+
+Quantification of gene expression by the \texttt{\justify aln\_subread} pipeline is comparable to
+that obtained by the \texttt{\justify aln\_tophat} pipeline. As shown in
+\autoref{fig:br-res-srvsthcount}, there is a very tight relationship between counts produced by the
+Tophat2 and subread aligners. The slope of $log(n +1)$ transformed raw count data when the model
+$tophat counts ~ subread counts$ is fitted is 0.994, with p < 2e-16 and $R^2$ of 0.993. 
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics{img/br-res-srvsthcount.pdf}
+  \end{center}
+  \caption{A very tight relationship is observed between count data generated by the tophat and
+  subread aligners.}
+  \label{fig:br-res-srvsthcount}
+\end{figure}
 
 
+%The number of genes called differentitially expressed 
+
+
+\todo{write up old comparison R document into thesis document}
+
+\todo{will be done Wednesday, found bug and needs to re-calculate}
+
+\subsection{Substantial reduction of RNAseq coverage is possible}
+\label{subsec:br-res-coverage}
+
+Sequencing is expensive, and multiplexing many samples per lane is important for high-throughput
+transcriptomics. However, in RNAseq, an optimality exists between sequencing depth per sample and
+statistical power: as the number of reads per sample decreased, the number of genes called as
+differentially expressed decreased in a non-linear fashion (\autoref{fig:br-res-detagsvscoverage}).
+Below 5 million reads, the number of genes called as differentially expressed reduces rapidly.
+Additionally, the median tag-wise mean log expression reduces rapidly below approximately 1 million
+reads, indicating that at very low coverage, lowly expressed genes begin to not be detected at all
+(\autoref{fig:br-res-medianexpvscoverage}. Finally, the common biological coefficient of variation,
+which indicates how variable a dataset is a whole, increases as sequencing depth decreases
+(\autoref{fig:br-res-bcvvscoverage} and Appendix \autoref{apx-plots-bcvcoverage}). For the model
+system used in this experiment, I would recommend an optimal sequencing depth of approximately 5
+million reads (or read pairs) to balance statistical power against sequencing cost.
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/br-res-detagsvscoverage.pdf}
+  \end{center}
+  \caption{Decreasing sequencing depth per sample decreases the number of tags called as
+    differentially expressed. This occurs because the total number of genes which can be examined
+    for differential expression decreases in a similar fashion.}
+  \label{fig:br-res-detagsvscoverage}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/placeholder.png}
+    %\includegraphics[width=\textwidth]{img/br-res-medianexpvscoverage.pdf}
+  \end{center}
+  \caption{Median tag-wise expression vs sequencing depth}
+  \label{fig:br-res-medianexpvscoverage}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/placeholder.png}
+    %\includegraphics[width=\textwidth]{img/br-res-bcvvscoverage.pdf}
+  \end{center}
+  \caption{Common biological coefficient of variation vs sequencing depth.}
+  \label{fig:br-res-bcvvscoverage}
+\end{figure}
