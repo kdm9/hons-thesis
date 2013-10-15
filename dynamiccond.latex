@@ -83,30 +83,27 @@ environment, namely light color and intensity, temperature, and humidity at 1min
 {\param & \tem}
 {Parameter settings of SolarCalc used in the creation of dynamic conditions.}
 
-SolarCalc by default simulates the climate of a location without any weather, however I aimed to
-create condition which mimic cloudy and intermittently cloudy days. Thus, to create such conditions,
-post-processing work is required. Firstly, SolarCalc was re-run with a neutral density shade
+SolarCalc by default simulates the climate of a location without variable weather. I aimed to
+further create conditions which mimic cloudy and intermittently cloudy days. Thus, to create such conditions,
+post-processing work was required. Firstly, SolarCalc was re-run with a neutral density shade
 parameter of 45\%, meaning that the model sunlight intensity was 45\% that of the original model,
 forming the shaded model, which aimed to emulate a cloudy day. Then, the result of both the original
 model, and this shaded model were spliced together to form a condition whose light intensity changed
 between shaded and original models on a two hour shaded, one-hour original rotation, using the
 \texttt{spliceSolarCalc.py} script described in \autoref{subsec:apx-code-spliceSolarCalc}. This
-created the fluctuating condition designed to emulate an intermittently cloudy day. The temperature,
+created the fluctuating condition designed to mimic an intermittently cloudy day. The temperature,
 humidity and light quality of these conditions remained unchanged. These additional conditions allow
 us to compare the effect of different light regimes within the framework of such pseudo-natural
 dynamic growth conditions which SolarCalc creates.
-\todo{This sounds too much like what got destroyed in the initial examiners meeting. Also it's to
-wordy.}
 
 \subsection{Measurement of Spectral Power Density}
-Raw spectral power density data was obtained from Dr. Pip Wilson of the Borevitz lab. The 
-<+model+> radio spectrophotometer was used to record spectral power density across the spectrum
+Raw spectral power density data was obtained from Dr. Pip Wilson of the Borevitz lab. A spectrophotometer was used to record spectral power density across the spectrum
 between light of wavelengths 400nm to 800nm, with 2nm wavelength resolution. Sun and shade spectra
 were obtained on <+date+> at the Acton campus of the ANU, in a clear, open space and under heavy
 shade from mature trees of various species, in the courtyard between buildings 46 and 48. Spectra of
 laboratory growth conditions were obtained from a Conviron PGC20 by placing the spectrophotometer on
 the lowest shelf level, while fluorescent lamps or Heliospectra L4A series 10 lamps were illuminated
-at their highest intensities. In the case of the Heliospectra L4A series 10 LED lamps, measurement
+at their highest intensities. In the case of the Heliospectra L4A series 10 LED lamps, measurements
 from directly under a single unit were recorded. Intensity-normalised spectral power density was
 calculated by normalising the intensity between spectra to an intensity of 1 \uEdens.
 
