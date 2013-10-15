@@ -154,21 +154,18 @@ configurations would be relatively trivial. Status reports are reported to an ex
 database, and email error messages are generated using the Google mail API from within python. In
 all, this consists of over 740 lines of code and configuration, and 134 minor versions (git commits)
 16 releases.
-\todo{concluding sentence}
-
 
 \subsection{Sufficient, Excess and Fluctuating Dynamic Growth Conditions}
 \label{subsec:dc-res-mygrowthcond}
 
 To investigate the effect of altered light intensity on the \textit{Arabidopsis} transcriptome, three
-novel growth conditions have been created. These conditions have been specifically designed to
-emulate a difference in light intensity which may be encountered naturally, that of neutral density
+novel growth conditions were created as described. These conditions have been specifically designed to
+mimic dynamic changes in light intensity that can be expected to occure outdoors along with neutral density
 shading by clouds. The Sufficient Light dynamic growth condition (hereafter ``Sufficient'')
 corresponds to approximately the same daily integral of light as ``standard growth conditions'' of
-120-150 \uE on a 12-hour photoperiod. The Excess light condition is an approximate 250 \% excess
-over the sufficient condition. The Fluctuating light condition is designed to simulate the pattern of
+120-150 \uE on a 12-hour photoperiod. The Excess light condition is an approximate 3.5X ?JB? the sufficient condition. The Fluctuating light condition is designed to simulate the pattern of
 light intensity variation caused by partial cloud or patchy sun. These conditions simulate the
-spring season, and display circannual variation in temperature, light and humidity. As time
+spring season, and display circannual or seasonal variation in temperature, light and humidity. As spring
 progresses, daily minimal and maximal temperature and peak light intensity increase, while minimal
 relative humidity decreases.
 
