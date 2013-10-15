@@ -52,9 +52,9 @@
 % http://tex.stackexchange.com/questions/299/how-to-get-long-texttt-sections-to-break
 % see also: http://texblog.net/latex-archive/plaintex/full-justification-with-typewriter-font/
 \newcommand*\justify{%
-  \fontdimen2\font=0.4em% interword space
-  \fontdimen3\font=0.2em% interword stretch
-  \fontdimen4\font=0.1em% interword shrink
-  \fontdimen7\font=0.1em% extra space
+  \fontdimen2\font=3.91663pt% interword space
+  \fontdimen3\font=1.95831pt% interword stretch
+  \fontdimen4\font=1.30554pt% interword shrink
+  \fontdimen7\font=1.30554pt% extra space
   \hyphenchar\font=`\-% allowing hyphenation
 }
