@@ -163,8 +163,8 @@ novel growth conditions were created as described. These conditions have been sp
 mimic dynamic changes in light intensity that can be expected to occure outdoors along with neutral density
 shading by clouds. The Sufficient Light dynamic growth condition (hereafter ``Sufficient'')
 corresponds to approximately the same daily integral of light as ``standard growth conditions'' of
-120-150 \uE on a 12-hour photoperiod. The Excess light condition is an approximate 3.5X ?JB? the sufficient condition. The Fluctuating light condition is designed to simulate the pattern of
-light intensity variation caused by partial cloud or patchy sun. These conditions simulate the
+120-150 \uE on a 12-hour photoperiod. The Excess light condition is an ~2.5X brighter than the sufficient condition. The Fluctuating light condition is designed to simulate the pattern of
+light intensity variation caused by partial cloud or patchy sun varies between these. These conditions simulate the
 spring season, and display circannual or seasonal variation in temperature, light and humidity. As spring
 progresses, daily minimal and maximal temperature and peak light intensity increase, while minimal
 relative humidity decreases.
@@ -238,10 +238,10 @@ spectrum, with intensity-normalised spectral power density of fluorescent and LE
 sources of 1.00 $\pm$ 1.74 and 1.00 $\pm$ 0.92 \uEdens respectively (means $\pm$ SD; see
 \autoref{fig:dc-res-spectra-norm}). The intensity-normalised spectral power density of sunlight on a
 clear day is remarkably even (1.00 $\pm$ 0.19 \uEdens; \autoref{fig:dc-res-spectra-norm}). The
-intensity normalised spectral power density of shaded light is similarly even at wavelengths lower
+intensity normalised spectral power density of canopy shaded light is similarly even at wavelengths lower
 than approx 700nm, above which sunlight is not filtered by vegetation and thus is over-represented.
 Overall, the spectral power density of LED lamps is more even than that of fluorescent lamps,
-however is nowhere near as even as that of sunlight.
+however it still deviates from that of sunlight.
 
 \begin{figure}[p]
   \begin{center}
@@ -263,7 +263,7 @@ however is nowhere near as even as that of sunlight.
 
 The overall light intensity of these light sources varies drastically. Open sunlight is very bright,
 with a total intensity of over 2480 \uE in the visible and adjacent spectrum on the day of
-measurement. The intensity of naturally shaded sunlight is much lower, at approximately 88 \uE on
+measurement. The intensity of tree canopy shaded sunlight is much lower, at approximately 88 \uE on
 the day of measurement. The light intensity under a single Heliospectra L4A series 10 LED lamp was
 370 \uE, while the intensity of light from fluorescent lamps was 140 \uE (data shown
 graphically in \autoref{fig:dc-res-spectra-norm}). 
@@ -277,9 +277,8 @@ does this go here or ch4?
 \subsection{Novel Dynamic Growth Conditions That Simulate a Continental Gradient}
 \label{subsec:dc-res-kengcond}
 
-\todo{should this be included in my thesis?}
-In addition to conditions created to test hypotheses around altered light intensity, I have created
-conditions to answer others' hypotheses. Two conditions have been created to test the overall effect
+This software I have developed was further used to create conditions for further hypotheses not addresses in this thesis project
+This includes two conditions to test the overall effect
 of environments with higher light and more diurnal variation in temperature, such as may be
 experienced in inland regional climates, compared to conditions with lower light intensity and lower
 diurnal variation in temperature, such as those often encountered in coastal climates. These
@@ -287,5 +286,5 @@ conditions, named ``NSW inland'' and ``NSW coastal'' respectively, generally are
 the sufficient, fluctuating and excess light dynamic growth conditions created for my experiments.
 Plots describing their conditions follow.
 \todo{polish this if it is to be included, and input plots. also needs a subsection in the methods
-section of this chapter if included.}
+section of this chapter if included. JB- Perhaps a shorter look at light and temp if you have time }
 
