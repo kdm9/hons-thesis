@@ -9,10 +9,10 @@
 
 \section{Background, Aims and Hypotheses}
 
-In this chapter I am to create artificial growth conditions which vary on diurnal and circannual
+In this chapter I have created artificial growth conditions which vary on diurnal and circannual
 cycles in a similar manner to the regional climates cultivated or naturally growing plants
 experience. I hypothesise that plants grown under such conditions will exhibit phenotypes more
-similar to those grown under natural environments, given their growth conditions are more similar to
+similar to those grown outdoors under natural environments, given that these simulated growth conditions are more similar to
 natural environments. The Borevitz lab and I are terming this class of laboratory growth condition
 ``dynamic growth conditions''. The term dynamic is in contrast with the unnaturally benign, highly
 static growth conditions typically used in the propagation, growth and experimentation of plants in
@@ -71,8 +71,8 @@ trial location for various agricultural crops, and is in the same climate zone a
 range of \textit{Arabidopsis thaliana} \autocite{peel_updated_2007}. SolarCalc has a very extensive
 list of parameters which can be set. The settings I used in the creation of the dynamic conditions
 are described in \autoref{tab:dc-mth-solarcalcsettings}. SolarCalc was run with these model
-parameters, to produce a model of growth conditions which simulate elements of a natural
-environment.
+parameters, to produce a model of growth conditions which simulate predictable elements of a natural
+environment, namely light color and intensity, temperature, and humidity at 1min intervals throughout the day and season.
 
 \kmdefaulttable
 {dc-mth-solarcalcsettings}
