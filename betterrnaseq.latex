@@ -7,15 +7,39 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Aims and Hypotheses}
+\section{Background, Aims and Hypotheses}
 
-In this chapter of my thesis, I am to discuss and provide solutions to some bioinformatic challenges in
-the analysis of RNAseq datasets. Specifically, I am to identify issues arising as a result of two
-aspects of biological experiments like the one which I have conducted this year: \textit{a),} the
-dramatic changes in global expression on changing the growth, and particularly the light conditions of
-a plant, and \textit{b),} the need for high throughput, low cost RNAseq experiments to match the
-high throughput required for mapping experiments.
-\todo{reword this}
+A wealth of technical and methodological literature exists on the topic of RNAseq. This chapter
+identifies and implements recent advances in RNAseq molecular and data analytic methods with
+applications to High-throughput RNAseq. For small-scale RNAseq experiments with fewer than 12-24
+samples, rapid, reliable and commercially available kits enable library creation. Commercial kits
+exist for high-throughput RNAseq, however their cost is prohibitive. Thus, I aim to implement a
+published RNAseq library preparation protocol (that of \textcite{kumar_high-throughput_2012}) which
+enables rapid, low-cost and high throughput RNAseq library preparation. I hypothesised that the
+implementation of this protocol would be possible, enabling high-throughput RNAseq studies such as
+expression QTL mapping.
+
+To gain biological meaning from raw RNAseq data, an analysis pipeline must be employed. A pipeline
+is series of software components which
+manipulate in succession a dataset to obtain a biologically relevant result. Best practice pipelines
+for RNAseq analysis exist, but are often slow and almost ubiquitously cumbersome to manipulate to
+suit the idiosyncrasies of each experiment. Thus, a second aim in this chapter of my thesis is to
+create a framework allowing easy creation of pipelines by non-expert bioinformaticians with limited
+programming experience, and to use this framework to create high-performance pipelines suited to
+analysis of high-throughput RNAseq experiments.
+
+Finally, I aim to conduct an \textit{in silico} experiment to test the effect of sequencing depth on
+statistical power of RNAseq experiments. Despite the rapid and continuing reduction in the cost of
+high throughput sequencing, it is still a very large component of the overall cost of RNAseq
+experiments. This is particularly evident with regards to high throughput experiments, and is often
+combated by increasing multiplexing, i.e. reducing the amount of raw sequence data each sample
+yields. If excessive reductions in sequencing depth are made, reduced statistical power to detect
+differential expression is observed. Thus I am to determine the optimal trade-off between sequencing
+cost and statistical power. Previous similar experiments suggest an optimal depth of 10 million
+reads per sample for Chicken samples \autocite{wang_evaluation_2011}. however due to the smaller
+genome size, I hypothesise that the optimal sequencing depth for \textit{Arabidopsis} will be
+smaller, specifically between 2 and 5 million reads, or between 48 and 96 libraries per Illumina
+HiSeq 2500 sequencing lane (which yield 200 million reads each).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -27,8 +51,13 @@ high throughput required for mapping experiments.
 \subsection{Implementation of a High Throughput RNAseq Library Preparation Method}
 \label{subsec:br-mth-kumaretal}
 
-To increase the throughput and the decrease cost of Illumina RNAseq sequencing library preparation, I
-have attempted to implement the RNAseq library preparation protocol of
+\todo{lots of details missing in this section}
+
+I discalim that these experiments were conducted in collaboration with Dr. Norman Warthmann, who
+performed the testing of bell adaptors.
+
+To increase the throughput and the decrease cost of Illumina RNAseq sequencing library preparation,
+I have attempted to implement the RNAseq library preparation protocol of
 \textcite{kumar_high-throughput_2012}, a published protocol enabling the preparation of RNAseq
 libraries in high throughput using 96 well plates. Specifically, I used a slightly modified version
 of the High-Throughput RNAseq protocol described in Supplementary Methods 1 of
@@ -39,28 +68,42 @@ tubes (PN:<++>) containing a single steel ball bearing, and snap frozen in \liqn
 a TissueLyser (PN <+get details+>) for two one minute pulses at 25Hz at a later date. In collection
 tubes, 750 \ul Dynabeads Lysis/Binding Buffer was added, before sample was ground for a further 30s
 in a TissueLyser as before. Then, lysates were prepared per Steps 1.1.6-1.1.8 of the HTR protocol
-described in Supplementary Methods 1 of \textcite{kumar_high-throughput_2012}.
+described in Supplementary Methods 1 of \textcite{kumar_high-throughput_2012}. Isolated mRNA was
+obtained and cDNA synthesised and fragmented according to steps 1.2 to 3 of the HTR protocol of
+\textcite{kumar_high-throughput_2012}. Working with Dr. Norman Warthmann, the remaining steps of the
+HTR protocol were validated using four cDNA samples.
 
-Isolated mRNA was obtained and cDNA synthesised and fragmented according to steps 1.2 to 3 of the HTR
-protocol of \textcite{kumar_high-throughput_2012}. Working with Dr. Norman Warthmann, the remaining
-steps of the HTR protocol were validated using sonicated genomic DNA as input material, due to it's
-similar size and fragmentation properties to fragmented cDNA, and due to the scarcity of cDNA of
-little value. This DNA was obtained from \textit{Oryza sativa} seedlings, diluted to a concentration
-of approximately 7 \ngul (500 $ng$ in 70 \ul) before being sonicated for <+settings+> on a Diagenode
+To test all bell adaptors, sonicated genomic DNA was used as input material, due to it's similar
+size and fragmentation properties to fragmented cDNA, and due to the scarcity of cDNA of little
+value. This DNA was obtained from \textit{Oryza sativa} seedlings, diluted to a concentration of
+approximately 7 \ngul (500 $ng$ in 70 \ul) before being sonicated for <+settings+> on a Diagenode
 Bioruptor DNA sonicator. This sonicated DNA was cleaned up per steps 3.5-3.8 of the HTR protocol,
 with the modification that 3o \ul bead binding buffer and 40 \ul Ampure XP SPRI beads were used.
 Then, a modified step 4 of the HTR protocol was used to create unamplified sequencing libraries. In
-step 4.1 and 4.2, double reactions were performed, however the same quantity of SPRI cleanup reagents
-were used. Before adaptor ligation, the A-tailed libraries were eluted using a mixture of 5 \ul
-diluted adaptor oligonucleotide, 1 \ul 10x ligation buffer and 2 \ul water. The DNA ligase was
+step 4.1 and 4.2, double reactions were performed, however the same quantity of SPRI cleanup
+reagents were used. Before adaptor ligation, the A-tailed libraries were eluted using a mixture of 5
+\ul diluted adaptor oligonucleotide, 1 \ul 10x ligation buffer and 2 \ul water. The DNA ligase was
 diluted in the remaining 1.5 \ul water and added to each reaction, before proceeding with protocol
 steps 4.3.3 onwards. The adaptors used were not those specified by
 \textcite{kumar_high-throughput_2012}, instead custom bell adaptors were used. These adaptors were
 designed by Dr Norman Warthmann, and are compatible with the T/A overhang ligation method
 \textcite{kumar_high-throughput_2012} utilise. These adaptors are described in
 \autoref{tab:br-mth-normanadaptors}. The protocol described in step 5 of the HTR protocol was used,
-with the forward and index 1 reverse primers (see \autoref{tab:br-mth-normanadaptors}),
-to amplify the libraries.
+with the forward and index 1 reverse primers (see \autoref{tab:br-mth-normanadaptors}), to amplify
+the libraries.
+
+\todo{split this into two paragraphs: successful creation of 4 libraies from my cDNA, and Norman's
+optimization of his adaptors, which he mostly did.}
+
+\kmdefaulttable
+{br-mth-normanadaptors}
+{./tables/br-mth-normanadaptors.csv}
+{lc}
+{Adaptor Name & Sequence}
+{\nm=Name, \seq=Sequence}
+{\nm & \texttt{\seq}}
+{Bell adatpors and index primers obtained from Dr. Norman Warthmann.}
+\todo{need this data from norman}
 
 RNA quality and quantity was assayed using the Agilent BioAnalyser digital electrophoresis system.
 The RNA samples were loaded into a Plant RNA Pico analysis chip and an analysis run per
@@ -72,7 +115,6 @@ performed to test the ligation and PCR efficiency of each adaptor. To do so, 2\u
 pre-amplification library was combined with 5\ul Sybr Green qPCR master mix, 1\ul each of the
 forward and index 1 reverse primers (see \autoref{tab:br-mth-normanadaptors}), and 1\ul
 Uracil-Specific Excision Reagent (USER) enzyme mix.
-\todo{lots of details missing here}
 
 
 \subsection{External RNAseq Datasets}
@@ -81,7 +123,7 @@ Uracil-Specific Excision Reagent (USER) enzyme mix.
 \todo{check details of this section from Pete}
 Two RNAseq datasets from collaborators were used both as trial datasets and external references in
 this thesis. I unambiguously disclaim that Peter Crisp, of the Pogson lab, Research School of
-Biology, ANU, created these datasets, and authorised their use in this thesis. 
+Biology, ANU, created these datasets, and authorised their use in this thesis.
 
 The Rapid Recovery Gene Silencing excess light time-course experiment (hereafter referred to as the
 RRGS time-course) consists of samples taken in triplicate from an eleven-point excess light stress
@@ -156,11 +198,11 @@ testing for differential expression
 \label{subsec:br-mth-depth}
 
 Six samples from the RRGS-Timecourse experiment (see \autoref{subsec:br-mth-datasets}) were
-sub-sampled to allow investigation of the effect of sequencing depth on statisical power. To do so,
+sub-sampled to allow investigation of the effect of sequencing depth on statistical power. To do so,
 the command \texttt{\justify seqtk sample -s 10 $X$} was run on each pair of read files for these six samples,
 with $X$ (number of reads to sample) set to 1000, 10000, 20000, 50000, 100000, 200000, 500000,
 1000000, 2000000, 5000000 and 10000000. This sub-sampled dataset allows for titration of the optimal
-sequeing depth (or multiplexing level) for high throughput experiments, balancing sequencing cost
+sequencing depth (or multiplexing level) for high throughput experiments, balancing sequencing cost
 with statistical power.
 
 For each subsampled dataset, the \texttt{\justify km\_subread} pipeline followed by the
@@ -189,31 +231,32 @@ non kit-based protocols must be used. This subsection of my thesis describes my 
 implement the RNAseq library preparation protocol of \textcite{kumar_high-throughput_2012}. The
 majority of this protocol was successfully implemented.  Messenger RNA was successfully extracted in
 a 96 well plate format using oligo-d(T) magnetic beads, albeit with low yield (see
-\autoref{fig:br-res-dynabeadsrna}). Complimentary DNA (cDNA) was successfully prepared from this
-mRNA. Enzymatic fragmentation of cDNA was successful, as was end repair and A-tailing. However,
-a cumulation of possible ligation and PCR biases caused order-of-magnitude variation in library 
-abundance. This variation in library abundance was confirmed with diagnostic qPCR. For this reason,
-the use of this protocol in my experiment was abandoned, as the optimisation of these difficulties may
-have been very time consuming and was not feasible in the time remaining in my Honours year.
+\autoref{fig:br-res-dynabdpicogel}, \autoref{fig:br-res-dynabdpicoegramB1}). Complimentary DNA (cDNA)
+was successfully prepared from this mRNA. Enzymatic fragmentation of cDNA was successful, as was end
+repair and A-tailing. However, a cumulation of possible ligation and PCR biases caused
+order-of-magnitude variation in library abundance. This variation in library abundance was confirmed
+with diagnostic qPCR. For this reason, the use of this protocol in my experiment was abandoned, as
+the optimisation of these difficulties may have been very time consuming and was not feasible in the
+time remaining in my Honours year.
 
 \begin{figure}[p]
   \begin{center}
-    \includegraphics[width=\textwidth]{img/placeholder.png}
+    \includegraphics[width=\textwidth]{img/br-res-dynabdpicogel.png}
   \end{center}
   \caption{BioAnalyser digital gels of 10 RNA samples extracted. The extraction or quantification of C1
-    failed.}
-  \label{fig:br-res-dynabeadsrna}
+    failed. Note the feint mRNA smear, and residual rRNA bands.}
+  \label{fig:br-res-dynabdpicogel}
 \end{figure}
 
 \begin{figure}[p]
   \begin{center}
-    \includegraphics[width=\textwidth]{img/placeholder.png}
+    \includegraphics[width=\textwidth]{img/br-res-dynabdpicoegramB1.png}
   \end{center}
   \caption{BioAnalyser digital electrophoretogram of a representative mRNA sample (Sample B1 in
-    \autoref{fig:br-res-dynabeadsrna}). Note the smear-like quality of the mRNA sample, and the
+    \autoref{fig:br-res-dynabdpicogel}). Note the smear-like quality of the mRNA sample, and the
     reduced or absent ribosomal RNA peaks, when compared with a total RNA sample such as in
     \autoref{fig:txv-res-rnaqual}}
-  \label{fig:br-res-electrophoretogram}
+    \label{fig:br-res-dynabdpicoegramB1}
 \end{figure}
 
 \begin{figure}[p]
@@ -251,7 +294,7 @@ subsection (\ref{subsec:br-res-pipeline}).
 \subsection{An Improved Analysis Pipeline for Large Plant RNAseq Datasets}
 \label{subsec:br-res-pipeline}
 
-A series of pipelines to analyses RNAseq datasets of different kinds have been developed. As each
+A series of pipelines to analyse RNAseq datasets of different kinds have been developed. As each
 RNAseq experiment has subtle differences in experimental design or library construction, developing
 a one-size-fits-all pipeline is not possible. Thus, a series of pipelines to encompass a variety of
 RNAseq experiments have been created. These pipelines are two-step pipelines; step one takes raw
@@ -320,14 +363,18 @@ de\_pairwise} pipeline are then produced.
 
 There was a highly significant difference between the computational cost of four pipelines
 (\texttt{\justify aln\_subread}, \texttt{\justify aln\_tophat}, \texttt{\justify aln\_tophat\_htseq}
-and \texttt{\justify \justify aln\_subread\_htseq}). Using an ANOVA model with Tukey's HSD post-hoc
-testing, significant differences in ``real'' time, ``user'' time and ``sys'' time were uncovered. As
-is shown graphically in \autoref{fig:br-res-pltimes}, the \texttt{\justify aln\_subread} is the
-fastest, taking an average of 3.48 $\pm$ 0.10 minutes to complete, followed by the \texttt{\justify
-aln\_subread\_htseq} pipeline, which took 4.88 $\pm$ 0.07 minutes. The \texttt{\justify aln\_tophat}
-and \texttt{\justify aln\_tophat\_htseq} were almost 400\% slower, taking 12.9 $\pm$ 0.12 and 13.77
-$\pm$ 0.07 minutes of real time respectively. The computational cost of user code and kernel
-processes in CPU-minutes followed similar patterns, as detailed in \autoref{fig:br-res-pltimes}.
+and \texttt{\justify \justify aln\_subread\_htseq}). Three measures of computational cost were
+measured: ``real'' time, ``user'' time and ``sys'' time. The ``real'' time describes the time each
+pipeline took to complete. The ``user'' and ``sys'' time describe the CPU time spent running user
+code and performing operating system calls on behalf of user code respectively. Using an ANOVA
+model with Tukey's HSD post-hoc testing, significant differences in ``real'' time, ``user'' time and
+``sys'' time were uncovered. As is shown graphically in \autoref{fig:br-res-pltimes}, the
+\texttt{\justify aln\_subread} is the fastest, taking an average of 3.48 $\pm$ 0.10 minutes to
+complete, followed by the \texttt{\justify aln\_subread\_htseq} pipeline, which took 4.88 $\pm$ 0.07
+minutes. The \texttt{\justify aln\_tophat} and \texttt{\justify aln\_tophat\_htseq} were almost
+400\% slower, taking 12.9 $\pm$ 0.12 and 13.77 $\pm$ 0.07 minutes of real time respectively. The
+computational cost of user code and kernel processes in CPU-minutes followed similar patterns, as
+detailed in \autoref{fig:br-res-pltimes}.
 
 \begin{figure}[p]
   \begin{center}
@@ -335,7 +382,7 @@ processes in CPU-minutes followed similar patterns, as detailed in \autoref{fig:
   \end{center}
   \caption{Computational cost of the \texttt{\justify aln\_subread}, \texttt{\justify aln\_tophat},
   \texttt{\justify aln\_tophat\_htseq} and \texttt{\justify aln\_subread\_htseq} RNAseq analysis pipelines differs
-    significantly. The ``real'' computational cost describes the number of seconds each pipeline took to
+    significantly. The ``real'' computational cost describes the number of minutes each pipeline took to
     complete. The ``user'' and ``sys'' metrics describe the number of CPU-minutes spent running user
     code (i.e. the pipeline components) and performing kernel operations on behalf of user code (e.g.
     input/output, memory (de)allocation and other system calls) for each pipeline execution.}
@@ -346,20 +393,23 @@ Quantification of gene expression by the \texttt{\justify aln\_subread} pipeline
 that obtained by the \texttt{\justify aln\_tophat} pipeline. As shown in
 \autoref{fig:br-res-srvsthcount}, there is a very tight relationship between counts produced by the
 Tophat2 and subread aligners. The slope of $log(n +1)$ transformed raw count data when the model
-$tophat counts ~ subread counts$ is fitted is 0.994, with p < 2e-16 and $R^2$ of 0.993. 
+$tophat counts \sim subread counts$ is fitted is 0.994, with p < 2e-16 and $R^2$ of 0.993. This
+indicates that there is approximately 0.7\% statistical variation between these aligners.
 
 \begin{figure}[p]
   \begin{center}
-    \includegraphics{img/br-res-srvsthcount.pdf}
+    \includegraphics[width=\textwidth]{img/br-res-srvsthcount.pdf}
   \end{center}
-  \caption{A very tight relationship is observed between count data generated by the tophat and
-  subread aligners.}
+  \caption{Comparison of tag-wise counts derived from the Tophat2 and subread short read aligners. A
+    tight relationship is observed between cound data from these aligners. If aligner had no effect,
+    all points (tags) would fall exactly on the $y=x$ line. There are off-diagnonal points, however
+    these occur mostly at low expression levels and are likely due to the required log
+    transformation of count data.}
   \label{fig:br-res-srvsthcount}
 \end{figure}
 
 
-%The number of genes called differentitially expressed 
-
+%The number of genes called differentitially expressed
 
 \todo{write up old comparison R document into thesis document}
 
@@ -369,7 +419,7 @@ $tophat counts ~ subread counts$ is fitted is 0.994, with p < 2e-16 and $R^2$ of
 \label{subsec:br-res-coverage}
 
 Sequencing is expensive, and multiplexing many samples per lane is important for high-throughput
-transcriptomics. However, in RNAseq, an optimality exists between sequencing depth per sample and
+transcriptomics. However, in RNAseq, an optimum exists between sequencing depth per sample and
 statistical power: as the number of reads per sample decreased, the number of genes called as
 differentially expressed decreased in a non-linear fashion (\autoref{fig:br-res-detagsvscoverage}).
 Below 5 million reads, the number of genes called as differentially expressed reduces rapidly.
