@@ -157,45 +157,46 @@ somewhere - just need the reference.}
 
 \begin{figure}[p]
   \begin{center}
-    %\includegraphics{img/br-mth-pete317timecourse.png}
-    \includegraphics[width=\textwidth]{img/placeholder.png}
+    \includegraphics[width=\textwidth]{img/br-mth-pete317timecourse.pdf}
   \end{center}
-  \caption{Illustration of the RRGS timecourse. This figure was created by Peter Crisp, and is
+  \caption{Illustration of the RRGS timecourse. Whole plant samples were harvested in triplicate at
+    each indicated time-point along the excess light stress and recovery time-course. Two timepoints
+    after a 24 hour recovery period are not show. This figure was created by Peter Crisp, and is
     reproduced with his permission}
   \label{fig:br-mth-pete317timecourse}
 \end{figure}
-\todo{Pete: get \autoref{fig:br-mth-pete317timecourse} from pete, he said I can use one from his PEB slides.}
 
 \subsection{Development of an Improved Analysis Pipeline}
 \label{subsec:br-mth-pldev}
 
-Bioinformatic experiments were used to validate pipelines against the ``gold standard'' RNAseq analysis
-pipeline. In these experiments, programs selected through both literature review and searches of
-pre-publication software releases (e.g. software on \url{github.com}) were tested against a
-published best-practice pipeline \autocite{van_verk_rna-seq:_2013}. Specifically, the
-computational speed and efficiency, and the results obtained with these newer
-programs were compared to the analysis pipeline of \textcite{van_verk_rna-seq:_2013}. This enables
-the development of higher-performance analysis pipelines suitable to high throughput experiments,
-with no cost to the quality of results obtained.
+Bioinformatic experiments were used to validate pipelines against the ``gold standard'' RNAseq
+analysis pipeline. In these experiments, programs selected through both literature review and
+searches of pre-publication software releases (e.g. software on \url{github.com}) were tested
+against a published best-practice pipeline \autocite{van_verk_rna-seq:_2013}. Specifically, the
+computational speed and efficiency, and the results obtained with these newer programs were compared
+to the analysis pipeline of \textcite{van_verk_rna-seq:_2013}. This enables the development of
+higher-performance analysis pipelines suitable to high throughput experiments, with no cost to the
+quality of results obtained.
 
 Comparisons between the computational cost of four pipelines were conducted using a sub-sampled
-dataset. To demonstrate the improved performance of the \texttt{\justify aln\_subread} pipeline, it was
-compared to the \texttt{\justify aln\_tophat}, \texttt{\justify aln\_tophat\_htseq} and \texttt{\justify aln\_subread\_htseq}
-pipelines. The \texttt{\justify time} UNIX command was used to summarise the computational cost of these four
-pipelines across five identical, independent, non-simultaneous runs. Four time-points of the RRGS
-timecourse dataset were sub-sampled to 500,000 reads by running \texttt{\justify seqtk sample -s 10 500000}
-on both forward and reverse read files, which extracts 500000 random read pairs preserving read
-pairing. An ANOVA analysis was performed to find significant differences in runtime and CPU
-utilisation between analysis pipelines (see \autoref{subsec:appendix-misccode-pltimes}).
+dataset. To demonstrate the improved performance of the \texttt{\justify aln\_subread} pipeline, it
+was compared to the \texttt{\justify aln\_tophat}, \texttt{\justify aln\_tophat\_htseq} and
+\texttt{\justify aln\_subread\_htseq} pipelines. The \texttt{\justify time} UNIX command was used to
+summarise the computational cost of these four pipelines across five identical, independent,
+non-simultaneous runs. Four time-points of the RRGS timecourse dataset were sub-sampled to 500,000
+reads by running \texttt{\justify seqtk sample -s 10 500000} on both forward and reverse read files,
+which extracts 500000 random read pairs preserving read pairing. An ANOVA analysis was performed to
+find significant differences in runtime and CPU utilisation between analysis pipelines (see
+\autoref{subsec:appendix-misccode-pltimes}).
 
-To ensure that the \texttt{\justify subread} aligner and \texttt{\justify featureCounts} produced comparable results
-to the analysis pipeline of \textcite{van_verk_rna-seq:_2013}, several diagnostic measures were
-used. Firstly, the percentage of reads mapped to the genome, and to protein coding loci within the
-genome was computed and compared. Then, sample-wise correlations between tag-wise counts calculated by
-each pipeline were calculated. Finally, genes called differentially expressed by each pipeline were
-compared. These measures allow verification of pipeline performance at three major stages in an
-analysis pipeline: alignment of short reads to a genome, tag-wise count summarisation, and statiscial
-testing for differential expression
+To ensure that the \texttt{\justify subread} aligner and \texttt{\justify featureCounts} produced
+comparable results to the analysis pipeline of \textcite{van_verk_rna-seq:_2013}, several diagnostic
+measures were used. Firstly, the percentage of reads mapped to the genome, and to protein coding
+loci within the genome was computed and compared. Then, sample-wise correlations between tag-wise
+counts calculated by each pipeline were calculated. Finally, genes called differentially expressed
+by each pipeline were compared. These measures allow verification of pipeline performance at three
+major stages in an analysis pipeline: alignment of short reads to a genome, tag-wise count
+summarisation, and statiscial testing for differential expression
 
 
 \subsection{Measuring the Effect of Sequencing Depth on Analysis of Differential Expression}
@@ -203,11 +204,11 @@ testing for differential expression
 
 Six samples from the RRGS-Timecourse experiment (see \autoref{subsec:br-mth-datasets}) were
 sub-sampled to allow investigation of the effect of sequencing depth on statistical power. To do so,
-the command \texttt{\justify seqtk sample -s 10 $X$} was run on each pair of read files for these six samples,
-with $X$ (number of reads to sample) set to 1000, 10000, 20000, 50000, 100000, 200000, 500000,
-1000000, 2000000, 5000000 and 10000000. This sub-sampled dataset allows for titration of the optimal
-sequencing depth (or multiplexing level) for high throughput experiments, balancing sequencing cost
-with statistical power.
+the command \texttt{\justify seqtk sample -s 10 $X$} was run on each pair of read files for these
+six samples, with $X$ (number of reads to sample) set to 1000, 10000, 20000, 50000, 100000, 200000,
+500000, 1000000, 2000000, 5000000 and 10000000. This sub-sampled dataset allows for titration of the
+optimal sequencing depth (or multiplexing level) for high throughput experiments, balancing
+sequencing cost with statistical power.
 
 For each subsampled dataset, the \texttt{\justify km\_subread} pipeline followed by the
 \texttt{\justify de\_pairwise} pipeline were applied  to find differential expression between the
