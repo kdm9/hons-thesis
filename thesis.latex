@@ -143,23 +143,24 @@
 \end{abstract}
 
 \tableofcontents
-
 \todototoc
-\listoftodos
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%                          Todo list                                %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%                        Acknoweledgements                          %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Todo List}
 
-\todo{Tim: images from Col, Cvi, Ler from all timepoints}
-\todo{Keng: Exact details of planting times}
+\clearpage
+\section*{Acknoweledgements}
+Thanks everyone!
+\todo{write Acknoweledgements}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                          Imported Chapters                        %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{intro.latex}
+\clearpage
+\input{todo.latex}
+
 
 \input{dynamiccond.latex}
 

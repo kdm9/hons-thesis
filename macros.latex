@@ -1,11 +1,13 @@
 
 % shortcuts for extensions
 \newcommand{\supn}{supernatant}
-\newcommand{\ul}{$\mu\,L$}
-\newcommand{\uE}{$\mu$\,mol photons $m^{-2}$\,$s^{-1}$}
-\newcommand{\degc}{$^{\circ}$C~}
+\newcommand{\ul}{~$\mu\,L$}
+\newcommand{\uE}{\,$\mu$~mol photons $m^{-2}$\,$s^{-1}$}
+\newcommand{\uEdens}{\,$\mu$\,mol photons $m^{-2}$\,$s^{-1} nm^{-1}$ per total $\mu$\,mol photons $m^{-2}$\,$s^{-1}$}
+%\newcommand{\uEdens}{~$\mu mol photons ^2 m^{-4} s^{-2} nm^{-1}$}
+\newcommand{\degc}{~$^{\circ}$C }
 \newcommand{\liqn}{liquid N$_2$}
-
+\newcommand{\ngul}{~$ng \mu\,L^{-1}$ }
 \definecolor{bg}{rgb}{0.95,0.95,0.95}
 
 
@@ -43,3 +45,16 @@
   \end{table}
 }
 
+
+% stuff stolen from stack exchange
+
+% make \texttt{} wrap nicely
+% http://tex.stackexchange.com/questions/299/how-to-get-long-texttt-sections-to-break
+% see also: http://texblog.net/latex-archive/plaintex/full-justification-with-typewriter-font/
+\newcommand*\justify{%
+  \fontdimen2\font=3.91663pt% interword space
+  \fontdimen3\font=1.95831pt% interword stretch
+  \fontdimen4\font=1.30554pt% interword shrink
+  \fontdimen7\font=1.30554pt% extra space
+  \hyphenchar\font=`\-% allowing hyphenation
+}
