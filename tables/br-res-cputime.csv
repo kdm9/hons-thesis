@@ -1,0 +1,4 @@
+Pipeline,real,user,sys
+aln+AFwAXw-subread,116,596,11
+aln+AFwAXw-tophat,245,1420,19
+aln+AFwAXw-subread+AFwAXw-htseq,128,656,10
