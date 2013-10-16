@@ -40,6 +40,12 @@ genome size, I hypothesise that the optimal sequencing depth for \textit{Arabido
 smaller, specifically between 2 and 5 million reads, or between 48 and 96 libraries per Illumina
 HiSeq 2500 sequencing lane (which yield 200 million reads apiece).
 
+KEVIN, CONRAD AND OTHER GOOD STATS FOLKS HAVE LOOKED INTO THIS, BECAUSE OF BIOLOGICAL VARIATION THE OPTIMUM IS
+REALLY TO DO AS MANY LINES AS YOU CAN AFFORD, BARCODE EACH, THEN SEQUENCE THE POOL WITH WHATEVER $$ YOU HAVE LEFT, PERHAPS $5K FOR EACH PART
+FOR EXAMPLE 2 LINES AT 100X = THE SAME READS AS 200 LINES AT 1 X, BUT THE COVERAGE IS SPREAD ACROSS SAMPLES REDUCING BIOLOGICAL ERROR.
+EVEN IF A GENE HAS ONLY 100 READS TOTAL. YOU WOULD BE MORE CONFIDENT IF THOSE READS CAME UP MOSTLY IN ONE GENOTYPE AND NOT ANOTHER
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                         Methods                                   %%%%%%%%%%%%%
