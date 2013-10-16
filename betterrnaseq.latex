@@ -8,6 +8,14 @@
 
 
 \section{Background, Aims and Hypotheses}
+To gain biological meaning from raw RNAseq data, an analysis pipeline must be employed. In this
+context, a pipeline is series of software components which manipulate in succession a dataset to
+obtain a biologically relevant result. Best practice pipelines for RNAseq analysis exist, but are
+often slow and almost ubiquitously cumbersome to manipulate to suit the idiosyncrasies of each
+experiment. Thus, an aim in this chapter of my thesis is to create a framework allowing easy
+creation of pipelines by non-expert bioinformaticians with limited programming experience, and to
+use this framework to create high-performance pipelines suited to analysis of high-throughput RNAseq
+experiments.
 
 A wealth of technical and methodological literature exists on the topic of RNAseq. This chapter
 identifies and implements recent advances in RNAseq molecular and data analysis methods with
@@ -19,16 +27,7 @@ enables rapid, low-cost and high throughput RNAseq library preparation. I hypoth
 implementation of this protocol would be possible, enabling high-throughput RNAseq studies such as
 expression QTL mapping.
 
-To gain biological meaning from raw RNAseq data, an analysis pipeline must be employed. In this
-context, a pipeline is series of software components which manipulate in succession a dataset to
-obtain a biologically relevant result. Best practice pipelines for RNAseq analysis exist, but are
-often slow and almost ubiquitously cumbersome to manipulate to suit the idiosyncrasies of each
-experiment. Thus, a second aim in this chapter of my thesis is to create a framework allowing easy
-creation of pipelines by non-expert bioinformaticians with limited programming experience, and to
-use this framework to create high-performance pipelines suited to analysis of high-throughput RNAseq
-experiments.
-
-Finally, I aim to conduct an \textit{in silico} experiment to test the effect of sequencing depth on
+Finally, I conducted an \textit{in silico} experiment to test the effect of sequencing depth on
 statistical power of RNAseq experiments. Despite the rapid and continuing reduction in the cost of
 high throughput sequencing, it is still a very large component of the overall cost of RNAseq
 experiments. This is particularly evident with regards to high throughput experiments, and is often
@@ -53,8 +52,8 @@ HiSeq 2500 sequencing lane (which yield 200 million reads apiece).
 
 \todo{lots of details missing in this section}
 
-I disclaim that these experiments were conducted in collaboration with Dr. Norman Warthmann, who
-performed the testing of bell adaptors and assisted in many ways with the remainder of this section.
+This work was conducted in collaboration with Dr. Norman Warthmann, who
+performed the testing of bell adaptors and assisted with this section.
 
 To increase the throughput and the decrease cost of Illumina RNAseq sequencing library preparation,
 I attempted to implement the RNAseq library preparation protocol of
@@ -128,7 +127,7 @@ Biology, ANU, created these datasets, and authorised their use in this thesis.
 
 The Rapid Recovery Gene Silencing excess light time-course experiment (hereafter referred to as the
 RRGS time-course) consists of samples taken in triplicate from an eleven-point excess light stress
-and recovery time-course. \textit{A. thaliana} ecotype Col-0 were grown for 3 weeks under standard
+and recovery time-course. \textit{A. thaliana} reference accession Col-0 were grown for 3 weeks under standard
 laboratory growth conditions ($\approx$ 150 \uE light intensity, 12 hour photoperiod, 21 \degc
 daytime temperature, 21 \degc nighttime temperature). Whole rosette samples were taken before any
 treatment, after 30, 60 and 120 minutes of 8x excess light (1000 \uE, unfiltered light from a sodium
@@ -145,7 +144,7 @@ experiment, allowing development of bioinformatic protocols specific to RNAseq d
 experiments like these.
 \todo{part numbers etc}
 
-A second dataset, the excess light and drought (EL/D) dataset, was used as a second dataset.  This
+A second dataset, the excess light and drought (EL/D) dataset, was also used. This
 dataset consists of RNAseq libraries sampled in triplicate from plants grown to three week of age
 under standard laboratory growth conditions, per the RRGS timecourse experiment above. Plants were
 harvested before any stress, after 1 hour of 8x excess light, and after one week of drought stress,
@@ -193,6 +192,7 @@ To ensure that the \texttt{\justify subread} aligner and \texttt{\justify featur
 comparable results to the analysis pipeline of \textcite{van_verk_rna-seq:_2013}, several diagnostic
 measures were used. Firstly, the percentage of reads mapped to the genome, and to protein coding
 loci within the genome was computed and compared. Then, sample-wise correlations between tag-wise
+\todo{DEFINE TAG-WISE}
 counts calculated by each pipeline were calculated. Finally, genes called differentially expressed
 by each pipeline were compared. These measures allow verification of pipeline performance at three
 major stages in an analysis pipeline: alignment of short reads to a genome, tag-wise count
