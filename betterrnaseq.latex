@@ -43,7 +43,10 @@ HiSeq 2500 sequencing lane (which yield 200 million reads apiece).
 KEVIN, CONRAD AND OTHER GOOD STATS FOLKS HAVE LOOKED INTO THIS, BECAUSE OF BIOLOGICAL VARIATION THE OPTIMUM IS
 REALLY TO DO AS MANY LINES AS YOU CAN AFFORD, BARCODE EACH, THEN SEQUENCE THE POOL WITH WHATEVER $$ YOU HAVE LEFT, PERHAPS $5K FOR EACH PART
 FOR EXAMPLE 2 LINES AT 100X = THE SAME READS AS 200 LINES AT 1 X, BUT THE COVERAGE IS SPREAD ACROSS SAMPLES REDUCING BIOLOGICAL ERROR.
-EVEN IF A GENE HAS ONLY 100 READS TOTAL. YOU WOULD BE MORE CONFIDENT IF THOSE READS CAME UP MOSTLY IN ONE GENOTYPE AND NOT ANOTHER
+EVEN IF A GENE HAS ONLY 100 READS TOTAL. YOU WOULD BE MORE CONFIDENT IF THOSE READS CAME UP MOSTLY IN ONE GENOTYPE AND NOT ANOTHER.
+
+PERHAPS WHAT YOU CAN SAY IS GIVEN SO MANY SAMPLES WHO MUCH SEQ IS WORTH DOING BEFORE DIMINISHING RETURNS OF MORE COST WHEN
+BIOLOGICAL ERROR DOMINATES.
 
 
 
@@ -197,7 +200,7 @@ find significant differences in runtime and CPU utilisation between analysis pip
 To ensure that the \texttt{\justify subread} aligner and \texttt{\justify featureCounts} produced
 comparable results to the analysis pipeline of \textcite{van_verk_rna-seq:_2013}, several diagnostic
 measures were used. Firstly, the percentage of reads mapped to the genome, and to protein coding
-loci within the genome was computed and compared. Then, sample-wise correlations between tag-wise
+loci within the genome was computed and compared. Then, sample-wise correlations between tag-wise DEFINE TAG-WISE
 counts calculated by each pipeline were calculated. Finally, genes called differentially expressed
 by each pipeline were compared. These measures allow verification of pipeline performance at three
 major stages in an analysis pipeline: alignment of short reads to a genome, tag-wise count
