@@ -1,13 +1,13 @@
 
 % shortcuts for extensions
 \newcommand{\supn}{supernatant}
-\newcommand{\ul}{~$\mu\,L$}
+\newcommand{\ul}{\,$\mu\,L$}
 \newcommand{\uE}{\,$\mu$~mol photons $m^{-2}$\,$s^{-1}$}
 \newcommand{\uEdens}{\,$\mu$\,mol photons $m^{-2}$\,$s^{-1} nm^{-1}$ per total $\mu$\,mol photons $m^{-2}$\,$s^{-1}$}
 %\newcommand{\uEdens}{~$\mu mol photons ^2 m^{-4} s^{-2} nm^{-1}$}
-\newcommand{\degc}{~$^{\circ}$C }
-\newcommand{\liqn}{liquid N$_2$}
-\newcommand{\ngul}{~$ng \mu\,L^{-1}$ }
+\newcommand{\degc}{\,$^{\circ}$C }
+\newcommand{\liqn}{liquid N$_2$ }
+\newcommand{\ngul}{\,$ng \mu\,L^{-1}$ }
 \definecolor{bg}{rgb}{0.95,0.95,0.95}
 
 
