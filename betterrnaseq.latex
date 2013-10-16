@@ -58,8 +58,8 @@ EVEN IF A GENE HAS ONLY 100 READS TOTAL. YOU WOULD BE MORE CONFIDENT IF THOSE RE
 
 \todo{lots of details missing in this section}
 
-I disclaim that these experiments were conducted in collaboration with Dr. Norman Warthmann, who
-performed the testing of bell adaptors and assisted in many ways with the remainder of this section.
+This work was conducted in collaboration with Dr. Norman Warthmann, who
+performed the testing of bell adaptors and assisted with this section.
 
 To increase the throughput and the decrease cost of Illumina RNAseq sequencing library preparation,
 I attempted to implement the RNAseq library preparation protocol of
@@ -128,12 +128,12 @@ Uracil-Specific Excision Reagent (USER) enzyme mix.
 
 \todo{check details of this section from Pete}
 RNAseq datasets from collaborators were used both as trial datasets and external references in
-this thesis. I unambiguously disclaim that Peter Crisp, of the Pogson lab, Research School of
+this thesis. I worked with Peter Crisp, of the Pogson lab, Research School of
 Biology, ANU, created these datasets, and authorised their use in this thesis.
 
 The Rapid Recovery Gene Silencing excess light time-course experiment (hereafter referred to as the
 RRGS time-course) consists of samples taken in triplicate from an eleven-point excess light stress
-and recovery time-course. \textit{A. thaliana} ecotype Col-0 were grown for 3 weeks under standard
+and recovery time-course. \textit{A. thaliana} reference accession Col-0 were grown for 3 weeks under standard
 laboratory growth conditions ($\approx$ 150 \uE light intensity, 12 hour photoperiod, 21 \degc
 daytime temperature, 21 \degc nighttime temperature). Whole rosette samples were taken before any
 treatment, after 30, 60 and 120 minutes of 8x excess light (1000 \uE, unfiltered light from a sodium
@@ -150,7 +150,7 @@ experiment, allowing development of bioinformatic protocols specific to RNAseq d
 experiments like these.
 \todo{part numbers etc}
 
-A second dataset, the excess light and drought (EL/D) dataset, was used as a second dataset.  This
+A second dataset, the excess light and drought (EL/D) dataset, was alos used.  This
 dataset consists of RNAseq libraries sampled in triplicate from plants grown to three week of age
 under standard laboratory growth conditions, per the RRGS timecourse experiment above. Plants were
 harvested before any stress, after 1 hour of 8x excess light, and after one week of drought stress,
