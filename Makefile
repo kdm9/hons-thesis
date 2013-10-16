@@ -1,4 +1,4 @@
-COMPILER=lualatex -shell-escape
+COMPILER=lualatex -shell-escape -synctex=1
 BIB_COMPILER=biber
 LATEX_SRC=thesis.latex
 BIB_SRC=thesis.bib
