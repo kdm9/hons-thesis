@@ -1,4 +1,4 @@
-\chapter{Development of Improved Methodology for High-throughput RNAseq Experiments}
+\chapter{Improved Methodology for High-throughput RNAseq Experiments}
 \chaptermark{Improved RNAseq Methodology}
 \label{chap:br}
 
@@ -8,6 +8,9 @@
 
 
 \section{Background, Aims and Hypotheses}
+\todo{WHY: a pgf here expalaing this is a framework, and that it is generalisable, and that it aims
+to detect subtle differences in high throughput experiments}
+
 To gain biological meaning from raw RNAseq data, an analysis pipeline must be employed. In this
 context, a pipeline is series of software components which manipulate in succession a dataset to
 obtain a biologically relevant result. Best practice pipelines for RNAseq analysis exist, but are
