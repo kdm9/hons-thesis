@@ -3,6 +3,89 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Discussion}
+\label{chap:dis}
 
+
+\section{Novel Dynamic Growth Conditions}
+\label{sec:dis-dc}
+
+In creating dynamic growth condiitons, I aimed to combine some elements of the climates experienced by
+plants in nature with the reliability, reproducablity and convienience of laboratory growth
+conditions. This was largely successful.
+\begin{itemize}
+  \item reliablity - planned improvements
+  \item convenience
+\end{itemize}
+
+With regards to light quality, using multispectral LED arrays, we are able to approximate the almost flat specrtal density of
+sunlight more closely than is possible with other readily available lab light sources.
+\begin{itemize}
+  \item also non-ND shade
+  \item better lights
+  \item better control
+\end{itemize}
+
+In terms of local or regional climates, I postulate that the diurnal temperature and humidiy
+variation occurs similaly to that obsereved in nature. Obviously, plants experience \emph{weather},
+not climate, so these conditions cannot and are not being called ``natural''.
+\begin{itemize}
+  \item compare to BoM long term average stats
+\end{itemize}
+
+While the effect of altered light intensity on plants and their transcriptomes has been studied in
+depth, few authors have studied this under condtions similar to those to which plants are adapted.
+
+Many authors postulate ``cryptic phenotypes'', or phenotypes not observable under ``standard''
+conditions, may
+
+\begin{itemize}
+  \item the capability to create and run them
+  \item the similarity of those produced to reality (critical analysis)
+  \item their importance in finding cryptic phenotypes
+\end{itemize}
+
+
+\section{High throughput RNAseq Library Prep}
+
+\begin{itemize}
+  \item talk about why it didn't work
+  \item discuss how to get it working
+\end{itemize}
+
+
+\section{Bioinformatic pipeline}
+\begin{itemize}
+  \item How others were deficient (or non-optimal)
+  \item How is it better
+  \item what are it's limitations
+  \item How to make it better
+\end{itemize}
+
+
+\section{Discussion of Transcriptomics results}
+\begin{itemize}
+  \item Discuss similarity to previous Pogson datasets
+  \item Similarity to other stresses
+  \item effect of dynamic light
+  \item reasons for high variation
+\end{itemize}
+
+
+\section{Summary of data in context of how plants survive in nature}
+\begin{itemize}
+  \item Plants need to cope with many stresses at once
+  \item Mechanisms have evolved
+  \item dynamics conditions evoke these mechanisms
+  \item Cryptic phenotypes?
+\end{itemize}
+
+\section{Future Directions}
+\begin{itemize}
+  \item eQTL mapping
+  \item repeat study w/ Higher replication, better sampling
+  \item High throughput Phenomics
+  \item Better conditions?
+  \item Field transcriptomics
+\end{itemize}
 
 
