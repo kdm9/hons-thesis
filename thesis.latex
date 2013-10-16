@@ -7,8 +7,8 @@
   top=2cm,
   left=2cm,
   right=6cm,
+%  right=2cm,            % 2cm page margins, for final document
   bottom=2cm
-%  margin=2cm            % 2cm page margins, for final document
   ]{geometry}           % alter document geometry
 \usepackage{lscape}
 
