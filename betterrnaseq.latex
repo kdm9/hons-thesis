@@ -204,7 +204,7 @@ loci within the genome was computed and compared. Then, sample-wise correlations
 counts calculated by each pipeline were calculated. Finally, genes called differentially expressed
 by each pipeline were compared. These measures allow verification of pipeline performance at three
 major stages in an analysis pipeline: alignment of short reads to a genome, tag-wise count
-summarisation, and statiscial testing for differential expression
+summarisation, and statiscial testing for differential expression.
 
 
 \subsection{Measuring the Effect of Sequencing Depth on Analysis of Differential Expression}
@@ -297,7 +297,7 @@ underlying program. Given these three pieces of information, the wrapper script 
 underlying program, automatically detecting input files from the input folder, and automatically
 handling different experimental features such as single vs paired-end sequence data. Wrapper scripts
 abstract away the complexity of command syntax, increasing readability and reproducibility of
-results.
+results, thus making them usable by a larger community of basic biologists.
 
 Pipeline scripts describe processes of analysis of RNAseq data. They combine wrapped programs
 together to perform an analysis specific to the process or dataset in question. Several generic and
