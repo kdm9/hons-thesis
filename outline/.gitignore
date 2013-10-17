@@ -1,0 +1,18 @@
+*.swp
+*.bak
+.~*# # OpenOffice temp files
+*.pdf
+
+# Tex temps
+*.bcf
+*.log
+*.aux
+*.dvi
+*-blx.bib
+*.bbl
+*.blg
+*.run.xml
+*.nav
+*.snm
+*.out
+*.toc
