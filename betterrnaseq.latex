@@ -55,8 +55,8 @@ HiSeq 2500 sequencing lane (which yield 200 million reads apiece).
 
 \todo{lots of details missing in this section}
 
-This work was conducted in collaboration with Dr. Norman Warthmann, who
-performed the testing of bell adaptors and assisted with this section.
+This work was conducted in collaboration with Dr. Norman Warthmann, who performed the testing of
+bell adaptors and assisted with this section.
 
 To increase the throughput and the decrease cost of Illumina RNAseq sequencing library preparation,
 I attempted to implement the RNAseq library preparation protocol of
