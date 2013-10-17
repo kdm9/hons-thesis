@@ -449,8 +449,9 @@ when compared to the \texttt{\justify aln\_tophat} pipeline.}
 \subsection{Substantial reduction of RNAseq coverage is possible}
 \label{subsec:br-res-coverage}
 
-Sequencing is expensive, and multiplexing many samples per lane is important for high-throughput
-transcriptomics. However, in RNAseq, an optimum exists between sequencing depth per sample and
+Sequencing capacity is high and costs have stabalized. Multiplexing many samples per lane is important
+for high-throughput transcriptomics to account for biological error and investigate specificity to genetic background and treatment effects.
+However, when samples are already in hand and ready for RNAseq, an trade exists between sequencing depth per sample and
 statistical power: as the number of reads per sample decreased, the number of genes called as
 differentially expressed decreased in a non-linear fashion (\autoref{fig:br-res-detagsvscoverage}).
 Below 5 million reads, the number of genes called as differentially expressed reduces rapidly.
