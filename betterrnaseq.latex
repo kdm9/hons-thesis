@@ -8,8 +8,8 @@
 
 
 \section{Background, Aims and Hypotheses}
-\todo{WHY: a pgf here expalaing this is a framework, and that it is generalisable, and that it aims
-to detect subtle differences in high throughput experiments}
+%\todo{WHY: a pgf here expalaing this is a framework, and that it is generalisable, and that it aims
+%to detect subtle differences in high throughput experiments}
 
 As high-throughput, large-scale experiments such as QTL mapping and Genome Wide Association Studies
 (GWAS) become more prevalent, increasingly subtle biological contrasts are being examined. RNAseq is
@@ -165,7 +165,6 @@ growth conditions.
 \todo{need protocol used for exp217 from Pete: this used the stranded protocol which is published
 somewhere - just need the reference.}
 
-
 \begin{figure}[p]
   \begin{center}
     \includegraphics[width=\textwidth]{img/br-mth-pete317timecourse.pdf}
@@ -204,11 +203,11 @@ To ensure that the \texttt{\justify subread} aligner and \texttt{\justify featur
 comparable results to the analysis pipeline of \textcite{van_verk_rna-seq:_2013}, several diagnostic
 measures were used. Firstly, the percentage of reads mapped to the genome, and to protein coding
 loci within the genome was computed and compared. Then, sample-wise correlations between tag-wise
-\todo{DEFINE TAG-WISE}
 counts calculated by each pipeline were calculated. Finally, genes called differentially expressed
 by each pipeline were compared. These measures allow verification of pipeline performance at three
 major stages in an analysis pipeline: alignment of short reads to a genome, tag-wise count
 summarisation, and statiscial testing for differential expression
+\todo{DEFINE TAG-WISE}
 
 
 \subsection{Measuring the Effect of Sequencing Depth on Analysis of Differential Expression}
@@ -442,10 +441,9 @@ is able to map a slightly higher percentage of reads to both the genome and to t
 when compared to the \texttt{\justify aln\_tophat} pipeline.}
 
 
-
 %The number of genes called differentitially expressed
 
-\todo{will be done Wednesday, found bug and needs to re-calculate}
+\todo{Add paragraph on edgeR analysis looking for DE between subread and tophat}
 
 \subsection{Substantial reduction of RNAseq coverage is possible}
 \label{subsec:br-res-coverage}
