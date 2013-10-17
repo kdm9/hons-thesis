@@ -161,6 +161,7 @@ Thanks everyone!
 \clearpage
 \input{todo.latex}
 
+\input{intro.latex}
 
 \input{dynamiccond.latex}
 
