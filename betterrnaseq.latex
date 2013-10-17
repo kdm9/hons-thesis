@@ -447,18 +447,22 @@ when compared to the \texttt{\justify aln\_tophat} pipeline.}
 \label{subsec:br-res-coverage}
 
 Sequencing capacity is high and costs have stabalized. Multiplexing many samples per lane is important
-for high-throughput transcriptomics to account for biological error and investigate specificity to genetic background and treatment effects.
-However, when samples are already in hand and ready for RNAseq, an trade exists between sequencing depth per sample and
-statistical power: as the number of reads per sample decreased, the number of genes called as
-differentially expressed decreased in a non-linear fashion (\autoref{fig:br-res-detagsvscoverage}).
-Below 5 million reads, the number of genes called as differentially expressed reduces rapidly.
+for high-throughput transcriptomics to account for biological error and to investigate specificity of gene expression variation 
+to genetic background and multiple treatment effects.
+However, when samples are already in hand and ready for RNAseq,
+there are diminishing returns to improved statistical power from additional sequencing.
+The number of genes called as
+differentially expressed increases in a non-linear fashion with sequence coverage (\autoref{fig:br-res-detagsvscoverage}).
+Below a lower limit, 5 million reads, the number of genes called as differentially expressed reduces rapidly.
 Additionally, the median tag-wise mean log expression reduces rapidly below approximately 1 million
 reads, indicating that at very low coverage, lowly expressed genes begin to not be detected at all
 (\autoref{fig:br-res-medianexpvscoverage}. Finally, the common biological coefficient of variation,
-which indicates how variable a dataset is a whole, increases as sequencing depth decreases
+which indicates how variable a dataset is a whole, increases as sequencing depth decreases due to poison noise.
 (\autoref{fig:br-res-bcvvscoverage} and Appendix \autoref{apx-plots-bcvcoverage}). For the model
 system used in this experiment, I would recommend an optimal sequencing depth of approximately 5
-million reads (or read pairs) to balance statistical power against sequencing cost.
+million reads (or read pairs) to balance statistical power against additional sequencing cost. With a larger budget 
+more biologial replicates and/or critical treatments should be included before extra sequencing is performed. 
+These results have important implications for experimental design of current and future experiments underway.
 
 \begin{figure}[p]
   \begin{center}
