@@ -309,6 +309,7 @@ RNAseq experiments have been created. These pipelines are two-step pipelines; st
 sequence reads, and produces summarised gene-wise counts. Step two applies statistical normalisation
 techniques and tests for differential expression. When applied combinatorially, these pipelines
 allow for different experimental designs to be analysed.
+\todo{describe read filtering - low coverage and rRNA}
 
 \subsubsection{The \texttt{\justify aln\_subread} pipeline}
 \label{subsubsec:br-res-alnsubread}
