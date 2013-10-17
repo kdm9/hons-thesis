@@ -11,6 +11,15 @@
 \todo{WHY: a pgf here expalaing this is a framework, and that it is generalisable, and that it aims
 to detect subtle differences in high throughput experiments}
 
+As high-throughput, large-scale experiments such as QTL mapping and Genome Wide Association Studies
+(GWAS) become more prevalent, increasingly subtle biological contrasts are being examined. RNAseq is
+an incredbly senstive tool to assay suble changes in, for example, plant growth environment or
+subtle genetic variation. Typically, RNAseq molecular and analytic methods have been developed to
+investigate stark biological comparisons, such as comparison of heathy and disesed or mutatnt and
+wild-type tissues or individuals, and are often too time consuming for use in large scale
+experiments. In order to create analyse these large scale datasets, updated molecular and analysis
+methodology must be used.
+
 To gain biological meaning from raw RNAseq data, an analysis pipeline must be employed. In this
 context, a pipeline is series of software components which manipulate in succession a dataset to
 obtain a biologically relevant result. Best practice pipelines for RNAseq analysis exist, but are
