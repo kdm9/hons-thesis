@@ -318,10 +318,10 @@ allow for different experimental designs to be analysed.
 \subsubsection{The \texttt{\justify aln\_subread} pipeline}
 \label{subsubsec:br-res-alnsubread}
 This pipeline is built around the \texttt{\justify subread} aligner, a very fast RNAseq-compatible short read
-aligner. Firstly, quality of sequencing data is checked using the \texttt{\justify fastqc} program,
+aligner of expressed RNA sequence to a reference genome. Firstly, quality of sequencing data is checked using the \texttt{\justify fastqc} program,
 sequencing adaptors are removed with \texttt{\justify scythe}, and \texttt{\justify seqtk} remove low quality
 sequences, before the quality is again checked using \texttt{\justify fastqc}. The \texttt{\justify subread} aligner
-then aligns reads to the TAIR10 \textit{A. thaliana} genome, accounting for splicing. The resulting
+then aligns reads to the current TAIR10 \textit{A. thaliana} reference genome, accounting for alternative exon splicing. The resulting
 SAM file is converted to the BAM format, sorted and indexed, as required by some downstream programs
 (e.g. the \texttt{\justify IGV} genome browser). Gene expression is then summarised gene-wise by counting the
 number of reads which align to genic loci with \texttt{\justify featureCounts}, completing this section of
@@ -338,11 +338,11 @@ aln\_subjunc} and \texttt{\justify aln\_tophat} are identical to the \texttt{\ju
 pipeline, aside from their use of the \texttt{\justify subjunc} and \texttt{\justify Tophat2}
 aligners respectively, in place of the \texttt{\justify subread} aligner, allowing study of
 alternative splicing. However, this \textit{de novo} detection of splicing comes at a performance
-cost, and is not necessary for simple quantitation of gene expression.
+cost, and is not necessary for simple quantitation of gene expression. Splicing was not further analysed.
 
 \subsubsection{\texttt{\justify de\_pairwise}}
 \label{subsubsec:br-res-depairwise}
-Where the experimental design is simple, statistical tests can be performed pairwise between
+For paired experimental designs, statistical tests can be performed pairwise between
 samples. To this end, the \texttt{\justify de\_pairwise} pipeline implements these tests using the
 \texttt{\justify edgeR} R package. This pipeline first reads count files into a \texttt{\justify
 DGEList} object, then normalises counts using the TMM normalisation method of
@@ -354,15 +354,15 @@ pairwise between groups described in the keyfile, from data in this \texttt{\jus
 \texttt{\justify exactTest}. This creates a \texttt{\justify list()} of \texttt{\justify DGEExact}
 objects, from which tables of differential expression and diagnostic plots can be created. A plot
 showing the relationship between the tag-wise Biological Coefficient of Variation (BCV) and tag
-expression.
+expression level aims to show that variation is largely independent of expression level.
 
 \subsubsection{\texttt{\justify de\_glm}}
 \label{subsubsec:br-res-deglm}
-If the experimental design is not simplistic, for example if multiple experimental factors
-(variables such as growth condition, treatment, block, or genotype) exist, pairwise analysis is
+If the experimental design is multifactorial, for example if experimental factors such as starting growth condition,
+treatment, genotype, and replicated block exist, pairwise analysis is
 inadequate. Thus, the more statistically complex Generalised Linear Model based hypothesis testing
 functions of \texttt{\justify edgeR} are required. This pipeline takes a keyfile describing the
-experimental design as above pipelines do, however it takes and additional R script which describes
+experimental design as the above pipelines do, however it takes and additional R script which describes
 the statistical model to be fitted, and contrasts within this model to be tested for differential
 expression. Tag-wise read counts are normalised and dispersions calculated with the GLM-based
 analogous of the functions used to do so in the \texttt{\justify de\_pairwise} pipeline. Then, a
@@ -374,7 +374,7 @@ de\_pairwise} pipeline are then produced.
 \subsection{Comparison of Differential Expression Pipelines}
 \label{subsec:br-res-plcommpare}
 
-There was a highly significant difference between the computational cost of four pipelines
+There was a large difference between the computational cost of four pipelines
 (\texttt{\justify aln\_subread}, \texttt{\justify aln\_tophat}, \texttt{\justify aln\_tophat\_htseq}
 and \texttt{\justify \justify aln\_subread\_htseq}). Three measures of computational cost were
 measured: ``real'' time, ``user'' time and ``sys'' time. The ``real'' time describes the time each
@@ -387,7 +387,8 @@ complete, followed by the \texttt{\justify aln\_subread\_htseq} pipeline, which 
 minutes. The \texttt{\justify aln\_tophat} and \texttt{\justify aln\_tophat\_htseq} were almost
 400\% slower, taking 12.9 $\pm$ 0.12 and 13.77 $\pm$ 0.07 minutes of real time respectively. The
 computational cost of user code and kernel processes in CPU-minutes followed similar patterns, as
-detailed in \autoref{fig:br-res-pltimes}.
+detailed in \autoref{fig:br-res-pltimes}.  The computational time can become a limitations in very large
+and heavility replicated data sets needed to identify important effects of environment on common genetic variation.
 
 \begin{figure}[p]
   \begin{center}
