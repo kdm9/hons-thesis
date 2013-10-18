@@ -38,3 +38,11 @@ Available at \url{https://github.com/kdmurray91/bioscripts/blob/master/solarcalc
 Statisical analysis of RNAseq pipeline computation cost.
 
 \url{https://github.com/kdmurray91/hons-thesis-stats/blob/master/pltimes/pltimes.Rmd}
+
+
+\subsection{qPCR analysis Code}
+\label{subsec:apx-code-qpcr}
+
+Statistical calculation of relative quantification and differential exression in qPCR datasets.
+
+Available at \url{https://github.com/kdmurray91/hons-thesis-stats/blob/master/qpcr/qpcr.Rnw}
