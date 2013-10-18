@@ -2,6 +2,10 @@
 % shortcuts for extensions
 \newcommand{\supn}{supernatant}
 \newcommand{\ul}{\,$\mu\,L$}
+\newcommand{\ug}{\,$\mu\,g$}
+\newcommand{\nM}{\,$n\,mol\,L^{-1}$}
+\newcommand{\uM}{\,$\mu\,mol\,L^{-1}$}
+\newcommand{\mM}{\,$m\,mol\,L^{-1}$}
 \newcommand{\uE}{\,$\mu$~mol photons $m^{-2}$\,$s^{-1}$}
 \newcommand{\uEdens}{\,$\mu$\,mol photons $m^{-2}$\,$s^{-1} nm^{-1}$ per total $\mu$\,mol photons $m^{-2}$\,$s^{-1}$}
 %\newcommand{\uEdens}{~$\mu mol photons ^2 m^{-4} s^{-2} nm^{-1}$}
