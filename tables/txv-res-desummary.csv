@@ -1,0 +1,9 @@
+Contrast,Definition,nDown,nUp
+Exc0-Suf0,Excess Light vs Sufficient Light,4,80
+Flu0-Suf0,Fluctuating Light vs Sufficient Light,154,217
+Exc0-Flu0,Excess Light vs Fluctuating Light,0,0
+Suf1-Suf0,Sufficient Light pre- vs post-hot excess light,11,140
+Exc1-Exc0,Excess Light pre- vs post-hot excess light,109,426
+Flu1-Flu0,Fluctuating Light pre- vs post-hot excess light,94,201
+Exc01h-Suf01h,Interaction between Fluctuating light and hot excess light treatment,0,0
+Flu01h-Suf01h,Interaction between Sufficient light and hot excess light treatment,1,1
