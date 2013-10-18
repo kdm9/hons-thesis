@@ -9,8 +9,21 @@
     to give links to github or similar (somewhere publically available).
 \end{itemize}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                          Todo list                                %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\section*{general notes and TODOs}
+\begin{itemize}
+  \item Ensure ``static growth conditions'' is use throughout, not standard GC
+  \item standardise emulate/mimic/simulate refernces when talking about diff between reality and
+    dynamic cond
+  \item get really anal about stats being reported: use d.f., stat value, and P.
+  \item Standardise the terminolgy around excess dynamic growth condition vs hot high light.
+  \item ensure all latex cross references are pointing somewhere logical.
+  \item backslash space after all macros
+\end{itemize}
 
 \listoftodos
