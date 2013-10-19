@@ -1,4 +1,13 @@
-\chapter{Transcriptome Variation Under Novel Growth Conditions}
+\chapter{Transcriptome Variation in Under Dynamic Growth Conditions}
+\chaptermark{Transcriptome Variation}
+\label{chap:txv}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%                     Background & Aims                             %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Background, Aims and Hypotheses}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -6,70 +15,529 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Methods}
+\todo{part numbers and small details like that are missing throughout this methods section}
+\todo{also need to write the qPCR methods section}
 
-\subsection{Growth cabinet control software}
+\subsection{Growth and Harvesting of \textit{Arabidopsis}}
 
-The Research School of Biology has acquired computer-controlled growth cabinets with multispectral
-LED light arrays. These cabinets are digitally controlled growth cabinets (Conviron PGC20 reach-in
-Chambers; Conviron, Winnepeg, Canada) equipt with multispectral LED growth lamps (Heliospectra Model L4A Series 10;
-Heliospectra AB, Sweden) and image-based phenomics systems (in-house solution). This suite of
-equiptment is computer controllable, however no interface to control these systems as a whole
-exists. Thus, I have created software which is able to control these cabinets, enabling the creation
-of dynamic growth conditions.
+Initially, I had aimed to conduct a experiment which mapped expression QTLs under dynamic growth
+conditions. Thus, 70 \textit{A. thaliana} Recombinant Inbred Intercross (RIX) lines were
+\todo{complete this section about RIX planting}
 
-The software I have created, \texttt{spcControl}, gives control commands to both growth cabinets and
-retrofitted LED light lamps. This software is implemented in the Python programming language, and
-allows conditions generated in a defined format by external software to be parsed, converted to
-control commands, and sent in concert to all components of the SpectralPhenoClimatron. It runs on a
-computer situated next to the chambers, and can control many chambers at once <++>
+Plants of \textit{A. thaliana} ecotype Col-0 were grown in a carefully controlled manner to
+minimise variation in germination time and the developmental state of plants at a given time. Seeds
+were sown directly onto Debco Seed Raising Mix (Debco Pty. Ltd.), mixed with 3 grams per litre
+Osmocote\textregistered\ slow release fertiliser \todo{get part numbers}. Following sowing, plants
+were lightly watered from above and vernalised in a 4 \degc cool room for three days. Plants were
+germinated under static growth conditions, of approximately 120 \uE, 21 \degc, with a 12 hour
+photoperiod. Following thinning, the remaining plants were established under these conditions for
+two weeks, before being distributed between three SpectralPhenoClimatron growth cabinets, with
+temperature, humidity and lighting controlled according to the Sufficient, 2x Excess and Fluctuating
+light dynamic growth conditions described in \autoref{subsec:dc-res-mygrowthcond}. Plants continued
+to grow under these conditions until and beyond harvesting.
+%\todo{Keng: Exact details of planting times}
 
+To assay plant response to hot excess light, plants were exposed to one hour of 8x hot excess light
+from sodium vapour and tungsten filament lamps in a Conviron growth cabinet.
+To enable study of transcriptomic responses to this assay, one fully expanded leaf was taken from
+each of the 576 \todo{check this number} surviving plants before and after this excess light
+treatment. To do so, petioles were cut with clean scissors, and leaves gently rolled without crushing
+to facilitate placement in 96 well 1.2 mL deep well plates. Plates were kept in dry ice while
+harvesting occurred, and were transferred to -80\degc freezers for storage.
 
-\subsection{Design of dynamic growth conditions} \label{sec:bio-mth-growthcond}
-
-Novel growth condiitons were designed to emulate some charachteristics of growth conditions
-experienced by plants in natural environments. Using SolarCalc \autocite{spokas_estimating_2006}, I
-have created simulated climates derived from historical observations and models of the climate of
-the region surrounding Temora, New South Wales. This is a trial location for various agricultural
-crops, and is in the same climate zone as much of the native range of \textit{Arabidopsis thaliana}.
-SolarCalc has an large number of parameters which can be set. The settings I used in the creation of
-the dynamic conditions are described in table \ref{tab:bio-mth-solarcalcsettings}. Solarcalc was run
-with these model parameters, to produce a model of growth conditions which simulate elements of a
-natural environment.
+Due to the failure of attempts to implement the high-throughput RNAseq protocol of
+\textcite{kumar_high-throughput_2012}, a subset of all samples were selected. Specifically, the
+samples of all Col-0 reference accession plants were used, as described in
+\autoref{tab:txv-meth-sampletab}. Tissue of selected samples was extricated from 96 well plates into
+pre \liqn cooled 1.5ml micro-tubes, ensuring plates remained frozen. Samples were ground using a
+TissueLyser (PN <+get details+>) for two one minute pulses at 25Hz, cooling racks in \liqn between
+each pulse.
 
 \kmdefaulttable
-{bio-mth-solarcalcsettings}
-{./tables/bio-mth-solarcalcsettings.csv}
-{lc}
-{Parameter & Temora Setting}
-{\param=Parameter, \tem=Temora}
-{\param & \tem}
-{Parameter settings of SolarCalc used in the creation of dynamic conditions.}
+{txv-meth-sampletab}
+{tables/txv-meth-sampletab.csv}
+{rccc}
+{Sample Number & Accession & Growth Condition & High Light Treatment}
+{\sn=num, \acc=accession, \gc=cond, \hl=hl}
+{\sn & \acc & \gc & \hl}
+{Samples analysed by RNAseq and qPCR. These samples are referred to by their sample numbers for the
+remainder of this thesis}
 
 
-SolarCalc simulates the climate of a location without any weather, however I aimed to create
-condition which mimic cloudy and intermittently cloudy days. Thus, to create such conditions,
-post-processing work is requred. Firstly, SolarCalc was re-run with a neutral density shade
-parameter of 70\%, meaning that the intentisy of each LED channel was 70\% that of the original
-model, forming the shaded model, which aimed to emulate a cloudy day. Then, the result of both the
-original model, and this shaded model were spliced together to form a condtion whose light intensity
-changed between shaded and original models on a two hour shaded, one-hour original rotation,
-creating the fluctating condition designed to emulate an intermittently cloudy day. The temperature,
-humidiy and light quality of these conditions remained unchanged. These additional condtiions allow
-us to compare the effect of different light regimes within the framework of such pseudo-natural
-dynamic growth conditions which SolarCalc creates. 
-\todo{This sounds too much like what got destroyed in the initial examiners meeting}
+\subsubsection{Phenomic dataset generation}
+does this go here or ch4?
+\todo{Tim: images from Col, Cvi, Ler from all time-points}
 
 
 
+\subsection{RNAseq Library Preparation and Sequencing}
+\label{subsec:txv-mth-libprep}
+
+Total nucleic acids (TNA) were extracted from samples using a commercial reagent (Trizol, Life
+Technologies, \todo{details}) immediately after grinding.  Total nucleic acids were extracted by
+adding 1mL of Trizol to each well-ground sample and shaking vigorously by hand, before adding
+200\ul chloroform and shaking by hand again. Samples were incubated for 3 minutes at room
+temperature, before centrifugation at 14000 rcf for 10 min in a chilled centrifuge. The TNA contained
+in the aqueous phase was re-extracted with chloroform and precipitated with 500\ul ice cold
+isopropanol before incubation at -20\degc overnight. Total nucleic acids were precipitated by
+centrifugation for 20 minutes at 20000 rcf and 4\degc, washed with 1mL 75\% Ethanol, and resuspended
+in 50\ul RNase free 10 mM Tris-HCl. The quality of RNA in extracted TNA was assayed using the Agilent
+Bioanalyser digital electrophoresis platform. Samples were loaded into a Plant Nano analysis chip,
+and analysis run according to manufacturer's protocol.
+
+RNAseq libraries were then prepared using the Illumina TruSeq V2 RNAseq Sample Preparation kit (Part
+number RS-122-2002). As previous studies in the Pogson Lab indicated DNAse treatment of TNA samples
+before RNAseq library preparation was not necessary (pers. comm. Peter Crisp, 2013; Supplementary
+Figure \ref{fig:apx-plots-217dnase}), TNA was diluted with 10mM Tris-HCl to 80\ngul for use as input
+material. The manufacturer's protocol was then followed to produce RNAseq libraries, with
+modifications. RNA was fragmented by heating samples at the ``Elution 2 - Frag - Prime'' stage to 94
+\degc for 7 minutes, in place of the 8 minutes recommended by manufacturer guidelines to increase
+median insert size. To create cDNA, the SuperScript III reverse transcriptase (<+pn+>) was used, and
+thus the incubation temperature was increased from 42\degc to 50\degc, per SuperScript III
+guidelines. During every SPRI clean-up step throughout the protocol, DNA bound to SPRI beads was
+washed with 180\ul ethanol rather than the recommended 200\ul, allowing all liquid to be effectively
+removed with a P200 multi-channel pipettors.
+
+A pilot enrichment PCR was conducted with a subset of samples, enabling estimation of optimal cycle
+number for final enrichment PCR. To do so, quarter-volume PCRs (12.5\ul master-mix, 2.5\ul sample) were
+run: samples 1 and 13 were run for 10 cycles, and 2 and 19 were run for 14 cycles, with the 60\degc
+annealing time extended to 45 seconds. Then, half-volume PCRs were used to amplify libraries for 12
+cycles. Two libraries (<+which numbers+>) whose amplification failed with 12 PCR cycles were
+amplified using quarter-volume PCRs with 17 amplification cycles. These libraries were then cleaned
+up with SPRI beads, per TruSeq kit protocol. The success of these PCRs were assayed by digital
+electrophoresis, using the MultiNA instrument, as per \autoref{subsec:br-mth-kumaretal}, both before
+and after SPRI cleanup.
+
+Final sequencing libraries were created by diluting and pooling RNAseq libraries. Libraries were
+diluted to 10nM, as calculated from MultiNA quantification. They were then quantitated
+fluorometrically using the Qubit 2.0 instrument (Life Technologies) with the dsDNA BR assay kit per
+manufacturer's protocol, and diluted to 5nM accordingly. These 5nM libraries were re-quantitated
+fluorometrically as above. Samples 1-12 and 13-18 plus 4 additional samples from a colleague were
+pooled to equimolarity, forming two final sequencing libraries. Raw 100bp paired end sequence data
+was obtained by sequencing final sequencing libraries on two Illumina HiSeq 2500 sequencing lanes,
+performed at the Bio-molecular Resource Facility, John Curtain School of Medical Research, ANU.
 
 
+\subsection{Computational Analysis of RNAseq Data}
+\label{subsec:txv-mth-rnaseqanalysis}
+\todo{stuff on including Pete's dataset}
+Raw Illumina paired-end 100bp sequence data was obtained as gzipped FASTQ files from the BRF. To
+gauge the quality of the obtained sequence data, several analyses were conducted. Firstly, the number
+of reads obtained from each library were calculated using the code shown in listing
+\autoref{lst:countreadspersample} below.
+
+\kminputcode
+{sh}
+{code/countreadspersample.sh}
+{Count the number of reads in raw sequence files}
+{lst:countreadspersample}
+
+Analysis pipelines described in \autoref{subsec:br-res-pipeline} were applied to this dataset.
+Firstly, the \texttt{aln\_subread} pipeline computed read counts gene-wise from raw short reads, using
+the \texttt{kevin-hons-pairwise.key} keyfile (see listing \autoref{lst:txv-mth-kmhonspairwisekey}). Then,
+both \texttt{de\_pairwise} and \texttt{de\_glm} pipelines were used independently to test for
+differential expression, using the kevin-hons-pairwise.key keyfile and the
+kevin-hons-glm.key keyfile and edgeR-glm-kmhons.R GLM setting script respectively (see listings
+\ref{lst:txv-mth-kmhonspairwisekey}, \ref{lst:txv-mth-kmhonsglmkey}, and
+\ref{lst:txv-mth-kmhonsglmR}).
+
+\kminputcode
+{text}
+{tables/kevin-hons-pairwise.key}
+{The \texttt{kevin-hons-pairwise.key} keyfile}
+{lst:txv-mth-kmhonspairwisekey}
+
+\kminputcode
+{text}
+{tables/kevin-hons-glm.key}
+{The \texttt{kevin-hons-glm.key} keyfile}
+{lst:txv-mth-kmhonsglmkey}
+
+\todo{this next bit should go in methods}
+A general linear model (GLM) of the form $\sim\;Group$ was fitted, according to the keyfile shown in
+listing \ref{lst:txv-mth-kmhonsglm}. Statistical tests for differential expression between contrasts
+shown in listing \ref{lst:txv-mth-kmhonsglmR} (lines <+x-y+>). 
+
+\subsection{Quantitative Real-time PCR Quantification of Gene Expression}
+\label{subsec:txv-mth-qpcr}
+
+To assay expression of genes shown to respond to hot excess light in previous studies, quantitative
+PCR (qPCR) was used. RNA extracted for RNAseq analysis (see \autoref{subsec:txv-mth-libprep}) was
+treated with DNAse, to remove genomic DNA contaminants, using Turbo DNAse (Life Technologies).
+Approximately 15-20 \ug of RNA in 90 \ul was combined with 10 \ul Turbo DNAse buffer and 1\ul Turbo
+DNAse, before incubation at 37\degc for 30 minutes, at which point an additional 1\ul Turbo DNAse
+was added to sample. Samples were mixed, and incubated for a further 30 minutes at 37\degc. RNA was
+recovered by pheno-chloroform extraction, adding 100\ul 1:1 phenol-chloroform mixture to the DNAse
+reaction solution, mixing, separating phases by centrifugation for 10 minutes at 14000 rcf and
+4\degc, and precipitating RNA by adding 200\ul ice cold isopropanol, incubating at -20\degc
+overnight, centrifuging to pellet RNA, washing RNA pellet with 70\% ethanol and re-suspending RNA in
+20\ul DEPC-treated MilliQ water. RNA quality was assayed by visualising denatured RNA on a 1\% Agarose
+gel, prepared using buffers made with DEPC-treated water to prevent RNA degradation.
+
+Complimentary DNA (cDNA) was synthesised using Invitrogen SuperScript III First-strand cDNA synthesis
+kit. RNA was diluted to 100\ngul, denatured at 65\degc for 5 minutes, and cDNA synthesis reactions
+consisting of 10\ul denatured RNA sample, 1\ul 50\nM dT(18)VN primer, 1\ul 10\mM dNTPs, 2.5\ul
+nuclease free water, 4\ul 5x reaction buffer, 1\ul 100\mM DTT, and 0.5\ul SuperScript III enzyme.
+This reaction solution was mixed, centrifuged briefly, and incubated at 50\degc for 60 minutes,
+before enzyme inactivation at 70\degc for 15 minutes. Samples were then stored at -20\degc until
+use.
+
+Expression was quantified with qPCR using the Sybr Gold master mix kit (<+manufacturer+>) in a Roche
+<+qPCR machine setup+>. Reactions of 10\ul consisting of 1\ul cDNA, 3.6\ul nuclease free water,
+0.2\ul of each 20\uM primer, and 5\ul Sybr Gold 2x master mix. Reactions were conducted in
+technical triplicate in 384 well plates sealed with qPCR-compatible plate seals. Expression of
+eight genes (APX2, ELIP1, ELIP2, LHCB1.4 and HSP90-like, as well as reference genes PP2AA3 and GAP)
+was quantified using primer sets described in \autoref{tab:txv-mth-qpcrprimers} in 24 samples. These
+cDNA samples were samples 1-18 of the dynamic growth condition dataset described in
+\autoref{tab:txv-meth-sampletab}, as well as cDNA samples prepared using identical methods as
+described above from plants grown under static conditions (100\uE light intensity, 12 hour
+photoperiod, 21\degc \todo{check growth cond. of B3 plants w/ Pete}) for five weeks, before and
+after exposure to 10x hot excess light for one hour. In addition, template-less and reverse
+transcriptase free controls were conducted for some primer sets (HSP90-like and PP2AA3) to ensure
+absence of genomic DNA contamination.
+
+Raw quantification curves were obtained by thermocycling qPCR reactions in a <+model+> qPCR
+thermocycler (<+manufacturer+>). Reactions were heated to 95\degc for 10 minutes, before cycling
+between 95\degc for 30 seconds, 60\degc for 45 seconds, and 72\degc for 60 seconds for 45 cycles. A
+final incubation at 72\degc for 5 minutes was followed by a slow ramping of temperature from 45 to
+95\degc with continuous quantitative analysis, to obtain a melting curve. Raw quantification data
+was analysed with LinRegPCR \autocite{ruijter_amplification_2009} to create N0 values, a
+statistically rigorous arbitrary unit of quantification suitable for relative quantification.
+Quantification relative to PP2AA3 was then calculated sample-wise for all primer sets analysed,
+using custom analysis code in R (see \autoref{subsec:apx-code-qpcr}). An ANOVA model was fitted to
+relative quantification, with Tukey's honest significant differences post-hoc testing to determine
+specific effects.
+
+\begin{landscape}
+  \kmdefaulttable
+  {txv-mth-qpcrprimers}
+  {tables/txv-mth-qpcrprimers.csv}
+  {ccclcp{1cm}cp{2cm}cc}
+  {Name & AGI & NCBI Acc. & Sequence & Length & Tm (\degc) & GC \% & Amplicon Size}
+%    & Location & Exon  Junction}
+  {\nm=Name, \agi=AGI, \ncbi=NCBI, \seq=Sequence, \len=Length, \tm=Tm, \gc=GC, \sz=AmpliconSize}
+%  , \loc=Location, \ej=ExonJunction}
+  {\nm & \agi & \ncbi & \texttt{\seq} & \len & \tm & \gc & \sz}
+%& \loc & \ej}
+  {Primer Details}
+\end{landscape}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                         Results                                   %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+\label{sec:txv-res}
 
-\chapter{Results}
+\subsection{Quantification of Transcriptome-wide Responses to Altered Light Intensity Under Novel
+Growth Conditions}
+\label{subsec:txv-res-rnaseq}
+
+\subsubsection{Successful Preparation of RNAseq Libraries}
+\label{subsubsec:txv-res-libprep}
+
+RNA of suitable yield and quality for RNAseq library preparation was obtained.
+\autoref{fig:txv-res-rnaqual} and \autoref{tab:txv-res-rnaqual} illustrate the high quality and
+yield of RNA samples. Illumina RNAseq libraries of the expected size and concentration were
+successfully prepared from all 18 RNA samples. Figures \ref{fig:txv-res-finalpcr} and
+\ref{fig:txv-res-17cycpcr} demonstrate the successful creation of RNAseq libraries. Two library
+amplifications (Samples 6 and 17) failed to reach a suitable yield after 12 PCR cycles, so the PCR
+was re-run with 17 amplification cycles, which created libraries of a suitable concentration
+(\autoref{fig:txv-res-17cycpcr}).
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{./img/txv-res-bioanalyser-gel-1-12.jpg}
+    \includegraphics[width=\textwidth]{./img/txv-res-bioanalyser-gel-13-rob4.jpg}
+  \end{center}
+  \caption{Bioanalyser e-gels show expected rRNA peaks and mRNA smear, with no evidence of
+  large-scale sample degradation. Samples 1-18 are numbered according to
+  \autoref{tab:txv-meth-sampletab}}
+  \label{fig:txv-res-rnaqual}
+\end{figure}
+
+\kmdefaulttable
+{txv-res-rnaqual}
+{tables/txv-res-rnaqual.csv}
+{ccc}
+{Sample & Conc. (\ngul) & RIN}
+{\sn=Sample,\conc=Concentration,\rin=RIN}
+{\sn & \conc & \rin}
+{RNA sample yield and RNA Integrity Number (RIN). RINs greater than 7 indicate high quality RNA, and
+RINs greater than 6 are acceptable. Overall yield is sufficient, and quality is good.}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/txv-res-finalPCRgelsBeforeSPRI.png}
+    \includegraphics[width=\textwidth]{img/txv-res-finalPCRgelsAfterSPRI.png}
+  \end{center}
+  \caption{RNAseq libraries before (top) and after (bottom) final SPRI cleanup.}
+  \label{fig:txv-res-finalpcr}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics{img/txv-res-17cycPCRgels.png}
+  \end{center}
+  \caption{17-cycle PCR}
+  \label{fig:txv-res-17cycpcr}
+\end{figure}
 
 
+\subsubsection{Obtaining a High Quality RNAseq Dataset}
+\label{subsubsec:txv-res-libqual}
+\todo{better word for obtaining}
 
+To quantify global gene expression accurately, it is important to ensure the quality of raw
+sequencing data is acceptable. To reiterate dataset integrity, many measures of dataset quality were
+obtained throughout this analysis.  Firstly, ensuring approximately even coverage across sequencing
+libraries within a lane gives confidence that variation in sequencing depth does not confound
+differential expression analysis. As detailed in \autoref{tab:txv-res-libcoverage}, library depth
+variation was acceptable within both lanes sequenced. The two lanes of sequencing yielded 153 and
+143 million reads respectively, averaging 15.3 $\pm$ 2.7 million and 11.9 $\pm$ 1.0 million reads per
+sample respectively (means $\pm$ standard deviation). Coverage in lane 1 is expected to be lower, as
+its overall coverage is lower and it contained 12 samples, where as lane 2 contained 10 samples.
+These basic statistics show the sequencing of RNAseq libraries was successful and the resulting data
+suitable for further analysis.
+
+\kmdefaulttable
+{txv-res-libcoverage}
+{./tables/txv-res-libcoverage.csv}
+{ccc}
+{\multirow{2}{*}{Library} & \multicolumn{2}{c}{Reads per Library (Millions)}\\
+& Pre QC & Post QC}
+{\lib=Library, \pre=MreadsPreQC, \post=LibSize}
+{\lib & \pre & \post}
+{RNAseq library sequencing depth. Reads per library before and after quality control refer to the
+length of raw sequence data, and to the size of the libraries immediately before statistical analysis
+of differential expression, after sparse tags and non-protein coding loci were removed. Libraries
+19-22 were sequenced on behalf of a colleague, and do not form part of this thesis, thus have not
+been analysed for differential expression.}
+
+Low-level sequence quality as gauged by \texttt{fastqc} was exceptional. The 25th percentile PHRED
+quality score (defined as $-10\:log_{10}(P)$, where $P$ is the probability of error at a given
+position) exceeded 28 at every base in all sequence libraries before any quality control (see
+Figures \ref{fig:txv-res-fastqc-before-pbq} and \ref{fig:txv-res-fastqc-after-pbq}). Following
+adaptor removal and low-quality sequence trimming, this figure increased to a PHRED score of 30. The
+sequence length distribution was altered by these quality control measures, with the uniform 101bp
+length of the library reduced almost imperceptibly (Figures \ref{fig:txv-res-fastqc-before-sld} and
+\ref{fig:txv-res-fastqc-after-sld}). 
+\todo{these fastqc figures all need captions}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/txv-res-fastqc-before-per_base_quality.png}
+  \end{center}
+  \caption{Per-base quality before QC}
+  \label{fig:txv-res-fastqc-before-pbq}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/txv-res-fastqc-after-per_base_quality.png}
+  \end{center}
+  \caption{Per-base quality after QC}
+  \label{fig:txv-res-fastqc-after-pbq}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/txv-res-fastqc-before-sequence_length_distribution.png}
+  \end{center}
+  \caption{Sequence length distribution before QC}
+  \label{fig:txv-res-fastqc-before-sld}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/txv-res-fastqc-after-sequence_length_distribution.png}
+  \end{center}
+  \caption{Sequence length distribution after QC}
+  \label{fig:txv-res-fastqc-after-sld}
+\end{figure}
+
+The very high proportion of sequence reads which aligned to the genome, and moreover to protein
+coding loci, is a further indicator of dataset integrity. \autoref{tab:txv-res-mappingstats}
+describes the sample-wise percentages of reads which map to the genome and transcriptome. Over 99
+percent of reads map to the genome in all samples, the vast majority of which align to
+protein-coding genes (97-99\%). Ribosomal RNA depletion during library preparation was successful,
+with between 0.08\% and 1.6\% rRNA contamination across all libraries. 
+
+\kmdefaulttable
+{txv-res-mappingstats}
+{tables/txv-res-mappingstats.csv}
+{ccc}
+{\multirow{2}{*}{Sample Number} & \multicolumn{2}{c}{Percentage Reads Mapped to:}\\
+& Entire Genome & Protein-coding Genes}
+{\nm=Sample, \gen=PercentMapped, \prot=PercentProtCoding}
+{\nm & \gen & \prot}
+{Percentage of mapped reads to genome and transcriptome.}
+
+\subsubsection{RNAseq Reveals a Noisy Transcriptome}
+\label{subsubsec:txv-res-noisytx}
+
+Once reads were aligned to the genome and gene-wise counts obtained, statistical assessment of
+differential expression was conducted. After dataset filtering to remove sparse tags, or loci not
+detected above the level of statistical noise, and non-protein coding loci, 17948 loci remained. Two
+informative plots of the remaining dataset were created: a plot describing the biological coefficient
+of variation (BCV), and a multi-dimensional scaling of samples into euclidean space.
+\autoref{fig:txv-res-plotbcv} illustrates the high biological coefficient of variation across the
+majority of genes. This is evidenced by the spread of points upwards in
+\autoref{fig:txv-res-plotbcv} when compared to those in \autoref{fig:txv-res-plotbcv317}. The
+overall biological coefficient of variation was also much higher in the dynamic growth condition
+dataset (common BCV = 0.493), when compared to the RRGS dataset described in
+\autoref{subsec:br-mth-datasets} (common BCV = 0.128).  This higher variance causes reduced
+statistical power to detect differential expression
+
+The high biological variance in expression is also demonstrated via multiple-dimensional scaling.
+This analysis is an unsupervised clustering algorithm, which displays relatedness between samples by
+plotting them in multi-dimensional space, and can be interpreted similarly to Principle Co-ordinate
+Analysis or ordination plots. When samples grown under dynamic growth conditions are analysed, a
+noisy pattern is obtained (\autoref{fig:txv-res-plotmds}). While replicates often cluster less
+closely than treatments, samples treated with one hour of hot 8x excess light are separate to
+corresponding samples taken before this treatment (in \autoref{fig:txv-res-plotmds}, pre and
+post-treatment samples separate along a diagonal). This noise is alarming, as it reiterates the
+biological noise present in this dataset.
+
+When this dynamic condition RNAseq dataset is analysed alongside corresponding samples from the RRGS
+dataset, derived from plants grown under static growth conditions, the pre- and post-excess light
+treatment in the RRGS dataset separates along the same axis as the pre- and post-excess light
+treatment in the dynamic condition dataset (\autoref{fig:txv-res-plotbcv317}). It is crucial to note
+that the RRGS experiment is not a control for the dynamic growth condition experiment, but is still
+useful an external comparison. It is also important to note that replicates within the RRGS dataset
+cluster together tightly compared with replicates from the dynamic growth condition dataset, a
+hallmark of the RRGS dataset's lower biological variance.
+
+\todo{write-up bcv and mds plots, with reference to 317 dataset. Also, these need re-jigging to all
+be the same size, with better axis labels, titles etc}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/txv-res-plotbcv.png}
+  \end{center}
+  \caption{Biological coefficient of variation in dynamic growth conditions}
+  \label{fig:txv-res-plotbcv}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/txv-res-plotbcv317.pdf}
+  \end{center}
+  \caption{Biological coefficient of variation in static growth conditions}
+  \label{fig:txv-res-plotbcv317}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/txv-res-plotmds.png}
+  \end{center}
+  \caption{Multi-dimensional scaling of dynamic growth conditions}
+  \label{fig:txv-res-plotmds}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/txv-res-plotmds317.pdf}
+  \end{center}
+  \caption{Multi-dimensional scaling of dynamic and static growth conditions}
+  \label{fig:txv-res-plotmds317}
+\end{figure}
+
+
+\subsubsection{Differential expression between dynamic growth conditions}
+\label{subsubsec:txv-res-diffexp}
+
+Eight group contrasts were tested for differential expression. These contrasts test the effect of
+light intensity within the framework of dynamic growth conditions on both the steady-state
+transcriptome, and on the transcriptional response to exposure to 8-10x hot excess light for one
+hour. A summary of statistically significant differential expression is shown in
+\autoref{tab:txv-res-desummary} and \autoref{fig:txv-res-devenn}. Briefly, small numbers of
+differentially expressed genes were observed between steady-state transcription in the sufficient
+growth condition and the excess and fluctuating growth conditions, but not between the fluctuating and
+excess growth conditions. A transcriptional response to a one hour exposure to 8-10x hot excess
+light was observed in plants grown under all dynamic growth conditions, however plants grown under
+excess light conditions showed the greatest number of differentially expressed genes in response to
+this treatment, followed by fluctuating and sufficient light conditions. Tests for interaction
+between growth condition light intensity and treatment effect showed little or no significant
+interaction.
+
+\todo{Brief look at RRGS dataset DE to contrast the above, and also textually explain what the
+Venn shows}
+
+\kmdefaulttable
+{txv-res-desummary}
+{tables/txv-res-desummary.csv}
+{cp{8cm}cc}
+{Contrast Name & Contrast Description & Genes Downregulated & Genes Up-regulated}
+{\cn=Contrast, \cdef=Definition, \down=nDown, \up=nUp}
+{\cn & \cdef & \down & \up}
+{Summary of Differential expression}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/placeholder.png}
+  \end{center}
+  \caption{Venn diagram examining DE between each condition and RRGS dataset}
+  \label{fig:txv-res-deven}
+\end{figure}
+
+
+\subsubsection{Further analysis of differential expression between dynamic growth conditions}
+\label{subsubsec:txv-res-postanalysis}
+
+To gain biological insight from patterns of differential expression, gene ontology (GO) term enrichment
+analysis was used. Statistically significant enrichment of GO terms in genes up- and down-regulated
+in comparisons of steady-state expression and in transcriptional response to hot excess light
+(\autoref{tab:txv-res-topgoterms}). The GO terms enriched in genes up-regulated on exposure to hot
+high light were highly conserved across all dynamic growth conditions and the RRGS dataset grown
+under static growth conditions (\autoref{fig:txv-res-govenn}). Specifically, terms including
+'response to heat', 'response to high light intensity', 'response to hydrogen peroxide' and
+'response to jasmonic acid stimulus' are among the most statistically over-represented genes induced
+by one hour of hot excess light in plants from all dynamic conditions. Moreover, these terms are
+also amongst the most statistically over-represented genes induced by one hour of hot excess light in
+plants grown under static growth conditions. \autoref{tab:txv-res-topgo} describes the 10 most
+significantly enriched GO terms in all tests with differential expression described in
+\autoref{tab:txv-res-desummary}, and the  corresponding test from the RRGS dataset.
+
+\todo{table of top 10 go for 6 contrasts w/ DE, + RRGS}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/placeholder.png}
+  \end{center}
+  \caption{Venn diagram of GO terms between contrasts including RRGS}
+  \label{fig:txv-res-govenn}
+\end{figure}
+
+\subsection{Expression Patterns of Excess Light Marker Genes}
+\label{subsec:txv-res-markergenes}
+
+\todo{Guys: this section is pretty rough}
+
+Quantitative RT-PCR (qPCR) was used to examine expression patterns of excess light marker genes.
+Comparisons of both steady-state expression, and induction of expression upon treatemnt with hot
+excess light have been examined. APX2, a gene induced by oxidative stress and excess light, was
+upregulated in sufficient, excesss and fluctuating light dynamic light conditions (ANOVA model
+$N0\;\sim\;Growth\:Condition+Time$, F=5.63, p=0.0072, 3 d.f. with Tukey's HSD demonstrating
+signficicatnt pairwise differences between expression in sufficient, excesss and fluctuating light
+dynamic light conditions and in static grwoth conditions with p<0.05). Steady-state expression of
+LHCB1.4, a photosynthic gene known to be down-regulated by exceess light, was downreulated in plants
+grown under dynamic growth conditons, with statistically significant down-regulation observed
+between excess and fluctuatin gdynamic light conditons and static growth conditions; no
+statisticlaly signfiicant effect of hot excesss light treatment was found. Expression of ELIP1 is
+significantly upregulated in excess and fluctuating dynamic light conditions compared to sufficient
+and static growth conditions. Similar patterns can be qualitatibely observed in ELIP2, however high
+variance prevents statisitcal signficiance.
+
+\todo{write up qPCR results - put stat. details in and make figures from Rnw}
+
+\todo{fig showing APX2, ELIP1/2, LHCB, GAP, PP2AA3 and HSP20-like expression between all samples -
+full page horizontal bar graph}
+
+\todo{fig showing APX2, HSP and PP2AA3 fold change from RNAseq and qPCR}
+
+\todo{melt curve figure}
+
+
+\section{Summary of Findings}
+\
