@@ -8,8 +8,10 @@
 
 
 \section{Background, Aims and Hypotheses}
-%\todo{WHY: a pgf here expalaing this is a framework, and that it is generalisable, and that it aims
-%to detect subtle differences in high throughput experiments}
+\todo{WHY: a pgf here expalaing this is a framework, and that it is generalisable, and that it aims
+to detect subtle differences in high throughput experiments}
+\todo{insert citaitons from intro into this summmary. also, one liner about what is RNAseq before
+first menton of RNAseq in first paragraph}
 
 As high-throughput, large-scale experiments such as QTL mapping and Genome Wide Association Studies
 (GWAS) become more prevalent, increasingly subtle biological contrasts are being examined. RNAseq is
@@ -37,7 +39,8 @@ exist for high-throughput RNAseq, however their cost is prohibitive. Thus, I aim
 published RNAseq library preparation protocol (that of \textcite{kumar_high-throughput_2012}) which
 enables rapid, low-cost and high throughput RNAseq library preparation. I hypothesised that the
 implementation of this protocol would be possible, enabling high-throughput RNAseq studies such as
-expression QTL mapping.
+expression QTL mapping. \todo{expand prohibitive cost with V. rough ballpark figs of eqtl expt with
+commercial kits}
 
 Finally, I conducted an \textit{in silico} experiment to test the effect of sequencing depth on
 statistical power of RNAseq experiments. Despite the rapid and continuing reduction in the cost of
@@ -64,8 +67,9 @@ HiSeq 2500 sequencing lane (which yield 200 million reads apiece).
 
 \todo{lots of details missing in this section}
 
-This work was conducted in collaboration with Dr. Norman Warthmann, who performed the testing of
-bell adaptors and assisted with this section.
+%This work was conducted in collaboration with Dr. Norman Warthmann, who performed the testing of
+%bell adaptors and assisted with this section.
+\todo{define bell adaptors}
 
 To increase the throughput and the decrease cost of Illumina RNAseq sequencing library preparation,
 I attempted to implement the RNAseq library preparation protocol of
@@ -133,37 +137,34 @@ Uracil-Specific Excision Reagent (USER) enzyme mix.
 \label{subsec:br-mth-datasets}
 
 \todo{check details of this section from Pete}
-RNAseq datasets from collaborators were used both as trial datasets and external references in
-this thesis. I unambiguously disclaim that Peter Crisp, of the Pogson lab, Research School of
-Biology, ANU, created these datasets, and authorised their use in this thesis.
-
-The Rapid Recovery Gene Silencing excess light time-course experiment (hereafter referred to as the
-RRGS time-course) consists of samples taken in triplicate from an eleven-point excess light stress
-and recovery time-course. \textit{A. thaliana} reference accession Col-0 were grown for 3 weeks under standard
-laboratory growth conditions ($\approx$ 150 \uE light intensity, 12 hour photoperiod, 21 \degc
-daytime temperature, 21 \degc nighttime temperature). Whole rosette samples were taken before any
-treatment, after 30, 60 and 120 minutes of 8x excess light (1000 \uE, unfiltered light from a sodium
-vapour lamp, hereafter EL), after 60 minutes of EL followed by 7.5, 15, 30 and 60 minutes of
-recovery under standard growth conditions, after 60 minutes of EL, followed by 60minutes of
-recovery, followed by another 60 minutes of EL, and before and after 60 minutes of EL 24 hours after
-the original 60 minutes of EL\@. This complex time-course is illustrated in
-\autoref{fig:br-mth-pete317timecourse}. RNA extracted from five plants per replicate was pooled,
-before Illumina libraries were created using the TruSeq V2 library preparation kit (<+part
-numbers+>) per manufacturer's instructions. These libraries were sequenced across two Illumina HiSeq
-2500 sequencing lanes, yielding the RRGS timecourse RNAseq dataset. This dataset studies a
-timecourse over a treatment highly similar to that conducted in the dynamic growth condition
-experiment, allowing development of bioinformatic protocols specific to RNAseq datasets from
-experiments like these.
+RNAseq datasets created by Peter Crisp and Barry Pogson were used both as trial datasets and
+external references in this thesis. The Rapid Recovery Gene Silencing excess light time-course
+experiment (hereafter referred to as the RRGS time-course) consists of samples taken in triplicate
+from an eleven-point excess light stress and recovery time-course. \textit{A. thaliana} reference
+accession Col-0 were grown for 3 weeks under standard laboratory growth conditions ($\approx$ 150
+\uE light intensity, 12 hour photoperiod, 21 \degc daytime temperature, 21 \degc nighttime
+temperature). Whole rosette samples were taken before any treatment, after 30, 60 and 120 minutes of
+8x excess light (1000 \uE, unfiltered light from a sodium vapour lamp, hereafter EL), after 60
+minutes of EL followed by 7.5, 15, 30 and 60 minutes of recovery under standard growth conditions,
+after 60 minutes of EL, followed by 60minutes of recovery, followed by another 60 minutes of EL, and
+before and after 60 minutes of EL 24 hours after the original 60 minutes of EL\@. This complex
+time-course is illustrated in \autoref{fig:br-mth-pete317timecourse}. RNA extracted from five plants
+per replicate was pooled, before Illumina libraries were created using the TruSeq V2 library
+preparation kit (<+part numbers+>) per manufacturer's instructions. These libraries were sequenced
+across two Illumina HiSeq 2500 sequencing lanes, yielding the RRGS timecourse RNAseq dataset. This
+dataset studies a timecourse over a treatment highly similar to that conducted in the dynamic growth
+condition experiment, allowing development of bioinformatic protocols specific to RNAseq datasets
+from experiments like these.
 \todo{part numbers etc}
 
-A second dataset, the excess light and drought (EL/D) dataset, was also used. This
+A second dataset, the excess light and drought (EL/D) dataset, was used as further validation. This
 dataset consists of RNAseq libraries sampled in triplicate from plants grown to three week of age
 under standard laboratory growth conditions, per the RRGS timecourse experiment above. Plants were
 harvested before any stress, after 1 hour of 8x excess light, and after one week of drought stress,
 in which water was completely withheld while plants continued to grow under standard laboratory
 growth conditions.
 \todo{need protocol used for exp217 from Pete: this used the stranded protocol which is published
-somewhere - just need the reference.}
+somewhere - just need the reference. Also don't present work with this dataset: maybe scrap?}
 
 \begin{figure}[p]
   \begin{center}
@@ -359,6 +360,7 @@ pairwise between groups described in the keyfile, from data in this \texttt{\jus
 objects, from which tables of differential expression and diagnostic plots can be created. A plot
 showing the relationship between the tag-wise Biological Coefficient of Variation (BCV) and tag
 expression level aims to show that variation is largely independent of expression level.
+\todo{reword to stop it soundling like M+M}
 
 \subsubsection{\texttt{\justify de\_glm}}
 \label{subsubsec:br-res-deglm}
@@ -495,3 +497,12 @@ million reads (or read pairs) to balance statistical power against sequencing co
 \section{Summary and Technical Discussion}
 \label{sec:br-summ}
 \todo{summary of br chapter}
+
+\subsection{High throughput RNAseq Library Prep}
+\begin{itemize}
+  \item talk about why it didn't work
+  \item discuss how to get it working
+  \item state It won't be used, or discussed later
+\end{itemize}
+
+
