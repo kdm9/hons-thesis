@@ -17,7 +17,7 @@
 
 % table/figure/code input macros
 
-\newcommand{\kminputcode}[4]{
+\newcommand{\kminputcode}[4]{%
 \begin{listing}[p]
   \inputminted[
     linenos=true,
@@ -31,7 +31,7 @@
 
 %\renewcommand*{\dtldisplaystartrow}{\\}
 
-\newcommand{\kmdefaulttable}[7]{
+\newcommand{\kmdefaulttable}[7]{%
   \DTLloaddb{#1}{#2}
   \begin{table}[p]
     \centering
