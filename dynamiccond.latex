@@ -54,7 +54,7 @@ retro-fitted with four Heliospectra Model L4A Series 10 multi-spectral LED growt
 and other consumer hardware). The Conviron PGC20 cabinets have a capacity of 320 5cm by 5cm plant
 growth containers, or 16 <+dimension+> standard nursery seed trays (e.g. <+gcp part number+>). The
 temperature and humidity within the growth cabinets is tightly controlled, with operating range of
-5-35 \degc and 50-80 \% RH. The Heliospectra L4A Series 10 LED lamps contain 7 LED wavelength
+5-35 \degc and 50-80 \% RH\@. The Heliospectra L4A Series 10 LED lamps contain 7 LED wavelength
 channels: 400nm (sub-blue), 420nm (blue), 450nm (blue), 530nm (green), 630nm (red), 660nm (red) and
 735nm (far red). However, the intensity of these channels is not equal (see
 %\autoref{fig:dc-res-heliospectraspectrum} and
@@ -170,16 +170,17 @@ messages are generated using the Google mail API from within python. In all, thi
 \subsection{Sufficient, Excess and Fluctuating Dynamic Growth Conditions}
 \label{subsec:dc-res-mygrowthcond}
 
-To investigate the effect of altered light intensity on the \textit{Arabidopsis} transcriptome, three
-novel growth conditions were created as described. These conditions have been specifically designed to
-mimic dynamic changes in light intensity that can be expected to occur outdoors along with neutral density
-shading by clouds. The Sufficient Light dynamic growth condition (hereafter ``Sufficient'')
-corresponds to approximately the same daily integral of light as ``standard growth conditions'' of
-120-150 \uE on a 12-hour photoperiod. The Excess light condition is an ~2.5X brighter than the sufficient condition. The Fluctuating light condition is designed to simulate the pattern of
-light intensity variation caused by partial cloud or patchy sun varies between these. These conditions simulate the
-spring season, and display circannual or seasonal variation in temperature, light and humidity. As spring
-progresses, daily minimal and maximal temperature and peak light intensity increase, while minimal
-relative humidity decreases.
+To investigate the effect of altered light intensity on the \textit{Arabidopsis} transcriptome,
+three novel growth conditions were created as described. These conditions have been specifically
+designed to mimic dynamic changes in light intensity that can be expected to occur outdoors along
+with neutral density shading by clouds. The Sufficient Light dynamic growth condition (hereafter
+``Sufficient'') corresponds to approximately the same daily integral of light as ``standard growth
+conditions'' of 120-150 \uE on a 12-hour photoperiod. The Excess light condition is approximately
+250\% brighter than the sufficient condition. The Fluctuating light condition is designed to
+simulate the pattern of light intensity variation caused by partial cloud or patchy sun varies
+between these. These conditions simulate the spring season, and display circannual or seasonal
+variation in temperature, light and humidity. As spring progresses, daily minimal and maximal
+temperature and peak light intensity increase, while minimal relative humidity decreases.
 
 \begin{landscape}
   \begin{figure}[p]
@@ -280,12 +281,6 @@ the day of measurement. The light intensity under a single Heliospectra L4A seri
 370 \uE, while the intensity of light from fluorescent lamps was 140 \uE (data shown
 graphically in \autoref{fig:dc-res-spectra-norm}).
 
-
-\subsection{Phenomic dataset generation}
-does this go here or ch4?
-\todo{Tim: images from Col, Cvi, Ler from all time-points}
-
-
 \subsection{Novel Dynamic Growth Conditions That Simulate a Continental Gradient}
 \label{subsec:dc-res-kengcond}
 
@@ -297,5 +292,9 @@ variation in temperature, such as those often encountered in coastal climates. T
 named ``NSW inland'' and ``NSW coastal'' respectively, generally are more harsh than the sufficient,
 fluctuating and excess light dynamic growth conditions created for my experiments.  Plots describing
 their conditions follow.
-\todo{polish this if it is to be included, and input plots. also needs a subsection in the methods
+\todo{polish this if it is to be included, and input plots. Also needs a subsection in the methods
 section of this chapter if included. JB- Perhaps a shorter look at light and temp if you have time }
+
+\section{Summary and Technical Discussion}
+\todo{summary of dynamic cond.\ chapter}
+
