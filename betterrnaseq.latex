@@ -146,7 +146,7 @@ treatment, after 30, 60 and 120 minutes of 8x excess light (1000 \uE, unfiltered
 vapour lamp, hereafter EL), after 60 minutes of EL followed by 7.5, 15, 30 and 60 minutes of
 recovery under standard growth conditions, after 60 minutes of EL, followed by 60minutes of
 recovery, followed by another 60 minutes of EL, and before and after 60 minutes of EL 24 hours after
-the original 60 minutes of EL.  This complex time-course is illustrated in
+the original 60 minutes of EL\@. This complex time-course is illustrated in
 \autoref{fig:br-mth-pete317timecourse}. RNA extracted from five plants per replicate was pooled,
 before Illumina libraries were created using the TruSeq V2 library preparation kit (<+part
 numbers+>) per manufacturer's instructions. These libraries were sequenced across two Illumina HiSeq
@@ -490,3 +490,8 @@ million reads (or read pairs) to balance statistical power against sequencing co
   \caption{Common biological coefficient of variation vs sequencing depth.}
   \label{fig:br-res-bcvvscoverage}
 \end{figure}
+
+
+\section{Summary and Technical Discussion}
+\label{sec:br-summ}
+\todo{summary of br chapter}
