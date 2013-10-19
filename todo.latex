@@ -24,6 +24,7 @@
   \item Standardise the terminolgy around excess dynamic growth condition vs hot high light.
   \item ensure all latex cross references are pointing somewhere logical.
   \item backslash space after all macros
+  \item remove all references to pseudo-natural
 \end{itemize}
 
 \listoftodos
