@@ -9,6 +9,36 @@
 
 \section{Background, Aims and Hypotheses}
 
+Transcriptional responses to abiotic stress have been studied by many authors
+\autocite{drought,pogson}. However, theses stresses have rarely been studied in combination
+\autocite{mittler_abiotic_2006}. This is despite evidence supporting the interactions between
+stresses \autocite{mittler_abiotic_2006, atkinson_interaction_2012}. Additionally, many authors have
+observed responses to abiotic stresses encountered under field conditions that are not simple
+additions of the responses to individual stresses as elucidated under laboratory study
+\autocite{seki_monitoring_2001, mittler_abiotic_2006,atkinson_interaction_2012,
+atkinson_identification_2013, wituszynska_multivariable_2013}. Together, these shortcomings warrant
+the investigation, under controlled laboratory conditions, of abiotic stresses in combinations which
+mimic those observed under field conditions.
+
+I this chapter, I present preliminary transcriptomic study of plants grown under such conditions. To
+examine the effect of altered long-term light intensity in field-like combinations of stressful
+climatic variables such as temperature and humidity, dynamic growth conditions have been designed
+(see \autoref{chap:dc}). Specifically, I aim to test if plants exposed to modest excesses of light
+either continuously (Excess light dynamic growth conditions) or intermittently (Fluctuating light)
+exhibit increased hardening to excess light.
+
+I hypothesise that this increased hardening would manifest as increased steady-state transcription of
+stress-responsive genes, and a reduced induction of stress responsive genes upon exposure of plants
+to an 8x hot excess light treatment. More specifically, I expect that the excess and fluctuating
+light conditions will exhibit increased steady-state expression of stress-responsive transcripts
+compared with the sufficient growth condition, and with steady-stated expression observed in previous
+studies of plants grown under static growth conditions. Furthermore, I hypothesise that the
+fluctuating light condition will exhibit higher steady-state expression of stress-responsive
+transcripts, as plants are generally less able to acclimate to fluctuations in light intensity, than
+to constitutive excess light \autocite{kulheim_rapid_2002, alter_acclimatory_2012,
+gordon_systemic_2013}.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                         Methods                                   %%%%%%%%%%%%%
@@ -22,7 +52,15 @@
 
 Initially, I had aimed to conduct a experiment which mapped expression QTLs under dynamic growth
 conditions. Thus, 70 \textit{A. thaliana} Recombinant Inbred Intercross (RIX) lines were
-\todo{complete this section about RIX planting}
+\todo{clean up this seciton}
+During February, March and April, approximately 900 plants were planted, grown and harvested. I, in
+collaboration with Keng Rungrat, selected and planted 87 lines of \textit{A. thaliana}. These
+consisted of the ecotypes Cape Verde Islands (Cvi), Columbia (Col) and Landsberg erecta (Ler), the
+photoprotection mutants \textit{stn8}, \textit{pgr5}, \textit{npq1} and \textit{npq4}, and 80
+members of the Cvi vs Ler RIX mapping population. Many RIX lines exhibited very poor germination or
+survival rates. Because of this, only 40 to 60 RIX lines had at least one plant survive to
+harvesting, a significant reduction in statistical power for mapping.
+
 
 Plants of \textit{A. thaliana} ecotype Col-0 were grown in a carefully controlled manner to
 minimise variation in germination time and the developmental state of plants at a given time. Seeds
@@ -167,7 +205,7 @@ treated with DNAse, to remove genomic DNA contaminants, using Turbo DNAse (Life 
 Approximately 15-20 \ug of RNA in 90 \ul was combined with 10 \ul Turbo DNAse buffer and 1\ul Turbo
 DNAse, before incubation at 37\degc for 30 minutes, at which point an additional 1\ul Turbo DNAse
 was added to sample. Samples were mixed, and incubated for a further 30 minutes at 37\degc. RNA was
-recovered by pheno-chloroform extraction, adding 100\ul 1:1 phenol-chloroform mixture to the DNAse
+recovered by phenol-chloroform extraction, adding 100\ul 1:1 phenol-chloroform mixture to the DNAse
 reaction solution, mixing, separating phases by centrifugation for 10 minutes at 14000 rcf and
 4\degc, and precipitating RNA by adding 200\ul ice cold isopropanol, incubating at -20\degc
 overnight, centrifuging to pellet RNA, washing RNA pellet with 70\% ethanol and re-suspending RNA in
