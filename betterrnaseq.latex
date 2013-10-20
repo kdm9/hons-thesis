@@ -55,6 +55,15 @@ genome size, I hypothesise that the optimal sequencing depth for \textit{Arabido
 smaller, specifically between 2 and 5 million reads, or between 48 and 96 libraries per Illumina
 HiSeq 2500 sequencing lane (which yield 200 million reads apiece).
 
+%KEVIN, CONRAD AND OTHER GOOD STATS FOLKS HAVE LOOKED INTO THIS, BECAUSE OF BIOLOGICAL VARIATION THE OPTIMUM IS
+%REALLY TO DO AS MANY LINES AS YOU CAN AFFORD, BARCODE EACH, THEN SEQUENCE THE POOL WITH WHATEVER $$ YOU HAVE LEFT, PERHAPS $5K FOR EACH PART
+%FOR EXAMPLE 2 LINES AT 100X = THE SAME READS AS 200 LINES AT 1 X, BUT THE COVERAGE IS SPREAD ACROSS SAMPLES REDUCING BIOLOGICAL ERROR.
+%EVEN IF A GENE HAS ONLY 100 READS TOTAL. YOU WOULD BE MORE CONFIDENT IF THOSE READS CAME UP MOSTLY IN ONE GENOTYPE AND NOT ANOTHER.
+%
+%PERHAPS WHAT YOU CAN SAY IS GIVEN SO MANY SAMPLES WHO MUCH SEQ IS WORTH DOING BEFORE DIMINISHING RETURNS OF MORE COST WHEN
+%BIOLOGICAL ERROR DOMINATES. THAT IS WHAT YOU SHOW IN FIG 1.7, SO PERHAPS RETRY ABOVE.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                         Methods                                   %%%%%%%%%%%%%
@@ -207,9 +216,8 @@ loci within the genome was computed and compared. Then, sample-wise correlations
 counts calculated by each pipeline were calculated. Finally, genes called differentially expressed
 by each pipeline were compared. These measures allow verification of pipeline performance at three
 major stages in an analysis pipeline: alignment of short reads to a genome, tag-wise count
-summarisation, and statiscial testing for differential expression
+summarisation, and statiscial testing for differential expression.
 \todo{DEFINE TAG-WISE}
-
 
 \subsection{Measuring the Effect of Sequencing Depth on Analysis of Differential Expression}
 \label{subsec:br-mth-depth}
@@ -301,7 +309,7 @@ underlying program. Given these three pieces of information, the wrapper script 
 underlying program, automatically detecting input files from the input folder, and automatically
 handling different experimental features such as single vs paired-end sequence data. Wrapper scripts
 abstract away the complexity of command syntax, increasing readability and reproducibility of
-results.
+results, thus making them usable by a larger community of basic biologists.
 
 Pipeline scripts describe processes of analysis of RNAseq data. They combine wrapped programs
 together to perform an analysis specific to the process or dataset in question. Several generic and
@@ -451,19 +459,24 @@ when compared to the \texttt{\justify aln\_tophat} pipeline.}
 \subsection{Substantial reduction of RNAseq coverage is possible}
 \label{subsec:br-res-coverage}
 
-Sequencing capacity is high and costs have stabalized. Multiplexing many samples per lane is important
-for high-throughput transcriptomics to account for biological error and investigate specificity to genetic background and treatment effects.
-However, when samples are already in hand and ready for RNAseq, an trade exists between sequencing depth per sample and
-statistical power: as the number of reads per sample decreased, the number of genes called as
-differentially expressed decreased in a non-linear fashion (\autoref{fig:br-res-detagsvscoverage}).
-Below 5 million reads, the number of genes called as differentially expressed reduces rapidly.
-Additionally, the median tag-wise mean log expression reduces rapidly below approximately 1 million
-reads, indicating that at very low coverage, lowly expressed genes begin to not be detected at all
+Sequencing capacity is high and costs have stabalized. Multiplexing many samples per lane is
+important for high-throughput transcriptomics to account for biological error and to investigate
+specificity of gene expression variation to genetic background and multiple treatment effects.
+However, when samples are already in hand and ready for RNAseq, there are diminishing returns to
+improved statistical power from additional sequencing.  The number of genes called as differentially
+expressed increases in a non-linear fashion with sequence coverage
+(\autoref{fig:br-res-detagsvscoverage}).  Below a lower limit, 5 million reads, the number of genes
+called as differentially expressed reduces rapidly.  Additionally, the median tag-wise mean log
+expression reduces rapidly below approximately 1 million reads, indicating that at very low
+coverage, lowly expressed genes begin to not be detected at all
 (\autoref{fig:br-res-medianexpvscoverage}. Finally, the common biological coefficient of variation,
-which indicates how variable a dataset is a whole, increases as sequencing depth decreases
-(\autoref{fig:br-res-bcvvscoverage} and Appendix \autoref{apx-plots-bcvcoverage}). For the model
-system used in this experiment, I would recommend an optimal sequencing depth of approximately 5
-million reads (or read pairs) to balance statistical power against sequencing cost.
+which indicates how variable a dataset is a whole, increases as sequencing depth decreases due to
+poison noise.  (\autoref{fig:br-res-bcvvscoverage} and Appendix \autoref{apx-plots-bcvcoverage}).
+For the model system used in this experiment, I would recommend an optimal sequencing depth of
+approximately 5 million reads (or read pairs) to balance statistical power against additional
+sequencing cost. With a larger budget more biologial replicates and/or critical treatments should be
+included before extra sequencing is performed.  These results have important implications for
+experimental design of current and future experiments underway.
 
 \begin{figure}[p]
   \begin{center}
