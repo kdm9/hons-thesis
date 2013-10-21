@@ -31,7 +31,7 @@ operational)
 
 In creating dynamic growth conditions, I aimed to combine some elements of the climates experienced by
 plants in nature with the reliability, reproducibility and convenience of laboratory growth
-conditions. (diurnal trends)
+conditions. We simulate predictable climates without daily weather noise.
 
 While these conditions mimic elements of natural environments, they are not designed to be accurate
 representations of conditions encountered in nature. (climate vs weather. also accuracy of
@@ -50,9 +50,11 @@ how it could be used. mention ecology, ``virtual reciprocal transplants'' etc).
 %light sources.
 %In terms of local or regional climates, I postulate that the diurnal temperature and humidiy
 %variation occurs similaly to that obsereved in nature. Obviously, plants experience \emph{weather},
-%not climate, so these conditions cannot and are not being called ``natural''.
+%not climate, so these conditions represent typical regional averages where expected differences in seasonal acclimations can be observed 
+Phenotypic variation can be released or enhanced under these dynamic conditions or alternatively they can masked when signals homogenize genetic variation.
 %Many authors postulate ``cryptic phenotypes'', or phenotypes not observable under ``standard''
-%conditions, may
+%conditions.  Phenotypes observed under standard conditions may not be relavant to field conditions. 
+Our cliamte chamber conditions provide a better match (Li et al, PNAS 2010) to field level phenotypes.
 
 
 \section{Improved analytic methods for RNAseq}
