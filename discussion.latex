@@ -60,17 +60,21 @@ Our cliamte chamber conditions provide a better match (Li et al, PNAS 2010) to f
 \section{Improved analytic methods for RNAseq}
 \label{sec:dis-bioinf}
 
+Transcription can reveal hidden phenotypes and subtle environmental effects of dynamic conditions.  It can provide
+an early view of developmental variation to come and identify key singaling pathways.
+
 Reproducibility, accuracy, and performance of the computational analysis of any dataset is crucial.
 (summarise and discuss improvements to all 3. cite reproducible research/software carpentry type
 papers here. This should be split into 2 paragraphs I think)
 
-In a field active technical research such as RNAseq statistical analysis, the agility of
-computational frameworks is crucial. (describe it's modularity and possible ``future directions'',
+In active computational research such as RNAseq statistical analysis, the agility of
+software frameworks is crucial. (describe it's modularity and possible ``future directions'',
 i.e. adding support for bigger and better programs. perhaps back in technical discussion)
 
 When transcriptome variation within a study system is subtle, sensitive and accurate methods are
 required to glean information. (discuss seq\@. depth expt, recent ``how to do RNAseq'' papers,
-seq depth vs replicates arguments.)
+seq depth vs replicates arguments.)  Biologial variation control and multi environment treaments are needed to provide
+specificity of changes.  Gene Atlas idea.
 
 
 \section{Elucidating Response to Light Intensity in Dynamic Growth Conditions}
@@ -89,14 +93,15 @@ authors have been noted in this study. (brief description of DE. compare basic s
 genes to Pete's dataset, also Rossel and Estavillo paper microarrays.)
 
 Limited transcriptomic evidence of hardening of \textit{Arabidopsis} during acclimation to dynamic
-growth conditions was observed. (talk about DE between steady-state genes)
+growth conditions was observed. (talk about DE between steady-state genes  Good! novel preliminary findings)
 
 However, this evidence of hardening is contrasted by the number of genes differentially expressed in
 respose to hot high light under dynamic growth condtions. (discuss hypothesised hardening vs Excess
 > Fluct > sufficient response discovered, and possible reasons)
 
 Little concise effect of light intensity within the framework of dynamic light conditions was
-observed.
+observed. [but an understanding of the power needed and variation present in a typical experiment was identified.
+Samples are available for future studies.
 (disuss venn diagrams: expect some form of pattern, found a pattern in qPCR, etc.)
 \todo{this paragraph needs a re-think}
 
@@ -112,9 +117,8 @@ microarray paper?))
 Study of the transcriptome is an established method to assess the responses of plants to their
 environment, but it is far from the only method of doing so. (discuss briefly headway others are
 making using the plants I grew, i.e. tim's phenomics, keng's flurometrics, possibility of
-physilological assays. this paragraph may be asking for trouble, RE ``if their stuff is working, why
-didn't you do that/isn't that a better way of studying light resp.'' But then, answering those
-questions here may be a good idea anyway.)
+physilological assays.This show the extension of the environment and the experiemntal design and the ability
+to stack layers of phenotype data. This is called a 'systems biology' approach.)
 
 
 \section{Discussion of data in broader context of abiotic stresses}
