@@ -1,0 +1,83 @@
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{./img/intro/all_spectra}
+  \end{center}
+  \caption{Spectral response of growth chamber lighting compared to sunlight. The power density of
+    sunlight (grey) is relatively even across the visible spectrum. However, the power density of
+    fluorescent lamps (orange), as used in many lab growth chambers, is far from even, containing
+    large peaks corresponding to mercury’s emission spectrum, and areas of little density. While the
+    spectrum of the multispectral LED arrays (blue) is not as even as that of the sun, it contains
+    broader density peaks and fewer areas of low power density.}
+  \label{fig:intro-dynamic_fluctuating_light_B}
+\end{figure}
+
+of plants to create
+organic material from inorganic inputs and sunlight (photosynthesis).
+
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=0.9\textwidth]{./img/intro/kulheim_solar_output}
+  \caption{Daily variation in solar intensity and light intensity in artificial growth chambers.
+    \textcite{kulheim_rapid_2002} measured the solar intensity during one day in a garden at
+    Umeå, Sweden (black line), and one day in a laboratory growth cabinet at the University of
+    Umeå (red line). Adapted from \textcite{kulheim_rapid_2002} with permission of C. Külheim.
+    }
+  \label{fig:intro-dfl-kulheimsolaroutput}
+\end{figure}
+Recent advances in light emitting diode (LED) technology, and recent investments by the ANU’s
+Research School of Biology, have lead to the provision of computer-controllable growth chambers and
+multi-spectral LED arrays capable of simulating natural conditions with greater accuracy compared to
+traditional growth cabinets. The light quality of the new LED arrays is more consistent across the
+visible spectrum compared to fluorescent lamps (\autoref{fig:intro-dfl-kulheimsolaroutput}). These
+cabinets are also able to control temperature and humidity on a diurnal cycle, enabling study of
+interactions between light and cold temperatures (such as those observed by
+\textcite{armstrong_assessing_2007}).
+
+
+
+The light plants receive in natural environments is dynamic, in that the intensity and spectral
+composition (or quality) of sunlight varies over a day, even in the absence of shading from any
+cloud  or vegetation. In addition, the intensity of sunlight received may fluctuate throughout the
+day as cloud and canopy shade intermittently shade a plant. The time scale of this fluctuation
+varies from minutes to hours depending on its source; clouds may pass over plants in minutes,
+whereas canopy shade will move over plants slowly as the sun tracks from east to west
+(\autoref{fig:intro-dfl-kulheimsolaroutput}; \autocite{kulheim_rapid_2002}).
+
+Plant biologists use laboratory growth chambers to provide repeatable experimental conditions.
+While the elucidation of complex phenotypes, including gene regulation can be studied in the field,
+the ``noise'' experienced by plants in natural environments caused by microclimate, weather and
+biotic interaction, amongst other sources, can cause the interpretation of results to become complex
+and difficult. Laboratory growth conditions  have allowed us to manipulate and observe plants away
+from the random influences of nature such as weather and predation. However, these cabinets
+typically have conditions very different to those experienced in the field
+\autocite{kulheim_rapid_2002}.
+
+
+
+Additionally, I aim to determine if the loci which
+regulate response to excess dynamic light are similar to those which have been found to regulate
+transcriptional response to artificial high light. I will generate RNAseq data collected from
+\textit{Arabidopsis} exposed to novel dynamic light growth conditions, and then mine this dataset
+to:
+
+
+
+I had planned to quantify global gene expression using RNAseq on all plants grown in my main
+experiment, to determine the effects of genotype and novel dynamic growth conditions on global gene
+expression. I have spent some of May and most of June optimising the RNAseq library prep protocol,
+in collaboration with Norman Warthmann. Each step of the protocol appears to work, with varying
+efficiency. Persistent issues with 96 well tissue grinding, ligation efficiency and PCR
+amplification still require further optimisation. Additionally, we do not know that the RNAseq
+protocol is functional as a whole, as the practice samples which which we intended to sequence on
+the MiSeq sequencer as a proof-of-concept were lost due to an equipment malfunction. I am of the
+opinion that it would be unwise to persevere with RNAseq analysis while we are unsure if it will
+yield results in time for my thesis, given the limited results I would obtain if it transpired that
+the protocol took far longer than expected to optimise. My supervisors support me in this decision.
+
+These
+facilites are broadly built with readily available equiptment, often not designed with plant growth
+in mind, for instance fluroscent lamps and air conditioning controllers. Whilst plants will happily
+grow under such conditions, this equiptment not designed with plant growth
+in mind
+
