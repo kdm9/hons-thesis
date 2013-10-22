@@ -235,13 +235,14 @@ expressed upon treatment with excess light. (ELIPs, Jansen and Karpinski.
 
 By studying how, when and to what extent each gene in
 the genome is expressed, we can gain insight into the response to any
-perturbation to a plant's environment. To study global expression, two approaches have commonly been
-used: microarrays and RNAseq. Microarrays quantify expression as fluorescence from
+perturbation to a plant's environment. To study global expression, first whole genome microarrays were developed.
+More recently sequencing of transcribed messges (RNAseq) has been used to quantify expression variation.
+Microarrays quantify expression as fluorescence from
 fluorophore-tagged cDNAs complementary to specific small sections of the transcriptome. More modern
 experiments use RNAseq, the high-throughput sequencing of cDNA libraries, and rely on the number of
 sequence reads being proportional to the concentration of a particular transcript within the
 library. RNAseq allows not only quantification, but provides the actual sequence of each transcript,
-important for analyses of sequence variation such as allele specific expression.
+important for analyses of sequence variation such as allele specific expression and splicing variation.
 
 %\subsection{Theoretical Aspects of RNAseq}
 %\label{subsec:intro-txomics-theory}
@@ -252,7 +253,7 @@ sequencing (HTS), quantification is possible \autocite{wang_rna-seq:_2009}. The 
 library creation is complex, and involves the extraction and purification of intact mRNAs, their
 conversion to complimentary DNA (cDNA), fragmentation, end-repair and A-tailing to allow sequencing
 adaptor ligation, ligation of sequencing adaptors and library amplification
-\autocite{kumar_high-throughput_2012}. This figure is detailed in When sequenced via HTS, these
+\autocite{kumar_high-throughput_2012}. This figure is detailed in CHECK THIS SENTENCE When sequenced via HTS, these
 libraries will yield raw sequence data, with sequences derived from mRNA molecules proportional to
 their abundance in the sample mRNA pool, allowing quantification.
 
@@ -319,6 +320,9 @@ devoted to the examination of the following aims:
   \item Determine the transcriptional response of \textit{Arabidopsis thaliana} to combinatorial
     application of abiotic stresses, using dynamic growth conditions
 \end{enumerate}
+
+
+CAN'T YOU CUT THIS BELOW?
 
 Originally, this project had an alternative aims (below). Due to technical obstacles and delays, the
 specific aims of this project have evolved over the year.  As it became apparent that technical
