@@ -1,0 +1,10 @@
+prog,role,reason,refs
+fastqc,Determine raw sequence quality of datasets,Easy of use and detailed reporting,\autocite{andrews_fastqc_2012}
+scythe,"Remove Illumina adaptor sequence from 3' ends of reads, allowing more accurate mapping",Author's claims of increased accuracy and speed,\autocite{buffalo_scythe_2013}
+seqtk,Remove sequences with low base-level quality from analysis,Mott trimming algorithm; fast,\autocite{li_seqtk_2013}
+subread,Align short reads to genome,Fast RNAseq compatible,\autocite{liao_subread_2013}
+tophat2,Align short reads to genome while detecting mRNA splicing \textit{de novo},Capable of de-novo splicing detection,\autocite{kim_tophat2:_2013}
+subjunc,Align short reads to genome while detecting mRNA splicing \textit{de novo},,\autocite{liao_subread_2013}
+featureCounts,Aggregate gene-wise counts of aligned reads to quantify expression,Fast and well supported,\autocite{liao_featurecounts:_2013}
+edgeR,Perform statistical normalisation and hypothesis testing,Statistically rigorous; supports multi-factor experiments,"\autocite{robinson_edger:_2010, mccarthy_differential_2012}"
+goseq,Perform gene ontology term enrichment,Improved RNAseq-compatible statistical basis,\autocite{young_gene_2010}
