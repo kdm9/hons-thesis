@@ -8,7 +8,7 @@ Nearly all terrestrial biomass, including human life, depends on the primary pro
 plants (i.e.  photosynthesis) \autocite{johnston_anoxygenic_2009}. This primary productivity is
 reduced when plants are stressed by interaction with their environment
 \autocite{mittler_abiotic_2006, mittler_genetic_2010}. In particular, abiotic stresses account for
-many billions of dollars of crop losses per annum \autocite{mittler_abiotic_2006}. The study of
+[PICK OUT THE 10 OR 100B ##] many billions of dollars of crop losses per annum \autocite{mittler_abiotic_2006}. The study of
 plant-environment interactions is crucial to improving agricultural yield and understanding
 functional plant ecology in a changing climate.
 
@@ -34,7 +34,7 @@ Abiotic stresses are those applied to plants from their growth environment, incl
 variables including temperature, humidity, salinity and water availability, and light quality and
 quantity amongst many others. Salinity and drought stresses decrease a plant's ability to transpire
 and obtain inorganic carbon vital to photosynthesis \autocite{seki_molecular_2003}. Excess light
-creates harmful reactive oxygen species (ROS), and damages photosynthetic equipment
+creates harmful reactive oxygen species (ROS), and damages the photosynthetic aparatus
 \autocite{niyogi_photoprotection_1999, asada_production_2006}. Extremes of temperature cause damage
 to or non-optimal function of many enzymes, particularly those involved in metabolism
 \autocite{atkin_thermal_2003}.  Together, abiotic stresses limit plant productivity as their
@@ -44,7 +44,8 @@ enormous effort has been placed into the elucidation and improvement of these co
 however the study of stresses has not lead to the promised improved crops with as much success as
 the effort to do so would justify.
 
-\todo{better papers}
+\todo{better papers JB ADD SOMETHING ABOUT HOW DIFFERENT PLANTS (SPECIES AND GENOTYPES) ARE MORE SUITED FOR DIFFERENT AMOUNTS OF LIGHT
+EG SHADE VS SUN PLANTS, FOREST, WOODLAND, SAVANA TYPES, TROPIC VS TEMPERATE, WHAT IS THE GENETIC BASIS OF THIS DIFFERENTIATION IN LIGHT SENSITIVITY? SOME PATHWAYS ARE HYPOTHESIZED, KEY GENES IDENTFIED, PHYA CRY2}
 %(cite paper/review describing effects, paper showing constitutive expression of some HSF, or
 %other stress mitigator)
 
@@ -52,7 +53,7 @@ the effort to do so would justify.
 \subsection{Photooxidative damage and Photoprotection: Coping with Detrimental Effects of Excess Light}
 \label{subsec:intro-stress-photodamage}
 
-\todo{this chapter breaks up the flow}
+\todo{this chapter breaks up the flow}  BIT REDUNDANT WITH ABOVE
 The ability of plants to utilise energy from light to fix inorganic carbon into organic biomass is
 reduced when the quality or quantity of light a plant receives is not optimal. Excess light is
 particularly damaging, causing both reductions in photosynthetic ability, termed photoinhibition,
@@ -120,10 +121,9 @@ presented by \textcite{mishra_arabidopsis_2012}, who found increased NPQ and exp
 proteins and decreased LHC-associated protein abundances in field-grown \textit{Arabidopsis}. These
 field studies reiterate interactions noted in laboratory studies, and provide impetus for the study
 of field-like combinations of abiotic stresses under controlled laboratory conditions, as this would
-facilitate the mapping of QTLs for combinatorial stress tolerance, of which there appear to be no
-published studies.
+facilitate the mapping of QTLs for combinatorial stress tolerance (Li and Borevitz plosone 2006 and pnas 2010).
 
-\todo{smoother segue into GWAS/QTL}
+\todo{smoother segue into GWAS/QTL OUR OLD PAPERS GIVE YOU THIS IF YOU REVIEW THEM.}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Responses   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -210,7 +210,7 @@ wavelengths between 580-620nm than in the remainder of the visible spectrum, whi
 density peak in the spectral power density of fluorescent lamps (see
 \autoref{fig:dc-res-spectra-norm}). The integration of light quality into assays which test plant
 responses to altered light intensity is lacking in the vast majority of works on the topic.
-\todo{perhaps spruik the SPC here also}
+\todo{perhaps spruik the SPC here also. LED lights are arriving, studies emerging, and you with SPC are in the lead}
 
 \subsection{Response of Plants to Field Conditions}
 \label{subsec:intro-resp-field}
@@ -233,13 +233,14 @@ expressed upon treatment with excess light. (ELIPs, Jansen and Karpinski.
 
 By studying how, when and to what extent each gene in
 the genome is expressed, we can gain insight into the response to any
-perturbation to a plant's environment. To study global expression, two approaches have commonly been
-used: microarrays and RNAseq. Microarrays quantify expression as fluorescence from
+perturbation to a plant's environment. To study global expression, first whole genome microarrays were developed.
+More recently sequencing of transcribed messges (RNAseq) has been used to quantify expression variation.
+Microarrays quantify expression as fluorescence from
 fluorophore-tagged cDNAs complementary to specific small sections of the transcriptome. More modern
 experiments use RNAseq, the high-throughput sequencing of cDNA libraries, and rely on the number of
 sequence reads being proportional to the concentration of a particular transcript within the
 library. RNAseq allows not only quantification, but provides the actual sequence of each transcript,
-important for analyses of sequence variation such as allele specific expression.
+important for analyses of sequence variation such as allele specific expression and splicing variation.
 
 %\subsection{Theoretical Aspects of RNAseq}
 %\label{subsec:intro-txomics-theory}
@@ -250,7 +251,7 @@ sequencing (HTS), quantification is possible \autocite{wang_rna-seq:_2009}. The 
 library creation is complex, and involves the extraction and purification of intact mRNAs, their
 conversion to complimentary DNA (cDNA), fragmentation, end-repair and A-tailing to allow sequencing
 adaptor ligation, ligation of sequencing adaptors and library amplification
-\autocite{kumar_high-throughput_2012}. This figure is detailed in When sequenced via HTS, these
+\autocite{kumar_high-throughput_2012}. This figure is detailed in CHECK THIS SENTENCE When sequenced via HTS, these
 libraries will yield raw sequence data, with sequences derived from mRNA molecules proportional to
 their abundance in the sample mRNA pool, allowing quantification.
 
@@ -317,6 +318,9 @@ devoted to the examination of the following aims:
   \item Determine the transcriptional response of \textit{Arabidopsis thaliana} to combinatorial
     application of abiotic stresses, using dynamic growth conditions
 \end{enumerate}
+
+
+CAN'T YOU CUT THIS BELOW?
 
 Originally, this project had an alternative aims (below). Due to technical obstacles and delays, the
 specific aims of this project have evolved over the year.  As it became apparent that technical
