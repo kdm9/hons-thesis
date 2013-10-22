@@ -238,7 +238,7 @@ temperature and peak light intensity increase, while minimal relative humidity d
     brightness of LED arrays.}
   \label{fig:dc-res-3cond-annuallight}
 \end{figure}
-\todo{finish captions describing the trends in my conditions}
+\todo{check all captions describing the trends in my conditions}
 
 
 The light quality of all dynamic growth conditions created using this system are markedly different
@@ -300,55 +300,27 @@ Additionally, conditions required to conduct a virtual reciproical transplant of
 \todo{finish peli condiions}
 
 \section{Summary and Technical Discussion}
-\todo{summary of dynamic cond.\ chapter}
+\label{sec:dc-summary}
 
 In this chapter, I present software enabling the implementation of dynamic growth condtions that
 mimic diurnal and circannual trends in temperature, humidty, photoperiod, and light quality and
 quantity observed in regional climates. This software enables the use of regional climate models to
 govern growth conditions in laboratory growth chambers, allowing reproducible and reliable
-implementatiion of dynamic growth conditions. Additionally, three dynamic growth conditions to
-examine the effect of light intensity in field-like interaction with temperature, humidity and light
-quality were implemented. These conditions allow for light stress to be studied in the framework of
-combinatiorial application of stresses, as recent literature has advocated
-\autocite{mittler_abiotic_2006, wituszynska_multivariate_2013}.
+implementatiion of dynamic growth conditions. Practically, there are shortcomings in the
+SpectralPhenoClimatron. These are largely limitations inherent to the harware from which it is
+constructed, and include the limited light intensity, temperature and humidity of the
+SpectralPhenoClimatron. The limited light intensity and the evenness of the spectral power density
+of Heliospectra L4A Series 10 lamps will be improved in an upcoming upgrade (pers. comm., Justin
+Borevitz). Despite these minor shortcomings, the SpectralPhenoClimatron is a phenonomneal tool with
+which to study plant-envioronment interactions that has been designed with large scale studies that
+elucidate underlying genetic mechanisms and examine genetic variaiton in these interactions in mind.
 
+Three dynamic growth conditions to examine the effect of light intensity in field-like interaction
+with temperature, humidity and light quality were implemented. These conditions allow for light
+stress to be studied in the framework of combinatiorial application of stresses, as recent
+literature has advocated \autocite{mittler_abiotic_2006, wituszynska_multivariate_2013}. Examinaiton
+of genetic variation in transcriptional, physiological or phenomic responses to altered light
+intesnity may provide insight into mechanisms underlying response to light stress in field-like
+combiations with other abiotic stresses \autocite{li_genetics_2006, li_association_2010}.
 
-\todo{below here should be summarised into single paragraph}
-Practically, there are shortcomings in the SpectralPhenoClimatron. These are largely limitations
-inherent to the harware from which it is constructed, and include the limited light intensity, 
-\begin{itemize}
-  \item reliablity - planned improvements
-  \item convenience
-  \item better lights
-  \item better control
-  \item the capability to create and run them
-\end{itemize}
-
-%Novel growth conditions were designed to emulate some characteristics of growth conditions
-%experienced by plants in natural environments. Using SolarCalc (version AusFebC)
-%\autocite{spokas_estimating_2006}, I have created simulated climates derived from historical
-%observations and models of the climate of the region surrounding Temora, New South Wales. This is a
-%trial location for various agricultural crops, and is in the same climate zone as much of the native
-%range of \textit{Arabidopsis thaliana} \autocite{peel_updated_2007}.
-Hardware components of the SpectralPhenoClimatron are both manually and automatically programmable.
-Components are manually programmable either directly or over a web interface, however this control
-is limited to approximately 15-20 updates per day, with a single schedule (no day-to-day changes).
-In addition, both Conviron PGC20 cabinets and Heliospectra L4A lamps can interface with a computer
-using commands communicated over the telnet protocol. This enables a programmer to create software
-which automates the process of controlling each component together. The functionality of the
-SpectralPhenoClimatron would then only be limited by the operating range of its components and the
-software used to control it.
-
-SolarCalc was run with these model parameters, to produce a model of growth conditions which
-simulate predictable elements of a natural environment, namely light colour and intensity,
-temperature, and humidity at minute intervals throughout the day and season.
-
-The temperature and humidity within the growth cabinets is tightly controlled, wi operating range
-of 5-35 \degc and 50-80 \% RH\@. 
-However, the intensity of these channels is not equal (see
-%\autoref{fig:dc-res-heliospectraspectrum} and
-\autoref{subsec:dc-mth-growthcond}). This facility will be used to implement dynamic growth
-conditions.
-
-\todo{Make heliospectra non-normalised spectrum from Pip's data.}
-
+\todo{summary needs a reword to link it better}
