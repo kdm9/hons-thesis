@@ -8,7 +8,7 @@ Nearly all terrestrial biomass, including human life, depends on the primary pro
 plants (i.e.  photosynthesis) \autocite{johnston_anoxygenic_2009}. This primary productivity is
 reduced when plants are stressed by interaction with their environment
 \autocite{mittler_abiotic_2006, mittler_genetic_2010}. In particular, abiotic stresses account for
-many billions of dollars of crop losses per annum \autocite{mittler_abiotic_2006}. The study of
+[PICK OUT THE 10 OR 100B ##] many billions of dollars of crop losses per annum \autocite{mittler_abiotic_2006}. The study of
 plant-environment interactions is crucial to improving agricultural yield and understanding
 functional plant ecology in a changing climate.
 
@@ -34,7 +34,7 @@ Abiotic stresses are those applied to plants from their growth environment, incl
 variables including temperature, humidity, salinity and water availability, and light quality and
 quantity amongst many others. Salinity and drought stresses decrease a plant's ability to transpire
 and obtain inorganic carbon vital to photosynthesis \autocite{seki_molecular_2003}. Excess light
-creates harmful reactive oxygen species (ROS), and damages photosynthetic equipment
+creates harmful reactive oxygen species (ROS), and damages the photosynthetic aparatus
 \autocite{niyogi_photoprotection_1999, asada_production_2006}. Extremes of temperature cause damage
 to or non-optimal function of many enzymes, particularly those involved in metabolism
 \autocite{atkin_thermal_2003}.  Together, abiotic stresses limit plant productivity as their
@@ -44,7 +44,8 @@ enormous effort has been placed into the elucidation and improvement of these co
 however the study of stresses has not lead to the promised improved crops with as much success as
 the effort to do so would justify.
 
-\todo{better papers}
+\todo{better papers JB ADD SOMETHING ABOUT HOW DIFFERENT PLANTS (SPECIES AND GENOTYPES) ARE MORE SUITED FOR DIFFERENT AMOUNTS OF LIGHT
+EG SHADE VS SUN PLANTS, FOREST, WOODLAND, SAVANA TYPES, TROPIC VS TEMPERATE, WHAT IS THE GENETIC BASIS OF THIS DIFFERENTIATION IN LIGHT SENSITIVITY? SOME PATHWAYS ARE HYPOTHESIZED, KEY GENES IDENTFIED, PHYA CRY2}
 %(cite paper/review describing effects, paper showing constitutive expression of some HSF, or
 %other stress mitigator)
 
@@ -52,7 +53,7 @@ the effort to do so would justify.
 \subsection{Photooxidative damage and Photoprotection: Coping with Detrimental Effects of Excess Light}
 \label{subsec:intro-stress-photodamage}
 
-\todo{this chapter breaks up the flow}
+\todo{this chapter breaks up the flow}  BIT REDUNDANT WITH ABOVE
 The ability of plants to utilise energy from light to fix inorganic carbon into organic biomass is
 reduced when the quality or quantity of light a plant receives is not optimal. Excess light is
 particularly damaging, causing both reductions in photosynthetic ability, termed photoinhibition,
