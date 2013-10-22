@@ -84,4 +84,47 @@ framework of such pseudo-natural dynamic growth conditions which SolarCalc creat
 the fluctuating condition designed to mimic an intermittently cloudy day.  I aimed to further  in
 addition to conditions mimicking clear skies. To create such conditions
 
+A second dataset, the excess light and drought (EL/D) dataset, was used as further validation. This
+dataset consists of RNAseq libraries sampled in triplicate from plants grown to three week of age
+under standard laboratory growth conditions, per the RRGS timecourse experiment above. Plants were
+harvested before any stress, after 1 hour of 8x excess light, and after one week of drought stress,
+in which water was completely withheld while plants continued to grow under standard laboratory
+growth conditions.
+\todo{need protocol used for exp217 from Pete: this used the stranded protocol which is published
+somewhere - just need the reference. Also don't present work with this dataset: maybe scrap?}
+
+%Novel growth conditions were designed to emulate some characteristics of growth conditions
+%experienced by plants in natural environments. Using SolarCalc (version AusFebC)
+%\autocite{spokas_estimating_2006}, I have created simulated climates derived from historical
+%observations and models of the climate of the region surrounding Temora, New South Wales. This is a
+%trial location for various agricultural crops, and is in the same climate zone as much of the native
+%range of \textit{Arabidopsis thaliana} \autocite{peel_updated_2007}.
+Hardware components of the SpectralPhenoClimatron are both manually and automatically programmable.
+Components are manually programmable either directly or over a web interface, however this control
+is limited to approximately 15-20 updates per day, with a single schedule (no day-to-day changes).
+In addition, both Conviron PGC20 cabinets and Heliospectra L4A lamps can interface with a computer
+using commands communicated over the telnet protocol. This enables a programmer to create software
+which automates the process of controlling each component together. The functionality of the
+SpectralPhenoClimatron would then only be limited by the operating range of its components and the
+software used to control it.
+
+
+SolarCalc was run with these model parameters, to produce a model of growth conditions which
+simulate predictable elements of a natural environment, namely light colour and intensity,
+temperature, and humidity at minute intervals throughout the day and season.
+
+The temperature and humidity within the growth cabinets is tightly controlled, wi operating range
+of 5-35 \degc and 50-80 \% RH\@. 
+However, the intensity of these channels is not equal (see
+%\autoref{fig:dc-res-heliospectraspectrum} and
+\autoref{subsec:dc-mth-growthcond}). This facility will be used to implement dynamic growth
+conditions.
+
+\todo{Make heliospectra non-normalised spectrum from Pip's data.}
+
+During February, March and April, approximately 900 plants were planted, grown and harvested. I, in
+collaboration with Keng Rungrat, selected and planted 87 lines of \textit{A. thaliana}. These
+consisted of the ecotypes Cape Verde Islands (Cvi), Columbia (Col) and Landsberg erecta (Ler), the
+photoprotection mutants \textit{stn8}, \textit{pgr5}, \textit{npq1} and \textit{npq4}, and 80
+members of the Cvi vs Ler RIX mapping population. 
 
