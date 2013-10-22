@@ -113,7 +113,7 @@ severe in the field but had no impact under constant light in the lab \autocite{
 Similarly, photoinhibition, physiological symptoms of abiotic stress and expression of high light-induced
 transcripts were more severe in field-grown \textit{Solidago altissima} than those grown in
 comparable lab conditions \autocite{barua_interactive_2006}. Furthermore,
-\textcite{wituszynska_multivariate_2013} observe increased steady-state expression of genes involved in
+\textcite{wituszynska_multivariable_2013} observe increased steady-state expression of genes involved in
 response to excess light and photooxidative damage under field conditions compared to lab-grown
 plants, and concomitant physiological acclimation to variable light intensity. Similar findings are
 presented by \textcite{mishra_arabidopsis_2012}, who found increased NPQ and expression of ELIP
@@ -140,7 +140,7 @@ variety of techniques.  Studies of photosynthetic characteristics by chlorophyll
 \autocite{technical review} have illustrated the effects of abiotic stress of photosynthesis
 \autocite{kulheim_rapid_2002, mishra_arabidopsis_2012, alter_acclimatory_2012,
 tikkanen_regulation_2012}. Phenotypic analysis, particularly of plant morphology, has given insight
-into the effects of abiotic stress \autocite{wituszynska_multivariate_2013,
+into the effects of abiotic stress \autocite{wituszynska_multivariable_2013,
 armstrong_assessing_2007}. Studies of the transcriptome, or global cellular pool of expressed genes,
 have provided insight into plant responses to many abiotic stresses and combinations thereof
 \autocite{rossel_global_2002, kimura_identification_2003, seki_monitoring_2001,
@@ -181,11 +181,9 @@ photoreceptor-dependent induction of \textit{ELIP1} \autocite{kleine_genome-wide
 ROS-induced, heat shock transcription factor (HSF) mediated induction of HSPs
 \autocite{miller_could_2006}. The light induced down-regulation of \textit{\underline{L}IGHT
 HARVESTING \underline{C}HLOROPHYLL a/b \underline{B}INDING} \textit{LHCB} family genes is also well
-established \autocite{citation needed}. Therefore, these genes are used in this thesis as markers of
-excess light, allowing comparison of transcriptional responses observed in this thesis to be
-compared to relevant previous works.
-%These genes can be used as markers\ldots (this should state the rationale behind qPCR marker genes,
-%from Gordon, rossell, estavillio etc)
+established \autocite{rossel_global_2002,mishra_arabidopsis_2013}. Therefore, these genes are used
+in this thesis as markers of transcritpional response to excess light, allowing comparison of
+transcriptional responses observed in this thesis to be compared to relevant previous works.
 
 The rapid response of the wider \textit{Arabidopsis} transcriptome to changes in light intensity has
 been demonstrated \autocite{rossel_global_2002}.  Acclimation to excess light conditions affects the
@@ -221,7 +219,7 @@ Under field conditions, plants respond to the combination of stresses they natur
 opposed to pre-determined combinations hypothesised to provoke a mechanism or response. Plants grown
 in the field show markedly different phenotypes and responses to those grown in the lab. This
 includes metabolic profiles \autocite{jankanpaa_metabolic_2012}, transcript abundances
-\autocite{mishra_arabidopsis_2012, wituszynska_multivariate_2013}, photosynthetic differences
+\autocite{mishra_arabidopsis_2012, wituszynska_multivariable_2013}, photosynthetic differences
 \autocite{mishra_arabidopsis_2012}, and survival and fecundity \autocite{kulheim_rapid_2002}.
 Several authors report overlap between genes constitutive expressed in field conditions, and those
 expressed upon treatment with excess light. (ELIPs, Jansen and Karpinski.
