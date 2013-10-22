@@ -13,14 +13,17 @@ to detect subtle differences in high throughput experiments}
 \todo{insert citaitons from intro into this summmary. also, one liner about what is RNAseq before
 first menton of RNAseq in first paragraph}
 
-As high-throughput, large-scale experiments such as QTL mapping and Genome Wide Association Studies
-(GWAS) become more prevalent, increasingly subtle biological contrasts are being examined. RNAseq is
-an incredibly sensitive tool to assay subtle changes in, for example, plant growth environment or
-subtle genetic variation. Typically, RNAseq molecular and analytic methods have been developed to
-investigate stark biological comparisons, such as comparison of healthy and diseased or mutant and
-wild-type tissues or individuals, and are often too time consuming for use in large scale
-experiments. In order to create analyse these large scale datasets, updated molecular and analysis
-methodology must be used.
+RNA sequencing (RNAseq) is a modern method of whole-transcriptome quantification, which works by
+sequncing the mRNA pool of a cell, tisssue or organisms \autocite{wang_rna-seq:_2009,
+martin_catalyzing_2013}. As high-throughput, large-scale experiments such as QTL mapping and Genome
+Wide Association Studies (GWAS) become more prevalent, increasingly subtle biological contrasts are
+being examined. RNAseq is an incredibly sensitive tool to assay subtle changes in, for example,
+plant growth environment or subtle genetic variation \autocite{martin_catalyzing_2013}. Typically,
+RNAseq molecular and analytic methods have been developed to investigate stark biological
+comparisons, such as comparison of healthy and diseased or mutant and wild-type tissues or
+individuals \autocite{wang_rna-seq:_2009}, and are often too time consuming for use in large scale
+experiments \autocite{kumar_high-throughtput_2012}. In order to create analyse these large scale
+datasets, updated molecular and analysis methodology must be used.
 
 To gain biological meaning from raw RNAseq data, an analysis pipeline must be employed. In this
 context, a pipeline is series of software components which manipulate in succession a dataset to
@@ -55,11 +58,12 @@ genome size, I hypothesise that the optimal sequencing depth for \textit{Arabido
 smaller, specifically between 2 and 5 million reads, or between 48 and 96 libraries per Illumina
 HiSeq 2500 sequencing lane (which yield 200 million reads apiece).
 
+\todo{remove all kumar et al stuff}
+
 %KEVIN, CONRAD AND OTHER GOOD STATS FOLKS HAVE LOOKED INTO THIS, BECAUSE OF BIOLOGICAL VARIATION THE OPTIMUM IS
 %REALLY TO DO AS MANY LINES AS YOU CAN AFFORD, BARCODE EACH, THEN SEQUENCE THE POOL WITH WHATEVER $$ YOU HAVE LEFT, PERHAPS $5K FOR EACH PART
 %FOR EXAMPLE 2 LINES AT 100X = THE SAME READS AS 200 LINES AT 1 X, BUT THE COVERAGE IS SPREAD ACROSS SAMPLES REDUCING BIOLOGICAL ERROR.
 %EVEN IF A GENE HAS ONLY 100 READS TOTAL. YOU WOULD BE MORE CONFIDENT IF THOSE READS CAME UP MOSTLY IN ONE GENOTYPE AND NOT ANOTHER.
-%
 %PERHAPS WHAT YOU CAN SAY IS GIVEN SO MANY SAMPLES WHO MUCH SEQ IS WORTH DOING BEFORE DIMINISHING RETURNS OF MORE COST WHEN
 %BIOLOGICAL ERROR DOMINATES. THAT IS WHAT YOU SHOW IN FIG 1.7, SO PERHAPS RETRY ABOVE.
 
@@ -74,78 +78,13 @@ HiSeq 2500 sequencing lane (which yield 200 million reads apiece).
 \subsection{Implementation of a High Throughput RNAseq Library Preparation Method}
 \label{subsec:br-mth-kumaretal}
 
-\todo{lots of details missing in this section}
 
-%This work was conducted in collaboration with Dr. Norman Warthmann, who performed the testing of
-%bell adaptors and assisted with this section.
-\todo{define bell adaptors}
-
-To increase the throughput and the decrease cost of Illumina RNAseq sequencing library preparation,
-I attempted to implement the RNAseq library preparation protocol of
-\textcite{kumar_high-throughput_2012}, a published protocol enabling the preparation of RNAseq
-libraries in high throughput using 96 well plates. Specifically, I used a slightly modified version
-of the High-Throughput RNAseq protocol described in Supplementary Methods 1 of
-\textcite{kumar_high-throughput_2012} (hereafter referenced as the HTR protocol). To test and
-optimise this protocol, leaf tissue collected from surplus 5-week old \textit{A. thaliana} Col-0
-from a colleague's experiment was used. This tissue had been collected into Qiagen 1.2mL collection
-tubes (PN:<++>) containing a single steel ball bearing, and snap frozen in \liqn before grinding in
-a TissueLyser (PN <+get details+>) for two one minute pulses at 25Hz at a later date. In collection
-tubes, 750 \ul Dynabeads Lysis/Binding Buffer was added, before sample was ground for a further 30s
-in a TissueLyser as before. Then, lysates were prepared per Steps 1.1.6-1.1.8 of the HTR protocol
-described in Supplementary Methods 1 of \textcite{kumar_high-throughput_2012}. Isolated mRNA was
-obtained and cDNA synthesised and fragmented according to steps 1.2 to 3 of the HTR protocol of
-\textcite{kumar_high-throughput_2012}. Working with Dr. Norman Warthmann, the remaining steps of the
-HTR protocol were validated using four cDNA samples, following the HTR protocol with modifications
-as described below.
-
-To test all bell adaptors, sonicated genomic DNA was used as input material, due to it's similar
-size and fragmentation properties to fragmented cDNA, and due to the scarcity of large quantities of
-cDNA of little value. This DNA was obtained from \textit{Oryza sativa} seedlings, diluted to a
-concentration of approximately 7 \ngul (500 $ng$ in 70 \ul) before sonication in a Diagenode
-Bioruptor DNA sonicator. This sonicated DNA was cleaned up per steps 3.5-3.8 of the HTR protocol,
-with the modification that 30 \ul bead binding buffer and 40 \ul Ampure XP SPRI beads were used.
-Then, a modified step 4 of the HTR protocol was used to create unamplified sequencing libraries. In
-step 4.1 and 4.2, double reactions were performed, however the same quantity of SPRI cleanup
-reagents were used. Before adaptor ligation, the A-tailed libraries were eluted using a mixture of 5
-\ul diluted adaptor oligonucleotide, 1 \ul 10x ligation buffer and 2 \ul water. The DNA ligase was
-diluted in the remaining 1.5 \ul water and added to each reaction, before proceeding with protocol
-steps 4.3.3 onwards. The adaptors used were not those specified by
-\textcite{kumar_high-throughput_2012}, instead custom bell adaptors were used. These adaptors were
-designed by Dr Norman Warthmann, and are compatible with the T/A overhang ligation method
-\textcite{kumar_high-throughput_2012} utilise. These adaptors are described in
-\autoref{tab:br-mth-normanadaptors}. The protocol described in step 5 of the HTR protocol was used,
-with the forward and index 1 reverse primers (see \autoref{tab:br-mth-normanadaptors}), to amplify
-the libraries.
-
-\todo{split this into two paragraphs: successful creation of 4 libraries from my cDNA, and Norman's
-optimisation of his adaptors, which he mostly did.}
-
-\kmdefaulttable
-{br-mth-normanadaptors}
-{./tables/br-mth-normanadaptors.csv}
-{lc}
-{Adaptor Name & Sequence}
-{\nm=Name, \seq=Sequence}
-{\nm & \texttt{\seq}}
-{Bell adaptors and index primers obtained from Dr. Norman Warthmann.}
-\todo{need this data from Norman}
-
-RNA quality and quantity was assayed using the Agilent BioAnalyser digital electrophoresis system.
-The RNA samples were loaded into a Plant RNA Pico analysis chip and an analysis run per
-manufacturer's protocol. The effectiveness of various steps in this protocol was assayed by digital
-electrophoresis with the Shimadzu MultiNA instrument, using the DNA1000 kit. The pre-mix protocol was
-used: 2\ul sample was added to 4\ul DNA1000 marker solution, the solution mixed, and loaded into the
-instrument, which was run according to manufacturer's DNA1000-PreMix protocol. Quantitative PCR was
-performed to test the ligation and PCR efficiency of each adaptor. To do so, 2\ul of each
-pre-amplification library was combined with 5\ul Sybr Green qPCR master mix, 1\ul each of the
-forward and index 1 reverse primers (see \autoref{tab:br-mth-normanadaptors}), and 1\ul
-Uracil-Specific Excision Reagent (USER) enzyme mix.
 
 
 \subsection{External RNAseq Datasets}
 \label{subsec:br-mth-datasets}
 
-\todo{check details of this section from Pete}
+
 RNAseq datasets created by Peter Crisp and Barry Pogson were used both as trial datasets and
 external references in this thesis. The Rapid Recovery Gene Silencing excess light time-course
 experiment (hereafter referred to as the RRGS time-course) consists of samples taken in triplicate
@@ -165,15 +104,6 @@ dataset studies a timecourse over a treatment highly similar to that conducted i
 condition experiment, allowing development of bioinformatic protocols specific to RNAseq datasets
 from experiments like these.
 \todo{part numbers etc}
-
-A second dataset, the excess light and drought (EL/D) dataset, was used as further validation. This
-dataset consists of RNAseq libraries sampled in triplicate from plants grown to three week of age
-under standard laboratory growth conditions, per the RRGS timecourse experiment above. Plants were
-harvested before any stress, after 1 hour of 8x excess light, and after one week of drought stress,
-in which water was completely withheld while plants continued to grow under standard laboratory
-growth conditions.
-\todo{need protocol used for exp217 from Pete: this used the stranded protocol which is published
-somewhere - just need the reference. Also don't present work with this dataset: maybe scrap?}
 
 \begin{figure}[p]
   \begin{center}
@@ -196,7 +126,19 @@ against a published best-practice pipeline \autocite{van_verk_rna-seq:_2013}. Sp
 computational speed and efficiency, and the results obtained with these newer programs were compared
 to the analysis pipeline of \textcite{van_verk_rna-seq:_2013}. This enables the development of
 higher-performance analysis pipelines suitable to high throughput experiments, with no cost to the
-quality of results obtained.
+quality of results obtained. A summary of progams choices is described in
+\autoref{tab:br-mth-programs}.
+
+\begin{landscape}
+  \kmdefaulttable
+  {br-mth-programs}
+  {tables/br-mth-programs.csv}
+  {lp{5cm}p{5cm}p{5cm}}
+  {Program & Program's Role & Reasons for Selection & References}
+  {\pr=prog, \rl=role, \rs=reason, \rf=refs}
+  {\texttt{\pr} & \rl & \rs & \rf}
+  {A caption}
+\end{landscape}
 
 Comparisons between the computational cost of four pipelines were conducted using a sub-sampled
 dataset. To demonstrate the improved performance of the \texttt{\justify aln\_subread} pipeline, it
@@ -247,53 +189,6 @@ effect of reduction of sequencing depth.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Results}
-
-\subsection{High Throughput RNAseq Library Preparation Protocol}
-\label{subsec:br-res-rnaseqprotocol}
-
-To increase the throughput and the decrease cost of Illumina RNAseq sequencing library preparation,
-non kit-based protocols must be used. This subsection of my thesis describes my attempts to
-implement the RNAseq library preparation protocol of \textcite{kumar_high-throughput_2012}. The
-majority of this protocol was successfully implemented.  Messenger RNA was successfully extracted in
-a 96 well plate format using oligo-d(T) magnetic beads, albeit with low yield (see
-\autoref{fig:br-res-dynabdpicogel}, \autoref{fig:br-res-dynabdpicoegramB1}). Complimentary DNA (cDNA)
-was successfully prepared from this mRNA. Enzymatic fragmentation of cDNA was successful, as was end
-repair and A-tailing. However, a cumulation of possible ligation and PCR biases caused
-order-of-magnitude variation in library abundance. This variation in library abundance was confirmed
-with diagnostic qPCR. For this reason, the use of this protocol in my experiment was abandoned, as
-the optimisation of these difficulties may have been very time consuming and was not feasible in the
-time remaining in my Honours year.
-
-\begin{figure}[p]
-  \begin{center}
-    \includegraphics[width=\textwidth]{img/br-res-dynabdpicogel.png}
-  \end{center}
-  \caption{BioAnalyser digital gels of 10 RNA samples extracted. The extraction or quantification of C1
-    failed. Note the feint mRNA smear, and residual rRNA bands.}
-  \label{fig:br-res-dynabdpicogel}
-\end{figure}
-
-\begin{figure}[p]
-  \begin{center}
-    \includegraphics[width=\textwidth]{img/br-res-dynabdpicoegramB1.png}
-  \end{center}
-  \caption{BioAnalyser digital electrophoretogram of a representative mRNA sample (Sample B1 in
-    \autoref{fig:br-res-dynabdpicogel}). Note the smear-like quality of the mRNA sample, and the
-    reduced or absent ribosomal RNA peaks, when compared with a total RNA sample such as in
-    \autoref{fig:txv-res-rnaqual}}
-    \label{fig:br-res-dynabdpicoegramB1}
-\end{figure}
-
-\begin{figure}[p]
-  \begin{center}
-    \includegraphics[width=\textwidth]{img/placeholder.png}
-  \end{center}
-  \caption{Ligation bias between indices}
-  \label{fig:br-res-libraryqpcr}
-\end{figure}
-
-\todo{this section needs a re-write. Also questioning if it should go here, or chapter 4.}
-
 \subsection{A Framework for the Creation of RNAseq Analysis Pipelines}
 \label{subsec:br-res-framework}
 
@@ -331,15 +226,17 @@ allow for different experimental designs to be analysed.
 \subsubsection{The \texttt{\justify aln\_subread} pipeline}
 \label{subsubsec:br-res-alnsubread}
 This pipeline is built around the \texttt{\justify subread} aligner, a very fast RNAseq-compatible short read
-aligner of expressed RNA sequence to a reference genome. Firstly, quality of sequencing data is checked using the \texttt{\justify fastqc} program,
-sequencing adaptors are removed with \texttt{\justify scythe}, and \texttt{\justify seqtk} remove low quality
+aligner of expressed RNA sequence to a reference genome. Firstly, quality of sequencing data is
+checked using the \texttt{\justify fastqc} program \autocite{andrews_fastqc_2013},
+sequencing adaptors are removed with \texttt{\justify scythe} \autocite{buffalo_scythe_2013}, and \texttt{\justify seqtk} remove low quality
 sequences, before the quality is again checked using \texttt{\justify fastqc}. The \texttt{\justify subread} aligner
 then aligns reads to the current TAIR10 \textit{A. thaliana} reference genome, accounting for alternative exon splicing. The resulting
 SAM file is converted to the BAM format, sorted and indexed, as required by some downstream programs
 (e.g. the \texttt{\justify IGV} genome browser). Gene expression is then summarised gene-wise by counting the
 number of reads which align to genic loci with \texttt{\justify featureCounts}, completing this section of
-the analysis and the \texttt{\justify aln\_subread} pipeline.
-
+the analysis and the \texttt{\justify aln\_subread} pipeline. See \autoref{tab:br-mth-programs} for
+futher details of these progams.
+\todo{programs citations}
 \subsubsection{The \texttt{\justify aln\_subjunc} and \texttt{\justify aln\_tophat} pipelines}
 \label{subsubsec:br-res-alnsplicing}
 
@@ -511,11 +408,14 @@ experimental design of current and future experiments underway.
 \label{sec:br-summ}
 \todo{summary of br chapter}
 
-\subsection{High throughput RNAseq Library Prep}
-\begin{itemize}
-  \item talk about why it didn't work
-  \item discuss how to get it working
-  \item state It won't be used, or discussed later
-\end{itemize}
+In this chapter, I have implemented a framework allowing easier creation and optimistaion of RNAseq
+analysis pipelines. Via literature review and brief experimental validation, I have selected
+software optimised for accuracy and speed in analysis of RNAseq data. Generic analysis piplines that
+utilise these software have been created to allow investigation of common RNAseq experimental
+designs. Subtle transcritponal variation requires software to be optimised for accuracy and
+statisitcal rigour, while optimising software for performance allows end users to conduct their own
+analyses, ensuring and end-to-end understanding of their experiments. Emphasis has been placed on
+reproducible analysis of RNAseq, ensuring the validity and reproduiblity of results obtained. These
+advances allow for the analysis of both small and large scale RNAseq experiments.
 
-
+\todo{CRUCIAL: needs linking sentence}
