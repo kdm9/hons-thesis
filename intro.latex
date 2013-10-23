@@ -5,12 +5,22 @@
 \chapter{Introduction}
 
 Nearly all terrestrial biomass, including human life, depends on the primary productivity of higher
-plants (i.e.  photosynthesis) \autocite{johnston_anoxygenic_2009}. This primary productivity is
+plants (photosynthesis) \autocite{johnston_anoxygenic_2009}. This primary productivity is
 reduced when plants are stressed by interaction with their environment
-\autocite{mittler_abiotic_2006, mittler_genetic_2010}. In particular, abiotic stresses account for
-over 100 billion of dollars of crop losses per annum in the United States alone \autocite{mittler_abiotic_2006}. The study of
-plant-environment interactions is crucial to improving agricultural yield and understanding
-functional plant ecology in a changing climate.
+\autocite{mittler_abiotic_2006, mittler_genetic_2010}. Abiotic stresses alone account for
+over 100 billion of dollars of crop losses per annum in the United States alone
+\autocite{mittler_abiotic_2006}. Therefore, the study of plant-environment interactions is crucial
+to improving agricultural yield and understanding functional plant ecology in a changing climate.
+
+Central to increasing the understanding of plant-enviroment intearctions is the development of labtorty study systems that allow classical mechanisitc
+studies of abiotc stress response to be placed in the context of the conditions plants experience in
+natural or cultivated environments outside laboritories. Several techniques and approaches that have
+been developed over the past decade aide the study of plant stress response. In this thesis, I
+discuss, develop and apply novel techniques that enable the global study of gene expression in
+laboratory growth conditions which mimic field-like combinations of light, temperature and humidity.
+Specifically, I examine the effect of light intensity on global gene expression, within the
+framework of growth conditions whose temperature, humidity and light follow trends that approximate
+those observed in regional climates.
 
 %the quality or quantity of light a plant receives is not optimal. Excess light is particularly
 %damaging, causing both reductions in photosynthetic ability (photoinhibition) and cellular or
@@ -30,115 +40,29 @@ functional plant ecology in a changing climate.
 \section{Abiotic Stress: A limit to Plant Productivity}
 \label{sec:intro-stress}
 
-Abiotic stresses are those applied to plants from their growth environment, including environmental
-variables including temperature, humidity, salinity and water availability, and light quality and
-quantity amongst many others. Salinity and drought stresses decrease a plant's ability to transpire
-and obtain inorganic carbon vital to photosynthesis \autocite{seki_molecular_2003}. Excess light
-creates harmful reactive oxygen species (ROS), and damages the photosynthetic aparatus
-\autocite{niyogi_photoprotection_1999, asada_production_2006}. Extremes of temperature cause damage
-to or non-optimal function of many enzymes, particularly those involved in metabolism
-\autocite{atkin_thermal_2003}.  Together, abiotic stresses limit plant productivity as their
-detrimental effects affect the ability of plants to assimilate biomass, and coping mechanisms plants
-have evolved generally come at a yield penalty \autocite{mittler_abiotic_2006}. As a result,
-enormous effort has been placed into the elucidation and improvement of these coping mechanisms,
-however the study of stresses has not lead to the promised improved crops with as much success as
-the effort to do so would justify.
+Abiotic stress are the non-living stresses imposed upon plants by their growth environment. This
+includes deletatious extremes in or combinations of environmental variables such as temperature,
+humidity, osmotc potential, water availability, light quality and quantity. Specifically, osmotic
+and drought stresses cause a decrease in the ability of plants to transpire and obtain inorganic
+carbon vital to photosynthesis \autocite{seki_molecular_2003, mittler_abiotic_2006}. Excess light
+creates harmful reactive oxygen species (ROS) that damage the delicate photosynthetic aparatus
+\autocite{niyogi_photoprotection_1999, apel_reactive_2004, asada_production_2006, li_sensing_2009,
+foyer_redox_2009, mubarakshina_production_2010}. Extremes of temperature cause non-optimal function
+of or damage to many enzymes, particularly those involved in metabolism
+\autocite{atkin_thermal_2003}.  Together, abiotic stresses limit plant productivity through their
+detrimental effects upon the ability of plants to assimilate biomass, and coping mechanisms that
+plants have evolved generally come at a yield penalty \autocite{mittler_abiotic_2006}. As a result,
+enormous effort has been directed towards the elucidation and improvement of these coping
+mechanisms. In particular, the mechanisms by which excess light impact on plants, and how plants
+respond to this stress, have been major foci of research in the past decade.
 
-\todo{better papers JB ADD SOMETHING ABOUT HOW DIFFERENT PLANTS (SPECIES AND GENOTYPES) ARE MORE SUITED FOR DIFFERENT AMOUNTS OF LIGHT
-EG SHADE VS SUN PLANTS, FOREST, WOODLAND, SAVANA TYPES, TROPIC VS TEMPERATE, WHAT IS THE GENETIC BASIS OF THIS DIFFERENTIATION IN LIGHT SENSITIVITY? SOME PATHWAYS ARE HYPOTHESIZED, KEY GENES IDENTFIED, PHYA CRY2}
-%(cite paper/review describing effects, paper showing constitutive expression of some HSF, or
-%other stress mitigator)
-
-
-\subsection{Photooxidative damage and Photoprotection: Coping with Detrimental Effects of Excess Light}
-\label{subsec:intro-stress-photodamage}
-
-\todo{this chapter breaks up the flow}  BIT REDUNDANT WITH ABOVE
-The ability of plants to utilise energy from light to fix inorganic carbon into organic biomass is
-reduced when the quality or quantity of light a plant receives is not optimal. Excess light is
-particularly damaging, causing both reductions in photosynthetic ability, termed photoinhibition,
-\autocite{niyogi_photoprotection_1999}, and cellular or tissue damage and death
-\autocite{asada_production_2006, suzuki_ros_2012}. Because of the indispensability of
-photosynthesis, plants have evolved evolved mechanisms by which the detrimental effects of excess
-light can be minimised. These mechanisms, collectively termed photoprotection, work to dissipate
-excess energy, reduce the amount of light absorbed, or prevent or repair any damage caused
-\autocite{niyogi_photoprotection_1999, takahashi_photoprotection_2011}
-\todo{other reviews of light stress and Photooxidative damage}
-
-Several mechanisms of photoprotection occur within the chloroplast. Non-photochemical quenching
-(NPQ) dissipates excess energy from excited state chlorophyll molecules as heat
-\autocite{muller_non-photochemical_2001}. It occurs in photosystem II (PS II), and is particularly
-important during rapid changes in intensity \autocite{kulheim_rapid_2002}. Cyclic electron flow
-occurs in photosystem I (PS I) and acts by decreasing the pH of the thylakoid lumen, which in turn
-is thought to stabilise the oxygen evolving complex and aid NPQ \autocite{takahashi_how_2009}. State
-transitions act via phosphorylation of PS II and light harvesting complex II (LHC II) proteins.
-State transitions reversibly alter the balance of excitation energy between PS I and PS II
-\autocite{tikkanen_state_2006}. Through reversible dissociation of the LHC II and PS II , state
-transitions lower the light harvesting ability of PS II  and prevent absorption of excess light by
-PS II  \autocite{johnson_photoprotective_2011}. The \textit{Arabidopsis} mutants
-\textit{\underline{N}ON-\underline{P}HOTOCHEMICAL \underline{Q}UENCHING \underline{1}}
-(\textit{NPQ1}) and \textit{\underline{N}ON-\underline{P}HOTOCHEMICAL \underline{Q}UENCHING
-\underline{4}} (\textit{NPQ4}), \textit{\underline{P}ROTON \underline{G}RADIENT
-\underline{R}EGULATOR \underline{5}} (\textit{PGR5}) and \textit{\underline{S}TATE
-\underline{T}RANSITIO\underline{N} \underline{7}} (\textit{STN7}) and \textit{\underline{S}TATE
-\underline{T}RANSITIO\underline{N} \underline{8}} (\textit{STN8}) are defective in these three
-mechanisms respectively.
-
-
-\subsection{Abiotic Stresses: Studied Individually, Encountered Combinatorially}
-\label{subsec:intro-stress-combstress}
-
-Despite the large body of published works elucidating coping mechanisms of and responses to several
-abiotic stresses, the majority of works focus on an abiotic stress in isolation
-\autocite{atkinson_interaction_2012, mittler_abiotic_2006}. However, in natural or agricultural
-situations, plants rarely experience an abiotic stress in isolation. This is a one of many causes of
-the difficulty in translating stress-tolerant lines of plants developed in labs to more hardy field
-lines \autocite{mittler_abiotic_2006, mittler_genetic_2010}. 
-
-Laboratory experiments have demonstrated interactions between many abiotic stresses. Temperature
-interacts with light stress in a detrimental fashion \autocite{mittler_abiotic_2006}.  At cold
-temperatures, unacclimated plants are less able to dissipate excess energy to avoid photooxidative
-damage \autocite{armstrong_assessing_2007}. \textcite{rossel_global_2002} demonstrate temperature
-dependence on the transcriptional response to excess light. Interactions with temperature have been
-observed in the transcriptional response to drought \autocite{seki_monitoring_2001,
-seki_molecular_2003, rizhsky_combined_2002, rizhsky_when_2004}. Additionally, interactions between
-biotic and abiotic stresses exist \autocite{mittler_abiotic_2006, atkinson_interaction_2012,
-atkinson_identification_2013}. The data these authors present warrants a paradigm shift towards the
-study of abiotic stresses in combination, as advocated by \textcite{mittler_abiotic_2006}.
-\todo{find something more convincing than that paper of Owen's}.
-
-Field-grown plants tend to demonstrate reduced survival, reproduction and altered transcriptional
-responses compared to those grown in comparable lab conditions. For example, in Arabidopsis thaliana
-the reduction in reproductive success caused by the \textit{npq1} and \textit{npq4} mutants was
-severe in the field but had no impact under constant light in the lab \autocite{kulheim_rapid_2002}.
-Similarly, photoinhibition, physiological symptoms of abiotic stress and expression of high light-induced
-transcripts were more severe in field-grown \textit{Solidago altissima} than those grown in
-comparable lab conditions \autocite{barua_interactive_2006}. Furthermore,
-\textcite{wituszynska_multivariable_2013} observe increased steady-state expression of genes involved in
-response to excess light and photooxidative damage under field conditions compared to lab-grown
-plants, and concomitant physiological acclimation to variable light intensity. Similar findings are
-presented by \textcite{mishra_arabidopsis_2012}, who found increased NPQ and expression of ELIP
-proteins and decreased LHC-associated protein abundances in field-grown \textit{Arabidopsis}. These
-field studies reiterate interactions noted in laboratory studies, and provide impetus for the study
-of field-like combinations of abiotic stresses under controlled laboratory conditions, as this would
-facilitate the mapping of QTLs for combinatorial stress tolerance (Li and Borevitz plosone 2006 and pnas 2010).
-
-\todo{smoother segue into GWAS/QTL OUR OLD PAPERS GIVE YOU THIS IF YOU REVIEW THEM.}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Responses   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Plant Responses to Abiotic Stresses}
-\label{sec:intro-resp}
-
-\todo{rebuttal to state of art in biol.\ literature}
-\todo{genetic variation}
+\todo{blurry comment from barry}
 
 Plants respond to abiotic stress via a myriad of mechanisms
-\autocite{demmig-adams_photoprotection_1992}, thus responses to abiotic stress must be studied via a
-variety of techniques.  Studies of photosynthetic characteristics by chlorophyll fluorescence
-\autocite{technical review} have illustrated the effects of abiotic stress of photosynthesis
-\autocite{kulheim_rapid_2002, mishra_arabidopsis_2012, alter_acclimatory_2012,
+\autocite{demmig-adams_photoprotection_1992}, therefore responses to abiotic stress must be studied
+via a variety of techniques. Studies of photosynthetic characteristics by chlorophyll fluorescence
+\autocite[reviewed in][]{baker_chlorophyll_2008} have illustrated the effects of abiotic stress on
+photosynthesis \autocite{kulheim_rapid_2002, mishra_arabidopsis_2012, alter_acclimatory_2012,
 tikkanen_regulation_2012}. Phenotypic analysis, particularly of plant morphology, has given insight
 into the effects of abiotic stress \autocite{wituszynska_multivariable_2013,
 armstrong_assessing_2007}. Studies of the transcriptome, or global cellular pool of expressed genes,
@@ -146,23 +70,64 @@ have provided insight into plant responses to many abiotic stresses and combinat
 \autocite{rossel_global_2002, kimura_identification_2003, seki_monitoring_2001,
 atkinson_identification_2013}.
 
+\todo{better papers JB ADD SOMETHING ABOUT HOW DIFFERENT PLANTS (SPECIES AND GENOTYPES) ARE MORE SUITED FOR DIFFERENT AMOUNTS OF LIGHT
+EG SHADE VS SUN PLANTS, FOREST, WOODLAND, SAVANA TYPES, TROPIC VS TEMPERATE, WHAT IS THE GENETIC BASIS OF THIS DIFFERENTIATION IN LIGHT SENSITIVITY? SOME PATHWAYS ARE HYPOTHESIZED, KEY GENES IDENTFIED, PHYA CRY2}
+%(cite paper/review describing effects, paper showing constitutive expression of some HSF, or
+%other stress mitigator)
+\todo{genetic variation}
+
+
+\subsection{Coping with Detrimental Effects of Excess Light: Photo-oxidative damage and Photoprotection}
+\label{subsec:intro-stress-photodamage}
+
+The ability of plants to utilise energy from light to fix inorganic carbon into organic biomass is
+reduced when the quality or quantity of light a plant receives is not optimal. The quanity of light
+a plant receives is in excess when plants are unable to utilise energy obained from absorbed photos
+to fix carbon \autocite{li_sensing_2009}. Excess light is particularly damaging, causing both
+reductions in photosynthetic ability, termed photoinhibition, , and cellular or tissue damage and
+death \autocite{niyogi_photoprotection_1999, asada_production_2006, li_sensing_2009, suzuki_ros_2012}. The
+indispensability of photosynthesis has caused the evolution of mechanisms by which the detrimental
+effects of excess light can be minimised. These mechanisms, collectively termed photoprotection,
+work to dissipate excess energy, reduce the amount of light absorbed, and prevent and repair any
+damage caused \autocite{niyogi_photoprotection_1999, takahashi_photoprotection_2011}
+
+
 \subsection{Physiological Responses to Excess Light}
 \label{subsec:intro-resp-physio}
 
 Upon exposure to excess light, plants immediately  begin to mitigate its detrimental effects
-\autocite{niyogi_photoprotection_1999, demmig-adams_photoprotection_1992}. These include
-chloroplastic mechanisms discussed above (see \autoref{subsec:intro-stress-photodamage}) In addition
-to these chloroplastic photoprotective mechanisms, plants can respond to excess light on a cellular
-scale. Chloroplast avoidance movement, the movement of chloroplasts parallel to the incident angle
-of light, decreases the amount of absorbed light \autocite{kasahara_chloroplast_2002}.
-Transcriptional induction of heat shock proteins, antioxidant scavenging and Photooxidative damage
-repair occur following excess light, and help to minimise oxidative damage
-\autocite{niyogi_photoprotection_1999}. Production of anthocyanin, a protective class of pigments,
-is induced by the production of reactive oxygen species due to excess light
-\autocite{vanderauwera_genome-wide_2005}. Together, these responses serve to reduce the
-Photooxidative damage of cells and tissues due to excess light.
+\autocite{niyogi_photoprotection_1999, demmig-adams_photoprotection_1992}. These include mechanisms
+of respose and damage mitigation within the chloroplastic (discussed below), as well as responses a
+whole-cellscale. Chloroplast avoidance movement, the movement of chloroplasts parallel to the
+incident angle of light, decreases the amount of absorbed light
+\autocite{kasahara_chloroplast_2002}.  Transcriptional induction of heat shock proteins, antioxidant
+scavenging and photo-oxidative damage repair occur following excess light, and help to minimise
+oxidative damage (discussed in detail in \autoref{subsec:intro-resp-txome}) \autocite{niyogi_photoprotection_1999, rossel_global_2002, jung_subset_2013}.
+Production of anthocyanin, a protective class of pigments, is induced by the production of reactive
+oxygen species due to excess light \autocite{vanderauwera_genome-wide_2005}. Together, these
+responses serve to reduce the photo-oxidative damage of cells and tissues due to excess light.
 
-\todo{ask for help before completing this section, not sure how to proceed RE amalgamation}
+Several mechanisms of photoprotection occur within the chloroplast. Non-photochemical quenching
+(NPQ) dissipates excess energy from excited state chlorophyll molecules as heat
+\autocite{muller_non-photochemical_2001}. It occurs in photosystem II (PS II), and is particularly
+important during rapid changes in light intensity \autocite{kulheim_rapid_2002}. Cyclic electron flow
+occurs in photosystem I (PS I) and acts by decreasing the pH of the thylakoid lumen, which in turn
+is thought to stabilise the oxygen evolving complex and aid NPQ \autocite{takahashi_how_2009}. State
+transitions act via phosphorylation of PS II and light harvesting complex II (LHC II) proteins.
+State transitions reversibly alter the balance of excitation energy between PS I and PS II
+\autocite{tikkanen_state_2006}. Through reversible dissociation of the LHC II and PS II , state
+transitions lower the light harvesting ability of PS II  and prevent absorption of excess light by
+PS II  \autocite{johnson_photoprotective_2011}. The \textit{Arabidopsis} mutants
+\textit{\underline{n}on-\underline{p}hotochemical \underline{q}uenching \underline{1}}
+(\textit{npq1}) and \textit{\underline{n}on-\underline{p}hotochemical \underline{q}uenching
+\underline{4}} (\textit{npq4}), \textit{\underline{p}roton \underline{g}radient
+\underline{r}egulator \underline{5}} (\textit{pgr5}), and \textit{\underline{s}tate
+\underline{t}ransitio\underline{n} \underline{7}} (\textit{stn7}) and \textit{\underline{s}tate
+\underline{t}ransitio\underline{n} \underline{8}} (\textit{stn8}) are defective in these three
+mechanisms respectively, and enable the study of the mechanisms underlying chloroplastic response to
+excess light and fluctutions in light intensity.
+
+\todo{ps 1 and 2 fig} 
 
 
 \subsection{Transcriptional Responses to Light Stress}
@@ -181,7 +146,7 @@ photoreceptor-dependent induction of \textit{ELIP1} \autocite{kleine_genome-wide
 ROS-induced, heat shock transcription factor (HSF) mediated induction of HSPs
 \autocite{miller_could_2006}. The light induced down-regulation of \textit{\underline{L}IGHT
 HARVESTING \underline{C}HLOROPHYLL a/b \underline{B}INDING} \textit{LHCB} family genes is also well
-established \autocite{rossel_global_2002,mishra_arabidopsis_2013}. Therefore, these genes are used
+established \autocite{rossel_global_2002, mishra_arabidopsis_2012}. Therefore, these genes are used
 in this thesis as markers of transcritpional response to excess light, allowing comparison of
 transcriptional responses observed in this thesis to be compared to relevant previous works.
 
@@ -192,115 +157,127 @@ steady-state level of expression of several classes of genes. In the cyanobacter
 homologues of heat-shock proteins up-regulated after 15 hours of excess light treatment
 \autocite{hihara_dna_2001}. In rice, similar transcriptional down-regulation of light harvesting and
 up-regulation of photoprotection after 24 or 72 hours of excess light treatment has been observed
-\autocite{murchie_acclimation_2005}. Using quantitative PCR, \textcite{gordon_systemic_2013} have
-show that repeated high light treatments lead to acclimation and reduced induction of high light
-responsive transcripts. These transcriptomic responses to light overlap with response to drought,
-pathogen or oxidative stresses as well as hormone response, reiterating the requirement of stresses
-to be considered in combination. No genome-wide study of transcriptional response to altered light
-intensity in combination with other abiotic stresses has, to my knowledge, been published.
-\todo{kimura, other Pogson microarrays}
+\autocite{murchie_acclimation_2005}. Using quantitative real-time PCR, a method to assay relative
+expression of single genes, \textcite{gordon_systemic_2013} have show that repeated high light
+treatments lead to acclimation and reduced induction of high light responsive transcripts. These
+transcriptomic responses to light overlap with response to drought, pathogen or oxidative stresses
+as well as hormone response, reiterating the requirement of stresses to be considered in
+combination. No genome-wide study of transcriptional response to altered light intensity in
+combination with other abiotic stresses has, to my knowledge, been published.  \todo{kimura, other
+Pogson microarrays}
 
 In addition to light quantity, plants perceive alterations in light quality, or the spectral
 composition of light. \textcite{gordon_systemic_2013} demonstrate that excess light induced
 expression of \textit{RRTF1} and \textit{ZAT10} was dependent on wavelength of excess light in
-\textit{Arabidopsis}. Light quality is particularly important in studies of photooxidative damage,
+\textit{Arabidopsis}. Light quality is particularly important in studies of photo-oxidative damage,
 as the extent of photosystem II damage is not consistent across the visible spectrum
-\autocite{takahashi_solar_2010}, and photooxidative damage is relatively more severe under light of
+\autocite{takahashi_solar_2010}, and photo-oxidative damage is relatively more severe under light of
 wavelengths between 580-620nm than in the remainder of the visible spectrum, which overlaps with a
 density peak in the spectral power density of fluorescent lamps (see
 \autoref{fig:dc-res-spectra-norm}). The integration of light quality into assays which test plant
 responses to altered light intensity is lacking in the vast majority of works on the topic.
 \todo{perhaps spruik the SPC here also. LED lights are arriving, studies emerging, and you with SPC are in the lead}
 
-\subsection{Response of Plants to Field Conditions}
+\subsection{Plant Growth Under Field Conditions}
 \label{subsec:intro-resp-field}
 
-Under field conditions, plants respond to the combination of stresses they naturally encounter, as
-opposed to pre-determined combinations hypothesised to provoke a mechanism or response. Plants grown
-in the field show markedly different phenotypes and responses to those grown in the lab. This
-includes metabolic profiles \autocite{jankanpaa_metabolic_2012}, transcript abundances
-\autocite{mishra_arabidopsis_2012, wituszynska_multivariable_2013}, photosynthetic differences
-\autocite{mishra_arabidopsis_2012}, and survival and fecundity \autocite{kulheim_rapid_2002}.
-Several authors report overlap between genes constitutive expressed in field conditions, and those
-expressed upon treatment with excess light. (ELIPs, Jansen and Karpinski.
-\autocite{mishra_arabidopsis_2012}
-\todo{move this to field condition section above}
+Under field conditions, plants respond to the combination of stresses they encounter in complex,
+natural envrionments. However, in the laboratory plants are exposed to pre-determined stresses (or
+combinations thereof) hypothesised to provoke a mechanism
+or response. Plants grown in the field show markedly different phenotypes and responses to those
+grown in the lab. This includes metabolic profiles \autocite{jankanpaa_metabolic_2012}, transcript
+abundances \autocite{mishra_arabidopsis_2012, wituszynska_multivariable_2013}, photosynthetic
+differences \autocite{mishra_arabidopsis_2012}, and survival and fecundity
+\autocite{kulheim_rapid_2002}.  Several authors report overlap between genes expressed upon
+treatment with excess light and those constitutively expressed
+in field conditions \autocite{mishra_arabidopsis_2012, wituszynska_multivariable_2013}.
+\todo{more field constitutive expression papers}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% REBUTTAL SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Abiotic Stresses: Studied Individually, Encountered Combinatorially}
+\label{sec:intro-combstress}
+
+Despite the large body of published works elucidating responses to
+abiotic stresses, the majority of works focus on an abiotic stress in isolation
+\autocite{atkinson_interaction_2012, mittler_abiotic_2006}. However, in natural or agricultural
+situations, plants rarely experience an abiotic stress in isolation. This is a one of many causes of
+the difficulty in translating stress-tolerant lines of plants developed in labs to agrigculaural
+crops that are  more field hardy \autocite{mittler_abiotic_2006, mittler_genetic_2010}. 
+
+%\autocite{mittler_abiotic_2006}.
+Recent laboratory studies have demonstrated temperature interacts with light stress in a detrimental
+fashion.  At cold temperatures, unacclimated plants are less able to dissipate excess energy to
+avoid photo-oxidative damage, leading to altered PS I/PS II redox poise
+\autocite{armstrong_assessing_2007}. \textcite{rossel_global_2002} demonstrate temperature
+dependence on the transcriptional response to excess light. Interactions with temperature have been
+observed in the transcriptional response to drought \autocite{seki_monitoring_2001,
+seki_molecular_2003, rizhsky_combined_2002, rizhsky_when_2004}. Additionally, interactions between
+biotic and abiotic stresses exist \autocite{mittler_abiotic_2006, atkinson_interaction_2012,
+atkinson_identification_2013}. The data these authors present warrants a paradigm shift towards the
+study of abiotic stresses in combination, as advocated by \textcite{mittler_abiotic_2006}.
+
+\todo{find something more convincing than that paper of Owen's}.
+
+Field-grown plants tend to demonstrate reduced survival, reproduction and altered transcriptional
+responses compared to those grown in supposedly comparable lab conditions. For example, in
+\textit{Arabidopsis thaliana} the reduction in reproductive success caused by the \textit{npq1} and
+\textit{npq4} mutations was severe in the field but had no impact under static sufficient light in
+the lab \autocite{kulheim_rapid_2002}.  Similarly, photoinhibition, physiological symptoms of
+abiotic stress and expression of high light-induced transcripts were more severe in field-grown
+\textit{Solidago altissima} than those grown in comparable lab conditions
+\autocite{barua_interactive_2006}. Furthermore, \textcite{wituszynska_multivariable_2013} observe
+increased steady-state expression of genes involved in response to excess light and photo-oxidative
+damage under field conditions compared to lab-grown plants, and concomitant physiological
+acclimation to variable light intensity. Similar findings are presented by
+\textcite{mishra_arabidopsis_2012}, who found increased NPQ and expression of ELIP proteins and
+decreased LHC-associated protein abundances in field-grown \textit{Arabidopsis}. These field studies
+reiterate interactions noted in laboratory studies, and provide impetus for the study of field-like
+combinations of abiotic stresses under controlled laboratory conditions, to facilitate
+the mapping of QTLs for combinatorial stress tolerance \autocite{li_genetics_2006,
+li_association_2010}.
+
+\todo{smoother segue into GWAS/QTL OUR OLD PAPERS GIVE YOU THIS IF YOU REVIEW THEM.}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Transcriptomics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Transcriptomics: Assessing Global Expression}
 \label{sec:intro-txomics}
 
-By studying how, when and to what extent each gene in
-the genome is expressed, we can gain insight into the response to any
-perturbation to a plant's environment. To study global expression, first whole genome microarrays were developed.
-More recently sequencing of transcribed messges (RNAseq) has been used to quantify expression variation.
-Microarrays quantify expression as fluorescence from
-fluorophore-tagged cDNAs complementary to specific small sections of the transcriptome. More modern
-experiments use RNAseq, the high-throughput sequencing of cDNA libraries, and rely on the number of
-sequence reads being proportional to the concentration of a particular transcript within the
-library. RNAseq allows not only quantification, but provides the actual sequence of each transcript,
-important for analyses of sequence variation such as allele specific expression and splicing variation.
+By studying how, when and to what extent each gene in the genome is expressed, we can gain insight
+into the response to any perturbation to a plant's environment. RNA sequencing (RNAseq) is a modern
+method of whole-transcriptome quantification. By creating cDNA from the cellular pool of mRNA, and
+sequencing libraries of this cDNA using high-throughput sequencing (HTS), quantification is possible
+\autocite{wang_rna-seq:_2009, lister_next_2009}. The process of RNAseq library creation involves the
+extraction and purification of intact mRNAs, their conversion to complimentary DNA (cDNA),
+fragmentation, end-repair and A-tailing to allow sequencing adaptor ligation, ligation of sequencing
+adaptors and library amplification \autocite{wang_rna-seq:_2009, kumar_high-throughput_2012}. When
+sequenced using HTS, raw sequnce data is obtained with sequences derived from mRNA molecules
+proportional to their abundance in the sample mRNA pool. Computational analysis is required to
+provide quantification from this raw sequence data \autocite{nookaew_comprehensive_2012,
+van_verk_rna-seq:_2013}. This process involves raw sequence quality control, alignment of raw
+sequence reads to the genome, and quantification of gene-wise expression by aggregating the number
+of sequecnes that align to each gene. Quantitative data undergoes statistically rigorous
+normalisation before hypothesis testing occurs \autocite{robinson_scaling_2010,
+robinson_edger:_2010}. Post-hoc analyses of expression data can be performed to glean summarised
+biological meaning from genome-wide differential expression patterns, including gene ontology (GO)
+term enrichment analysis \autocite{berardini_functional_2004, avraham_plant_2008} and gene set
+enrichment analysis \autocite{subramanian_gene_2005, kim_biological_2012, varemo_enriching_2013,
+yi_plantgsea:_2013}. The RNAseq analysis process takes raw sequence data from high-throughput
+sequencing of RNAseq libraries and generates data that can be interpreted in the context of the
+biological basis underlying the experiment, and is presented graphically in
+\autoref{fig:intro-rnaseq}
 
-%\subsection{Theoretical Aspects of RNAseq}
-%\label{subsec:intro-txomics-theory}
-
-RNA sequencing (RNAseq) is a modern method of whole-transcriptome quantification. By creating cDNA
-from the cellular pool of mRNA, and sequencing libraries of this cDNA using high-throughput
-sequencing (HTS), quantification is possible \autocite{wang_rna-seq:_2009}. The process of RNAseq
-library creation is complex, and involves the extraction and purification of intact mRNAs, their
-conversion to complimentary DNA (cDNA), fragmentation, end-repair and A-tailing to allow sequencing
-adaptor ligation, ligation of sequencing adaptors and library amplification
-\autocite{kumar_high-throughput_2012}. This figure is detailed in CHECK THIS SENTENCE When sequenced via HTS, these
-libraries will yield raw sequence data, with sequences derived from mRNA molecules proportional to
-their abundance in the sample mRNA pool, allowing quantification.
+\todo{maybe too methodsy}
 
 \begin{figure}[p]
   \begin{center}
     \includegraphics[width=\textwidth]{img/intro-rnaseq-libprep.png}
   \end{center}
   \caption{The molecular biology of RNAseq library preparation.}
-  \label{fig:intro-rnaseq-libprep}
+  \label{fig:intro-rnaseq}
 \end{figure}
-
-Computational analysis is required to provide quantification of the expression of each gene in the
-genome from the raw sequence data that RNAseq delivers \autocite{nookaew_comprehensive_2012,
-van_verk_rna-seq:_2013}. This process involves ensuring sufficient raw sequence quality then
-aligning raw sequence reads to the genome to determine the gene from which they originate.
-Quantification of gene-wise (or tag-wise in RNAseq terminology) expression is calculated for each
-sample by aggregating the number of short reads which align to each gene (tag). Quantitative data
-obtained via RNAseq must undergo statistically rigorous normalisation before hypothesis testing
-occurs \autocite{robinson_scaling_2010, robinson_edger:_2010}. Post-hoc analyses of expression data
-can be performed to glean summarised biological meaning from genome-wide differential expression
-patterns, including gene ontology (GO) term enrichment analysis \autocite{berardini_functional_2004,
-avraham_plant_2008} and gene set enrichment analysis \autocite{subramanian_gene_2005,
-kim_biological_2012, varemo_enriching_2013, yi_plantgsea:_2013}. This analysis process takes raw
-sequence data from high-throughput sequencing of RNAseq libraries and generates data that can be
-interpreted in the context of the biological basis underlying the experiment. 
-\todo{too methodsy}
-
-\begin{figure}[p]
-  \begin{center}
-    \includegraphics[width=\textwidth]{img/intro-rnaseq-informatics.png}
-  \end{center}
-  \caption{The bioinformatic process of analysis required to obtain biological meaning from RNAseq
-  data.}
-  \label{fig:intro-rnaseq-informatics}
-\end{figure}
-
-
-%The following goes into methods sections:
-%statistical basis underlying RNAseq is an area of active research. (\autocite{robinson})
-%(GO analysis. Try finding papers to back up my criticism of GO as being tautologous bollocks.)
-%
-%Recent years have seen an explosion of improvements in published protocols and tools for the
-%creation and analysis of RNAseq datasets.
-%
-%Higher throughput and less expensive RNAseq sequencing library preparation methods are required for
-%large-scale RNAseq experiments. (paraphrase some good points from intro of Kumar et al)
-%
-%RNAseq analysis software with improved performance and accuracy is continually published. (subread,
-%latest edgeR paper, QLspline paper, etc.)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Aims %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -319,19 +296,9 @@ devoted to the examination of the following aims:
     application of abiotic stresses, using dynamic growth conditions
 \end{enumerate}
 
-
-CAN'T YOU CUT THIS BELOW?
-
-Originally, this project had an alternative aims (below). Due to technical obstacles and delays, the
-specific aims of this project have evolved over the year.  As it became apparent that technical
-difficulties would prevent high-throughput RNAseq experiments in the time available, the aims were
-revised to remove reliance on such techniques. Originally, this project aimed to:
-\begin{enumerate}
-  \item Determine the response of Arabidopsis gene expression to novel dynamic light conditions.
-  \item Examine the extent of genetic variation in gene expression under these dynamic light
-    conditions, and elucidate gene regulation networks controlling gene expression.
-  \item Explore the effect of genotype-environment interactions on gene expression under dynamic
-    light conditions.
-\end{enumerate}
-
-
+Due to technical obstacles and delays, the aims of this project have evolved over the year.  As it
+became apparent that technical difficulties would prevent high-throughput RNAseq experiments
+required to map expression QTLs in the time available, the aims ``Examine the extent of genetic
+variation in gene expression under these dynamic light conditions, and elucidate gene regulation
+networks controlling gene expression.'' and `` Explore the effect of genotype-environment
+interactions on gene expression under dynamic light conditions.'' were discontinued.
