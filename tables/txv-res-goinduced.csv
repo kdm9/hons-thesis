@@ -1,0 +1,31 @@
+Eterm,Ecat,Ep,Fterm,Fcat,Fp,Sterm,Scat,Sp
+involved in response to hydrogen peroxide,GO:0009408,0.000,involved in response to heat,GO:0009408,0.000,involved in response to heat,GO:0009408,0.000
+involved in response to endoplasmic reticulum stress,GO:0042542,0.000,involved in response to hydrogen peroxide,GO:0042542,0.000,involved in response to endoplasmic reticulum stress,GO:0034976,0.000
+involved in response to jasmonic acid stimulus,GO:0034976,0.000,involved in response to high light intensity,GO:0009644,0.000,involved in response to hydrogen peroxide,GO:0042542,0.000
+involved in response to high light intensity,GO:0009753,0.000,involved in protein folding,GO:0006457,0.000,involved in response to high light intensity,GO:0009644,0.000
+involved in response to wounding,GO:0009644,0.000,involved in response to endoplasmic reticulum stress,GO:0034976,0.000,involved in response to jasmonic acid stimulus,GO:0009753,0.000
+involved in jasmonic acid biosynthetic process,GO:0009611,0.000,involved in response to jasmonic acid stimulus,GO:0009753,0.000,involved in response to wounding,GO:0009611,0.000
+involved in response to fungus,GO:0009695,0.000,has sequence-specific DNA binding transcription factor activity,GO:0003700,0.000,involved in protein folding,GO:0006457,0.000
+involved in protein folding,GO:0009620,0.000,located in membrane,GO:0016020,0.000,involved in jasmonic acid biosynthetic process,GO:0009695,0.000
+involved in response to chitin,GO:0006457,0.000,involved in heat acclimation,GO:0010286,0.000,involved in response to fungus,GO:0009620,0.000
+involved in jasmonic acid mediated signaling pathway,GO:0010200,0.000,involved in response to wounding,GO:0009611,0.000,involved in response to water deprivation,GO:0009414,0.000
+involved in jasmonic acid metabolic process,GO:0009867,0.000,involved in ER-nucleus signaling pathway,GO:0006984,0.000,involved in jasmonic acid mediated signaling pathway,GO:0009867,0.000
+involved in systemic acquired resistance,GO:0009694,0.000,involved in response to water deprivation,GO:0009414,0.000,involved in jasmonic acid metabolic process,GO:0009694,0.000
+involved in response to water deprivation,GO:0009627,0.000,involved in jasmonic acid metabolic process,GO:0009694,0.000,involved in systemic acquired resistance,GO:0009627,0.000
+involved in abscisic acid mediated signaling pathway,GO:0009414,0.000,has water channel activity,GO:0015250,0.000,involved in hyperosmotic salinity response,GO:0042538,0.000
+involved in hyperosmotic salinity response,GO:0009738,0.000,involved in response to fungus,GO:0009620,0.000,involved in response to ethylene stimulus,GO:0009723,0.000
+involved in response to ethylene stimulus,GO:0042538,0.000,located in endoplasmic reticulum,GO:0005783,0.000,involved in defense response to fungus,GO:0050832,0.000
+involved in protein targeting to membrane,GO:0009723,0.000,involved in response to salt stress,GO:0009651,0.000,involved in tryptophan biosynthetic process,GO:0000162,0.000
+involved in regulation of plant-type hypersensitive response,GO:0006612,0.000,located in endoplasmic reticulum lumen,GO:0005788,0.000,located in endoplasmic reticulum,GO:0005783,0.000
+has sequence-specific DNA binding transcription factor activity,GO:0010363,0.000,has protein transmembrane transporter activity,GO:0008320,0.000,involved in defense response to bacterium,GO:0042742,0.000
+involved in salicylic acid mediated signaling pathway,GO:0003700,0.000,involved in anthocyanin-containing compound biosynthetic process,GO:0009718,0.000,involved in response to bacterium,GO:0009617,0.000
+located in endoplasmic reticulum,GO:0009863,0.000,involved in hyperosmotic salinity response,GO:0042538,0.000,involved in anthocyanin-containing compound biosynthetic process,GO:0009718,0.000
+located in membrane,GO:0005783,0.000,involved in response to karrikin,GO:0080167,0.001,involved in heat acclimation,GO:0010286,0.000
+involved in defense response to fungus,GO:0016020,0.000,has transporter activity,GO:0005215,0.001,involved in indoleacetic acid biosynthetic process,GO:0009684,0.000
+involved in heat acclimation,GO:0050832,0.000,involved in gibberellic acid mediated signaling pathway,GO:0009740,0.001,involved in tryptophan catabolic process,GO:0006569,0.000
+involved in proline transport,GO:0010286,0.000,located in cell surface,GO:0009986,0.001,involved in response to desiccation,GO:0009269,0.000
+involved in respiratory burst involved in defense response,GO:0015824,0.000,has amine transmembrane transporter activity,GO:0005275,0.001,located in ER body,GO:0010168,0.000
+has water channel activity,GO:0002679,0.000,located in central vacuole,GO:0042807,0.001,involved in abscisic acid mediated signaling pathway,GO:0009738,0.000
+involved in response to desiccation,GO:0015250,0.000,has nicotianamine synthase activity,GO:0030410,0.001,involved in response to UV-B,GO:0010224,0.000
+involved in response to abscisic acid stimulus,GO:0009269,0.000,involved in nicotianamine biosynthetic process,GO:0030418,0.001,involved in toxin catabolic process,GO:0009407,0.000
+involved in amino acid transport,GO:0009737,0.000,involved in jasmonic acid biosynthetic process,GO:0009695,0.001,involved in regulation of systemic acquired resistance,GO:0010112,0.000
