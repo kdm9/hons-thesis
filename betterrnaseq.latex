@@ -139,7 +139,6 @@ counts calculated by each pipeline were calculated. Finally, genes called differ
 by each pipeline were compared. These measures allow verification of pipeline performance at three
 major stages in an analysis pipeline: alignment of short reads to a genome, gene-wise count
 summarisation, and statiscial testing for differential expression.
-\todo{DEFINE TAG-WISE}
 
 \subsection{Measuring the Effect of Sequencing Depth on Analysis of Differential Expression}
 \label{subsec:br-mth-depth}
