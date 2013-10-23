@@ -128,3 +128,71 @@ consisted of the ecotypes Cape Verde Islands (Cvi), Columbia (Col) and Landsberg
 photoprotection mutants \textit{stn8}, \textit{pgr5}, \textit{npq1} and \textit{npq4}, and 80
 members of the Cvi vs Ler RIX mapping population. 
 
+
+%\begin{itemize}
+%  \item also non-ND shade
+%\end{itemize}
+
+%With regards to light quality, using multispectral LED arrays, we are able to approximate the almost
+%flat specrtal density of sunlight more closely than is possible with other readily available lab
+%light sources.
+%In terms of local or regional climates, I postulate that the diurnal temperature and humidiy
+%variation occurs similaly to that obsereved in nature. Obviously, plants experience \emph{weather},
+%not climate, so these conditions represent typical regional averages where expected differences in seasonal acclimations can be observed 
+%Phenotypic variation can be released or enhanced under these dynamic conditions or alternatively they can masked when signals homogenize genetic variation.
+%Many authors postulate ``cryptic phenotypes'', or phenotypes not observable under ``standard''
+%conditions.  Phenotypes observed under standard conditions may not be relavant to field conditions. 
+%Our cliamte chamber conditions provide a better match (Li et al, PNAS 2010) to field level phenotypes.
+
+Additionally, the median gene-wise mean log
+expression reduces rapidly below approximately 1 million reads, indicating that at very low
+coverage, lowly expressed genes begin to not be detected at all
+(\autoref{fig:br-res-medianexpvscoverage}. Finally, the common biological coefficient of variation,
+which indicates how variable a dataset is a whole, increases as sequencing depth decreases due to
+poison noise.  (\autoref{fig:br-res-bcvvscoverage} and Appendix \autoref{apx-plots-bcvcoverage}).
+
+To study global expression, first
+whole genome microarrays were developed.  More recently sequencing of transcribed messges (RNAseq)
+has been used to quantify expression variation.  Microarrays quantify expression as fluorescence
+from fluorophore-tagged cDNAs complementary to specific small sections of the transcriptome. More
+modern experiments use RNAseq, the high-throughput sequencing of cDNA libraries, and rely on the
+number of sequence reads being proportional to the concentration of a particular transcript within
+the library. RNAseq allows not only quantification, but provides the actual sequence of each
+transcript, important for analyses of sequence variation such as allele specific expression and
+splicing variation.
+
+%\subsection{Theoretical Aspects of RNAseq}
+%\label{subsec:intro-txomics-theory}
+
+%The following goes into methods sections:
+%statistical basis underlying RNAseq is an area of active research. (\autocite{robinson})
+%(GO analysis. Try finding papers to back up my criticism of GO as being tautologous bollocks.)
+%
+%Recent years have seen an explosion of improvements in published protocols and tools for the
+%creation and analysis of RNAseq datasets.
+%
+%Higher throughput and less expensive RNAseq sequencing library preparation methods are required for
+%large-scale RNAseq experiments. (paraphrase some good points from intro of Kumar et al)
+%
+%RNAseq analysis software with improved performance and accuracy is continually published. (subread,
+%latest edgeR paper, QLspline paper, etc.)
+
+
+
+The
+sequence length distribution was alteredby these quality control measures, with the uniform 101bp
+length of the library reduced almost imperceptibly (Figure \ref{fig:txv-res-fastqc-sld}). 
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/txv-res-fastqc-before-sequence_length_distribution.png}
+    \includegraphics[width=\textwidth]{img/txv-res-fastqc-after-sequence_length_distribution.png}
+  \end{center}
+  \caption{Sequence length distribution before (top) and after (bottom) quality control. These
+    density plots demonstrate the uniform 101bp library size before quality control (top), and the
+    very small proportion of reads trimmed to less than 101bp due to poor quality during the quality
+    control process (bottom).}
+  \label{fig:txv-res-fastqc-before-sld}
+\end{figure}
+
+
