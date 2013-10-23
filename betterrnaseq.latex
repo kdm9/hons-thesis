@@ -245,7 +245,7 @@ DGElist}, using \texttt{\justify exactTest}. This creates a \texttt{\justify lis
 plots can be created. A plot showing the relationship between the gene-wise Biological Coefficient
 of Variation (BCV) and gene expression level aims to show that variation is largely independent of
 expression level.
-\todo{reword to stop it soundling like M+M}
+\todo{reword to stop it sounding like M+M}
 
 \subsubsection{\texttt{\justify de\_glm}}
 \label{subsubsec:br-res-deglm}

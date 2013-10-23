@@ -6,7 +6,7 @@
 \label{chap:dis}
 
 The study of plant-environment interactions is crucial to improving agricultural yield and
-understanding functional plant ecology in a changing climate. The study of mechansisms by which
+understanding functional plant ecology in a changing climate. The study of mechanisms by which
 plants tolerate or respond to  abiotic stresses is of particular importance, as abiotic stresses
 cause many hundreds of billions of dollars of crop losses and incalculable environmental damage
 \autocite{mittler_abiotic_2006}. Several recent reviews of abiotic stress research have suggested a
@@ -14,16 +14,16 @@ changed focus for research, away from studying stresses individually towards mor
 combined stress studies \autocite{mittler_abiotic_2006, mittler_genetic_2010}. Plants in ecological
 or agricultural settings commonly experience environments unfavourable to optimal growth, composed
 of multiple abiotic (and biotic) stresses \autocite{boyer_plant_1982, mittler_abiotic_2006}. 
-Moreover, natural environments are dynamic, and challenge plants to rapidly adapt to heterogenious
+Moreover, natural environments are dynamic, and challenge plants to rapidly adapt to heterogeneous
 environmental conditions on a daily basis. Laboratory
 study of these stresses should therefore account for recent findings suggesting that interactions
 between abiotic stresses in field conditions are not simply additive, rather are influenced by the
-dynamic combinations of stresses their enviroments impose upon them \autocite{mittler_abiotic_2006,
+dynamic combinations of stresses their environments impose upon them \autocite{mittler_abiotic_2006,
 atkinson_interaction_2012}.
 
 This thesis has developed methods to reproducibly induce abiotic stresses in laboratories in 
-combinations analagous to those in which they can appear naturally and assay plant growth under such
-condtions, analyse plant response to responses, and presents a preliminary proof-of-concept transcriptomics
+combinations analogous to those in which they can appear naturally and assay plant growth under such
+conditions, analyse plant response to responses, and presents a preliminary proof-of-concept transcriptomics
 dataset analysing light response in the context of combinatorial abiotic stresses.
 
 
@@ -33,10 +33,10 @@ dataset analysing light response in the context of combinatorial abiotic stresse
 Plant biologists often conduct laboratory experiments in controlled growth facilities. These
 facilities may lack the ability to mimic characteristics of their natural environment, as they are
 rarely built from hardware enabling an investigator to do so. While static growth conditions used in
-labotorires are sufficient to uncover core mecchanisms of plant resposnes to stress, this is not
+laboratories are sufficient to uncover core mechanisms of plant responses to stress, this is not
 always the case. In fact, evidence from field studies has uncovered phenotypes that are cryptic
 under static laboratory conditions, and that may be observed and studied closely under dynamic
-laboratory condtions \autocite{kulheim_rapid_2002, mittler_abiotic_2006, mishra_arabidopsis_2012,
+laboratory conditions \autocite{kulheim_rapid_2002, mittler_abiotic_2006, mishra_arabidopsis_2012,
 wituszynska_multivariable_2013}. By creating software which connects existing but disparate
 technologies, I have enabled the implementation of growth conditions which can mimic regional
 climates or weather. The combination of computer controllable growth cabinets fitted with
@@ -58,14 +58,14 @@ follow similar climactic trends as the historical mean observations of weather a
 location, with temperature slowly increasing, humidity decreasing and photoperiod lengthening,
 however light intensity does not gradually increase in the same manner as the observed climate.
 
-While the dynamic grwoth conditions implemented in the SpectralPhenoClimatron mimic elements of
+While the dynamic growth conditions implemented in the SpectralPhenoClimatron mimic elements of
 natural environments, they are not designed to be accurate representations of conditions encountered
 in nature. In nature, weather provides a layer of stochasticity upon the broad trends in climate
 \autocite{citation needed}. However, the developments I have described in this thesis facilitate the
 emulation of stressful growth environments which approximate weather-induced abiotic stresses plants
 experience in the natural environments. The system I have developed is not only applicable to
 studies discussed in this thesis, and has been used in experiments beyond the scope of this thesis
-including virtual recirocial transplants and gene-by-environment interaction QTL mapping. The study
+including virtual reciprocal transplants and gene-by-environment interaction QTL mapping. The study
 of standing genetic variation within regional climates allows links between genotype and reaction to
 some environmental parameter, and can shed light on mechanistic links via methods including GWAS
 \autocite{li_genetics_2006, li_association_2010, brachi_genome-wide_2011}. However, when modelling
@@ -84,10 +84,10 @@ need a link}
 RNAseq is a precise method to quantify genome-wide expression
 \autocite{wang_rna-seq:_2009}. RNAseq can reveal hidden phenotypes and subtle environmental effects
 of a plant's growth environment \autocite{martin_catalyzing_2013}, giving insights into development,
-regulatory mechanisms, signaling pathways, acclimation and many other aspects of plant biology. It
+regulatory mechanisms, signalling pathways, acclimation and many other aspects of plant biology. It
 is sufficiently sensitive to measure the subtle differences in expression between both closely
-geneticaly related organisms (à la expression QTL mapping, \textcite{sun_eqtl_2013}), and subtle
-envronmetal effects (e.g. diiferetial response to dynamic growth condttions).
+genetically related organisms (à la expression QTL mapping, \textcite{sun_eqtl_2013}), and subtle
+environmental effects (e.g. differential response to dynamic growth conditions).
 
 Reproducibility, accuracy, and performance of the computational analysis of any dataset is crucial.
 Inaccurate and poorly reproducible analyses have lead to embarrassing errors and retractions in many
@@ -133,7 +133,7 @@ mapped. In light of these data, my analysis of sequencing depth is conservative,
 consider the increases in replication made possible by increasing the number of samples sequenced
 per unit cost by a factor of two or more.
 
-\todo{Biologial variation control and multi environment treaments are needed to provide specificity
+\todo{Biological variation control and multi environment treatments are needed to provide specificity
 of changes.  Gene Atlas idea.}
 
 \section{Elucidating Response to Light Intensity Under Dynamic Growth Conditions}
@@ -164,10 +164,10 @@ harvesting time. While plants were harvested as quickly as possible, each replic
 harvest. Previous studies have found circadian effects to both the general transcriptome
 \autocite{covington_global_2008, ptitsyn_comprehensive_2008} and in transcriptional response to
 biotic stress \autocite{wilkins_time_2010}. The harvesting techniques and experimental design utilised in
-this study were suited to experiments that mapped eQTLs for stress-reponsive genes. For simple
-detection of differential expression howerver, they were not optimal and likely contributed to the
+this study were suited to experiments that mapped eQTLs for stress-responsive genes. For simple
+detection of differential expression however, they were not optimal and likely contributed to the
 high level of biological noise in the obtained dataset. Ideally, true internal controls grown under
-static growth condtitions, and higher levels of biological replication would be more appropriate.
+static growth conditions, and higher levels of biological replication would be more appropriate.
 These shortcomings result in reduced statistical power, and are a possible cause for the lower than
 expected number of genes whose expression was induced or repressed upon treatment with hot excess
 light.
@@ -184,7 +184,7 @@ here. Additionally, gene ontology (GO) term analysis indicates commonality of th
 response to hot excess light with heat and oxidative stresses, as observed in previous studies
 \autocite{rossel_global_2002}. Together, these data suggest that the response of plants grown under
 dynamic light conditions to hot excess light is similar to that of plants growth under static light
-conditions, albeit with somewhat tempered induction of hot excess light-resposive marker genes. An
+conditions, albeit with somewhat tempered induction of hot excess light-responsive marker genes. An
 understanding of the power needed and variation present in a typical experiment has been identified.
 
 Limited transcriptomic evidence of the effect of light intensity within the framework of dynamic
@@ -193,26 +193,26 @@ response to hot high light is preserved in plants grown under dynamic growth con
 to induce acclimation to high light or fluctuations in light intensity
 (\autoref{fig:txv-res-govenn}). Additionally, GO term enrichment analysis details the overlap and
 interaction with other abiotic stresses. GO terms  enriched in genes with differential steady-state
-expression in plants grown under sufficient light dynamic growth condititons and excess or flucating
-light dynamic grwoth condtiions exhibit limited overlap with those observed in previous studies of
+expression in plants grown under sufficient light dynamic growth conditions and excess or fluctuating
+light dynamic growth conditions exhibit limited overlap with those observed in previous studies of
 acute changes in light intensity, as hypothesised. However, this evidence of hardening is contrasted
 by the number of genes differentially expressed in response to hot high light under dynamic growth
 conditions. If acclimation to modest excesses in light intensity result in reduced fold-change
-induction of stress-inducible genes, as qPCR quanitfication of APX2 expression suggest, then either
-the relative order of hardening hypothesied is incorrect, or the level of biological noise in this
-dataset prevented observation of such phenonmena.
+induction of stress-inducible genes, as qPCR quantification of APX2 expression suggest, then either
+the relative order of hardening hypothesised is incorrect, or the level of biological noise in this
+dataset prevented observation of such phenomena.
 \todo{fix up go paragrahph}
 
 \todo{add model of mop vs bucket}
 
 A more detailed analysis of this dataset may be warranted by these findings. In particular,
-examinaiton of possible harvesting or treatment block effects may, if any effect exists, reduce the biological coefficient
+examination of possible harvesting or treatment block effects may, if any effect exists, reduce the biological coefficient
 of variation \autocite{robinson_edger:_2013}. A detailed analysis of all genes called as
 differentially expressed may be of use, as high biological noise may not affect the estimates of
 differential expression in all genes. I hypothesise that upon doing so, genes previously found to be
-differentially expressed between lab and field growth condtitions would have differential
+differentially expressed between lab and field growth conditions would have differential
 steady-state expression between sufficient, fluctuating and excess light conditions, with expression
-being highest in the excess and lowest in sufficient light condititons. 
+being highest in the excess and lowest in sufficient light conditions. 
 %\begin{itemize}
 %  \item check for block effect
 %  \item look at detail of individual genes
@@ -229,7 +229,7 @@ of stress metabolites has elucidated metabolites involved in acclimation to comb
 field conditions \autocite{recent jansson paper}, warranting similar analysis of metabolites in plants
 grown under dynamic growth conditions. However, transcriptomics remains a sensitive, accurate and
 useful tool to measure plants' responses to their environment.
-\todo{JB:This show the extension of the environment and the experiemntal design and the ability
+\todo{JB:This show the extension of the environment and the experimental design and the ability
 to stack layers of phenotype data. This is called a 'systems biology' approach.}
 
 
@@ -239,7 +239,7 @@ to stack layers of phenotype data. This is called a 'systems biology' approach.}
 \todo{better title for this section}
 
 While the effect of altered light intensity on plants and their transcriptomes has been studied in
-depth, few authors have studied under laboratory conditions analagous to those to which plants are
+depth, few authors have studied under laboratory conditions analogous to those to which plants are
 adapted.
 \todo{intro to section interpretation discussion}
 

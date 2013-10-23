@@ -119,7 +119,7 @@
     \textit{\Large Kevin Murray\\Borevitz Lab, ANU\\[1.5cm]}
     \today
     \vfill
-    \small Thesis submitted in partial fufillment of the requirements of the degree of\\
+    \small Thesis submitted in partial fulfilment of the requirements of the degree of\\
     \small Bachelor of Philosophy (Science) (Honours)\\
     \vfill
     \footnotesize Word Counts:\\
@@ -187,8 +187,8 @@
     Notes:
     \begin{itemize}
       \item Code listings, where included, are illustrative. Full source code of all software
-        developed is large (over 5000 lines of code), and will be distrubuted as a gzipped tar
-        archive. The latest code for all pipleines, scripts, is available online. See Appendix
+        developed is large (over 5000 lines of code), and will be distributed as a gzipped tar
+        archive. The latest code for all pipelines, scripts, is available online. See Appendix
         \autoref{sec:appendix-sourcecoderepos} and \autoref{tab:appendix-code-repos}
     \end{itemize}
   \end{minipage}

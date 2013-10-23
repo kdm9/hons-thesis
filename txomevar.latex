@@ -67,7 +67,7 @@ photoperiod. Following thinning, the remaining plants were established under the
 two weeks, before being distributed between three SpectralPhenoClimatron growth cabinets, with
 temperature, humidity and lighting controlled according to the Sufficient, 2x Excess and Fluctuating
 light dynamic growth conditions described in \autoref{subsec:dc-res-mygrowthcond}. Plants continued
-to grow under these conditions until and beyond harvesting. Throught plant growth in the
+to grow under these conditions until and beyond harvesting. Throughout plant growth in the
 SpectralPhenoClimatron, high resolution images were captured at 20 minutes intervals.
 
 \todo{this really needs some cleaning, per dad's comments also}
@@ -75,7 +75,7 @@ SpectralPhenoClimatron, high resolution images were captured at 20 minutes inter
 To assay plant response to hot excess light, plants were exposed to one hour of 8x hot excess light
 from sodium vapour and tungsten filament lamps in a Conviron growth cabinet. To enable study of
 transcriptomic responses to this assay, one fully expanded leaf was taken from each of the 576
-\todo{check this number} surviving plants between 0 and 10 mintues before and after this excess
+\todo{check this number} surviving plants between 0 and 10 minutes before and after this excess
 light treatment. To do so, petioles were cut with clean scissors, and leaves gently rolled without
 crushing to facilitate placement in 96 well 1.2 mL deep well plates. Plates were kept in dry ice
 while harvesting occurred, and were transferred to -80\degc freezers for storage.
@@ -363,8 +363,8 @@ was re-run with 17 amplification cycles, which created libraries of a suitable c
   \caption{Bioanalyser 2100 digital electrophoretograms show expected rRNA peaks and mRNA smear,
     with no evidence of large-scale sample degradation. Samples 1-18 are numbered according to
     \autoref{tab:txv-meth-sampletab}. The strong, clear bands at approximately 1900 and 3700nt are
-    derived from the 18s and 25s nuclear rRNA species respecively \autocite{babu_assessing_2011}.
-    The absense of a broad smear indicates minimal degradation of RNA has occured
+    derived from the 18s and 25s nuclear rRNA species respectively \autocite{babu_assessing_2011}.
+    The absence of a broad smear indicates minimal degradation of RNA has occurred
     \autocite{babu_assessing_2011}}
   \label{fig:txv-res-rnaqual}
 \end{figure}
@@ -378,18 +378,18 @@ was re-run with 17 amplification cycles, which created libraries of a suitable c
 {\sn & \conc & \rin}
 {RNA sample yield and RNA Integrity Number (RIN). RINs greater than 7 indicate high quality RNA, and
 RINs greater than 6 are acceptable \autocite{babu_assessing_2011}. Overall yield is sufficient, and
-all samples have a RIN of at least 6, indicating accepable quality.}
+all samples have a RIN of at least 6, indicating acceptable quality.}
 
 \begin{landscape}
   \begin{figure}[p]
     \begin{center}
       \includegraphics[width=\textwidth]{img/txv-res-finalPCR.png}
     \end{center}
-    \caption{RNAseq libraries before (top) and after (bottom) final solid-phase revserible
+    \caption{RNAseq libraries before (top) and after (bottom) final solid-phase reversible
       immobilisation (SPRI) cleanup. A broad smear of nucleic acid between approximately 200 and 600bp
       long is expected, ideally with a peak around 200-300b \autocite{illuminamanual}. Additionally,
       after PCR, a band of low molecular weight (approximately 60bp) contaminant is expected, and
-      observed. Clean-up with SPRI is expeceted, and obserbed, to remove this contaminant efficienly.}
+      observed. Clean-up with SPRI is expected, and observed, to remove this contaminant efficiently.}
     \label{fig:txv-res-finalpcr}
   \end{figure}
 \end{landscape}
@@ -448,7 +448,7 @@ been analysed for differential expression.}
     describe, per-position in each read (x-axis), quartiles and medians of PHRED quality score,
     which is related to probability of sequencing error at each position. PHRED scores of greater
     than 30 are considered good, and scores are expected to be lower towards the 3' end of read
-    sequences, due to sequenencing technology \autocite{andews_fastqc_2013}}
+    sequences, due to sequencing technology \autocite{andews_fastqc_2013}}
   \label{fig:txv-res-fastqc-pbq}
 \end{figure}
 
@@ -470,7 +470,7 @@ with between 0.08\% and 1.6\% rRNA contamination across all libraries.
 {Percentage of mapped reads to genome and transcriptome. These figures reiterate the successful
 creation of the RNAseq dataset, with very low (<4\%) rates of contamination by non-protein coding
 RNAs or genomic DNA. This imparts confidence that any short read counted towards quantification of
-the expression of a protein coding gene is derrived from mRNA transcribed from that gene.} 
+the expression of a protein coding gene is derived from mRNA transcribed from that gene.} 
 
 \subsection{RNAseq Reveals a Noisy Transcriptome}
 \label{subsubsec:txv-res-noisytx}
@@ -484,7 +484,7 @@ static growth condition (RRGS) dataset described in \autoref{subsec:br-mth-datas
 biological coefficient of variation was also much higher in the dynamic growth condition dataset
 (common BCV = 0.493), when compared to the RRGS dataset (common BCV = 0.128). It is crucial to note
 that the RRGS experiment is not a control for the dynamic growth condition experiment, but is still
-useful an external comparison. The high variaation betwen replicates causes reduced statistical
+useful an external comparison. The high variation between replicates causes reduced statistical
 power to detect differential expression \autocite{robinson_edger:_2013}.
 
 The high biological variance in expression is also demonstrated via multiple-dimensional scaling, an
@@ -496,8 +496,8 @@ excess light, plants grown under both static and dynamic growth conditions exhib
 (in \autoref{fig:txv-res-plotmds}, pre and post-treatment samples separate along a axis 1). It is
 also important to note that replicates within the RRGS dataset cluster together tightly compared
 with replicates from the dynamic growth condition dataset, a hallmark of the RRGS dataset's lower
-biological variance.  Whist the variabiliy observed in the dyanmic growth condition dataste is
-concerning, promisng qualitiative trends transcriptome-wide patterns of differeential expression
+biological variance.  Whist the variability observed in the dynamic growth condition dataset is
+concerning, promising qualitative trends transcriptome-wide patterns of differential expression
 warrant further --- albeit cautious --- investigation of this dataset.
 
 \begin{landscape}
@@ -506,9 +506,9 @@ warrant further --- albeit cautious --- investigation of this dataset.
       \includegraphics[width=\textwidth]{img/txv-res-plotbcv.png}
     \end{center}
     \caption{Biological coefficient of variation in dynamic (left) and static(right) growth
-      conditions. Here, each point represnts a gene, and the relationship between expression level
+      conditions. Here, each point represents a gene, and the relationship between expression level
       (x-axis) and gene-wise biological coefficients of variation is plotted. Additionally, a common
-      (analysis-wide) measure of the biological coefficient of variation is ploted (red line), for
+      (analysis-wide) measure of the biological coefficient of variation is plotted (red line), for
       samples from the dynamic and static growth condition datasets, this equates to 0.493 and 0.128
       respectively. The higher biological variance of the dynamic growth condition dataset when
       compared to the static growth condition (RRGS) dataset is evidenced by a more positive spread
@@ -542,10 +542,10 @@ warrant further --- albeit cautious --- investigation of this dataset.
     represented in the same colour. Pre-hot excess light samples (0h) tend towards negative values
     on axis 2, while post-hot high light samples (1hHL) tend towards positive values on axis 2. This
     trend is preserved across samples from plants grown under both dynamic and static growth
-    condtions. Replicates within the rapid recovery gene silencing dataset (Static 0h and Static
+    conditions. Replicates within the rapid recovery gene silencing dataset (Static 0h and Static
     1hHL) cluster together tightly compared with replicates from the dynamic growth condition
-    dataset (Excess, Fluctuating and Sufficient 0h and 1hHL).  Note the meaning of axes is arbirary;
-    they are pseudovariables that selected to seperate samples based upon log-fold-changes between
+    dataset (Excess, Fluctuating and Sufficient 0h and 1hHL).  Note the meaning of axes is arbitrary;
+    they are pseudo-variables that selected to separate samples based upon log-fold-changes between
     samples. Goodness of Fit (GOF) indicates that together, these two axes account for 90\% of
     variation between samples, indicating that the majority of difference across entire
     transcriptomes between samples is described within this plot.}
@@ -563,14 +563,14 @@ transcriptome, and on the transcriptional response to exposure to hot excess lig
 hour. A summary of statistically significant differential expression is shown in
 \autoref{tab:txv-res-desummary} and \autoref{fig:txv-res-devenn}. Small numbers of
 differentially expressed genes were observed between steady-state transcription in the sufficient
-growth condition and the excess and fluctuating growth conditions, but no differential expresison
+growth condition and the excess and fluctuating growth conditions, but no differential expression
 was detected between the fluctuating and excess growth conditions. A transcriptional response to one
 hour of hot excess light was observed in plants grown under all growth
 conditions, however plants grown under excess light dynamic growth conditions showed the greatest number of
 differentially expressed genes in response to this treatment, followed by fluctuating and sufficient
-light conditions, in direct confilict with hypotheses. Tests for interaction between growth condition light intensity and treatment
+light conditions, in direct conflict with hypotheses. Tests for interaction between growth condition light intensity and treatment
 effect showed little or no significant differential expression \autoref{tab:txv-res-desummary}.
-The differetail expression observed between dynamic grwoth contiitions is in contrast to the 3195 up-regulated and 3146 down-regulated genes differentially
+The differential expression observed between dynamic growth conditions is in contrast to the 3195 up-regulated and 3146 down-regulated genes differentially
 expressed after one hour of hot high light treatment in plants grown under static growth conditions
 (the RRGS dataset described in \autoref{subsec:br-mth-datasets}).
 
@@ -608,7 +608,7 @@ stimulus' are among the most statistically over-represented genes induced by one
 light in plants from all dynamic conditions. Moreover, these terms are also amongst the most
 statistically over-represented genes induced by one hour of hot excess light in plants grown under
 static growth conditions. Table \autoref{tab:txv-res-commongo} describes GO terms that are
-over-represented in genes induced by hot excess light treatment across all condtions; terms involved
+over-represented in genes induced by hot excess light treatment across all conditions; terms involved
 in biotic and abiotic stress represent the majority of the 37 such terms. Full details of the 30
 most significantly enriched GO terms in all differential expression tests are described in appendix
 \autoref{subsec:apx-tabs-go}.
@@ -617,11 +617,11 @@ most significantly enriched GO terms in all differential expression tests are de
   \begin{center}
     \includegraphics[width=\textwidth]{img/txv-res-govenn.pdf}
   \end{center}
-  \caption{Similariy in GO terms between genes whose expression is induced by one hour of hot
-    excess light in plants growth in Sufficient, Excess or Fluctuating dynamic growth condtiions,
-    as well as plants grown under static growth condtiitons (from the Rapid Recovery Gene Silencing
+  \caption{Similarity in GO terms between genes whose expression is induced by one hour of hot
+    excess light in plants growth in Sufficient, Excess or Fluctuating dynamic growth conditions,
+    as well as plants grown under static growth conditions (from the Rapid Recovery Gene Silencing
     dataset. A core set of GO terms is commonly over-represented in genes differentially expressed
-    in all condtions (see \autoref{tab:txv-res-commongo}).}
+    in all conditions (see \autoref{tab:txv-res-commongo}).}
   \label{fig:txv-res-govenn}
 \end{figure}
 
@@ -632,8 +632,8 @@ most significantly enriched GO terms in all differential expression tests are de
 {\multicolumn{2}{c}{Gene Ontology Term}}
 {\t=term}
 {\t}
-{Gene Ontology terms signficanly enriched in gene differentially expressed after treatment with one
-hour of hot excess light in all dynamic growth conditions and static growth condtiions}
+{Gene Ontology terms significantly enriched in gene differentially expressed after treatment with one
+hour of hot excess light in all dynamic growth conditions and static growth conditions}
 
 \todo{another table catption}
 
@@ -641,18 +641,18 @@ hour of hot excess light in all dynamic growth conditions and static growth cond
 \label{subsec:txv-res-markergenes}
 
 Quantitative RT-PCR (qPCR) was used to examine expression patterns of excess light marker genes.
-Comparisons of both steady-state expression, and induction of expression upon treatemnt with hot
+Comparisons of both steady-state expression, and induction of expression upon treatment with hot
 excess light have been examined. \textit{APX2}, a gene induced by oxidative stress and excess light,
-was upregulated in sufficient, excesss and fluctuating light dynamic light conditions (ANOVA, F=5.63, p=0.0072, 3 degrees of freedom, with Tukey's honest
-significant differences demonstrating signficicatnt pairwise differences between expression in
-sufficient, excesss and fluctuating light dynamic light conditions and in static grwoth conditions
-with p<0.05). Steady-state expression of LHCB1.4, a photosynthic gene known to be down-regulated by
-exceess light, was downreulated in plants grown under dynamic growth conditons, with statistically
-significant down-regulation observed between excess and fluctuatin gdynamic light conditons and
-static growth conditions (ANOVA \todo{anova stats for LHCB and other genes}); no statisticlaly signfiicant effect of hot excesss light treatment was
-found. Expression of ELIP1 is significantly upregulated in excess and fluctuating dynamic light
+was up-regulated in sufficient, excess and fluctuating light dynamic light conditions (ANOVA, F=5.63, p=0.0072, 3 degrees of freedom, with Tukey's honest
+significant differences demonstrating significant pairwise differences between expression in
+sufficient, excess and fluctuating light dynamic light conditions and in static growth conditions
+with p<0.05). Steady-state expression of LHCB1.4, a photosynthetic gene known to be down-regulated by
+excess light, was down-regulated in plants grown under dynamic growth conditions, with statistically
+significant down-regulation observed between excess and fluctuating dynamic light conditions and
+static growth conditions (ANOVA \todo{anova stats for LHCB and other genes}); no statistically significant effect of hot excess light treatment was
+found. Expression of ELIP1 is significantly up-regulated in excess and fluctuating dynamic light
 conditions compared to sufficient and static growth conditions. Similar patterns can be
-qualitatibely observed in ELIP2, however high variance prevents statisitcal signficiance. These
+qualitatively observed in ELIP2, however high variance prevents statistical significance. These
 patterns of differential expression are summarised in \autoref{fig:txv-res-qpcrfc}. 
 
 \begin{figure}[p]
@@ -666,12 +666,12 @@ patterns of differential expression are summarised in \autoref{fig:txv-res-qpcrf
 \section{Summary of Findings}
 
 In this chapter I present findings obtained from a preliminary dataset examining the
-transcritptional repsponse to altered light intesnity within the framework of dynamic grwoth
-conditions. An RNAseq dataset characterised by high levels of biolgogical noise was created; within
+transcriptional response to altered light intensity within the framework of dynamic growth
+conditions. An RNAseq dataset characterised by high levels of biological noise was created; within
 this dataset differential expression was observed. Upon treatment of plants grown under sufficient,
-excess or fluctating light dynamic growth conditions with one hour of hot excess light, differential
+excess or fluctuating light dynamic growth conditions with one hour of hot excess light, differential
 regulation of gene classes involved in abiotic stress response was observed. Comparisons between
-sufficient, excess and fluctating light dynamic growth conditions elucidated limited differential
-expression. Gene classes including genes invovled in translation, biotic and abioitc stress
-response and metabolism were signficantly enriched in genes differentially expressed between these
+sufficient, excess and fluctuating light dynamic growth conditions elucidated limited differential
+expression. Gene classes including genes involved in translation, biotic and abiotic stress
+response and metabolism were significantly enriched in genes differentially expressed between these
 dynamic growth conditions.
