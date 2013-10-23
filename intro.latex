@@ -8,7 +8,7 @@ Nearly all terrestrial biomass, including human life, depends on the primary pro
 plants (photosynthesis) \autocite{johnston_anoxygenic_2009}. This primary productivity is
 reduced when plants are stressed by interaction with their environment
 \autocite{mittler_abiotic_2006, mittler_genetic_2010}. Abiotic stresses alone account for
-over 100 billion of dollars of crop losses per annum in the United States alone
+over 100 billion of dollars crop losses per annum in the United States alone
 \autocite{mittler_abiotic_2006}. Therefore, the study of plant-environment interactions is crucial
 to improving agricultural yield and understanding functional plant ecology in a changing climate.
 
@@ -16,7 +16,7 @@ Central to increasing the understanding of plant-environment interactions is the
 laboratory study systems that allow classical mechanistic
 studies of abiotic stress response to be placed in the context of the conditions plants experience in
 natural or cultivated environments outside laboratories. Several techniques and approaches that have
-been developed over the past decade aide the study of plant stress response. In this thesis, I
+been developed over the past decade aid the study of plant stress response. In this thesis, I
 discuss, develop and apply novel techniques that enable the global study of gene expression in
 laboratory growth conditions which mimic field-like combinations of light, temperature and humidity.
 Specifically, I examine the effect of light intensity on global gene expression, within the
@@ -252,34 +252,35 @@ li_association_2010}.
 By studying how, when and to what extent each gene in the genome is expressed, we can gain insight
 into the response to any perturbation to a plant's environment. RNA sequencing (RNAseq) is a modern
 method of whole-transcriptome quantification. By creating cDNA from the cellular pool of mRNA, and
-sequencing libraries of this cDNA using high-throughput sequencing (HTS), quantification is possible
-\autocite{wang_rna-seq:_2009, lister_next_2009}. The process of RNAseq library creation involves the
-extraction and purification of intact mRNAs, their conversion to complimentary DNA (cDNA),
-fragmentation, end-repair and A-tailing to allow sequencing adaptor ligation, ligation of sequencing
-adaptors and library amplification \autocite{wang_rna-seq:_2009, kumar_high-throughput_2012}. When
-sequenced using HTS, raw sequence data is obtained with sequences derived from mRNA molecules
-proportional to their abundance in the sample mRNA pool. Computational analysis is required to
-provide quantification from this raw sequence data \autocite{nookaew_comprehensive_2012,
-van_verk_rna-seq:_2013}. This process involves raw sequence quality control, alignment of raw
-sequence reads to the genome, and quantification of gene-wise expression by aggregating the number
-of sequence that align to each gene. Quantitative data undergoes statistically rigorous
-normalisation before hypothesis testing occurs \autocite{robinson_scaling_2010,
-robinson_edger:_2010}. Post-hoc analyses of expression data can be performed to glean summarised
-biological meaning from genome-wide differential expression patterns, including gene ontology (GO)
-term enrichment analysis \autocite{berardini_functional_2004, avraham_plant_2008} and gene set
-enrichment analysis \autocite{subramanian_gene_2005, kim_biological_2012, varemo_enriching_2013,
-yi_plantgsea:_2013}. The RNAseq analysis process takes raw sequence data from high-throughput
-sequencing of RNAseq libraries and generates data that can be interpreted in the context of the
-biological basis underlying the experiment, and is presented graphically in
-\autoref{fig:intro-rnaseq}
+sequencing this cDNA using high-throughput sequencing (HTS), quantification is possible
+\autocite{wang_rna-seq:_2009, lister_next_2009}. RNAseq analysis takes raw sequence data from
+high-throughput sequencing of RNAseq libraries and generates data that can be interpreted in the
+context of the biological basis underlying the experiment. The process of RNAseq is presented
+graphically in \autoref{fig:intro-rnaseq}
 
 \todo{maybe too methodsy}
 
 \begin{figure}[p]
   \begin{center}
-    \includegraphics[width=\textwidth]{img/intro-rnaseq-libprep.png}
+    \includegraphics[width=\textwidth]{img/intro-rnaseq.png}
   \end{center}
-  \caption{The molecular biology of RNAseq library preparation.}
+  \caption{The molecular biology of RNAseq library preparation.
+    The process of RNAseq library creation involves the extraction and purification of intact mRNAs,
+    their conversion to complimentary DNA (cDNA), fragmentation, end-repair and A-tailing to allow
+    sequencing adaptor ligation, ligation of sequencing adaptors and library amplification
+    \autocite{wang_rna-seq:_2009, kumar_high-throughput_2012}. When sequenced using HTS, raw
+    sequence data is obtained with sequences derived from mRNA molecules proportional to their
+    abundance in the sample mRNA pool. Computational analysis is required to provide quantification
+    from this raw sequence data \autocite{nookaew_comprehensive_2012, van_verk_rna-seq:_2013}. This
+    process involves raw sequence quality control, alignment of raw sequence reads to the genome,
+    and quantification of gene-wise expression by aggregating the number of sequence that align to
+    each gene. Quantitative data undergoes statistically rigorous normalisation before hypothesis
+    testing occurs \autocite{robinson_scaling_2010, robinson_edger:_2010}. Post-hoc analyses of
+    expression data can be performed to glean summarised biological meaning from genome-wide
+    differential expression patterns, including gene ontology (GO) term enrichment analysis
+    \autocite{berardini_functional_2004, avraham_plant_2008} and gene set enrichment analysis
+    \autocite{subramanian_gene_2005, kim_biological_2012, varemo_enriching_2013,
+    yi_plantgsea:_2013}.}
   \label{fig:intro-rnaseq}
 \end{figure}
 
