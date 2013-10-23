@@ -21,25 +21,24 @@ atkinson_identification_2013, wituszynska_multivariable_2013}. Together, these s
 the investigation, under controlled laboratory conditions, of abiotic stresses in combinations which
 mimic those observed under field conditions.
 
-In this chapter, I present preliminary transcriptomic study of plants grown under such conditions. To
-examine the effect of altered long-term light intensity in field-like combinations of stressful
+To examine the effect of altered long-term light intensity in field-like combinations of stressful
 climatic variables such as temperature and humidity, dynamic growth conditions have been designed
-(see \autoref{chap:dc}). Specifically, I aim to test if plants exposed to modest excesses of light
-either continuously (Excess light dynamic growth conditions) or intermittently (Fluctuating light)
-exhibit increased hardening to excess light.
+(see \autoref{chap:dc}).  In this chapter, I present preliminary transcriptomic study of plants
+grown under these dynamic conditions. Specifically, I aim to test if plants exposed to modest
+excesses of light either continuously (excess light dynamic growth conditions) or intermittently
+(fluctuating light) exhibit increased hardening to excess light when compared with sufficient light
+dynamic growth conditions.  I hypothesise that this increased hardening would manifest as increased
+steady-state transcription of stress-responsive genes \autocite{wituszynska_multivariable_2013,
+gordon_systemic_2013}, and a reduced induction of stress responsive genes upon exposure of plants to
+an 8x hot excess light treatment. More specifically, I expect that the excess and fluctuating light
+conditions will exhibit increased steady-state expression of stress-responsive transcripts compared
+with the sufficient growth condition, and with steady-stated expression observed in previous studies
+of plants grown under static growth conditions. Furthermore, I hypothesise that the fluctuating
+light condition will exhibit higher steady-state expression of stress-responsive transcripts, as
+plants are generally less able to acclimate to fluctuations in light intensity than to constitutive
+excess light \autocite{kulheim_rapid_2002, alter_acclimatory_2012, gordon_systemic_2013}.
+
 \todo{clean this up per dad's comments}
-
-I hypothesise that this increased hardening would manifest as increased steady-state transcription of
-stress-responsive genes \autocite{wituszynska_multivariable_2013, gordon_systemic_2013}, and a
-reduced induction of stress responsive genes upon exposure of plants to an 8x hot excess light
-treatment. More specifically, I expect that the excess and fluctuating light conditions will exhibit
-increased steady-state expression of stress-responsive transcripts compared with the sufficient
-growth condition, and with steady-stated expression observed in previous studies of plants grown
-under static growth conditions. Furthermore, I hypothesise that the fluctuating light condition will
-exhibit higher steady-state expression of stress-responsive transcripts, as plants are generally
-less able to acclimate to fluctuations in light intensity than to constitutive excess light
-\autocite{kulheim_rapid_2002, alter_acclimatory_2012, gordon_systemic_2013}.
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
