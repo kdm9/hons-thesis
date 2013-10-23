@@ -184,36 +184,41 @@ here. Additionally, gene ontology (GO) term analysis indicates commonality of th
 response to hot excess light with heat and oxidative stresses, as observed in previous studies
 \autocite{rossel_global_2002}. Together, these data suggest that the response of plants grown under
 dynamic light conditions to hot excess light is similar to that of plants growth under static light
-conditions, albeit with somewhat tempered induction of hot excess light-resposive marker genes.
+conditions, albeit with somewhat tempered induction of hot excess light-resposive marker genes. An
+understanding of the power needed and variation present in a typical experiment has been identified.
 
 Limited transcriptomic evidence of the effect of light intensity within the framework of dynamic
-light conditions was observed. Gene classes enriched in genes with differential steady-state
-expression in plants grown under
-sufficient light dynamic growth condititons and excess or flucating light dynamic grwoth condtiions exhibit limited overlap with those observed in previous
-studies of acute changes in light intensity, as hypothesised. However, this evidence of hardening is
-contrasted by the number of genes differentially expressed in response to hot high light under
-dynamic growth conditions. If acclimation to modest excesses in light intensity result in reduced
-fold-change induction of stress-inducible genes, as qPCR quanitfication of APX2 expression suggest,
-then either the relative order of hardening hypothesied is incorrect, or the level of biological
-noise in this dataset prevented observation of such phenonmena.
-\todo{add model of mop vs bucket}
-\todo{may need a reword to clarify meaning}
-%Little concise effect of hardening of \textit{Arabidopsis} during acclimation to dynamic
-%growth conditions  was observed. 
-%(discuss Venn diagrams: expect some form of pattern, found a pattern in qPCR, etc.)
-%(discuss hypothesised hardening vs Excess
-%> Fluct > sufficient response discovered, and possible reasons)
-\todo{longer term responses to light level paragraph}
-\todo{JB:but an understanding of the power needed and variation present in a typical experiment was identified.
-Samples are available for future studies.}
+light conditions was observed. Gene ontology (GO) term enrichment provides evidence that plant
+response to hot high light is preserved in plants grown under dynamic growth conditions hypothesised
+to induce acclimation to high light or fluctuations in light intensity
+(\autoref{fig:txv-res-govenn}). Additionally, GO term enrichment analysis details the overlap and
+interaction with other abiotic stresses. GO terms  enriched in genes with differential steady-state
+expression in plants grown under sufficient light dynamic growth condititons and excess or flucating
+light dynamic grwoth condtiions exhibit limited overlap with those observed in previous studies of
+acute changes in light intensity, as hypothesised. However, this evidence of hardening is contrasted
+by the number of genes differentially expressed in response to hot high light under dynamic growth
+conditions. If acclimation to modest excesses in light intensity result in reduced fold-change
+induction of stress-inducible genes, as qPCR quanitfication of APX2 expression suggest, then either
+the relative order of hardening hypothesied is incorrect, or the level of biological noise in this
+dataset prevented observation of such phenonmena.
+\todo{fix up go paragrahph}
 
-Gene ontology (GO) term enrichment provides evidence that plant response to hot high light is preserved
-in plants grown under dynamic growth conditions hypothesised to induce acclimation to high light or
-fluctuations in light intensity. Additionally, GO term enrichment analysis details the overlap and
-interaction with other abiotic stresses. (describe other stress terms in dataset, refer back to Seki
-drought/heat transcriptome 2002 paper, also Pogson drought/light transcriptomic interaction
-commonality (was that the SAL microarray paper?))
-\todo{go paragraph}
+\todo{add model of mop vs bucket}
+
+A more detailed analysis of this dataset may be warranted by these findings. In particular,
+examinaiton of possible harvesting or treatment block effects may, if any effect exists, reduce the biological coefficient
+of variation \autocite{robinson_edger:_2013}. A detailed analysis of all genes called as
+differentially expressed may be of use, as high biological noise may not affect the estimates of
+differential expression in all genes. I hypothesise that upon doing so, genes previously found to be
+differentially expressed between lab and field growth condtitions would have differential
+steady-state expression between sufficient, fluctuating and excess light conditions, with expression
+being highest in the excess and lowest in sufficient light condititons. 
+%\begin{itemize}
+%  \item check for block effect
+%  \item look at detail of individual genes
+%  \item Hypothesise as to what good dataseet would find
+%\end{itemize}
+\todo{ensure expt. methods stuff here makes it into ch4 methods}
 
 Study of the transcriptome is an established method to assess the responses of plants to their
 environment, but it is far from the only method of doing so. Analysis of chlorophyll fluorescence of
