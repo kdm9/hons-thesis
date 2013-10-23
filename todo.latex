@@ -27,21 +27,4 @@
   \item remove all references to pseudo-natural
 \end{itemize}
 
-\begin{verbatim}
-WARN - I didn't find a database entry for 'technical review' (section 0)
-WARN - I didn't find a database entry for 'mishra_arabidopsis_2013' (section 0)
-WARN - I didn't find a database entry for 'wituszynska_multivariate_2013' (section 0)
-WARN - I didn't find a database entry for 'kumar_high-throughtput_2012' (section 0)
-WARN - I didn't find a database entry for 'drought' (section 0)
-WARN - I didn't find a database entry for 'pogson' (section 0)
-WARN - I didn't find a database entry for 'maybe a magnus nordberg paper' (section 0)
-WARN - I didn't find a database entry for 'martin_catalyzing_2012' (section 0)
-WARN - I didn't find a database entry for 'the famous excel analysis of the economic dataset John Maindonald used' (section 0)
-WARN - I didn't find a database entry for 'citation needed' (section 0)
-WARN - I didn't find a database entry for 'theres a pogoson paper that says this' (section 0)
-WARN - I didn't find a database entry for 'i think rossel 2007?' (section 0)
-WARN - I didn't find a database entry for 'recent jansson paper' (section 0)
-WARN - I didn't find a database entry for 'karpinski_multivariate_2013' (section 0)
-\end{verbatim}
-
 \listoftodos
