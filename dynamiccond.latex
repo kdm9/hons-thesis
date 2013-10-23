@@ -314,13 +314,13 @@ constructed, and include the limited light intensity, temperature and humidity o
 SpectralPhenoClimatron. The limited light intensity and the evenness of the spectral power density
 of Heliospectra L4A Series 10 lamps will be improved in an upcoming upgrade (pers. comm., Justin
 Borevitz). Despite these minor shortcomings, the SpectralPhenoClimatron is a phenomenal tool with
-which to study plant-environment interactions that has been designed with large scale studies that
+which to study plant-environment interactions. It has been designed with large scale studies that
 elucidate underlying genetic mechanisms and examine genetic variation in these interactions in mind.
 
 Three dynamic growth conditions to examine the effect of light intensity in field-like interaction
 with temperature, humidity and light quality were implemented. These conditions allow for light
 stress to be studied in the framework of combinatorial application of stresses, as recent
-literature has advocated \autocite{mittler_abiotic_2006, wituszynska_multivariate_2013}. Examination
+literature has advocated \autocite{mittler_abiotic_2006, wituszynska_multivariable_2013}. Examination
 of genetic variation in transcriptional, physiological or phenomic responses to altered light
 intensity may provide insight into mechanisms underlying response to light stress in field-like
 combinations with other abiotic stresses \autocite{li_genetics_2006, li_association_2010}.
