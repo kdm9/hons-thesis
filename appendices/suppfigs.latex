@@ -1,8 +1,63 @@
 \clearpage
-\section{Supplimentary Figures}
+\section{Supplimentary Information}
 
 \subsection{Sequening Depth Effect on Biological Coefficient of Varation}
 \label{apx-plots-bcvcoverage}
 
 BCV plots across all sequening depths in the experiment outlined in \autoref{subsec:br-res-coverage}
+
+\subsection{Gene ontology term enrichment between differential expression contrasts}
+\label{subsec:apx-tabs-go}
+
+
+  \kmdefaulttable
+  {txv-res-topgoterms}
+  {tables/txv-res-gosteady.csv}
+  {cp{2cm}ccp{3cm}ccp{3cm}ccp{3cm}c}
+  {\multicolumn{6}{c}{Excess vs Sufficient} & \multicolumn{6}{c}{Fluctuating vs Sufficient} \\
+  \multicolumn{3}{c}{Differentially Expressed} & \multicolumn{3}{c}{Differentially induced} &
+  \multicolumn{3}{c}{Differentially Expressed} & \multicolumn{3}{c}{Differentially induced} \\
+  Term & $p$ & Category &  Term & $p$ & Category & Term & $p$ & Category & Term & $p$ & Category\\}
+  {\dest=Esterm, \desp=Esp, \desc=Escat, \iest=Esiterm, \iesp=Esip, \iesc=Esicat, 
+  \dfst=Fsterm, \dfsp=Fsp, \dfsc=Fscat, \ifst=Fsiterm, \ifsp=Fsip, \ifsc=Fsicat}
+  {\dest & \desp & \desc & \iest & \iesp & \iesc & \dfst & \dfsp & \dfsc & \ifst & \ifsp & \ifsc\\}
+  {Go terms signficicantly enriched in differentially expressed}
+
+
+\subsection{High Throughput RNAseq Library Preparation Protocol}
+\label{subsec:apx-supp-rnaseqprotocol}
+
+To economically generate RNAseq libraries from the hundreds of samples I have collected, non
+kit-based protocols must be used. Here, I briefly summarise the failed implementaion of the RNAseq
+library preparation protocol of \textcite{kumar_high-throughput_2012}. The majority of this protocol
+was successfully implemented.  Messenger RNA was extracted in a 96 well plate format using
+oligo-d(T) magnetic beads, albeit with low yield that expected \autocite{kumar_high-throughput_2012}
+(\autoref{fig:br-res-dynabdpicogel}, \autoref{fig:br-res-dynabdpicoegramB1}). Complimentary DNA
+(cDNA) was prepared from this mRNA. Enzymatic fragmentation of cDNA, end repair and A-tailing were
+performed. However, a cumulation of possible ligation and PCR biases caused order-of-magnitude
+variation in library abundance (data not shown). This variation in library abundance was confirmed
+with diagnostic qPCR (data not shown). For this reason, the use of this protocol in my experiment
+was abandoned, as the optimisation of these difficulties may have been very time consuming and was
+not feasible in the time remaining in my Honours year.
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/br-res-dynabdpicogel.png}
+  \end{center}
+  \caption{BioAnalyser digital gels of 10 RNA samples extracted. The extraction or quantification of C1
+    failed. Note the feint mRNA smear, and residual rRNA bands. This indicates successful direct
+    extraction of mRNA molecules from plant tissue lysates, and residual carry-over of rRNA.}
+  \label{fig:br-res-dynabdpicogel}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/br-res-dynabdpicoegramB1.png}
+  \end{center}
+  \caption{BioAnalyser digital electrophoretogram of a representative mRNA sample (Sample B1 in
+    \autoref{fig:br-res-dynabdpicogel}). Note the smear-like quality of the mRNA sample, and the
+    reduced or absent ribosomal RNA peaks, when compared with a total RNA sample such as in
+    \autoref{fig:txv-res-rnaqual}}
+    \label{fig:br-res-dynabdpicoegramB1}
+\end{figure}
 

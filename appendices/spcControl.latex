@@ -1,6 +1,12 @@
 \section{\texttt{spcControl} Module Implementation Details}
 \label{sec:apx-spcControl}
 
+\subsection{Evolution of the \texttt{spcControl} codebase}
+\label{subsec:apx-spc-evol}
+Initially\ldots
+\todo{SPC evolution}
+
+\subsection{Invocation of \texttt{spcControl}}
 Some important notes about the invocation of \texttt{spcControl}:
 \begin{itemize}
   \item \texttt{SolarCalc} is a java program. The implementation of \texttt{strftime} function,
