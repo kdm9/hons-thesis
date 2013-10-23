@@ -7,40 +7,41 @@
 
 The study of plant-environment interactions is crucial to improving agricultural yield and
 understanding functional plant ecology in a changing climate. The study of mechansisms by which
-plants tolerte or respond to  abiotic stresses is of particular importance, as abiotic stresses
-cause many billions of dollars of crop losses and incalculable environmental damage
+plants tolerate or respond to  abiotic stresses is of particular importance, as abiotic stresses
+cause many hundreds of billions of dollars of crop losses and incalculable environmental damage
 \autocite{mittler_abiotic_2006}. Several recent reviews of abiotic stress research have suggested a
-changed focus for research, away from studying stresses individually towards holistic studies of
-combinations of stresses \autocite{mittler_abiotic_2006, mittler_genetic_2010}. Plants in ecological
-or agricultural settings commonly experience environments unfavourable to optimal growth, encompassing
-multiple abiotic (and biotic) stresses \autocite{boyer_plant_1982, mittler_abiotic_2006}. Laboratory
+changed focus for research, away from studying stresses individually towards more holistic
+combined stress studies \autocite{mittler_abiotic_2006, mittler_genetic_2010}. Plants in ecological
+or agricultural settings commonly experience environments unfavourable to optimal growth, composed
+of multiple abiotic (and biotic) stresses \autocite{boyer_plant_1982, mittler_abiotic_2006}. 
+Moreover, natural environments are dynamic, and challenge plants to rapidly adapt to heterogenious
+environmental conditions on a daily basis. Laboratory
 study of these stresses should therefore account for recent findings suggesting that interactions
-between abiotic stresses in field conditions are not simply additive \autocite{mittler_abiotic_2006,
+between abiotic stresses in field conditions are not simply additive, rather are influenced by the
+dynamic combinations of stresses their enviroments impose upon them \autocite{mittler_abiotic_2006,
 atkinson_interaction_2012}.
 
-This thesis has developed methods to reproducibly induce and analyse response to abiotic stresses in
-laboratories,in the combinations in which they can appear naturally, and presents a preliminary
-transcriptomics dataset analysing light response in the context of combinatorial stress.
-
-%Is thesis has studied abiotic stresses (under controlled laboratory conditions in the combinations
-%in which they can appear naturally, and has developed several methods to induce and analyse abiotic
-%stress, _presenting _a) preliminary transcriptomics dataset (for) analysing light response in the
-%context of combinatorial stress.
+This thesis has developed methods to reproducibly induce abiotic stresses in laboratories in 
+combinations analagous to those in which they can appear naturally and assay plant growth under such
+condtions, analyse plant response to responses, and presents a preliminary proof-of-concept transcriptomics
+dataset analysing light response in the context of combinatorial abiotic stresses.
 
 
 \section{Novel Dynamic Growth Conditions}
 \label{sec:dis-dc}
 
 Plant biologists often conduct laboratory experiments in controlled growth facilities. These
-facilities lack the ability to mimic characteristics of their natural environment, as they are
-rarely built from hardware enabling an investigator to do so. By creating software which connects
-existing but disparate technologies, I have enabled the implementation of growth conditions which
-can mimic regional climates or weather. The combination of computer controllable growth cabinets
-fitted with multi-spectral LED arrays allow for experimentation to consider important parameters
-that vary in the climates plants experience, including temperature, humidity, and light quality and
-quantity.
-\todo{find reviews stating importance of temperature, humidity, and light quality and quantity on
-plant growth}
+facilities may lack the ability to mimic characteristics of their natural environment, as they are
+rarely built from hardware enabling an investigator to do so. While static growth conditions used in
+labotorires are sufficient to uncover core mecchanisms of plant resposnes to stress, this is not
+always the case. In fact, evidence from field studies has uncovered phenotypes that are cryptic
+under static laboratory conditions, and that may be observed and studied closely under dynamic
+laboratory condtions \autocite{kulheim_rapid_2002, mittler_abiotic_2006, mishra_arabidopsis_2012,
+wituszynska_multivariable_2013}. By creating software which connects existing but disparate
+technologies, I have enabled the implementation of growth conditions which can mimic regional
+climates or weather. The combination of computer controllable growth cabinets fitted with
+multi-spectral LED arrays allow for experimentation to consider important parameters that vary in
+natural regional climates, including temperature, humidity, and light quality and quantity.
 
 In creating dynamic growth conditions, I aimed to combine some elements of the climates experienced
 by plants in nature with the reliability, reproducibility and convenience of laboratory growth
@@ -60,67 +61,59 @@ however light intensity does not gradually increase in the same manner as the ob
 While the dynamic grwoth conditions implemented in the SpectralPhenoClimatron mimic elements of
 natural environments, they are not designed to be accurate representations of conditions encountered
 in nature. In nature, weather provides a layer of stochasticity upon the broad trends in climate
-\autoref{citation needed}. The system I have developed is not only applicable to studies discussed
-in this thesis, and has been used in experiments beyond the scope of this thesis including virtual
-recirocial transplants and gene-by-environment interaction QTL mapping. The study of standing
-genetic variation within regional climates allows links between genotype and reaction to some
-environmental parameter, and can shed light on mechanistic links via methods including GWAS
-\autocite{brachi_genome-wide_2011, maybe a magnus nordberg paper}. However, when modelling plant
-growth in, or reaction to, environmental conditions, the system I have developed allows for
+\autocite{citation needed}. However, the developments I have described in this thesis facilitate the
+emulation of stressful growth environments which approximate weather-induced abiotic stresses plants
+experience in the natural environments. The system I have developed is not only applicable to
+studies discussed in this thesis, and has been used in experiments beyond the scope of this thesis
+including virtual recirocial transplants and gene-by-environment interaction QTL mapping. The study
+of standing genetic variation within regional climates allows links between genotype and reaction to
+some environmental parameter, and can shed light on mechanistic links via methods including GWAS
+\autocite{li_genetics_2006, li_association_2010, brachi_genome-wide_2011}. However, when modelling
+plant growth in, or reaction to, environmental conditions, the system I have developed allows for
 non-stochastic weather to be imposed over the climatic trends (e.g. the fluctuations in light
 modelling intermittent cloud cover used in this thesis).
-\todo{mention ecology, ``virtual reciprocal transplants'' etc}
-\todo{reiterate reliability, and make it first person}
 
-%\begin{itemize}
-%  \item also non-ND shade
-%\end{itemize}
-
-%With regards to light quality, using multispectral LED arrays, we are able to approximate the almost
-%flat specrtal density of sunlight more closely than is possible with other readily available lab
-%light sources.
-%In terms of local or regional climates, I postulate that the diurnal temperature and humidiy
-%variation occurs similaly to that obsereved in nature. Obviously, plants experience \emph{weather},
-%not climate, so these conditions represent typical regional averages where expected differences in seasonal acclimations can be observed 
-%Phenotypic variation can be released or enhanced under these dynamic conditions or alternatively they can masked when signals homogenize genetic variation.
-%Many authors postulate ``cryptic phenotypes'', or phenotypes not observable under ``standard''
-%conditions.  Phenotypes observed under standard conditions may not be relavant to field conditions. 
-%Our cliamte chamber conditions provide a better match (Li et al, PNAS 2010) to field level phenotypes.
+\todo{mention ecology, ``virtual
+reciprocal transplants'' etc} \todo{reiterate reliability, and make it first person} \todo{CRUCIAL-
+need a link}
 
 
 \section{Improved analytic methods for RNAseq}
 \label{sec:dis-bioinf}
 
-
-RNAseq is a precise method to simultaneously quantify expression of genome-wide expression
+RNAseq is a precise method to quantify genome-wide expression
 \autocite{wang_rna-seq:_2009}. RNAseq can reveal hidden phenotypes and subtle environmental effects
-of a plant's growth environment \autocite{martin_catalyzing_2012}, giving insights into development,
-regulatory mechanisms, signaling pathways, acclimation and many other aspects of plant biology.
-% not sure if I should split here?
+of a plant's growth environment \autocite{martin_catalyzing_2013}, giving insights into development,
+regulatory mechanisms, signaling pathways, acclimation and many other aspects of plant biology. It
+is sufficiently sensitive to measure the subtle differences in expression between both closely
+geneticaly related organisms (à la expression QTL mapping, \textcite{sun_eqtl_2013}), and subtle
+envronmetal effects (e.g. diiferetial response to dynamic growth condttions).
+
 Reproducibility, accuracy, and performance of the computational analysis of any dataset is crucial.
 Inaccurate and poorly reproducible analyses have lead to embarrassing errors and retractions in many
-fields \autocite{the famous excel analysis of the economic dataset John Maindonald used}.
-Computational performance of analysis software is central to interactive analysis of datasets;
-enabling fast analysis of datasets allows researchers to explore their data without the requirement
-for expensive clusters or supercomputers. The design and implementation of the RNAseq analysis
-framework I have created specifically address reproducibility, accuracy, and performance, by
-selecting the latest advances in high-performance, accurate analysis software, and providing a
-simple structure to an analysis to allow perfect reproduction of the entire analysis.  The framework
-presented in this thesis is specifically designed for modularity, enabling substitution of
-components for improved versions or alternatives with minimal effort.
+fields \autocite{peng_reproducible_2009, herndon_does_2013}.  Computational performance of analysis
+software is central to interactive analysis of datasets; enabling fast analysis of datasets allows
+researchers to explore their data without the requirement for expensive clusters or supercomputers.
+The design and implementation of the RNAseq analysis framework I have created specifically address
+reproducibility, accuracy, and performance, by selecting the latest advances in high-performance,
+accurate analysis software, and providing a simple structure to an analysis that allows exact
+reproduction of the entire analysis.
 
 %summarise and discuss improvements to all 3. cite reproducible research/software carpentry type
 %papers here. This should be split into 2 paragraphs I think)
 
-The specific algorithms used in analysis of RNAseq datasets is a field active technical research.
+The specific algorithms used in analysis of RNAseq datasets is a field of active technical research.
 Validation of pipelines designed around the Subread aligner \autocite{liao_subread_2013} reiterate
-the software authors' claims of increased speed and accuracy. I have used the trimmed mean of M values
-normalisation proposed by \textcite{robinson_scaling_2010} and implemented by
-\textcite{robinson_edger:_2010}. While recent reviews suggest superior performance over competitors
-\autocite{rapaport_comprehensive_2013}, this review did not consider recently published statistical
-techniques such as QLspline \autocite{lund_detecting_2012}. Further investigation of the state of
-the art in RNAseq statistical and computational analysis software is of great importance to studies
-of differential expression.
+the software authors' claims of increased speed and accuracy. A recent publication suggests superior
+performance of the trimmed mean of M values normalisation method proposed by
+\textcite{robinson_scaling_2010} and implemented by \textcite{robinson_edger:_2010} compared to its
+competitors \autocite{rapaport_comprehensive_2013}. However, this review did not consider recently
+published statistical techniques such as QLspline \autocite{lund_detecting_2012}. Further
+investigation of the state of the art in RNAseq statistical and computational analysis software is
+of great importance to studies of differential expression, and the framework presented in this
+thesis is specifically designed for modularity, enabling substitution of components for improved
+versions or alternatives with minimal effort.
+
 \todo{mention txome subtlety}
 
 %(describe its modularity and possible ``future directions'', i.e. adding support for bigger and
@@ -130,21 +123,21 @@ When transcriptome variation within a study system is subtle, sensitive and accu
 required to glean information. This includes accurate analysis software (see above) and optimal
 experimental design. I examined the effect of sequencing depth on power to detect differential
 expression, and found that below 5 million reads per sample, power to detect differential expression
-with three replicates diminishes rapidly. Several recent studies and reviews suggest that the
-current informal standard of RNAseq experimental design, which emphasises sample sequencing coverage
-over replication, is unwise. \textcite{rapaport_comprehensive_2013} find increasing the level of
-replication over sequencing depth yields more differentially expressed genes, while
-\textcite{kliebenstein_exploring_2012} demonstrate that, even when sequence coverage was very low,
-nearly all expression QTLs could be mapped. In light of these data, my analysis of sequencing depth
-is conservative, as it does not consider the increases in replication made possible by increasing
-the number of samples sequenced per unit cost by a factor of two or more. 
-\todo{mention Shannon entropy in kleib. paper}
-\todo{Biologial variation control and multi environment treaments are needed to provide
-specificity of changes.  Gene Atlas idea.}
+with three replicates diminishes rapidly (see \autoref{fig:br-res-detagsvscoverage}). Several recent
+studies and reviews suggest that the current informal standard of RNAseq experimental design, which
+emphasises sample sequencing coverage over replication, is unwise.
+\textcite{rapaport_comprehensive_2013} find increasing the level of replication over sequencing
+depth yields more differentially expressed genes, while \textcite{kliebenstein_exploring_2012}
+demonstrate that, even when sequence coverage was very low, nearly all expression QTLs could be
+mapped. In light of these data, my analysis of sequencing depth is conservative, as it does not
+consider the increases in replication made possible by increasing the number of samples sequenced
+per unit cost by a factor of two or more.
 
-\section{Elucidating Response to Light Intensity in Dynamic Growth Conditions}
+\todo{Biologial variation control and multi environment treaments are needed to provide specificity
+of changes.  Gene Atlas idea.}
+
+\section{Elucidating Response to Light Intensity Under Dynamic Growth Conditions}
 \label{sec:dis-txvar}
-\todo{better title for this section}
 
 The transcriptomes of \textit{Arabidopsis} grown under dynamic growth conditions have been
 observed. A preliminary RNAseq dataset characterised by high levels of biological noise indicated
@@ -161,19 +154,23 @@ The large amount of biological noise and resulting lack of power to detect diffe
 is likely caused by a combination of factors. A rapid (within minutes) reduction in transcript
 abundance of hot excess light induced genes upon removal from hot excess light treatment has been
 observed (pers.  comm. Peter Crisp). In light of these data, the high temporal error in sampling
-which exists in the dataset which I created may explain some of the biological variability.
+which exists in the dataset that I created may explain some of the biological variability.
 Additionally, as plants were of an advanced age (5 weeks) when samples were taken rapid estimation
-of leaf number was infeasible, and the largest expanded leaf was taken. This variation in leaf
-number may be an additional reason for the high variability in this dataset, as the transcriptome is
-dependent on leaf developmental stage \autocite{citation needed}. A final possible explanation for
-the high biological noise is variation in harvesting time. While plants were harvested as quickly as
-possible, each replicate took 3 hours to harvest. Previous studies have found circadian effects to
-both the general transcriptome \autocite{covington_global_2008, ptitsyn_comprehensive_2008} and in
-transcriptional response to biotic stress \autocite{wilkins_time_2010}. The harvesting techniques
-utilised in this study were not optimal, and likely contributed to the high level of biological
-noise in the obtained dataset, and the resulting reduced statistical power is a possible cause for
-the lower than expected number of genes whose expression was induced or repressed upon treatment
-with hot excess light.
+of the particular leaf that was samples was infeasible, thus the largest expanded leaf was taken.
+This variation in leaf number may be an additional reason for the high variability in this dataset,
+as the transcriptome is dependent on leaf developmental stage \autocite{gordon_systemic_2013,
+carmody_rapid_2013}. A final possible explanation for the high biological noise is variation in
+harvesting time. While plants were harvested as quickly as possible, each replicate took 3 hours to
+harvest. Previous studies have found circadian effects to both the general transcriptome
+\autocite{covington_global_2008, ptitsyn_comprehensive_2008} and in transcriptional response to
+biotic stress \autocite{wilkins_time_2010}. The harvesting techniques and experimental design utilised in
+this study were suited to experiments that mapped eQTLs for stress-reponsive genes. For simple
+detection of differential expression howerver, they were not optimal and likely contributed to the
+high level of biological noise in the obtained dataset. Ideally, true internal controls grown under
+static growth condtitions, and higher levels of biological replication would be more appropriate.
+These shortcomings result in reduced statistical power, and are a possible cause for the lower than
+expected number of genes whose expression was induced or repressed upon treatment with hot excess
+light.
 
 Given this high level of biological noise, all further analyses of differential expression should be
 approached with caution, even if statistical techniques are sufficiently advanced to allow detection
@@ -185,19 +182,21 @@ gordon_systemic_2013, kimura_identification_2003}. Specifically, the
 induction of heat shock family proteins observed by \textcite{rossel_global_2002} was also observed
 here. Additionally, gene ontology (GO) term analysis indicates commonality of the transcriptional
 response to hot excess light with heat and oxidative stresses, as observed in previous studies
-\autocite{theres a pogoson paper that says this, i think rossel 2007?}. Together, these data suggest
-that the response of plants grown under dynamic light conditions to hot excess light is similar to
-that of plants growth under static light conditions, albeit with tempered responses.
+\autocite{rossel_global_2002}. Together, these data suggest that the response of plants grown under
+dynamic light conditions to hot excess light is similar to that of plants growth under static light
+conditions, albeit with somewhat tempered induction of hot excess light-resposive marker genes.
 
-Limited transcriptomic evidence of the effect of light intensity within the framework of dynamic light
-conditions was observed. Gene classes enriched in genes differentially regulated between sufficient light and
-excess or flucating light exhibit overlap with those observed in previous studies of acute changes
-in light intensity, as hypothesised. However, this evidence of hardening is contrasted by the number of genes differentially expressed in
-response to hot high light under dynamic growth conditions. If acclimation to modest excesses in
-light intensity result in reduced fold-change induction of stress-inducible genes, as qPCR
-quanitfication of APX2 expression suggest, then either the relative order of hardening hypothesied
-is incorrect, or the level of biological noise in this dataset prevented observation of such
-phenonmena 
+Limited transcriptomic evidence of the effect of light intensity within the framework of dynamic
+light conditions was observed. Gene classes enriched in genes with differential steady-state
+expression in plants grown under
+sufficient light dynamic growth condititons and excess or flucating light dynamic grwoth condtiions exhibit limited overlap with those observed in previous
+studies of acute changes in light intensity, as hypothesised. However, this evidence of hardening is
+contrasted by the number of genes differentially expressed in response to hot high light under
+dynamic growth conditions. If acclimation to modest excesses in light intensity result in reduced
+fold-change induction of stress-inducible genes, as qPCR quanitfication of APX2 expression suggest,
+then either the relative order of hardening hypothesied is incorrect, or the level of biological
+noise in this dataset prevented observation of such phenonmena.
+\todo{add model of mop vs bucket}
 \todo{may need a reword to clarify meaning}
 %Little concise effect of hardening of \textit{Arabidopsis} during acclimation to dynamic
 %growth conditions  was observed. 
@@ -206,7 +205,7 @@ phenonmena
 %> Fluct > sufficient response discovered, and possible reasons)
 \todo{longer term responses to light level paragraph}
 \todo{JB:but an understanding of the power needed and variation present in a typical experiment was identified.
-Samples are available for future studies.
+Samples are available for future studies.}
 
 Gene ontology (GO) term enrichment provides evidence that plant response to hot high light is preserved
 in plants grown under dynamic growth conditions hypothesised to induce acclimation to high light or
@@ -252,26 +251,30 @@ the artificially benign conditions under which many laboratory experiments on pl
 
 Studying the effect of ``hardening'' on the transcriptional response of plants to stress may reveal
 mechanistic insights of response genes. As plants acclimate to altered growth conditions,
-alteration of steady-state transcription often occurs. Transcriptome profiling during acclimation to cold stress,
+alteration of steady-state transcription often occurs \autocite{hihara_dna_2001, alter_acclimatory_2012,
+heinrich_transcriptomic_2012}. Transcriptome profiling during acclimation to cold stress,
 \autocite{fowler_arabidopsis_2002, chawade_putative_2007}, excess light
-\autocite{gordon_systemic_2013,page_influence_2012}, and drought \autocite{citation needed} reveals a
+\autocite{gordon_systemic_2013,page_influence_2012}, and drought \autocite{ding_multiple_2012} reveals a
 transcriptional response to long-term stress exposure. The elucidation of genes underlying such
 acclimatory responses would yield insights into mechanisms by which plant tolerance of chronic
 abiotic stress could be improved.
 \todo{need more refs and less fluff for this paragraph}
 %(my hypothesis RE ``mop and bucket'' vs ``guardian'' genes.)
 
-% translaitonal sci
-Scientists have repeatedly developed crop lines tolerant to stress assays ``in the lab'' that, when
-trialled under agricultural condition, have increased susceptibility to other stresses or combinations
-of stresses \autocite{mittler_abiotic_2006, mittler_genetic_2010, atkinson_interaction_2012,
-karpinski_multivariate_2013}. Some of the difficulty in translation of stress tolerance from lab to field can be explained by
-detrimental interaction of stresses \autocite{mittler_genetic_2010}. By performing genetic screens
-or genome wide association studies for stress tolerance under dynamic growth conditions, which mimic
-field-like combinations of stresses, it may be possible to elucidate mechanisms of tolerance to
-specific stresses which do not conflict with mechanisms of defence or tolerance to other biotic or
-abiotic stresses encountered under agricultural conditions.
 
+Scientists have repeatedly developed crop lines tolerant to stress assays ``in the lab'' that, when
+trialled under agricultural condition, either do not show stress tolerance or have increased
+susceptibility to other stresses or combinations of stresses \autocite{mittler_abiotic_2006,
+mittler_genetic_2010, atkinson_interaction_2012, wituszynska_multivariable_2013}. Some of the
+difficulty in translation of stress tolerance from lab to field can be explained by detrimental
+interaction of stresses \autocite{mittler_genetic_2010}. By performing genetic screens or genome
+wide association studies for stress tolerance under dynamic growth conditions, which mimic
+field-like combinations of stresses, it may be possible to elucidate mechanisms of tolerance to
+specific stresses which do not conflict with mechanisms of tolerance to other abiotic stresses, as
+tolerance is assayed in a mildly stressful environment that mimics that encountered under
+agricultural conditions.
+
+\todo{first sentence needs rewording}
 
 \section{Future Directions}
 \label{sec:dis-futdir}
