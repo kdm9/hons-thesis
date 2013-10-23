@@ -14,8 +14,8 @@ Some important notes about the invocation of \texttt{spcControl}:
     java does not comply with the standards which the \texttt{datetime} module of python does. Thus,
     each time in the hour after midnight is recorded as, for example, \texttt{07/01/12 00:15:00AM},
     for 15 minutes after midnight, July 1, 2012. As a result, we cannot \emph{directly} use
-    solarcalc output. There is a very simple fix however, finding all occurances of
-    \texttt{00:} in the solarcalc output file and replacing them with \texttt{12:} solves this
+    SolarCalc output. There is a very simple fix however, finding all occurrences of
+    \texttt{00:} in the SolarCalc output file and replacing them with \texttt{12:} solves this
     issue. As these files are very large, this is best accomplished with \texttt{sed}, the Stream
     EDitor, as show below in listing \ref {lst:apx-spc-makeSolarcalcUseProperStrftime}.
 \end{itemize}

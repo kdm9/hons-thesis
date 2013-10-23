@@ -1,6 +1,6 @@
 \section{Source Code Repositories}
 \label{sec:appendix-sourcecoderepos}
-The following source code repositiories have been created as part of this thesis.
+The following source code repositories have been created as part of this thesis.
 
 \begin{table}[h]
   \centering
@@ -17,25 +17,25 @@ The following source code repositiories have been created as part of this thesis
 \end{table}
 
 
-\section{Miscelanelous Software}
+\section{Miscellaneous Software}
 \label{sec:appendix-misccode}
 
 The following pieces of software are not part of any software package, however are used within this
 thesis.
 
-Most scritps are available within the \texttt{bioscripts} reposistory on my github site, available
+Most scripts are available within the \texttt{bioscripts} repository on my github site, available
 at \url{https://github.com/kdmurray91/bioscripts}.
 
 \subsection{\texttt{spliceSolarCalc.py}}
 \label{subsec:apx-code-spliceSolarCalc}
 
-Create solarcalc model files which fluctuate between two model files on a regular cycle.
+Create SolarCalc model files which fluctuate between two model files on a regular cycle.
 Available at \url{https://github.com/kdmurray91/bioscripts/blob/master/solarcalc/spliceSolarCalc.py}.
 
 \subsection{Analysis of RNAseq analysis pipeline computation cost}
 \label{subsec:apx-code-pltimes}
 
-Statisical analysis of RNAseq pipeline computation cost.
+Statistical analysis of RNAseq pipeline computation cost.
 
 \url{https://github.com/kdmurray91/hons-thesis-stats/blob/master/pltimes/pltimes.Rmd}
 
@@ -43,6 +43,6 @@ Statisical analysis of RNAseq pipeline computation cost.
 \subsection{qPCR analysis Code}
 \label{subsec:apx-code-qpcr}
 
-Statistical calculation of relative quantification and differential exression in qPCR datasets.
+Statistical calculation of relative quantification and differential expression in qPCR datasets.
 
 Available at \url{https://github.com/kdmurray91/hons-thesis-stats/blob/master/qpcr/qpcr.Rnw}
