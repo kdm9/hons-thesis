@@ -12,7 +12,8 @@ over 100 billion of dollars of crop losses per annum in the United States alone
 \autocite{mittler_abiotic_2006}. Therefore, the study of plant-environment interactions is crucial
 to improving agricultural yield and understanding functional plant ecology in a changing climate.
 
-Central to increasing the understanding of plant-enviroment intearctions is the development of labtorty study systems that allow classical mechanisitc
+Central to increasing the understanding of plant-enviroment intearctions is the development of
+laboratory study systems that allow classical mechanisitc
 studies of abiotc stress response to be placed in the context of the conditions plants experience in
 natural or cultivated environments outside laboritories. Several techniques and approaches that have
 been developed over the past decade aide the study of plant stress response. In this thesis, I
@@ -40,15 +41,14 @@ those observed in regional climates.
 \section{Abiotic Stress: A limit to Plant Productivity}
 \label{sec:intro-stress}
 
-Abiotic stress are the non-living stresses imposed upon plants by their growth environment. This
+Abiotic stresses are the non-living stresses imposed upon plants by their growth environment. This
 includes deletatious extremes in or combinations of environmental variables such as temperature,
 humidity, osmotc potential, water availability, light quality and quantity. Specifically, osmotic
 and drought stresses cause a decrease in the ability of plants to transpire and obtain inorganic
 carbon vital to photosynthesis \autocite{seki_molecular_2003, mittler_abiotic_2006}. Excess light
 creates harmful reactive oxygen species (ROS) that damage the delicate photosynthetic aparatus
 \autocite{niyogi_photoprotection_1999, apel_reactive_2004, asada_production_2006, li_sensing_2009,
-foyer_redox_2009, mubarakshina_production_2010}. Extremes of temperature cause non-optimal function
-of or damage to many enzymes, particularly those involved in metabolism
+foyer_redox_2009, mubarakshina_production_2010}. Extremes of temperature impair and  damage to many enzymes, particularly those involved in metabolism
 \autocite{atkin_thermal_2003}.  Together, abiotic stresses limit plant productivity through their
 detrimental effects upon the ability of plants to assimilate biomass, and coping mechanisms that
 plants have evolved generally come at a yield penalty \autocite{mittler_abiotic_2006}. As a result,
@@ -61,7 +61,7 @@ respond to this stress, have been major foci of research in the past decade.
 Plants respond to abiotic stress via a myriad of mechanisms
 \autocite{demmig-adams_photoprotection_1992}, therefore responses to abiotic stress must be studied
 via a variety of techniques. Studies of photosynthetic characteristics by chlorophyll fluorescence
-\autocite[reviewed in][]{baker_chlorophyll_2008} have illustrated the effects of abiotic stress on
+\autocite[reviewed in][]{baker_chlorophyll_2008} have illustrated the negative effects of abiotic stress on
 photosynthesis \autocite{kulheim_rapid_2002, mishra_arabidopsis_2012, alter_acclimatory_2012,
 tikkanen_regulation_2012}. Phenotypic analysis, particularly of plant morphology, has given insight
 into the effects of abiotic stress \autocite{wituszynska_multivariable_2013,
@@ -97,8 +97,8 @@ damage caused \autocite{niyogi_photoprotection_1999, takahashi_photoprotection_2
 
 Upon exposure to excess light, plants immediately  begin to mitigate its detrimental effects
 \autocite{niyogi_photoprotection_1999, demmig-adams_photoprotection_1992}. These include mechanisms
-of respose and damage mitigation within the chloroplastic (discussed below), as well as responses a
-whole-cellscale. Chloroplast avoidance movement, the movement of chloroplasts parallel to the
+of respose and damage mitigation within the chloroplast (discussed below), as well as responses on a
+whole-cell scale. Chloroplast avoidance movement, the movement of chloroplasts parallel to the
 incident angle of light, decreases the amount of absorbed light
 \autocite{kasahara_chloroplast_2002}.  Transcriptional induction of heat shock proteins, antioxidant
 scavenging and photo-oxidative damage repair occur following excess light, and help to minimise
@@ -115,9 +115,9 @@ occurs in photosystem I (PS I) and acts by decreasing the pH of the thylakoid lu
 is thought to stabilise the oxygen evolving complex and aid NPQ \autocite{takahashi_how_2009}. State
 transitions act via phosphorylation of PS II and light harvesting complex II (LHC II) proteins.
 State transitions reversibly alter the balance of excitation energy between PS I and PS II
-\autocite{tikkanen_state_2006}. Through reversible dissociation of the LHC II and PS II , state
+\autocite{tikkanen_state_2006}. State
 transitions lower the light harvesting ability of PS II  and prevent absorption of excess light by
-PS II  \autocite{johnson_photoprotective_2011}. The \textit{Arabidopsis} mutants
+PS II, via reversible dissociation of the LHC II and PS II \autocite{johnson_photoprotective_2011}. The \textit{Arabidopsis} mutants
 \textit{\underline{n}on-\underline{p}hotochemical \underline{q}uenching \underline{1}}
 (\textit{npq1}) and \textit{\underline{n}on-\underline{p}hotochemical \underline{q}uenching
 \underline{4}} (\textit{npq4}), \textit{\underline{p}roton \underline{g}radient
@@ -138,7 +138,7 @@ study the response of plants to excess light.The excess light induced expression
 genes including \textit{\underline{A}SCORBATE \underline{P}ERO\underline{X}IDASE 2} (\textit{APX2})
 \autocite{rossel_global_2002, muhlenbock_chloroplast_2008}, \textit{\underline{E}ARLY
 \underline{L}IGHT \underline{I}NDUCED \underline{P}ROTEINS 1} and \textit{2} (\textit{ELIP1} and
-\textit{ELIP2}) \autocite{adamska_elips_1997, rossel_global_2002}, various heat shock proteins
+\textit{ELIP2}) \autocite{adamska_elips_1997, rossel_global_2002}, and various heat shock proteins
 (HSPs) \autocite{rossel_global_2002} is well established. These proteins are induced by alternative
 putative mechanisms, allowing for differentiation between oxidative induction of retrograde
 chloroplastic stress signals (\textit{APX2}) \autocite{karpinski_systemic_1999}, ROS-mediated but
@@ -181,11 +181,12 @@ responses to altered light intensity is lacking in the vast majority of works on
 \subsection{Plant Growth Under Field Conditions}
 \label{subsec:intro-resp-field}
 
+Plants grown in the field show markedly different phenotypes and responses to those
+grown in the lab. 
 Under field conditions, plants respond to the combination of stresses they encounter in complex,
 natural envrionments. However, in the laboratory plants are exposed to pre-determined stresses (or
 combinations thereof) hypothesised to provoke a mechanism
-or response. Plants grown in the field show markedly different phenotypes and responses to those
-grown in the lab. This includes metabolic profiles \autocite{jankanpaa_metabolic_2012}, transcript
+or response. This includes metabolic profiles \autocite{jankanpaa_metabolic_2012}, transcript
 abundances \autocite{mishra_arabidopsis_2012, wituszynska_multivariable_2013}, photosynthetic
 differences \autocite{mishra_arabidopsis_2012}, and survival and fecundity
 \autocite{kulheim_rapid_2002}.  Several authors report overlap between genes expressed upon
@@ -201,8 +202,10 @@ in field conditions \autocite{mishra_arabidopsis_2012, wituszynska_multivariable
 
 Despite the large body of published works elucidating responses to
 abiotic stresses, the majority of works focus on an abiotic stress in isolation
-\autocite{atkinson_interaction_2012, mittler_abiotic_2006}. However, in natural or agricultural
-situations, plants rarely experience an abiotic stress in isolation. This is a one of many causes of
+\autocite{atkinson_interaction_2012, mittler_abiotic_2006}. While there is much merit to this
+reductionist approach, in natural or agricultural
+situations, plants rarely experience an abiotic stress in isolation. Unfortuanately, this
+reductionist approach contributes to
 the difficulty in translating stress-tolerant lines of plants developed in labs to agrigculaural
 crops that are  more field hardy \autocite{mittler_abiotic_2006, mittler_genetic_2010}. 
 
@@ -210,13 +213,14 @@ crops that are  more field hardy \autocite{mittler_abiotic_2006, mittler_genetic
 Recent laboratory studies have demonstrated temperature interacts with light stress in a detrimental
 fashion.  At cold temperatures, unacclimated plants are less able to dissipate excess energy to
 avoid photo-oxidative damage, leading to altered PS I/PS II redox poise
-\autocite{armstrong_assessing_2007}. \textcite{rossel_global_2002} demonstrate temperature
-dependence on the transcriptional response to excess light. Interactions with temperature have been
-observed in the transcriptional response to drought \autocite{seki_monitoring_2001,
-seki_molecular_2003, rizhsky_combined_2002, rizhsky_when_2004}. Additionally, interactions between
-biotic and abiotic stresses exist \autocite{mittler_abiotic_2006, atkinson_interaction_2012,
-atkinson_identification_2013}. The data these authors present warrants a paradigm shift towards the
-study of abiotic stresses in combination, as advocated by \textcite{mittler_abiotic_2006}.
+\autocite{armstrong_assessing_2007}. Many authors demonstrate temperature dependence on the
+transcriptional response to excess light \autocite{rossel_global_2002, jung_subsets_2013}.
+Interactions with temperature have been observed in the transcriptional response to drought
+\autocite{seki_monitoring_2001, seki_molecular_2003, rizhsky_combined_2002, rizhsky_when_2004}.
+Additionally, interactions between biotic and abiotic stresses exist \autocite{mittler_abiotic_2006,
+atkinson_interaction_2012, atkinson_identification_2013}. The data these authors present warrants a
+paradigm shift towards the study of abiotic stresses in combination, as advocated by
+\textcite{mittler_abiotic_2006}.
 
 \todo{find something more convincing than that paper of Owen's}.
 
