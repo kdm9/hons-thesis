@@ -64,7 +64,7 @@ atkinson_identification_2013}.
 \label{subsec:intro-stress-photodamage}
 
 The ability of plants to utilise energy from light to fix inorganic carbon into organic biomass is
-reduced when the quality or quantity of light a plant receives is not optimal. The quanity of light
+reduced when the quality or quantity of light a plant receives is not optimal. The quantity of light
 a plant receives is in excess when plants are unable to utilise energy obtained from absorbed photos
 to fix carbon \autocite{li_sensing_2009}. Excess light is particularly damaging, causing both
 reductions in photosynthetic ability, termed photoinhibition, , and cellular or tissue damage and
@@ -117,7 +117,7 @@ reduce the photo-oxidative damage of cells and tissues due to excess light.
     in light intensity.}
   \label{fig:intro-ps}
 \end{figure}
-\todo{citration}
+\todo{citation}
 
 \subsection{Transcriptional Responses to Light Stress}
 \label{subsec:intro-resp-txome}
