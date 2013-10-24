@@ -48,7 +48,7 @@
   backend=biber,
   style=authoryear,
   bibstyle=rsbthesis,
-  sortcites=true,
+%  sortcites=true,
   backref=true,
   maxcitenames=3,
   maxbibnames=20,
@@ -124,11 +124,13 @@
     \small Thesis submitted in partial fulfilment of the requirements of the degree of\\
     \small Bachelor of Philosophy (Science) (Honours)\\
     \vfill
-    \footnotesize Word Counts:\\
+    \footnotesize Aproximate Word Counts:\\
     \begin{tabular}{ll}
-      \footnotesize Introduction: &  x words\\
-      \footnotesize Results: & y words\\
-      \footnotesize Discussion: & z words\\
+      \footnotesize Introduction: & 2010 words\\
+      \footnotesize Dynamic Growth Conditions: & 1250 words\\
+      \footnotesize Improved RNAseq Analysis: & 1545 words\\
+      \footnotesize Transcriptome Variation: & 1870 words\\
+      \footnotesize Discussion: & 3320 words\\
     \end{tabular}
   \end{center}
 \end{titlepage}
@@ -159,7 +161,7 @@
 
 \tableofcontents
 \todototoc
-
+%\listoffigures
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                        Acknoweledgements                          %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -214,5 +216,8 @@
 
 \clearpage
 \input{appendices/spcControl.latex}
+
+\clearpage
+\input{appendices/suppfigs.latex}
 
 \end{document}
