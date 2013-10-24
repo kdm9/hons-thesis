@@ -146,7 +146,7 @@ treatment with hot excess light. QPCR analysis showed increased steady-state exp
 stress responsive genes under dynamic growth conditions, and reduced fold-change induction of
 stress genes upon application of hot excess light. Together, these data indicate patterns of
 differential expression observed under dynamic growth conditions, and provide limited and tentative
-support for the hypothesised ``hardening'' of plants to excess light.
+support for the hypothesised hardening of plants to excess light.
 \todo{this paragraph needs a lot of thought, maybe move this one to summary of ch4, and rewrite the
 one that ends up here}
 
@@ -226,35 +226,33 @@ plants acclimating to fluctuating light demonstrated up-regulation of NPQ
 \autocite{alter_acclimatory_2012, gordon_systemic_2013}, and study of such characteristics under
 dynamic light conditions is ongoing, but beyond the scope of this thesis. Analysis of accumulation
 of stress metabolites has elucidated metabolites involved in acclimation to combined stresses in
-field conditions \autocite{recent jansson paper}, warranting similar analysis of metabolites in plants
+field conditions \autocite{jankanpaa_metabolic_2012}, warranting similar analysis of metabolites in plants
 grown under dynamic growth conditions. However, transcriptomics remains a sensitive, accurate and
-useful tool to measure plants' responses to their environment.
-\todo{JB:This show the extension of the environment and the experimental design and the ability
-to stack layers of phenotype data. This is called a 'systems biology' approach.}
-
+useful tool to measure plants' responses to their environment, particlarly in a systems biology
+approach that integrates metabolomic, phenomic, transnscriptomic and physiological responses to
+applied stresses.
 
 
 \section{Discussion of data in broader context of abiotic stresses}
 \label{sec:dis-combstress}
 \todo{better title for this section}
 
-While the effect of altered light intensity on plants and their transcriptomes has been studied in
-depth, few authors have studied under laboratory conditions analogous to those to which plants are
-adapted.
 \todo{intro to section interpretation discussion}
 
-% basic science of response to lab cond.
-Mutants in pathways critical to survival or fecundity of plants in ecological or agricultural
-settings may show little or no detrimental phenotype under benign laboratory conditions
+While the effect of altered light intensity on plants and their transcriptomes has been studied in
+depth, few authors have studied under laboratory conditions analogous to those to which plants are
+adapted.  Mutants in pathways important in survival or fecundity of plants in ecological or
+agricultural settings may show little or no detrimental phenotype under benign laboratory conditions
 \autocite{kulheim_rapid_2002}. This further underlies the importance of examining the physiological,
-metabolomic and transcriptional responses of plants to field-like combinations of stresses. By
+metabolomic and transcriptional responses of plants to field-like combinations of stresses
+\autocite{jankanpaa_metabolic_2012, mishra_arabidopsis_2012, wituszynska_multivariable_2013}. By
 examining the responses of plants to their environment in conditions similar to those which they
 have evolved, and studying stress response to field-like combinations of stresses, it may be
 possible to obtain a more direct picture of the role of parts of the genome with little function in
-the artificially benign conditions under which many laboratory experiments on plants are conducted. 
+the artificially benign conditions under which many laboratory experiments on plants are conducted.
 \todo{this could do with more refs}
 
-Studying the effect of ``hardening'' on the transcriptional response of plants to stress may reveal
+Studying the effect of hardening on the transcriptional response of plants to stress may reveal
 mechanistic insights of response genes. As plants acclimate to altered growth conditions,
 alteration of steady-state transcription often occurs \autocite{hihara_dna_2001, alter_acclimatory_2012,
 heinrich_transcriptomic_2012}. Transcriptome profiling during acclimation to cold stress,

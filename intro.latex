@@ -13,15 +13,14 @@ over 100 billion of dollars crop losses per annum in the United States alone
 to improving agricultural yield and understanding functional plant ecology in a changing climate.
 
 Central to increasing the understanding of plant-environment interactions is the development of
-laboratory study systems that allow classical mechanistic
-studies of abiotic stress response to be placed in the context of the conditions plants experience in
-natural or cultivated environments outside laboratories. Several techniques and approaches that have
-been developed over the past decade aid the study of plant stress response. In this thesis, I
-discuss, develop and apply novel techniques that enable the global study of gene expression in
-laboratory growth conditions which mimic field-like combinations of light, temperature and humidity.
-Specifically, I examine the effect of light intensity on global gene expression, within the
-framework of growth conditions whose temperature, humidity and light follow trends that approximate
-those observed in regional climates.
+laboratory study systems that allow classical mechanistic studies of abiotic stress response to be
+placed in the context of the conditions plants experience in natural or cultivated environments
+outside laboratories. Several techniques and approaches that have been developed over the past
+decade aid the study of plant stress response. In this thesis, I discuss, develop and apply novel
+techniques that enable the global study of gene expression in laboratory growth conditions which
+mimic field-like combinations of light, temperature and humidity.  Specifically, I examine the
+effect of light intensity on global gene expression, within the framework of growth conditions whose
+temperature, humidity and light follow trends that approximate those observed in regional climates.
 
 %the quality or quantity of light a plant receives is not optimal. Excess light is particularly
 %damaging, causing both reductions in photosynthetic ability (photoinhibition) and cellular or
@@ -48,27 +47,28 @@ and drought stresses cause a decrease in the ability of plants to transpire and 
 carbon vital to photosynthesis \autocite{seki_molecular_2003, mittler_abiotic_2006}. Excess light
 creates harmful reactive oxygen species (ROS) that damage the delicate photosynthetic apparatus
 \autocite{niyogi_photoprotection_1999, apel_reactive_2004, asada_production_2006, li_sensing_2009,
-foyer_redox_2009, mubarakshina_production_2010}. Extremes of temperature impair and  damage to many enzymes, particularly those involved in metabolism
-\autocite{atkin_thermal_2003}.  Together, abiotic stresses limit plant productivity through their
-detrimental effects upon the ability of plants to assimilate biomass, and coping mechanisms that
-plants have evolved generally come at a yield penalty \autocite{mittler_abiotic_2006}. As a result,
-enormous effort has been directed towards the elucidation and improvement of these coping
-mechanisms. In particular, the mechanisms by which excess light impact on plants, and how plants
-respond to this stress, have been major foci of research in the past decade.
+foyer_redox_2009, mubarakshina_production_2010}. Extremes of temperature impair and  damage to many
+enzymes, particularly those involved in metabolism \autocite{atkin_thermal_2003}. Together, abiotic
+stresses limit plant productivity through their detrimental effects upon the ability of plants to
+assimilate biomass, and coping mechanisms that plants have evolved generally come at a yield penalty
+\autocite{mittler_abiotic_2006}. As a result, enormous effort has been directed towards the
+elucidation and improvement of these coping mechanisms. In particular, the mechanisms by which
+excess light impact on plants, and how plants respond to this stress, have been major foci of
+research in the past decade.
 
 \todo{blurry comment from Barry}
 
 Plants respond to abiotic stress via a myriad of mechanisms
 \autocite{demmig-adams_photoprotection_1992}, therefore responses to abiotic stress must be studied
 via a variety of techniques. Studies of photosynthetic characteristics by chlorophyll fluorescence
-\autocite[reviewed in][]{baker_chlorophyll_2008} have illustrated the negative effects of abiotic stress on
-photosynthesis \autocite{kulheim_rapid_2002, mishra_arabidopsis_2012, alter_acclimatory_2012,
-tikkanen_regulation_2012}. Phenotypic analysis, particularly of plant morphology, has given insight
-into the effects of abiotic stress \autocite{wituszynska_multivariable_2013,
-armstrong_assessing_2007}. Studies of the transcriptome, or global cellular pool of expressed genes,
-have provided insight into plant responses to many abiotic stresses and combinations thereof
-\autocite{rossel_global_2002, kimura_identification_2003, seki_monitoring_2001,
-atkinson_identification_2013}.
+\autocite[reviewed in][]{baker_chlorophyll_2008} have illustrated the negative effects of abiotic
+stress on photosynthesis \autocite{kulheim_rapid_2002, mishra_arabidopsis_2012,
+alter_acclimatory_2012, tikkanen_regulation_2012}. Phenotypic analysis, particularly of plant
+morphology, has given insight into the effects of abiotic stress
+\autocite{wituszynska_multivariable_2013, armstrong_assessing_2007}. Studies of the transcriptome,
+or global cellular pool of expressed genes, have provided insight into plant responses to many
+abiotic stresses and combinations thereof \autocite{rossel_global_2002, kimura_identification_2003,
+seki_monitoring_2001, atkinson_identification_2013}.
 
 \todo{better papers JB ADD SOMETHING ABOUT HOW DIFFERENT PLANTS (SPECIES AND GENOTYPES) ARE MORE SUITED FOR DIFFERENT AMOUNTS OF LIGHT
 EG SHADE VS SUN PLANTS, FOREST, WOODLAND, SAVANA TYPES, TROPIC VS TEMPERATE, WHAT IS THE GENETIC BASIS OF THIS DIFFERENTIATION IN LIGHT SENSITIVITY? SOME PATHWAYS ARE HYPOTHESIZED, KEY GENES IDENTFIED, PHYA CRY2}
@@ -89,45 +89,51 @@ death \autocite{niyogi_photoprotection_1999, asada_production_2006, li_sensing_2
 indispensability of photosynthesis has caused the evolution of mechanisms by which the detrimental
 effects of excess light can be minimised. These mechanisms, collectively termed photoprotection,
 work to dissipate excess energy, reduce the amount of light absorbed, and prevent and repair any
-damage caused \autocite{niyogi_photoprotection_1999, takahashi_photoprotection_2011}
+damage caused \autocite{niyogi_photoprotection_1999, takahashi_photoprotection_2011}.
 
 
 \subsection{Physiological Responses to Excess Light}
 \label{subsec:intro-resp-physio}
 
 Upon exposure to excess light, plants immediately  begin to mitigate its detrimental effects
-\autocite{niyogi_photoprotection_1999, demmig-adams_photoprotection_1992}. These include mechanisms
-of response and damage mitigation within the chloroplast (discussed below), as well as responses on a
-whole-cell scale. Chloroplast avoidance movement, the movement of chloroplasts parallel to the
-incident angle of light, decreases the amount of absorbed light
-\autocite{kasahara_chloroplast_2002}.  Transcriptional induction of heat shock proteins, antioxidant
-scavenging and photo-oxidative damage repair occur following excess light, and help to minimise
-oxidative damage (discussed in detail in \autoref{subsec:intro-resp-txome}) \autocite{niyogi_photoprotection_1999, rossel_global_2002, jung_subset_2013}.
-Production of anthocyanin, a protective class of pigments, is induced by the production of reactive
-oxygen species due to excess light \autocite{vanderauwera_genome-wide_2005}. Together, these
-responses serve to reduce the photo-oxidative damage of cells and tissues due to excess light.
+\autocite{niyogi_photoprotection_1999, demmig-adams_photoprotection_1992}. These include several
+mechanisms of response and damage mitigation within the chloroplast described in
+\autoref{fig:intro-ps} , as well as responses on a whole-cell scale. Chloroplast avoidance movement,
+the movement of chloroplasts parallel to the incident angle of light, decreases the amount of
+absorbed light \autocite{kasahara_chloroplast_2002}.  Transcriptional induction of heat shock
+proteins, antioxidant scavenging and photo-oxidative damage repair occur following excess light, and
+help to minimise oxidative damage (discussed in detail in \autoref{subsec:intro-resp-txome})
+\autocite{niyogi_photoprotection_1999, rossel_global_2002, jung_subset_2013}.  Production of
+anthocyanin, a protective class of pigments, is induced by the production of reactive oxygen species
+due to excess light \autocite{vanderauwera_genome-wide_2005}. Together, these responses serve to
+reduce the photo-oxidative damage of cells and tissues due to excess light.
 
-Several mechanisms of photoprotection occur within the chloroplast. Non-photochemical quenching
-(NPQ) dissipates excess energy from excited state chlorophyll molecules as heat
-\autocite{muller_non-photochemical_2001}. It occurs in photosystem II (PS II), and is particularly
-important during rapid changes in light intensity \autocite{kulheim_rapid_2002}. Cyclic electron flow
-occurs in photosystem I (PS I) and acts by decreasing the pH of the thylakoid lumen, which in turn
-is thought to stabilise the oxygen evolving complex and aid NPQ \autocite{takahashi_how_2009}. State
-transitions act via phosphorylation of PS II and light harvesting complex II (LHC II) proteins.
-State transitions reversibly alter the balance of excitation energy between PS I and PS II
-\autocite{tikkanen_state_2006}. State
-transitions lower the light harvesting ability of PS II  and prevent absorption of excess light by
-PS II, via reversible dissociation of the LHC II and PS II \autocite{johnson_photoprotective_2011}. The \textit{Arabidopsis} mutants
-\textit{\underline{n}on-\underline{p}hotochemical \underline{q}uenching \underline{1}}
-(\textit{npq1}) and \textit{\underline{n}on-\underline{p}hotochemical \underline{q}uenching
-\underline{4}} (\textit{npq4}), \textit{\underline{p}roton \underline{g}radient
-\underline{r}egulator \underline{5}} (\textit{pgr5}), and \textit{\underline{s}tate
-\underline{t}ransitio\underline{n} \underline{7}} (\textit{stn7}) and \textit{\underline{s}tate
-\underline{t}ransitio\underline{n} \underline{8}} (\textit{stn8}) are defective in these three
-mechanisms respectively, and enable the study of the mechanisms underlying chloroplastic response to
-excess light and fluctuations in light intensity.
-
-\todo{ps 1 and 2 fig} 
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/intro-ps.png}
+  \end{center}
+  \caption{Chloroplastic mechanisms of excess light damage avoidance. Non-photochemical quenching
+    (NPQ) dissipates excess energy from excited state chlorophyll molecules as heat
+    \autocite{muller_non-photochemical_2001}. It occurs in photosystem II (PS II), and is
+    particularly important during rapid changes in light intensity \autocite{kulheim_rapid_2002}.
+    Cyclic electron flow occurs in photosystem I (PS I) and acts by decreasing the pH of the
+    thylakoid lumen, which in turn is thought to stabilise the oxygen evolving complex and aid NPQ
+    \autocite{takahashi_how_2009}.  State transitions act via phosphorylation of PS II and light
+    harvesting complex II (LHC II) proteins.  State transitions reversibly alter the balance of
+    excitation energy between PS I and PS II \autocite{tikkanen_state_2006}. State transitions lower
+    the light harvesting ability of PS II and prevent absorption of excess light by PS II, via
+    reversible dissociation of the LHC II and PS II \autocite{johnson_photoprotective_2011}. The
+    \textit{Arabidopsis} mutants \textit{\underline{n}on-\underline{p}hotochemical
+    \underline{q}uenching \underline{1}} (\textit{npq1}) and
+    \textit{\underline{n}on-\underline{p}hotochemical \underline{q}uenching \underline{4}}
+    (\textit{npq4}), \textit{\underline{p}roton \underline{g}radient \underline{r}egulator
+    \underline{5}} (\textit{pgr5}), and \textit{\underline{s}tate \underline{t}ransitio\underline{n}
+    \underline{7}} (\textit{stn7}) and \textit{\underline{s}tate \underline{t}ransitio\underline{n}
+    \underline{8}} (\textit{stn8}) are defective in these three mechanisms respectively, and enable
+    the study of the mechanisms underlying chloroplastic response to excess light and fluctuations
+    in light intensity.}
+  \label{fig:intro-ps}
+\end{figure}
 
 
 \subsection{Transcriptional Responses to Light Stress}
@@ -181,18 +187,16 @@ responses to altered light intensity is lacking in the vast majority of works on
 \subsection{Plant Growth Under Field Conditions}
 \label{subsec:intro-resp-field}
 
-Plants grown in the field show markedly different phenotypes and responses to those
-grown in the lab. 
-Under field conditions, plants respond to the combination of stresses they encounter in complex,
-natural environments. However, in the laboratory plants are exposed to pre-determined stresses (or
-combinations thereof) hypothesised to provoke a mechanism
-or response. This includes metabolic profiles \autocite{jankanpaa_metabolic_2012}, transcript
-abundances \autocite{mishra_arabidopsis_2012, wituszynska_multivariable_2013}, photosynthetic
-differences \autocite{mishra_arabidopsis_2012}, and survival and fecundity
-\autocite{kulheim_rapid_2002}.  Several authors report overlap between genes expressed upon
-treatment with excess light and those constitutively expressed
-in field conditions \autocite{mishra_arabidopsis_2012, wituszynska_multivariable_2013}.
-\todo{more field constitutive expression papers}
+Plants grown in the field show markedly different phenotypes and responses to those grown in the
+lab.  Under field conditions, plants respond to the combination of stresses they encounter in
+complex, natural environments. However, in the laboratory plants are exposed to pre-determined
+stresses (or combinations thereof) hypothesised to provoke a mechanism or response. This includes
+metabolic profiles \autocite{jankanpaa_metabolic_2012}, transcript abundances
+\autocite{mishra_arabidopsis_2012, wituszynska_multivariable_2013}, photosynthetic differences
+\autocite{mishra_arabidopsis_2012}, and survival and fecundity \autocite{kulheim_rapid_2002}.
+Several authors report overlap between genes expressed upon treatment with excess light and those
+constitutively expressed in field conditions \autocite{mishra_arabidopsis_2012,
+wituszynska_multivariable_2013}.  \todo{more field constitutive expression papers}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% REBUTTAL SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

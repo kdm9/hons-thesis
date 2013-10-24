@@ -113,11 +113,13 @@ quality of results obtained. A summary of programs selections is described in
   \kmdefaulttable
   {br-mth-programs}
   {tables/br-mth-programs.csv}
-  {lp{5cm}p{5cm}p{5cm}}
+  {lp{6cm}p{5cm}p{6cm}}
   {Program & Program's Role & Reasons for Selection & References}
   {\pr=prog, \rl=role, \rs=reason, \rf=refs}
   {\texttt{\pr} & \rl & \rs & \rf}
-  {A caption}
+  {Selection of pipeline componets and their roles in an RNAseq analysis pipeline. These programs
+  were selected by review of relevant literature (References). Brief reasons for selection are
+  given. }
 \end{landscape}
 
 Comparisons between the computational cost of four pipelines were conducted using a sub-sampled
@@ -160,7 +162,7 @@ called as differentially expressed at each sequencing depth was calculated, as w
 biological coefficient of variation. A third measure, the log-transformed mean expression level of
 the least-expressed differentially expressed gene and the overall least-expressed gene were
 calculated. These metrics were plotted against sequencing depth to give a graphical overview of the
-effect of reduction of sequencing depth.
+effect of reduction of sequencing depth \autoref{fig:br-res-srvsthcount}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -171,7 +173,7 @@ effect of reduction of sequencing depth.
 \subsection{A Framework for the Creation of RNAseq Analysis Pipelines}
 \label{subsec:br-res-framework}
 
-In order to allow easy creation of diverse analysis pipelines for the multitude of possible
+To allow creation of diverse analysis pipelines suited to the multitude of RNAseq
 experimental designs and methodologies, I have implemented a generic framework for the creation of
 RNAseq data analysis pipelines. This framework takes the form of ``wrapper scripts'', which act as
 wrappers around programs which other authors have created, and ``pipeline'' scripts, which combine
@@ -197,89 +199,59 @@ de\_pairwise} and \texttt{\justify de\_pairwise}) applies statistical normalisat
 tests for differential expression. When applied combinatorially, these pipelines allow for different
 experimental designs to be analysed. \autoref{tab:br-mth-programs} describes each software element
 of these pipelines, reasons for their selection, and references to literature describing each
-component (which for brevity are not included below).
+component. 
 
 \subsubsection{The \texttt{\justify aln\_subread} pipeline}
 \label{subsubsec:br-res-alnsubread}
-This pipeline is built around the \texttt{\justify subread} aligner, a very fast RNAseq-compatible
-short read aligner of expressed RNA sequence to a reference genome. Firstly, quality of sequencing
-data is checked using the \texttt{\justify fastqc} program \autocite{andrews_fastqc_2013},
+In this pipeline, quality of sequencing
+data is checked using \texttt{\justify fastqc} \autocite{andrews_fastqc_2013},
 sequencing adaptors are removed with \texttt{\justify scythe} \autocite{buffalo_scythe_2013}, and
-\texttt{\justify seqtk} remove low quality sequences, before the quality is again checked using
-\texttt{\justify fastqc}. The \texttt{\justify subread} aligner then aligns reads to the current
-TAIR10 \textit{A. thaliana} reference genome, accounting for alternative exon splicing. The
-resulting SAM file is converted to the BAM format, sorted and indexed, as required by downstream
-programs. Gene expression is then summarised gene-wise by counting the number of reads which align
-to genic loci with \texttt{\justify featureCounts}, completing this section of the analysis and the
-\texttt{\justify aln\_subread} pipeline.\todo{programs citations}
+\texttt{\justify seqtk} removes low quality sequences, before the quality is again checked using
+\texttt{\justify fastqc}. The \texttt{\justify subread} aligner, a very fast RNAseq-compatible
+short read aligner, then aligns reads to the current TAIR10 \textit{A. thaliana} reference genome. Gene expression is summarised gene-wise by counting the number of reads which align
+to genic loci with \texttt{\justify featureCounts}, completing the pipeline.
 
-\subsubsection{The \texttt{\justify aln\_subjunc} and \texttt{\justify aln\_tophat} pipelines}
+\subsubsection{The  \texttt{\justify aln\_tophat} pipelines}
 \label{subsubsec:br-res-alnsplicing}
 For studies examining alternative splicing of mRNA transcripts, an aligner able to detect splicing
-\textit{de novo} is required \autocite{kim_tophat2_2013}. \texttt{\justify Tophat2}, one of the most
+\textit{de novo} is required \autocite{kim_tophat2:_2013}. \texttt{\justify Tophat2}, one of the most
 popular RNAseq aligners, is able to align short reads while detecting slicing isoforms
-\autocite{kim_tophat2_2013}.  \texttt{\justify Subjunc} is an extension to the \texttt{\justify
-subread} aligner which it allows it to do so \autocite{liao_subread_2013}. The \texttt{\justify
-aln\_subjunc} and \texttt{\justify aln\_tophat} are identical to the \texttt{\justify aln\_subread}
-pipeline, aside from their use of the \texttt{\justify subjunc} and \texttt{\justify Tophat2}
-aligners respectively, in place of the \texttt{\justify subread} aligner, allowing study of
+\autocite{kim_tophat2:_2013}. \texttt{\justify aln\_tophat} is identical to the \texttt{\justify aln\_subread}
+pipeline, except it uses the \texttt{\justify Tophat2} aligner, allowing study of
 alternative splicing. However, this \textit{de novo} detection of splicing comes at a performance
-cost, and is not necessary for simple quantitation of gene expression. Splicing was not further
-analysed.
+cost, and is not necessary for simple quantitation of gene expression.
 
 \subsubsection{\texttt{\justify de\_pairwise}}
 \label{subsubsec:br-res-depairwise}
 
-For paired experimental designs, statistical tests can be performed pairwise between samples. To
-this end, the \texttt{\justify de\_pairwise} pipeline implements these tests using the
-\texttt{\justify edgeR} R package. This pipeline first reads count files into a \texttt{\justify
-DGEList} object, removes loci not detected above statistical noise and non-protein coding loci, then
-normalises counts using the Trimmed Mean of M values normalisation method of
-\textcite{robinson_scaling_2010}. Common and gene-wise (i.e. gene-wise) dispersion are then
-calculated using the \texttt{\justify calcNormFactors}, \texttt{\justify estimateCommonDisp} and
-\texttt{\justify estimateTagwiseDisp} functions respectively, yielding a \texttt{\justify DGElist}
-object containing normalised counts and estimates of expression variability. Tests are then
-conducted pairwise between groups described in the keyfile, from data in this \texttt{\justify
-DGElist}, using \texttt{\justify exactTest}. This creates a \texttt{\justify list()} of
-\texttt{\justify DGEExact} objects, from which tables of differential expression and diagnostic
-plots can be created. A plot showing the relationship between the gene-wise Biological Coefficient
-of Variation (BCV) and gene expression level aims to show that variation is largely independent of
-expression level.
-\todo{reword to stop it sounding like M+M}
+For paired experimental designs, pairwise statistical tests can be performed between samples. The
+\texttt{\justify de\_pairwise} pipeline implements these tests using the \texttt{\justify edgeR} R
+package. This pipeline first reads count files, removes loci not detected above statistical noise
+and non-protein coding loci, normalises counts using the trimmed Mean of M values normalisation
+method of \textcite{robinson_scaling_2010}. Transcritptome-wide and gene-wise dispersion are then
+calculated and tests are conducted between groups described in a keyfile. Tables of differential
+expression and diagnostic plots are also created.
 
 \subsubsection{\texttt{\justify de\_glm}}
 \label{subsubsec:br-res-deglm}
-If the experimental design is multi-factorial, for example if experimental factors such as starting growth condition,
-treatment, genotype, and replicated block exist, pairwise analysis is
-inadequate. Thus, the more statistically complex Generalised Linear Model based hypothesis testing
-functions of \texttt{\justify edgeR} are required. This pipeline takes a keyfile describing the
-experimental design as the above pipelines do, however it takes and additional R script which describes
-the statistical model to be fitted, and contrasts within this model to be tested for differential
-expression. Tag-wise read counts are normalised and dispersions calculated with the GLM-based
-analogous of the functions used to do so in the \texttt{\justify de\_pairwise} pipeline. Then, a
-generalised linear model is fitted with \texttt{\justify glmFit}, creating a \texttt{\justify glm}
-object. Then, \texttt{\justify glmLRT} is used to test each constant specified in the model script
-for differential expression. Analogous plots and tables to those produced in the \texttt{\justify
-de\_pairwise} pipeline are then produced.
+% for example if experimental factors such as starting growth condition, treatment, genotype, and replicated block exist,
+If the experimental design is multi-factorial, pairwise analysis is inadequate and Generalised
+Linear Model-based hypothesis testing functions of \texttt{\justify edgeR} are required. This
+pipeline fits such models, and tests user-defined contrasts for differential expression. Proceses
+analogous to those in the \texttt{\justify de\_pairwise} pipeline are performed, yielding similar
+tabular and graphical descritpionsof differential expression.
 
 \subsection{Comparison of Differential Expression Pipelines}
 \label{subsec:br-res-plcommpare}
 
-There was a large difference between the computational cost of four pipelines
-(\texttt{\justify aln\_subread}, \texttt{\justify aln\_tophat}, \texttt{\justify aln\_tophat\_htseq}
-and \texttt{\justify \justify aln\_subread\_htseq}). Three measures of computational cost were
-measured: ``real'' time, ``user'' time and ``sys'' time. The ``real'' time describes the time each
-pipeline took to complete. The ``user'' and ``sys'' time describe the CPU time spent running user
-code and performing operating system calls on behalf of user code respectively. Using an ANOVA
-model with Tukey's HSD post-hoc testing, significant differences in ``real'' time, ``user'' time and
-``sys'' time were observed. As is shown graphically in \autoref{fig:br-res-pltimes}, the
-\texttt{\justify aln\_subread} is the fastest, taking an average of 3.48 $\pm$ 0.10 minutes to
-complete, followed by the \texttt{\justify aln\_subread\_htseq} pipeline, which took 4.88 $\pm$ 0.07
-minutes. The \texttt{\justify aln\_tophat} and \texttt{\justify aln\_tophat\_htseq} were almost
-400\% slower, taking 12.9 $\pm$ 0.12 and 13.77 $\pm$ 0.07 minutes of real time respectively. The
-computational cost of user code and kernel processes in CPU-minutes followed similar patterns, as
-detailed in \autoref{fig:br-res-pltimes}.  The computational time can become a limitations in very large
-and heavily replicated data sets needed to identify important effects of environment on common genetic variation.
+A large difference in computational cost between four pipelines (\texttt{\justify aln\_subread},
+\texttt{\justify aln\_tophat}, \texttt{\justify aln\_tophat\_htseq} and \texttt{\justify \justify
+aln\_subread\_htseq}). These differnces were significant (ANOVA, 3 degrees of freedom (DF), F=15738
+p<2e-16) As is shown graphically in \autoref{fig:br-res-pltimes}, the \texttt{\justify aln\_subread}
+is the fastest, followed by the \texttt{\justify aln\_subread\_htseq} pipeline, the \texttt{\justify
+aln\_tophat} and the \texttt{\justify aln\_tophat\_htseq}. The computational time can become a
+limitation in very large and heavily replicated data sets such as those needed to identify important
+effects of environment on common genetic variation.
 
 \begin{figure}[p]
   \begin{center}
@@ -308,11 +280,12 @@ transcriptome, when compared to the \texttt{\justify aln\_tophat} pipeline.
   \begin{center}
     \includegraphics[width=\textwidth]{img/br-res-srvsthcount.pdf}
   \end{center}
-  \caption{Comparison of gene-wise counts derived from the Tophat2 and subread short read aligners. A
-    tight relationship is observed between count data from these aligners. If aligner had no effect,
-    all points (genes) would fall exactly on the $y=x$ line. There are off-diagonal points, however
-    these occur mostly at low expression levels and are likely due to the required log
-    transformation of count data.}
+  \caption{Comparison of gene-wise counts derived from the Tophat2 and subread short read aligners.
+    A tight relationship is observed between count data from these aligners. If aligner had no
+    effect, all points (genes) would fall exactly on the $y=x$ line. There are off-diagonal points,
+    however these occur mostly at low expression levels and are likely due to the required log
+    transformation of count data. Note that there are almost 18,000 genes plotted here, and
+    off-diagonal scatter may, by eye, appear exadurated.}
   \label{fig:br-res-srvsthcount}
 \end{figure}
 
@@ -326,12 +299,9 @@ transcriptome, when compared to the \texttt{\justify aln\_tophat} pipeline.
 {\nm & \gen & \prot}
 {Percentage of mapped reads to genome and transcriptome. The \texttt{\justify aln\_subread} pipeline
 is able to map a slightly higher percentage of reads to both the genome and to the transcriptome
-when compared to the \texttt{\justify aln\_tophat} pipeline.}
+when compared to the \texttt{\justify aln\_tophat} pipeline. This indicates it's increased
+sensititvity, and echoes findings by its authors \autoref{liao_subread_2013}}
 
-
-%The number of genes called differentitially expressed
-
-\todo{Add paragraph on edgeR analysis looking for DE between subread and tophat}
 
 \subsection{Substantial reduction of RNAseq coverage is possible}
 \label{subsec:br-res-coverage}
@@ -360,30 +330,13 @@ underway.
   \end{center}
   \caption{Decreasing sequencing depth per sample decreases the number of genes called as
     differentially expressed. This occurs because the total number of genes which can be examined
-    for differential expression decreases in a similar fashion.}
+    for differential expression decreases in a similar fashion (data not shown). At 5 million reads
+    per sample, approximately 80\% of genes differentially expressed with full datasets (12-17
+    million reads) are found to be differentially expressed. At 2 million reads, this figure falls to
+    approximately 50\%, indicating at least 5 million reads are required to detect the majority of
+    genes differentially expressed with three biological replicates.}
   \label{fig:br-res-detagsvscoverage}
 \end{figure}
-
-\todo{better caption for \autoref{fig:br-res-detagsvscoverage}}
-
-%\begin{figure}[p]
-%  \begin{center}
-%    \includegraphics[width=\textwidth]{img/placeholder.png}
-%    %\includegraphics[width=\textwidth]{img/br-res-medianexpvscoverage.pdf}
-%  \end{center}
-%  \caption{Median gene-wise expression vs sequencing depth}
-%  \label{fig:br-res-medianexpvscoverage}
-%\end{figure}
-%
-%\begin{figure}[p]
-%  \begin{center}
-%    \includegraphics[width=\textwidth]{img/placeholder.png}
-%    %\includegraphics[width=\textwidth]{img/br-res-bcvvscoverage.pdf}
-%  \end{center}
-%  \caption{Common biological coefficient of variation vs sequencing depth.}
-%  \label{fig:br-res-bcvvscoverage}
-%\end{figure}
-
 
 \section{Summary and Technical Discussion}
 \label{sec:br-summ}

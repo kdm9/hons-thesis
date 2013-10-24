@@ -1,44 +1,69 @@
 \clearpage
 \section{Supplementary Information}
 
-\subsection{Sequencing Depth Effect on Biological Coefficient of Variation}
-\label{apx-plots-bcvcoverage}
-
-BCV plots across all sequening depths in the experiment outlined in \autoref{subsec:br-res-coverage}
-
-\subsection{Gene ontology term enrichment between differential expression contrasts}
-\label{subsec:apx-tabs-go}
-
-
-  \kmdefaulttable
-  {txv-res-topgoterms}
-  {tables/txv-res-gosteady.csv}
-  {cp{2cm}ccp{3cm}ccp{3cm}ccp{3cm}c}
-  {\multicolumn{6}{c}{Excess vs Sufficient} & \multicolumn{6}{c}{Fluctuating vs Sufficient} \\
-  \multicolumn{3}{c}{Differentially Expressed} & \multicolumn{3}{c}{Differentially induced} &
-  \multicolumn{3}{c}{Differentially Expressed} & \multicolumn{3}{c}{Differentially induced} \\
-  Term & $p$ & Category &  Term & $p$ & Category & Term & $p$ & Category & Term & $p$ & Category\\}
-  {\dest=Esterm, \desp=Esp, \desc=Escat, \iest=Esiterm, \iesp=Esip, \iesc=Esicat, 
-  \dfst=Fsterm, \dfsp=Fsp, \dfsc=Fscat, \ifst=Fsiterm, \ifsp=Fsip, \ifsc=Fsicat}
-  {\dest & \desp & \desc & \iest & \iesp & \iesc & \dfst & \dfsp & \dfsc & \ifst & \ifsp & \ifsc\\}
-  {Go terms signficicantly enriched in differentially expressed}
-
-
 \subsection{High Throughput RNAseq Library Preparation Protocol}
 \label{subsec:apx-supp-rnaseqprotocol}
 
+\todo{part numbers and small details like that are missing throughout this methods section}
+%This work was conducted in collaboration with Dr. Norman Warthmann, who performed the testing of
+%sequencing adaptors and assisted with this section.
+
 To economically generate RNAseq libraries from the hundreds of samples I have collected, non
 kit-based protocols must be used. Here, I briefly summarise the failed implementaion of the RNAseq
-library preparation protocol of \textcite{kumar_high-throughput_2012}. The majority of this protocol
-was successfully implemented.  Messenger RNA was extracted in a 96 well plate format using
-oligo-d(T) magnetic beads, albeit with low yield that expected \autocite{kumar_high-throughput_2012}
-(\autoref{fig:br-res-dynabdpicogel}, \autoref{fig:br-res-dynabdpicoegramB1}). Complimentary DNA
-(cDNA) was prepared from this mRNA. Enzymatic fragmentation of cDNA, end repair and A-tailing were
-performed. However, a cumulation of possible ligation and PCR biases caused order-of-magnitude
-variation in library abundance (data not shown). This variation in library abundance was confirmed
-with diagnostic qPCR (data not shown). For this reason, the use of this protocol in my experiment
-was abandoned, as the optimisation of these difficulties may have been very time consuming and was
-not feasible in the time remaining in my Honours year.
+library preparation protocol of \textcite{kumar_high-throughput_2012}, a published protocol enabling
+the preparation of RNAseq libraries in high throughput using 96 well plates. Specifically, I used a
+slightly modified version of the High-Throughput RNAseq protocol described in Supplementary Methods
+1 of \textcite{kumar_high-throughput_2012} (hereafter referenced as the HTR protocol). To test and
+optimise this protocol, leaf tissue collected from surplus 5-week old \textit{A. thaliana} Col-0
+from a colleague's experiment was used. This tissue had been collected into Qiagen 1.2mL collection
+tubes containing a single steel ball bearing, and snap frozen in \liqn before grinding in a
+TissueLyser for two one minute pulses at 25Hz at a later date. In collection tubes, 750 \ul
+Dynabeads Lysis/Binding Buffer was added, before sample was ground for a further 30s in a
+TissueLyser as before. Then, lysates were prepared per Steps 1.1.6-1.1.8 of the HTR protocol
+described in Supplementary Methods 1 of \textcite{kumar_high-throughput_2012}. Isolated mRNA was
+obtained and cDNA synthesised and fragmented according to steps 1.2 to 3 of the HTR protocol of
+\textcite{kumar_high-throughput_2012}. Working with Dr. Norman Warthmann, the remaining steps of the
+HTR protocol were validated using four cDNA samples, following the HTR protocol with modifications
+as described below.
+
+To test all sequencing adaptors, sonicated genomic DNA was used as input material, due to it's
+similar size and fragmentation properties to fragmented cDNA, and due to the scarcity of large
+quantities of cDNA of little value. This DNA was obtained from \textit{Oryza sativa} seedlings,
+diluted to a concentration of approximately 7\ngul\ (500 $ng$ in 70 \ul) before sonication in a
+Diagenode Bioruptor DNA sonicator. This sonicated DNA was cleaned up per steps 3.5-3.8 of the HTR
+protocol, with the modification that 30\ul\ bead binding buffer and 40 \ul Ampure XP SPRI beads were
+used.  Then, a modified step 4 of the HTR protocol was used to create unamplified sequencing
+libraries. In step 4.1 and 4.2, double reactions were performed, however the same quantity of SPRI
+cleanup reagents were used. Before adaptor ligation, the A-tailed libraries were eluted using a
+mixture of 5 \ul diluted adaptor oligonucleotide, 1\ul 10x ligation buffer and 2 \ul water. The DNA
+ligase was diluted in the remaining 1.5\ul\ water and added to each reaction, before proceeding with
+protocol steps 4.3.3 onwards. The adaptors used were not those specified by
+\textcite{kumar_high-throughput_2012}, instead custom sequencing adaptors were used. These adaptors
+were designed by Dr Norman Warthmann, and are compatible with the T/A overhang ligation method
+\textcite{kumar_high-throughput_2012} utilise. The protocol described in step 5 of the HTR protocol
+was used, to amplify the libraries.
+
+RNA quality and quantity was assayed using the Agilent BioAnalyser digital electrophoresis system.
+The RNA samples were loaded into a Plant RNA Pico analysis chip and an analysis run per
+manufacturer's protocol. The effectiveness of various steps in this protocol was assayed by digital
+electrophoresis with the Shimadzu MultiNA instrument, using the DNA1000 kit. The pre-mix protocol
+was used: 2\ul sample was added to 4\ul DNA1000 marker solution, the solution mixed, and loaded into
+the instrument, which was run according to manufacturer's DNA1000-PreMix protocol. Quantitative PCR
+was performed to test the ligation and PCR efficiency of each adaptor. To do so, 2\ul of each
+pre-amplification library was combined with 5\ul Sybr Green qPCR master mix, 1\ul each of the
+forward and index 1 reverse primers (see \autoref{tab:br-mth-normanadaptors}), and 1\ul
+Uracil-Specific Excision Reagent (USER) enzyme mix.
+
+Sections of this protocol was successfully implemented.  Messenger RNA was extracted in a 96
+well plate format using oligo-d(T) magnetic beads, albeit with low yield that expected
+\autocite{kumar_high-throughput_2012} (\autoref{fig:br-res-dynabdpicogel},
+\autoref{fig:br-res-dynabdpicoegramB1}). Complimentary DNA (cDNA) was prepared from this mRNA.
+Enzymatic fragmentation of cDNA, end repair and A-tailing were performed. However, a cumulation of
+possible ligation and PCR biases caused order-of-magnitude variation in library abundance (data not
+shown). This variation in library abundance was confirmed with diagnostic qPCR (data not shown). For
+this reason, the use of this protocol in my experiment was abandoned, as the optimisation of these
+difficulties may have been very time consuming and was not feasible in the time remaining in my
+Honours year.
 
 \begin{figure}[p]
   \begin{center}

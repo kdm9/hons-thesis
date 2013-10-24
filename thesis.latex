@@ -56,6 +56,8 @@
   isbn=false
   ]{biblatex}
 \addbibresource{thesis.bib}
+\AtEveryBibitem{\clearfield{month}}
+\AtEveryCitekey{\clearfield{month}}
 
 \usepackage{blindtext}                      % for lorem ipsum text. remove eventually
 
@@ -138,8 +140,21 @@
 
 
 \begin{abstract}
-  This is the abstract.
-  \blindtext[2] % remove this in reality
+  The study of plant interaction with the environment, and in particular responses to stresses
+  imposed by their environment, is of crucial importance to wide-ranging areas of botany, from
+  agricultural crop development to global change biology. In this study, I develop methods to
+  reproducibly grow plants in growth conditions which encompass combinations of climactic variables
+  analogous to those that can appear naturally, termed dynamic growth conditions. Additionally, I
+  develop bioinformatic protocols enabling the analysis of data from experiments aiming to determine
+  environmental and genetic effects on genome-wide gene expression (the transcriptome). I present
+  and analyse a preliminary dataset examining the transcriptomes of plants growth under dynamic
+  growth conditions, aiming to test plant response to altered light intensity in the context of
+  combinatorial abiotic stresses as recent abiotic stress research advocates. Analysing this dataset
+  revealed a dataset characterised by high levels of biological variation in expression, and
+  uncovered limited differential expression. Together with quantitative PCR examination of excess
+  light-responsive genes, these data provide tentative evidence of field-like hardening to excess
+  light stress by plants grown under dynamic growth conditions, a finding that warrants further
+  investigation.
 \end{abstract}
 
 \tableofcontents

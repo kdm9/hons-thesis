@@ -440,7 +440,7 @@ warrant further --- albeit cautious --- investigation of this dataset.
 \begin{landscape}
   \begin{figure}[p]
     \begin{center}
-      \includegraphics[width=\textwidth]{img/txv-res-plotbcv.png}
+      \includegraphics[height=\textheight]{img/txv-res-plotbcv.png}
     \end{center}
     \caption{Biological coefficient of variation in dynamic (left) and static(right) growth
       conditions. Here, each point represents a gene, and the relationship between expression level
