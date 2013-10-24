@@ -52,7 +52,7 @@ excess light \autocite{kulheim_rapid_2002, alter_acclimatory_2012, gordon_system
 
 Initially, I had aimed to conduct a experiment which mapped expression QTLs under dynamic growth
 conditions. Thus, 80 \textit{A. thaliana} Recombinant Inbred Intercross (RIX) lines were planted
-(see Appendix \autoref{tab:apx-supp-rixlines}, \textcite{zou_quantitiative_2005}). Additionally,
+(see Appendix \autoref{tab:apx-rix}, \textcite{zou_quantitative_2005}). Additionally,
 plants of reference accessions Cape Verde Islands (Cvi), Columbia (Col) and Landsberg erecta (Ler),
 the photoprotection mutants \textit{stn8}, \textit{pgr5}, \textit{npq1} and \textit{npq4} were
 planted.  All lines were planted in triplicate for each dynamic growth condition.  Plants were grown
@@ -119,16 +119,16 @@ and analysis run according to manufacturer's protocol.
 
 RNAseq libraries were then prepared using the Illumina TruSeq V2 RNAseq Sample Preparation kit (Part
 number RS-122-2002). As previous studies in the Pogson Lab indicated DNAse treatment of TNA samples
-before RNAseq library preparation was not necessary (pers. comm. Peter Crisp, 2013; Supplementary
-Figure \ref{fig:apx-plots-217dnase}), TNA was diluted with 10mM Tris-HCl to 80\ngul for use as input
-material. The manufacturer's protocol was then followed to produce RNAseq libraries, with
-modifications. RNA was fragmented by heating samples at the ``Elution 2 - Frag - Prime'' stage to 94
-\degc\ for 7 minutes, in place of the 8 minutes recommended by manufacturer guidelines to increase
-median insert size. To create cDNA, the SuperScript III reverse transcriptase (Life Technologies,
-part number 18080044) was used, and thus the incubation temperature was increased from 42\degc\ to
-50\degc, per SuperScript III guidelines. During every SPRI clean-up step throughout the protocol,
-DNA bound to SPRI beads was washed with 180\ul ethanol rather than the recommended 200\ul, allowing
-all liquid to be effectively removed with a P200 multi-channel pipettors.
+before RNAseq library preparation was not necessary (pers. comm. Peter Crisp, 2013), TNA was diluted
+with 10mM Tris-HCl to 80\ngul for use as input material. The manufacturer's protocol was then
+followed to produce RNAseq libraries, with modifications. RNA was fragmented by heating samples at
+the ``Elution 2 - Frag - Prime'' stage to 94 \degc\ for 7 minutes, in place of the 8 minutes
+recommended by manufacturer guidelines to increase median insert size. To create cDNA, the
+SuperScript III reverse transcriptase (Life Technologies, part number 18080044) was used, and thus
+the incubation temperature was increased from 42\degc\ to 50\degc, per SuperScript III guidelines.
+During every SPRI clean-up step throughout the protocol, DNA bound to SPRI beads was washed with
+180\ul ethanol rather than the recommended 200\ul, allowing all liquid to be effectively removed
+with a P200 multi-channel pipettors.
 
 A pilot enrichment PCR was conducted with a subset of samples, enabling estimation of optimal cycle
 number for final enrichment PCR. To do so, quarter-volume PCRs (12.5\ul master-mix, 2.5\ul sample)
@@ -137,7 +137,7 @@ were run: samples 1 and 13 were run for 10 cycles, and 2 and 19 were run for 14 
 for 12 cycles. Two libraries (samples 6 and 17) whose amplification failed with 12 PCR cycles were
 amplified using quarter-volume PCRs with 17 amplification cycles. These libraries were then cleaned
 up with SPRI beads, per TruSeq kit protocol. The success of these PCRs were assayed by digital
-electrophoresis, using the MultiNA instrument, as per \autoref{subsec:br-mth-kumaretal}, both before
+electrophoresis, using the MultiNA instrument, as per manufacturer's protocols, both before
 and after SPRI cleanup.
 
 Final sequencing libraries were created by diluting and pooling RNAseq libraries. Libraries were
@@ -173,7 +173,7 @@ pipeline computed read counts gene-wise from raw short reads, using the keyfile 
 \autoref{lst:txv-mth-kmhonsglmkey}). Then, the \texttt{de\_glm}
 pipeline was used  test for differential expression.  A general linear model (GLM) of
 the form $\sim\;Group$ was fitted, according to the keyfile shown in listing
-\ref{lst:txv-mth-kmhonsglm}. Statistical tests for differential expression between contrasts shown
+\ref{lst:txv-mth-kmhonsglmkey}. Statistical tests for differential expression between contrasts shown
 in \autoref{tab:txv-res-desummary}.
 
 \begin{landscape}
@@ -323,18 +323,15 @@ all samples have a RIN of at least 6, indicating acceptable quality.}
 \label{subsubsec:txv-res-libqual}
 
 To quantify global gene expression accurately, it is important to ensure the quality of raw
-sequencing data is acceptable. Ensuring approximately even sequencing depth across  libraries
-ensures sequencing depth does not confound differential expression analysis. As detailed in
+sequencing data is acceptable. As detailed in
 \autoref{tab:txv-res-libcoverage}, library depth variation was within an order of magnitude across
-both lanes sequenced. The two lanes of sequencing yielded 153 and 143 million reads respectively,
-averaging 15.3 $\pm$ 2.7 million and 11.9 $\pm$ 1.0 million reads per sample respectively (means
-$\pm$ standard deviation). Coverage in lane 1 is expected to be lower, as its overall coverage is
-lower and it contained 12 samples compared with 10 in lane 2. Low-level sequence quality as gauged
-by \texttt{fastqc} was high \autocite{andrews_fastqc_2012}. The 25th percentile PHRED quality score
+both lanes sequenced. Sequence quality was high; 25th percentile PHRED quality score
 exceeded 28 at every base in all sequence libraries before any quality control (see
 \autoref{fig:txv-res-fastqc-pbq}). Following sequence quality control, the minimal 25th percentile
 PHRED score increased to 30.  These basic statistics show the sequencing of RNAseq libraries was
 successful and the resulting data suitable for further analysis.
+The very high proportion of sequence reads which aligned to the genome, and moreover to protein
+coding loci, is a further indicator of dataset integrity (\autoref{tab:txv-res-mappingstats}).
 
 \kmdefaulttable
 {txv-res-libcoverage}
@@ -362,13 +359,6 @@ been analysed for differential expression.}
     sequences, due to sequencing technology \autocite{andrews_fastqc_2013}}
   \label{fig:txv-res-fastqc-pbq}
 \end{figure}
-
-The very high proportion of sequence reads which aligned to the genome, and moreover to protein
-coding loci, is a further indicator of dataset integrity. \autoref{tab:txv-res-mappingstats}
-describes the sample-wise percentages of reads which map to the genome and transcriptome. Over 99
-percent of reads map to the genome in all samples, the vast majority of which align to
-protein-coding genes (97-99\%). Ribosomal RNA depletion during library preparation was successful,
-with between 0.08\% and 1.6\% rRNA contamination across all libraries.
 
 \kmdefaulttable
 {txv-res-mappingstats}

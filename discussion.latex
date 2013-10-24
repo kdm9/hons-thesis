@@ -95,9 +95,6 @@ reproducibility, accuracy, and performance, by selecting the latest advances in 
 accurate analysis software, and providing a simple structure to an analysis that allows exact
 reproduction of the entire analysis.
 
-%summarise and discuss improvements to all 3. cite reproducible research/software carpentry type
-%papers here. This should be split into 2 paragraphs I think)
-
 The specific algorithms used in analysis of RNAseq datasets is a field of active technical research.
 Validation of pipelines designed around the Subread aligner \autocite{liao_subread_2013} reiterate
 the software authors' claims of increased speed and accuracy. A recent publication suggests superior
@@ -109,11 +106,6 @@ investigation of the state of the art in RNAseq statistical and computational an
 of great importance to studies of differential expression, and the framework presented in this
 thesis is specifically designed for modularity, enabling substitution of components for improved
 versions or alternatives with minimal effort.
-
-\todo{mention txome subtlety}
-
-%(describe its modularity and possible ``future directions'', i.e. adding support for bigger and
-%better programs. perhaps back in technical discussion)
 
 When transcriptome variation within a study system is subtle, sensitive and accurate methods are
 required to glean information. This includes accurate analysis software (see above) and optimal
@@ -129,8 +121,6 @@ mapped. In light of these data, my analysis of sequencing depth is conservative,
 consider the increases in replication made possible by increasing the number of samples sequenced
 per unit cost by a factor of two or more.
 
-\todo{Biological variation control and multi environment treatments are needed to provide specificity
-of changes.  Gene Atlas idea.}
 
 \section{Elucidating Response to Light Intensity Under Dynamic Growth Conditions}
 \label{sec:dis-txvar}
@@ -225,8 +215,6 @@ applied stresses.
 \label{sec:dis-combstress}
 \todo{better title for this section}
 
-\todo{intro to section interpretation discussion}
-
 While the effect of altered light intensity on plants and their transcriptomes has been studied in
 depth, few authors have studied under laboratory conditions analogous to those to which plants are
 adapted.  Mutants in pathways important in survival or fecundity of plants in ecological or
@@ -238,7 +226,6 @@ examining the responses of plants to their environment in conditions similar to 
 have evolved, and studying stress response to field-like combinations of stresses, it may be
 possible to obtain a more direct picture of the role of parts of the genome with little function in
 the artificially benign conditions under which many laboratory experiments on plants are conducted.
-\todo{this could do with more refs}
 
 Studying the effect of hardening on the transcriptional response of plants to stress may reveal
 mechanistic insights of response genes. As plants acclimate to altered growth conditions,
@@ -249,7 +236,7 @@ heinrich_transcriptomic_2012}. Transcriptome profiling during acclimation to col
 transcriptional response to long-term stress exposure. The elucidation of genes underlying such
 acclimatory responses would yield insights into mechanisms by which plant tolerance of chronic
 abiotic stress could be improved.
-\todo{need more refs and less fluff for this paragraph}
+
 %(my hypothesis RE ``mop and bucket'' vs ``guardian'' genes.)
 
 
@@ -265,33 +252,28 @@ specific stresses which do not conflict with mechanisms of tolerance to other ab
 tolerance is assayed in a mildly stressful environment that mimics that encountered under
 agricultural conditions.
 
-\todo{first sentence needs rewording}
 
 \section{Future Directions}
 \label{sec:dis-futdir}
 
 The emergence of transcriptional patterns despite a dataset with high noise warrants further
-investigation. Brief examination of fold-change values indicates that biological noise is the
-primary factor for reduced differential expression. Utilising recent research on the underlying
-biology of transcriptional response (Peter Crisp, unpublished data) and
-RNAseq molecular methodology \autocite{kumar_high-throughput_2012} and experimental design
+investigation. Utilising recent research on the underlying biology of transcriptional response
+(Peter Crisp, unpublished data) and RNAseq molecular methodology
+\autocite{kumar_high-throughput_2012} and experimental design
 \autocite{rapaport_comprehensive_2013}, a repeated experiment which incorporates faster sampling and
 more accurate application of hot excess light stress, along with many more biological replicates
-(5-8 replicates) per condition, may further elucidate the patterns of differential expression under
-dynamic growth conditions, and determine the effect of light intensity on the transcriptome
-under dynamic light conditions.
-\todo{rework this a bit}
+(5-8 replicates) per condition and the addition of static growth condition controls may further
+elucidate the patterns of differential expression under dynamic growth conditions, and determine the
+effect of light intensity on the transcriptome under dynamic light conditions.
 
 Expression QTL mapping presents an opportunity to simultaneously discover novel transcriptional
 patterns, and their underlying regulatory mechanisms \autocite{keurentjes_regulatory_2007}. Samples
 to perform a limited eQTL mapping experiment were collected but not processed due to constraints on
 time and statistical power. Once genetic material suitable for such analyses has been obtained,
-successfully conducting an analysis to find gene-by-environment interactions in, and eQTLs
-controlling differential expression of transcripts in response to altered light intensity within the
-framework of dynamic growth conditions would elucidate not only response mechanisms, but their
-underlying regulators. This information could be used by crop improvement programs to select for
-lines with improved ability to respond to or tolerate field-like combinations of stresses.
-\todo{reword horrible sent}
+mapping of eQTLs controlling differential expression of would elucidate not only response
+mechanisms, but their underlying regulators. This information could be used by crop improvement
+programs to select for lines with improved ability to respond to or tolerate field-like combinations
+of stresses.
 
 Application of real-time phenomic analysis to plants grown under dynamic growth conditions, combined
 with QTL mapping or GWAS analyses, may provide novel insights into physiological responses to
@@ -327,4 +309,3 @@ work lays the foundation for further work elucidating the response to and tolera
 combinations of abiotic stresses in a manner compatible with that suggested by recent reviews
 \autocite{mittler_abiotic_2006, atkinson_interaction_2012}, and for the further discovery of the
 genetic architecture underlying any tolerance or response discovered.
-\todo{add juice to final sentence}
