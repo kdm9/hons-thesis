@@ -37,13 +37,11 @@ creates harmful reactive oxygen species (ROS) that damage the delicate photosynt
 foyer_redox_2009, mubarakshina_production_2010}. Extremes of temperature impair and  damage to many
 enzymes, particularly those involved in metabolism \autocite{atkin_thermal_2003}. Together, abiotic
 stresses limit plant productivity through their detrimental effects upon the ability of plants to
-assimilate biomass, and coping mechanisms that plants have evolved generally come at a yield penalty
+assimilate biomass, and secondarily via coping mechanisms which some plants have evolved
 \autocite{mittler_abiotic_2006}. As a result, enormous effort has been directed towards the
 elucidation and improvement of these coping mechanisms. In particular, the mechanisms by which
 excess light impacts upon plants, and how plants respond to this stress, have been major foci of
 research.
-
-\todo{blurry comment from Barry}
 
 Plants respond to abiotic stress via a myriad of mechanisms, therefore responses to abiotic stress
 must be studied via a variety of techniques \autocite{demmig-adams_photoprotection_1992}. Studies of
@@ -55,9 +53,8 @@ into the effects of abiotic stress \autocite{armstrong_assessing_2007,wituszynsk
 Studies of the transcriptome, or global cellular pool of expressed genes,
 have provided insight into plant responses to many abiotic stresses and combinations thereof
 \autocite{seki_monitoring_2001, rossel_global_2002, kimura_identification_2003,
-atkinson_identification_2013}.
-
-\todo{genetic variation}
+atkinson_identification_2013}. Natural genetic variation in these responses exists, and allows for
+mechanistic study of such responses \autocite{li_genetics_2006}.
 
 
 \subsection{Coping with Detrimental Effects of Excess Light: Photo-oxidative damage and Photoprotection}
@@ -114,10 +111,10 @@ reduce the photo-oxidative damage of cells and tissues due to excess light.
     \underline{7}} (\textit{stn7}) and \textit{\underline{s}tate \underline{t}ransitio\underline{n}
     \underline{8}} (\textit{stn8}) are defective in these three mechanisms respectively, and enable
     the study of the mechanisms underlying chloroplastic response to excess light and fluctuations
-    in light intensity.}
+    in light intensity. Figure adapted from \textcite{nelson_complex_2004}}
   \label{fig:intro-ps}
 \end{figure}
-\todo{citation}
+
 
 \subsection{Transcriptional Responses to Light Stress}
 \label{subsec:intro-resp-txome}
@@ -164,8 +161,9 @@ damage is relatively more severe under light of wavelengths between 580-620nm th
 of the visible spectrum, which overlaps with a density peak in the spectral power density of
 fluorescent lamps (see \autoref{fig:dc-res-spectra-norm}). The integration of light quality into
 assays which test plant responses to altered light intensity is lacking in the vast majority of
-works on the topic.  \todo{perhaps spruik the SPC here also. LED lights are arriving, studies
-emerging, and you with SPC are in the lead}
+works on the topic. Plant growth methods developed in this thesis provide methods to examine such
+interactions.
+
 
 \subsection{Plant Growth Under Field Conditions}
 \label{subsec:intro-resp-field}
@@ -179,7 +177,7 @@ metabolic profiles \autocite{jankanpaa_metabolic_2012}, transcript abundances
 \autocite{mishra_arabidopsis_2012}, and survival and fecundity \autocite{kulheim_rapid_2002}.
 Several authors report overlap between genes expressed upon treatment with excess light and those
 constitutively expressed in field conditions \autocite{mishra_arabidopsis_2012,
-wituszynska_multivariable_2013}.  \todo{more field constitutive expression papers}
+wituszynska_multivariable_2013}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% REBUTTAL SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -221,11 +219,9 @@ acclimation to variable light intensity. Similar findings are presented by
 \textcite{mishra_arabidopsis_2012}, who found increased NPQ and expression of ELIP proteins and
 decreased LHC-associated protein abundances in field-grown \textit{Arabidopsis}. These field studies
 reiterate interactions noted in laboratory studies, and provide impetus for the study of field-like
-combinations of abiotic stresses under controlled laboratory conditions, to facilitate
-the mapping of QTLs for combinatorial stress tolerance \autocite{li_genetics_2006,
-li_association_2010}.
-
-\todo{smoother segue into GWAS/QTL OUR OLD PAPERS GIVE YOU THIS IF YOU REVIEW THEM.}
+combinations of abiotic stresses under controlled laboratory conditions. Natural variation in these
+interactive stress responses may facilitate the mapping of quantitative trait loci (QTLs) for
+combinatorial stress tolerance \autocite{li_genetics_2006, li_association_2010}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Transcriptomics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -241,7 +237,6 @@ high-throughput sequencing of RNAseq libraries and generates data that can be in
 context of the biological basis underlying the experiment. The process of RNAseq is presented
 graphically in \autoref{fig:intro-rnaseq}
 
-\todo{maybe too methodsy}
 
 \begin{figure}[p]
   \begin{center}
