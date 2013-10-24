@@ -3,8 +3,19 @@
 
 \subsection{Evolution of the \texttt{spcControl} codebase}
 \label{subsec:apx-spc-evol}
-Initially\ldots
-\todo{SPC evolution}
+As bugs were discovered, the initial code to relay control commands to the SpectralPhenoClimatron was
+developed into a fully fledged python module, of which the main program loop is shown below.
+
+\captionof{listing}{Initial code to relay control commands to the SpectralPhenoClimatron}
+\inputminted
+{python}
+{code/hackish.py}
+
+\clearpage
+\captionof{listing}{Main program loop in the \texttt{spcControl module}.}
+\inputminted
+{python}
+{code/main.py}
 
 \subsection{Invocation of \texttt{spcControl}}
 Some important notes about the invocation of \texttt{spcControl}:

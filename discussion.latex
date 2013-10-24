@@ -169,18 +169,19 @@ response to hot excess light with heat and oxidative stresses, as observed in pr
 \autocite{rossel_global_2002}. Together, these data suggest that the response of plants grown under
 dynamic light conditions to hot excess light is similar to that of plants growth under static light
 conditions, albeit with somewhat tempered induction of hot excess light-responsive marker genes. An
-understanding of the power needed and variation present in a typical experiment has been identified.
+understanding of the statistical power needed and variation present in an experiment examining
+dynamic growth conditions has been identified.
 
 Limited transcriptomic evidence of the effect of light intensity within the framework of dynamic
 light conditions was observed. Gene ontology (GO) term enrichment provides evidence that plant
-response to hot high light is preserved in plants grown under dynamic growth conditions hypothesised
-to induce acclimation to high light or fluctuations in light intensity
+response to hot excess light is preserved in plants grown under dynamic growth conditions hypothesised
+to induce acclimation to excess light or fluctuations in light intensity
 (\autoref{fig:txv-res-govenn}). Additionally, GO term enrichment analysis details the overlap and
 interaction with other abiotic stresses. GO terms  enriched in genes with differential steady-state
 expression in plants grown under sufficient light dynamic growth conditions and excess or fluctuating
 light dynamic growth conditions exhibit limited overlap with those observed in previous studies of
 acute changes in light intensity, as hypothesised. However, this evidence of hardening is contrasted
-by the number of genes differentially expressed in response to hot high light under dynamic growth
+by the number of genes differentially expressed in response to hot excess light under dynamic growth
 conditions. If acclimation to modest excesses in light intensity result in reduced fold-change
 induction of stress-inducible genes, as qPCR quantification of APX2 expression suggest, then either
 the relative order of hardening hypothesised is incorrect, or the level of biological noise in this
@@ -194,9 +195,6 @@ estimates of differential expression in all genes. I hypothesise that upon doing
 previously found to be differentially expressed between lab and field growth conditions would have
 differential steady-state expression between sufficient, fluctuating and excess light conditions,
 with expression being highest in the excess and lowest in sufficient light conditions. 
-%\begin{itemize} \item check for block effect \item look at detail of individual genes \item
-%Hypothesise as to what good dataseet would find \end{itemize}
-\todo{ensure expt. methods stuff here makes it into ch4 methods}
 
 Study of the transcriptome is an established method to assess the responses of plants to their
 environment, but it is far from the only method of doing so. Analysis of chlorophyll fluorescence of
@@ -206,14 +204,14 @@ dynamic light conditions is ongoing, but beyond the scope of this thesis. Analys
 of stress metabolites has elucidated metabolites involved in acclimation to combined stresses in
 field conditions \autocite{jankanpaa_metabolic_2012}, warranting similar analysis of metabolites in plants
 grown under dynamic growth conditions. However, transcriptomics remains a sensitive, accurate and
-useful tool to measure plants' responses to their environment, particlarly in a systems biology
-approach that integrates metabolomic, phenomic, transnscriptomic and physiological responses to
+useful tool to measure plants' responses to their environment, particularly in a systems biology
+approach that integrates metabolomic, phenomic, transcriptomic and physiological responses to
 applied stresses.
 
 
-\section{Discussion of data in broader context of abiotic stresses}
+\section{Interpreting Combined Abiotic Stress Responses}
 \label{sec:dis-combstress}
-\todo{better title for this section}
+
 
 While the effect of altered light intensity on plants and their transcriptomes has been studied in
 depth, few authors have studied under laboratory conditions analogous to those to which plants are
@@ -303,7 +301,7 @@ pipelines to analyse generic RNAseq datasets. Finally, aiming to determine the t
 response of \textit{Arabidopsis thaliana} to the combinatorial application of abiotic stresses using
 dynamic growth conditions, I created a preliminary RNAseq dataset, and samples for preliminary eQTL
 and phenomic QTL mapping datasets. This RNAseq dataset exhibited high biological noise, preventing
-reliable detection of differential expression on similar scales to analagous published experiments, however
+reliable detection of differential expression on similar scales to analogous published experiments, however
 yielded insight into patterns of differential expression that warrant further investigation.  This
 work lays the foundation for further work elucidating the response to and tolerance of field-like
 combinations of abiotic stresses in a manner compatible with that suggested by recent reviews

@@ -161,7 +161,7 @@ relative humidity decreases.
 \begin{landscape}
   \begin{figure}[p]
     \begin{center}
-      \includegraphics[height=0.8\textheight]{img/dc-res-3cond-light.png}
+      \includegraphics[height=0.6\textheight]{img/dc-res-3cond-light.png}
     \end{center}
     \caption{Diurnal variation in approximate light intensity of sufficient, fluctuating and excess
       light dynamic growth conditions (for model date 1 March). Note the altered light intensity

@@ -13,13 +13,14 @@ plant-environment interactions is crucial to improving agricultural yield and un
 functional plant ecology in a changing climate.
 
 Central to increasing the understanding of plant-environment interactions is the development of
-laboratory study systems that allow classical mechanistic studies of abiotic stress response to be
-placed in the context of the conditions plants experience in natural or cultivated environments
-outside laboratories. In this thesis, I discuss, develop and apply novel
-techniques that enable the global study of gene expression in laboratory growth conditions which
-mimic field-like combinations of light, temperature and humidity. I examine the
-effect of light intensity on global gene expression, within the framework of growth conditions whose
-temperature, humidity and light follow trends approximating those observed in regional climates.
+laboratory study systems. Specifically, systems that allow classical mechanistic studies of abiotic
+stress response to be placed in the context of the conditions plants experience in natural or
+cultivated environments outside laboratories are of importance to studies of stress response. In
+this thesis, I discuss, develop and apply novel techniques that enable the global study of gene
+expression in laboratory growth conditions which mimic field-like combinations of light, temperature
+and humidity. I examine the effect of light intensity on global gene expression, within the
+framework of growth conditions whose temperature, humidity and light follow trends approximating
+those observed in regional climates.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Stress and Coping Mechanisms   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -60,13 +61,13 @@ responses exists, and allows for mechanistic study of such responses \autocite{l
 \label{subsec:intro-stress-photodamage}
 
 The quantity of light a plant receives is in excess when plants are unable to utilise energy
-obtained from absorbed photos to fix carbon \autocite{li_sensing_2009}. Excess light is particularly
-damaging, causing both reductions in photosynthetic ability, termed photoinhibition, and cellular or
+obtained from absorbed photons to fix carbon \autocite{li_sensing_2009}. Excess light is particularly
+damaging, causing reductions in photosynthetic ability, termed photoinhibition, cellular or
 tissue damage and death \autocite{niyogi_photoprotection_1999, asada_production_2006,
 li_sensing_2009, suzuki_ros_2012}. The indispensability of photosynthesis has caused the evolution
 of mechanisms by which the detrimental effects of excess light can be minimised. These mechanisms,
 collectively termed photoprotection, work to dissipate excess energy, reduce the amount of light
-absorbed, and prevent and repair any damage caused \autocite{niyogi_photoprotection_1999,
+absorbed, and prevent or repair any damage caused \autocite{niyogi_photoprotection_1999,
 takahashi_photoprotection_2011}.
 
 
@@ -79,9 +80,9 @@ mechanisms of response and damage mitigation within the chloroplast described in
 \autoref{fig:intro-ps} , as well as responses on a whole-cell scale. Chloroplast avoidance movement,
 the movement of chloroplasts parallel to the incident angle of light, decreases the amount of
 absorbed light \autocite{kasahara_chloroplast_2002}.  Transcriptional induction of heat shock
-proteins, antioxidant scavenging and photo-oxidative damage repair occur following excess light, and
-help to minimise oxidative damage (discussed in detail in \autoref{subsec:intro-resp-txome})
-\autocite{niyogi_photoprotection_1999, rossel_global_2002, jung_subset_2013}.  Production of
+proteins and proteins involved in antioxidant scavenging and photo-oxidative damage repair occurs
+following excess light (discussed in detail in \autoref{subsec:intro-resp-txome})
+\autocite{niyogi_photoprotection_1999, rossel_global_2002, jung_subset_2013}. Production of
 anthocyanin, a protective class of pigments, is induced by the production of reactive oxygen species
 due to excess light \autocite{vanderauwera_genome-wide_2005}. Together, these responses serve to
 reduce the photo-oxidative damage of cells and tissues due to excess light.
@@ -129,12 +130,13 @@ chloroplastic stress signals (\textit{APX2}) \autocite{karpinski_systemic_1999},
 photoreceptor-dependent induction of \textit{ELIP1} \autocite{kleine_genome-wide_2007} and
 ROS-induced, heat shock transcription factor (HSF) mediated induction of HSPs
 \autocite{miller_could_2006}. The light induced down-regulation of \textit{\underline{L}IGHT
-HARVESTING \underline{C}HLOROPHYLL a/b \underline{B}INDING} (\textit{LHCB}) family genes is also well
-established \autocite{rossel_global_2002, mishra_arabidopsis_2012}. Therefore, these genes are used
-in this thesis as markers of transcriptional response to excess light. This enables comparison of
-transcriptional responses observed in this thesis to be compared to relevant previous works.
+\underline{H}ARVESTING \underline{C}HLOROPHYLL a/b \underline{B}INDING} (\textit{LHCB}) family genes
+is also well established \autocite{rossel_global_2002, mishra_arabidopsis_2012}. Therefore, these
+genes are used in this thesis as markers of transcriptional response to excess light. This enables
+comparison of transcriptional responses observed in this thesis to be compared to relevant previous
+works.
 
-The rapid response of the wider \textit{Arabidopsis} transcriptome to changes in light intensity has
+The rapid response of the \textit{Arabidopsis} transcriptome to changes in light intensity has
 been demonstrated \autocite{rossel_global_2002}.  Acclimation to excess light conditions affects the
 steady-state level of expression of several classes of genes. In the cyanobacterium
 \textit{Synechocysitis} sp. PCC 6803, genes involved in light capture are down-regulated and
@@ -142,8 +144,8 @@ homologues of heat-shock proteins up-regulated after 15 hours of excess light tr
 \autocite{hihara_dna_2001}. In rice, similar transcriptional down-regulation of light harvesting and
 up-regulation of photoprotection after 24 or 72 hours of excess light treatment has been observed
 \autocite{murchie_acclimation_2005}. Using quantitative real-time PCR, a method to assay relative
-expression of single genes, \textcite{gordon_systemic_2013} have show that repeated high light
-treatments lead to acclimation and reduced induction of high light responsive transcripts. These
+expression of single genes, \textcite{gordon_systemic_2013} have show that repeated excess light
+treatments lead to acclimation and reduced induction of excess light responsive transcripts. These
 transcriptomic responses to light overlap with response to drought, pathogen or oxidative stresses
 as well as hormone response, reiterating the requirement of stresses to be considered in
 combination.
@@ -208,7 +210,7 @@ responses compared to those grown in supposedly comparable laboratory conditions
 \textit{Arabidopsis thaliana} the reduction in reproductive success caused by the \textit{npq1} and
 \textit{npq4} mutations was severe in the field but had no impact under static sufficient light in
 the laboratory \autocite{kulheim_rapid_2002}.  Similarly, photoinhibition, physiological symptoms of
-abiotic stress and expression of high light-induced transcripts were more severe in field-grown
+abiotic stress and expression of excess light-induced transcripts were more severe in field-grown
 \textit{Solidago altissima} than those grown in comparable laboratory conditions
 \autocite{barua_interactive_2006}. Furthermore, \textcite{wituszynska_multivariable_2013} observe
 increased steady-state expression of genes involved in response to excess light and photo-oxidative

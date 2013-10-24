@@ -8,8 +8,8 @@ The following source code repositories have been created as part of this thesis.
     \hline
     Repository                    & URL \\
     \hline
-    This thesis                   & \url{http://github.com/kdmurray91/hons-thesis} \\
     \texttt{spcControl} module    & \url{http://github.com/borevitzlab/spcControl} \\
+    RNAseq Pipeline               & \url{https://github.com/kdmurray91/RNAseqPipeline} \\
     \hline
   \end{tabular}
   \caption{Source code repositories}

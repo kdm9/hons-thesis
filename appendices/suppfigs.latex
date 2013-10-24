@@ -4,12 +4,12 @@
 \subsection{High Throughput RNAseq Library Preparation Protocol}
 \label{subsec:apx-supp-rnaseqprotocol}
 
-\todo{part numbers and small details like that are missing throughout this methods section}
+
 %This work was conducted in collaboration with Dr. Norman Warthmann, who performed the testing of
 %sequencing adaptors and assisted with this section.
 
 To economically generate RNAseq libraries from the hundreds of samples I have collected, non
-kit-based protocols must be used. Here, I briefly summarise the failed implementaion of the RNAseq
+kit-based protocols must be used. Here, I briefly summarise the failed implementation of the RNAseq
 library preparation protocol of \textcite{kumar_high-throughput_2012}, a published protocol enabling
 the preparation of RNAseq libraries in high throughput using 96 well plates. Specifically, I used a
 slightly modified version of the High-Throughput RNAseq protocol described in Supplementary Methods
@@ -85,4 +85,33 @@ Honours year.
     \autoref{fig:txv-res-rnaqual}}
     \label{fig:br-res-dynabdpicoegramB1}
 \end{figure}
+
+
+\subsection{Additional Dynamic Growth Conditions}
+\label{subsec:dc-res-kengcond}
+
+The \texttt{spcControl} software I have developed can be applied to many experimental designs. For
+example, it was further used to create conditions which examine hypotheses beyond the scope this
+thesis. This includes two conditions to test the overall effect of environments with higher light
+and more diurnal variation in temperature, such as may be experienced in inland regional climates,
+compared to conditions with lower light intensity and lower diurnal variation in temperature, such
+as those often encountered in coastal climates. These conditions, named ``NSW inland'' and ``NSW
+coastal'' respectively, generally are more harsh than the sufficient, fluctuating and excess light
+dynamic growth conditions created for my experiments.  Additionally, conditions required to conduct
+a virtual reciprocal transplant of \textit{Pelargonium} species from Australia and South Africa
+were created, by simulating regional climates in two locations, in coastal New South Wales,
+Australia and coastal Western Cape, South Africa. The specifics of these dynamic growth conditions
+are beyond the scope of this thesis. 
+
+
+\subsection{RIX lines}
+\label{subsec:apx-rix}
+\kmdefaulttable
+{apx-rix}
+{tables/apx-rix.csv}
+{cc}
+{\multicolumn{2}{c}{Line Name}}
+{\a=a, \b=b}
+{\a & \b}
+{Cvi Ler RIX lines planted and harvested as part of this thesis.}
 

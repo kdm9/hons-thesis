@@ -11,7 +11,7 @@
 \label{sec:txv-aim}
 
 Transcriptional responses to abiotic stress have been studied by many authors
-\autocite{seki_molecular_2001, rossel_global_2002}. However, theses stresses are typically not
+\autocite{seki_monitoring_2001, rossel_global_2002}. However, theses stresses are typically not
 studied in combination \autocite{mittler_abiotic_2006}. This is despite evidence supporting the
 interactions between stresses \autocite{mittler_abiotic_2006, atkinson_interaction_2012}.
 Additionally, many authors have observed responses to abiotic stresses encountered under field
@@ -48,7 +48,6 @@ excess light \autocite{kulheim_rapid_2002, alter_acclimatory_2012, gordon_system
 
 
 \subsection{Growth and harvesting of \textit{Arabidopsis}}
-\todo{Elaborate on RIX lines in apx}
 
 Initially, I had aimed to conduct a experiment which mapped expression QTLs under dynamic growth
 conditions. Thus, 80 \textit{A. thaliana} Recombinant Inbred Intercross (RIX) lines were planted
@@ -213,14 +212,14 @@ Expression was quantified with qPCR using the Roche Sybr Gold master mix kit (pa
 04-707-516-001) in a Roche LightCycler 480 thermocycler. Reactions of 10\ul consisting of 1\ul cDNA,
 3.6\ul nuclease free water, 0.2\ul of each 20\uM primer, and 5\ul Sybr Gold 2x master mix. Reactions
 were conducted in technical triplicate in 384 well plates sealed with qPCR-compatible plate seals.
-Expression of eight genes (APX2, ELIP1, ELIP2, LHCB1.4 and HSP90-like, as well as reference genes
+Expression of eight genes (APX2, ELIP1, ELIP2, LHCB1.4, as well as reference genes
 PP2AA3 and GAP) was quantified using primer sets described in \autoref{tab:txv-mth-qpcrprimers} in
 24 samples. These cDNA samples were samples 1-18 of the dynamic growth condition dataset described
 in \autoref{tab:txv-meth-sampletab}, as well as cDNA samples prepared using identical methods as
 described above from plants grown under static conditions (100\uE light intensity, 12 hour
 photoperiod, 21\degc) for five weeks, before and after exposure to 10x hot excess light for one
 hour. In addition, template-less and reverse transcriptase free controls were conducted for some
-primer sets (HSP90-like and PP2AA3) to ensure absence of genomic DNA contamination.
+primer sets to ensure absence of genomic DNA contamination.
 
 Raw quantification curves were obtained by thermocycling qPCR reactions in a LightCycler 480
 thermocycler. Reactions were heated to 95\degc\ for 10 minutes, before cycling between 95\degc\ for 30
@@ -269,8 +268,8 @@ was re-run with 17 amplification cycles, which created libraries of a suitable c
 
 \begin{figure}[p]
   \begin{center}
-    \includegraphics[width=\textwidth]{./img/txv-res-bioanalyser-gel-1-12.jpg}
-    \includegraphics[width=\textwidth]{./img/txv-res-bioanalyser-gel-13-rob4.jpg}
+    \includegraphics[width=0.7\textwidth]{./img/txv-res-bioanalyser-gel-1-12.jpg}
+    \includegraphics[width=0.7\textwidth]{./img/txv-res-bioanalyser-gel-13-rob4.jpg}
   \end{center}
   \caption{Bioanalyser 2100 digital electrophoretograms show expected rRNA peaks and mRNA smear,
     with no evidence of large-scale sample degradation. Samples 1-18 are numbered according to
@@ -299,7 +298,7 @@ all samples have a RIN of at least 6, indicating acceptable quality.}
     \end{center}
     \caption{RNAseq libraries before (top) and after (bottom) final solid-phase reversible
       immobilisation (SPRI) cleanup. A broad smear of nucleic acid between approximately 200 and 600bp
-      long is expected, ideally with a peak around 200-300b \autocite{illuminamanual}. Additionally,
+      long is expected, ideally with a peak around 200-300b \autocite{illumina_truseq_2012}. Additionally,
       after PCR, a band of low molecular weight (approximately 60bp) contaminant is expected, and
       observed. Clean-up with SPRI is expected, and observed, to remove this contaminant efficiently.}
     \label{fig:txv-res-finalpcr}
@@ -349,14 +348,14 @@ been analysed for differential expression.}
 
 \begin{figure}[p]
   \begin{center}
-    \includegraphics[width=\textwidth]{img/txv-res-fastqc-before-per_base_quality.png}
-    \includegraphics[width=\textwidth]{img/txv-res-fastqc-after-per_base_quality.png}
+    \includegraphics[width=0.8\textwidth]{img/txv-res-fastqc-before-per_base_quality.png}
+    \includegraphics[width=0.8\textwidth]{img/txv-res-fastqc-after-per_base_quality.png}
   \end{center}
   \caption{Per-base quality before (top) and after (bottom) quality control. These box-plots
     describe, per-position in each read (x-axis), quartiles and medians of PHRED quality score,
     which is related to probability of sequencing error at each position. PHRED scores of greater
     than 30 are considered good, and scores are expected to be lower towards the 3' end of read
-    sequences, due to sequencing technology \autocite{andrews_fastqc_2013}}
+    sequences, due to sequencing technology \autocite{andrews_fastqc_2012}}
   \label{fig:txv-res-fastqc-pbq}
 \end{figure}
 
@@ -404,7 +403,7 @@ warrant further --- albeit cautious --- investigation of this dataset.
 \begin{landscape}
   \begin{figure}[p]
     \begin{center}
-      \includegraphics[height=\textheight]{img/txv-res-plotbcv.png}
+      \includegraphics[width=1.2\textwidth]{img/txv-res-plotbcv.png}
     \end{center}
     \caption{Biological coefficient of variation in dynamic (left) and static(right) growth
       conditions. Here, each point represents a gene, and the relationship between expression level
@@ -441,7 +440,7 @@ warrant further --- albeit cautious --- investigation of this dataset.
   \end{center}
   \caption{Multi-dimensional scaling of dynamic and static growth conditions. Replicate samples are
     represented in the same colour. Pre-hot excess light samples (0h) tend towards negative values
-    on axis 2, while post-hot high light samples (1hHL) tend towards positive values on axis 2. This
+    on axis 2, while post-hot excess light samples (1hHL) tend towards positive values on axis 2. This
     trend is preserved across samples from plants grown under both dynamic and static growth
     conditions. Replicates within the rapid recovery gene silencing dataset (Static 0h and Static
     1hHL) cluster together tightly compared with replicates from the dynamic growth condition
@@ -473,7 +472,7 @@ conflict with hypotheses. Tests for interaction between growth condition light i
 treatment effect showed little or no significant differential expression
 \autoref{tab:txv-res-desummary}.  The differential expression observed between dynamic growth
 conditions is in contrast to the 3195 up-regulated and 3146 down-regulated genes differentially
-expressed after one hour of hot high light treatment in plants grown under static growth conditions
+expressed after one hour of hot excess light treatment in plants grown under static growth conditions
 (the RRGS dataset described in \autoref{subsec:br-mth-datasets}).
 
 \begin{landscape}
@@ -504,7 +503,7 @@ expressed after one hour of hot high light treatment in plants grown under stati
 To gain biological insight from patterns of differential expression, gene ontology (GO) term
 enrichment analysis was used. Statistically significant enrichment of GO terms in genes up- and
 down-regulated in comparisons of steady-state expression and in transcriptional response to hot
-excess light. The GO terms enriched in genes up-regulated on exposure to hot high light were highly
+excess light. The GO terms enriched in genes up-regulated on exposure to hot excess light were highly
 conserved across all dynamic growth conditions and the RRGS dataset grown under static growth
 conditions (\autoref{fig:txv-res-govenn}). Specifically, terms including 'response to heat',
 'response to high light intensity', 'response to hydrogen peroxide' and 'response to jasmonic acid
@@ -554,7 +553,7 @@ F=5.63, p=0.0072, 3 degrees of freedom (DF), with Tukey's honest significant dif
 demonstrating significant pairwise differences between expression in sufficient, excess and
 fluctuating light dynamic light conditions and in static growth conditions with p<0.05).
 Steady-state expression of LHCB1.4, a photosynthetic gene known to be down-regulated by excess light
-\autocite{ruckel_plastid_2007}, and was down-regulated in plants grown under dynamic growth
+\autocite{ruckle_plastid_2007}, and was down-regulated in plants grown under dynamic growth
 conditions, with statistically significant down-regulation observed between excess and fluctuating
 dynamic light conditions and static growth conditions (ANOVA, F=4.45, 3 DF, p=0.019). Expression of
 ELIP1 is significantly up-regulated in excess and fluctuating dynamic light conditions compared to

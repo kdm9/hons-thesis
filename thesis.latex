@@ -5,9 +5,9 @@
 \usepackage{mathptmx}
 \usepackage[
   top=2cm,
-  left=2cm,
-  right=6cm,
-%  right=2cm,            % 2cm page margins, for final document
+  left=3cm,
+%  right=6cm,
+  right=2cm,            % 2cm page margins, for final document
   bottom=2cm
   ]{geometry}           % alter document geometry
 \usepackage{lscape}
@@ -20,10 +20,10 @@
 
 \usepackage{titlesec}
 \usepackage{fontspec}
-\usepackage[
-  textsize=scriptsize,
-  textwidth=4cm
-  ]{todonotes}          % for the \todo and associated commands
+%\usepackage[
+%  textsize=scriptsize,
+%  textwidth=4cm
+%  ]{todonotes}          % for the \todo and associated commands
 
 
 % Code etc
@@ -124,7 +124,7 @@
     \small Thesis submitted in partial fulfilment of the requirements of the degree of\\
     \small Bachelor of Philosophy (Science) (Honours)\\
     \vfill
-    \footnotesize Aproximate Word Counts:\\
+    \footnotesize Aproximate Chapter Word Counts:\\
     \begin{tabular}{ll}
       \footnotesize Introduction: & 2010 words\\
       \footnotesize Dynamic Growth Conditions: & 1250 words\\
@@ -160,7 +160,7 @@
 \end{abstract}
 
 \tableofcontents
-\todototoc
+%\todototoc
 %\listoffigures
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                        Acknoweledgements                          %%%%%%%%%%%%%
@@ -174,7 +174,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
-\input{todo.latex}
+%\input{todo.latex}
 
 \input{intro.latex}
 

@@ -62,3 +62,7 @@
   \fontdimen7\font=1.30554pt% extra space
   \hyphenchar\font=`\-% allowing hyphenation
 }
+
+%http://stackoverflow.com/questions/2785260/hide-an-entry-from-toc-in-latex
+\newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
+

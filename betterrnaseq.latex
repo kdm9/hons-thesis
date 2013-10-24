@@ -199,7 +199,7 @@ component.
 \subsubsection{The \texttt{\justify aln\_subread} pipeline}
 \label{subsubsec:br-res-alnsubread}
 In this pipeline, quality of sequencing data is checked using \texttt{\justify fastqc}
-\autocite{andrews_fastqc_2013}, sequencing adaptors are removed with \texttt{\justify scythe}
+\autocite{andrews_fastqc_2012}, sequencing adaptors are removed with \texttt{\justify scythe}
 \autocite{buffalo_scythe_2013}, and \texttt{\justify seqtk} removes low quality sequences, before
 the quality is again checked using \texttt{\justify fastqc}. The \texttt{\justify subread} aligner,
 a very fast RNAseq-compatible short read aligner, then aligns reads to the current TAIR10 \textit{A.
@@ -301,7 +301,7 @@ sensitivity, and echoes findings by its authors \autocite{liao_subread_2013}}
 \label{subsec:br-res-coverage}
 
 While high-throughput sequencing has reduced sequencing costs dramatically, costs have stabilised in
-recent years \autocite{citation needed}. Multiplexing many samples per lane is important for
+recent years \autocite{glenn_field_2011}. Multiplexing many samples per lane is important for
 high-throughput transcriptomics to increase replication to improve estimates of gene expression, and
 to increase sample breadth to better estimate transcriptome variation due to genetic or treatment
 effects.  However, improvement to statistical power from increased sequencing depth diminishes as
