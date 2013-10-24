@@ -9,14 +9,14 @@
 
 \section{Background, Aims and Hypotheses}
 
-If one studies organisms or mechanisms which have evolved in a given environment, as nearly all
-biologists do, it follows logically that the study environment should be as similar as possible to
-the environment in which the subject has evolved. This underpins the enormous wealth of literature
-derived from field studies. In areas of molecular plant science however, our study organisms are
-often placed in environments highly dissimilar to those in which our subjects are hypothesised to
-have evolved \autocite{mittler_abiotic_2006, mittler_genetic_2010}. This has a particular impact on
-areas of plant science which study the interaction of plants with their environment, and may alter
-the conclusions of such studies considerably.
+As biologists study organisms or mechanisms that have evolved in a given environment, it follows
+logically that the study environment should be as similar as possible to the environment in which
+the subject has evolved. This underpins the enormous wealth of literature derived from field
+studies. In areas of molecular plant science however, our study organisms are often placed in
+environments highly dissimilar to those in which our subjects are hypothesised to have evolved
+\autocite{mittler_abiotic_2006, mittler_genetic_2010}. This has a particular impact on the study of
+interaction of plants with their environment, and may alter the conclusions of such studies
+considerably \autocite{mittler_abiotic_2006, mittler_genetic_2010,wituszynska_multivariable_2013}.
 
 In this chapter I describe artificial growth conditions that I have created which vary on diurnal
 and circannual cycles in an analogous manner to the regional climates cultivated or naturally
@@ -27,7 +27,7 @@ laboratory settings, in which temperature, humidity, photoperiod, light intensit
 are constant across the period of plant growth. I hypothesise that plants grown under dynamic growth
 conditions will exhibit phenotypes more similar to those grown outdoors under natural environments,
 as these dynamic growth conditions are more similar to natural environments when compared to static,
-benign laboratory growth conditions. This hypothesis is tested in later chapters of this thesis.
+benign static growth conditions. This hypothesis is tested in later chapters of this thesis.
 
 A key driver behind the development of dynamic growth conditions is the ability to simulate regional
 climates in as reliable and reproducible manner as required for scientific study. The second aim for
@@ -73,8 +73,8 @@ of control commands is reported to an off-site database.
 
 SolarCalc was used to create climate models underlying dynamic growth conditions
 \autocite{spokas_estimating_2006}. Model settings that I used in the creation of the dynamic
-conditions are described in \autoref{tab:dc-mth-solarcalcsettings} if they deviate from program
-defaults . As SolarCalc by default simulates the climate of a location without variable weather,
+conditions are described in \autoref{tab:dc-mth-solarcalcsettings} where they deviate from program
+defaults. As SolarCalc by default simulates the climate of a location without variable weather,
 post-processing work was required to create conditions that mimic cloudy and intermittently cloudy
 days. A SolarCalc model with a neutral density shade such that model sunlight intensity was 45\%
 that of an unshaded model was created, and the result of both the shaded and unshaded models were
@@ -97,19 +97,18 @@ to wavelengths  400nm (sub-blue), 420nm (blue), 450nm (blue), 530nm (green), 630
 
 
 \subsection{Measurement of Spectral Power Density}
-\todo{define spectral power density}
 
 Spectral power density, or distribution of light intensity across the visible spectrum, was
-quantified using a spectrophotometer to record spectral power
-density across the spectrum between light of wavelengths 400nm to 800nm, with 2nm wavelength
-resolution. Sun and shade spectra were obtained on July 18 at the Acton campus of the ANU, in a
-clear, open space and under heavy shade from mature trees of various species, in the courtyard
-between buildings 46 and 48. Spectra of laboratory growth conditions were obtained from a Conviron
-PGC20 by placing the spectrophotometer on the lowest shelf level while fluorescent lamps or
-Heliospectra L4A series 10 lamps were illuminated at their highest intensities. In the case of the
-Heliospectra L4A series 10 LED lamps, measurements from directly under a single unit were recorded.
-Intensity-normalised spectral power density was calculated by normalising the intensity recorded for
-each wavelength by total light source intensity.
+quantified using a spectrophotometer to record spectral power density across the spectrum between
+light of wavelengths 400nm to 800nm, with 2nm wavelength resolution. Sun and shade spectra were
+obtained on July 18, 2013 at the Acton campus of the ANU, in a clear, open space and under heavy
+shade from mature trees of various species, in the courtyard between buildings 46 and 48. Spectra of
+laboratory growth conditions were obtained from a Conviron PGC20 by placing the spectrophotometer on
+the lowest shelf level while fluorescent lamps or Heliospectra L4A series 10 lamps were illuminated
+at their highest intensities. In the case of the Heliospectra L4A series 10 LED lamps, measurements
+from directly under a single unit were recorded.  Intensity-normalised spectral power density was
+calculated by normalising the intensity recorded for each wavelength by total light source
+intensity.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                         Results                                   %%%%%%%%%%%%%
@@ -124,7 +123,7 @@ each wavelength by total light source intensity.
 
 To create dynamic growth conditions which change on diurnal and circannual cycles, high temporal
 resolution is required. Whilst SpectralPhenoClimatron hardware can produce static growth conditions,
-external software is required enable the creation of such dynamic conditions. Thus, I have created
+external software is required to enable the creation of such dynamic conditions. Thus, I have created
 software, \texttt{spcControl}, to do so.  This software can implement dynamic growth conditions
 given a climate model generated by SolarCalc \autocite{spokas_estimating_2006}. \texttt{spcControl}
 will, at time intervals specified in the climate model, send control commands to both the LED
@@ -159,7 +158,7 @@ expand from a simple script to a fully-fledged python module with 16 versions re
 \label{subsec:dc-res-mygrowthcond}
 
 To investigate the effect of altered light intensity on the \textit{Arabidopsis} transcriptome,
-three novel growth conditions specifically designed to mimic the dynamic nature of temperature,
+three novel growth conditions were specifically designed to mimic the dynamic nature of temperature,
 humidity and light intensity and quality that occurs outdoors. The sufficient light dynamic growth
 condition  corresponds to approximately the same daily integral of light as ``standard static growth
 conditions'' of 120-150 \uE with a 12-hour photoperiod. The excess light condition is approximately
@@ -318,11 +317,10 @@ which to study plant-environment interactions. It has been designed with large s
 elucidate underlying genetic mechanisms and examine genetic variation in these interactions in mind.
 
 Three dynamic growth conditions to examine the effect of light intensity in field-like interaction
-with temperature, humidity and light quality were implemented. These conditions allow for light
-stress to be studied in the framework of combinatorial application of stresses, as recent
-literature has advocated \autocite{mittler_abiotic_2006, wituszynska_multivariable_2013}. Examination
-of genetic variation in transcriptional, physiological or phenomic responses to altered light
-intensity may provide insight into mechanisms underlying response to light stress in field-like
-combinations with other abiotic stresses \autocite{li_genetics_2006, li_association_2010}.
-
-\todo{summary needs a reword to link it better}
+with temperature, humidity and light quality were implemented using the SpectralPhenoClimatron.
+These conditions allow for light stress to be studied in the framework of combinatorial application
+of stresses, as recent literature has advocated \autocite{mittler_abiotic_2006,
+wituszynska_multivariable_2013}. Examination of genetic variation in transcriptional, physiological
+or phenomic responses to altered light intensity may provide insight into mechanisms underlying
+response to light stress in field-like combinations with other abiotic stresses
+\autocite{li_genetics_2006, li_association_2010}.
