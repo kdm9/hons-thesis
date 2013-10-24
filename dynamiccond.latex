@@ -11,32 +11,20 @@
 
 As biologists study organisms or mechanisms that have evolved in a given environment, it follows
 logically that the study environment should be as similar as possible to the environment in which
-the subject has evolved. This underpins the enormous wealth of literature derived from field
-studies. In areas of molecular plant science however, our study organisms are often placed in
-environments highly dissimilar to those in which our subjects are hypothesised to have evolved
-\autocite{mittler_abiotic_2006, mittler_genetic_2010}. This has a particular impact on the study of
-interaction of plants with their environment, and may alter the conclusions of such studies
-considerably \autocite{mittler_abiotic_2006, mittler_genetic_2010,wituszynska_multivariable_2013}.
-
-In this chapter I describe artificial growth conditions that I have created which vary on diurnal
-and circannual cycles in an analogous manner to the regional climates cultivated or naturally
-growing plants experience. This class of laboratory growth condition are termed ``dynamic growth
-conditions''. The term dynamic is in contrast with the often unnaturally benign, highly ``static
-growth conditions'' typically used in the propagation, growth and experimentation of plants in
-laboratory settings, in which temperature, humidity, photoperiod, light intensity and light quality
-are constant across the period of plant growth. I hypothesise that plants grown under dynamic growth
-conditions will exhibit phenotypes more similar to those grown outdoors under natural environments,
-as these dynamic growth conditions are more similar to natural environments when compared to static,
-benign static growth conditions. This hypothesis is tested in later chapters of this thesis.
-
-A key driver behind the development of dynamic growth conditions is the ability to simulate regional
-climates in as reliable and reproducible manner as required for scientific study. The second aim for
-this chapter of my thesis is to create software to allow dynamic growth conditions to be implemented
-with existing hardware at the ANU. This software should be able to use the model outputs of software
-previously written to create regional climate models \autocite{spokas_estimating_2006} that govern
-dynamic growth conditions, to control multi-spectral LED lamps and computerised reach-in growth
-chambers. Successful completion of this aim has allowed the implementation of dynamic growth
-conditions, and their use in research into plant-environment interactions in \textit{Arabidopsis}.
+the subject has evolved. In areas of molecular plant science however, our study organisms are often
+placed in environments highly dissimilar to those in which our subjects are hypothesised to have
+evolved \autocite{mittler_abiotic_2006, mittler_genetic_2010}. In this chapter I describe artificial
+growth conditions that I have created which vary on diurnal and circannual cycles in an analogous
+manner to the regional climates cultivated or naturally growing plants experience. This class of
+laboratory growth condition are termed dynamic growth conditions is in contrast with the highly
+static growth conditions typically used in the experimentation of plants in laboratory settings. I
+hypothesise that plants grown under dynamic growth conditions will exhibit phenotypes more similar
+to those grown outdoors under natural environments, as these dynamic growth conditions are more
+similar to natural environments when compared to static, benign static growth conditions. This
+hypothesis is tested in later chapters of this thesis.  Additionally, I aim to create software to
+allow dynamic growth conditions to be implemented with existing hardware at the ANU. Successful
+completion of this aim has allowed the implementation of dynamic growth conditions, and their use in
+research into plant-environment interactions in \textit{Arabidopsis}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%                         Methods                                   %%%%%%%%%%%%%
@@ -135,10 +123,11 @@ occurs. Furthermore, to ensure reliable operation and detection of faults, at ev
 specified in the SolarCalc model, the success or failure is communicated to an off site database,
 and any error message is emailed to an administrator. An additional program,
 \texttt{spcControl.monitor}, polls this database and guards against failure of hardware, control
-computers and software, informing an administrator upon any failure. Together, these features allow
-highly reliable control of growth cabinets with temporal resolution suitable for the implementation
-of dynamic growth conditions, while mitigating the risk posed by inconsistencies and failures in
-equipment, ensuring the validity and reproducibility of scientific experimentation.
+computers and software, informing an administrator upon any failure.
+%Together, these features allow
+%highly reliable control of growth cabinets with temporal resolution suitable for the implementation
+%of dynamic growth conditions, while mitigating the risk posed by inconsistencies and failures in
+%equipment, ensuring the validity and reproducibility of scientific experimentation.
 
 The \texttt{spcControl} python module runs with python version 3.2 or later. It is modular in
 design, with a main program loop which sends a control line to each sub-module per the schedule
@@ -283,23 +272,6 @@ Heliospectra L4A series 10 LED lamp of 370\uE, and the intensity of light from f
 was 140\uE (data shown graphically in \autoref{fig:dc-res-spectra-norm}).
 
 
-\subsection{Novel Dynamic Growth Conditions That Simulate a Continental Gradient}
-\label{subsec:dc-res-kengcond}
-
-The \texttt{spcControl} software I have developed can be applied to many experimental designs. For
-example, it was further used to create conditions which examine hypotheses beyond the scope this
-thesis. This includes two conditions to test the overall effect of environments with higher light
-and more diurnal variation in temperature, such as may be experienced in inland regional climates,
-compared to conditions with lower light intensity and lower diurnal variation in temperature, such
-as those often encountered in coastal climates. These conditions, named ``NSW inland'' and ``NSW
-coastal'' respectively, generally are more harsh than the sufficient, fluctuating and excess light
-dynamic growth conditions created for my experiments.  Additionally, conditions required to conduct
-a virtual reciprocal transplant of \textit{Pelargonium} species from Australia and South Africa
-were created, by simulating regional climates in two locations, in coastal New South Wales,
-Australia and coastal Western Cape, South Africa. The specifics of these dynamic growth conditions
-are beyond the scope of this thesis. 
-
-
 \section{Summary and Technical Discussion}
 \label{sec:dc-summary}
 
@@ -314,7 +286,9 @@ SpectralPhenoClimatron. The limited light intensity and the evenness of the spec
 of Heliospectra L4A Series 10 lamps will be improved in an upcoming upgrade (pers. comm., Justin
 Borevitz). Despite these minor shortcomings, the SpectralPhenoClimatron is a phenomenal tool with
 which to study plant-environment interactions. It has been designed with large scale studies that
-elucidate underlying genetic mechanisms and examine genetic variation in these interactions in mind.
+elucidate underlying genetic mechanisms and examine genetic variation in these interactions in mind,
+and has been applied by colleagues to aims beyond the scope of this thesis (see
+\autoref{subsec:dc-res-kengcond}).
 
 Three dynamic growth conditions to examine the effect of light intensity in field-like interaction
 with temperature, humidity and light quality were implemented using the SpectralPhenoClimatron.
