@@ -11,23 +11,23 @@
 \label{sec:txv-aim}
 
 Transcriptional responses to abiotic stress have been studied by many authors
-\autocite{drought,pogson}. However, theses stresses have rarely been studied in combination
-\autocite{mittler_abiotic_2006}. This is despite evidence supporting the interactions between
-stresses \autocite{mittler_abiotic_2006, atkinson_interaction_2012}. Additionally, many authors have
-observed responses to abiotic stresses encountered under field conditions that are not simple
-additions of the responses to individual stresses as elucidated under laboratory study
-\autocite{seki_monitoring_2001, mittler_abiotic_2006,atkinson_interaction_2012,
+\autocite{seki_molecular_2001, rossel_global_2002}. However, theses stresses are typically not
+studied in combination \autocite{mittler_abiotic_2006}. This is despite evidence supporting the
+interactions between stresses \autocite{mittler_abiotic_2006, atkinson_interaction_2012}.
+Additionally, many authors have observed responses to abiotic stresses encountered under field
+conditions that are not simple additions of the responses to individual stresses as elucidated under
+laboratory study \autocite{seki_monitoring_2001, mittler_abiotic_2006,atkinson_interaction_2012,
 atkinson_identification_2013, wituszynska_multivariable_2013}. Together, these shortcomings warrant
 the investigation, under controlled laboratory conditions, of abiotic stresses in combinations which
 mimic those observed under field conditions.
 
-To examine the effect of altered long-term light intensity in field-like combinations of stressful
-climatic variables such as temperature and humidity, dynamic growth conditions have been designed
-(see \autoref{chap:dc}).  In this chapter, I present preliminary transcriptomic study of plants
+To examine the effect of altered long-term light intensity in field-like combinations of
+climatic variables including temperature and humidity, dynamic growth conditions have been designed
+(see \autoref{chap:dc}). In this chapter, I present preliminary transcriptomic study of plants
 grown under these dynamic conditions. Specifically, I aim to test if plants exposed to modest
 excesses of light either continuously (excess light dynamic growth conditions) or intermittently
 (fluctuating light) exhibit increased hardening to excess light when compared with sufficient light
-dynamic growth conditions.  I hypothesise that this increased hardening would manifest as increased
+dynamic growth conditions. I hypothesise that this increased hardening would manifest as increased
 steady-state transcription of stress-responsive genes \autocite{wituszynska_multivariable_2013,
 gordon_systemic_2013}, and a reduced induction of stress responsive genes upon exposure of plants to
 an 8x hot excess light treatment. More specifically, I expect that the excess and fluctuating light
@@ -37,8 +37,6 @@ of plants grown under static growth conditions. Furthermore, I hypothesise that 
 light condition will exhibit higher steady-state expression of stress-responsive transcripts, as
 plants are generally less able to acclimate to fluctuations in light intensity than to constitutive
 excess light \autocite{kulheim_rapid_2002, alter_acclimatory_2012, gordon_systemic_2013}.
-
-\todo{clean this up per dad's comments}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,43 +48,39 @@ excess light \autocite{kulheim_rapid_2002, alter_acclimatory_2012, gordon_system
 
 
 \subsection{Growth and harvesting of \textit{Arabidopsis}}
-\todo{Elaborate on RIX lines}
+\todo{Elaborate on RIX lines in apx}
 
 Initially, I had aimed to conduct a experiment which mapped expression QTLs under dynamic growth
-conditions. Thus, 80 \textit{A. thaliana} Recombinant Inbred Intercross (RIX) lines \autocite{RIX
-line citation} were planted (see Appendix \autoref{tab:apx-supp-rixlines}). Additionally, plants of
-reference accessions Cape Verde Islands (Cvi), Columbia (Col) and Landsberg erecta (Ler), the
-photoprotection mutants \textit{stn8}, \textit{pgr5}, \textit{npq1} and \textit{npq4} were planted.
-All lines were planted in triplicate for each dynamic growth condition.  Plants were grown in a
-carefully controlled manner to minimise variation in germination time and the developmental state of
-plants at a given time. Seeds were sown directly onto Debco Seed Raising Mix (Debco Pty. Ltd.),
-mixed with 3 grams per litre Osmocote\textregistered\ slow release fertiliser. Following sowing,
-plants were lightly watered from above and vernalised in a 4\degc\ cool room for three days. Plants
-were germinated under static growth conditions, of approximately 120 \uE, 21\degc, with a 12 hour
-photoperiod. Following thinning, the remaining plants were established under these conditions for
-two weeks, before being distributed between three SpectralPhenoClimatron growth cabinets, with
+conditions. Thus, 80 \textit{A. thaliana} Recombinant Inbred Intercross (RIX) lines were planted
+(see Appendix \autoref{tab:apx-supp-rixlines}, \textcite{zou_quantitiative_2005}). Additionally,
+plants of reference accessions Cape Verde Islands (Cvi), Columbia (Col) and Landsberg erecta (Ler),
+the photoprotection mutants \textit{stn8}, \textit{pgr5}, \textit{npq1} and \textit{npq4} were
+planted.  All lines were planted in triplicate for each dynamic growth condition.  Plants were grown
+in a carefully controlled manner to minimise variation in germination time and the developmental
+state of plants at a given time. Seeds were sown directly onto Debco Seed Raising Mix (Debco Pty.
+Ltd.), mixed with 3 grams per litre Osmocote\textregistered\ slow release fertiliser. Following
+sowing, plants were lightly watered from above and vernalised in a 4\degc\ cool room for three days.
+Plants were germinated under static growth conditions, of approximately 120 \uE, 21\degc, with a 12
+hour photoperiod. Following thinning, the remaining plants were established under these conditions
+for two weeks, before being distributed between three SpectralPhenoClimatron growth cabinets, with
 temperature, humidity and lighting controlled according to the sufficient, excess and fluctuating
 light dynamic growth conditions described in \autoref{subsec:dc-res-mygrowthcond}. Plants continued
 to grow under these conditions until and beyond harvesting. Throughout plant growth in the
 SpectralPhenoClimatron, high resolution images were captured at 20 minutes intervals to enable
-analysis of growth using high-throuput phenomics, a study beyond the scope of this thesis
-
-\todo{this really needs some cleaning, per dad's comments also}
-
-To assay plant response to hot excess light, plants were exposed to one hour of 8x hot excess light
-from sodium vapour and tungsten filament lamps in a Conviron growth cabinet. To enable study of
-transcriptomic responses to this assay, one fully expanded leaf was taken from each of the 576
-\todo{check this number} surviving plants between 0 and 10 minutes before and after this excess
-light treatment. To do so, petioles were cut with clean scissors, and leaves gently rolled without
-crushing to facilitate placement in 96 well 1.2 mL deep well plates. Plates were kept in dry ice
-while harvesting occurred, and were transferred to -80\degc\ freezers for storage.
+analysis of growth using high-throughput phenomics, a study beyond the scope of this thesis
 
 
-%\subsubsection{Phenomic dataset generation}
-%does this go here or ch4?
-%\todo{Tim: images from Col, Cvi, Ler from all time-points}
+To assay plant response to hot excess light, plants were exposed to one hour of hot excess light
+from sodium vapour and tungsten filament lamps in a Conviron growth cabinet. In this stress,
+hereafter referred to as hot excess light, temperature was maintained at approximately 30\degc\ and
+light intensity at approximately 1000\uE\ .To enable study of transcriptomic responses to this
+assay, one fully expanded leaf was taken from each of the surviving plants between 0 and 10 minutes
+before and after this excess light treatment. To do so, petioles were cut with clean scissors, and
+leaves gently rolled without crushing to facilitate placement in 96 well 1.2 mL deep well plates.
+Plates were kept in dry ice while harvesting occurred, and were transferred to -80\degc\ freezers
+for storage.
 
-%\subsection{Unsuccessful generation of an eQTL mapping dataset}
+
 \subsection{RNAseq Library Preparation and Sequencing}
 \label{subsec:txv-mth-libprep}
 
@@ -108,11 +102,11 @@ pulse.
 {\sn & \acc & \gc & \hl}
 {Samples analysed by RNAseq and qPCR. These samples are referred to by their sample numbers for the
 remainder of this thesis. Treatments 0h and 1hHL refer to samples taken before and after one hour
-treamtent with hot excesss light. Growth conditions of sufficient, fluctuaing and excess refer to
+treatment with hot excess light. Growth conditions of sufficient, fluctuating and excess refer to
 their respective dynamic growth conditions.}
 
 Total nucleic acids (TNA) were extracted from samples using a commercial reagent (Trizol, Life
-Technologies, \todo{details}) immediately after grinding. Total nucleic acids were extracted by
+Technologies) immediately after grinding. Total nucleic acids were extracted by
 adding 1mL of Trizol to each well-ground sample and shaking vigorously by hand, before adding
 200\ul chloroform and shaking by hand again. Samples were incubated for 3 minutes at room
 temperature, before centrifugation at 14000 rcf for 10 min in a chilled centrifuge. The TNA contained
@@ -159,12 +153,12 @@ performed at the Bio-molecular Resource Facility, John Curtain School of Medical
 \subsection{Computational Analysis of RNAseq Data}
 \label{subsec:txv-mth-rnaseqanalysis}
 
-\todo{stuff on including Pete's dataset}
+
 Raw Illumina paired-end 100bp sequence data was obtained as gzipped FASTQ files from the BRF. To
 gauge the quality of the obtained sequence data, several analyses were conducted. Firstly, the
 number of reads obtained from each library were calculated using the code shown in listing
 \autoref{lst:countreadspersample} below. Then, PHRED scores (defined as $-10\:log_{10}(P)$, where
-$P$ is the probability of error at a given position) for each sequnce base in each library were
+$P$ is the probability of error at a given position) for each sequence base in each library were
 analysed using analysis pipelines described in \autoref{subsec:br-res-pipeline}.
 
 \kminputcode
@@ -173,24 +167,14 @@ analysed using analysis pipelines described in \autoref{subsec:br-res-pipeline}.
 {Count the number of reads in raw sequence files}
 {lst:countreadspersample}
 
-Analysis pipelines described in \autoref{subsec:br-res-pipeline} were applied to this dataset.
-Firstly, the \texttt{aln\_subread} pipeline computed read counts gene-wise from raw short reads, using
-the \texttt{kevin-hons-pairwise.key} keyfile (see listing \autoref{lst:txv-mth-kmhonspairwisekey}). Then,
-both \texttt{de\_pairwise} and \texttt{de\_glm} pipelines were used independently to test for
-differential expression, using the kevin-hons-pairwise.key keyfile and the
-kevin-hons-glm.key keyfile and edgeR-glm-kmhons.R GLM setting script respectively (see listings
-\ref{lst:txv-mth-kmhonspairwisekey}, \ref{lst:txv-mth-kmhonsglmkey}, and
-\ref{lst:txv-mth-kmhonsglmR}).
-A general linear model (GLM) of the form $\sim\;Group$ was fitted, according to the keyfile shown in
-listing \ref{lst:txv-mth-kmhonsglm}. Statistical tests for differential expression between contrasts
-shown in listing \ref{lst:txv-mth-kmhonsglmR}.
-\todo{Rewrite analysis methods - lower priority. remove pairwise!}
-
-%\kminputcode
-%{text}
-%{tables/kevin-hons-pairwise.key}
-%{The \texttt{kevin-hons-pairwise.key} keyfile}
-%{lst:txv-mth-kmhonspairwisekey}
+Analysis pipelines described in \autoref{subsec:br-res-pipeline} were applied to this dataset, and
+the RRGS dataset described in \autoref{subsec:br-mth-datasets}.  Firstly, the \texttt{aln\_subread}
+pipeline computed read counts gene-wise from raw short reads, using the keyfile below (listing
+\autoref{lst:txv-mth-kmhonsglmkey}). Then, the \texttt{de\_glm}
+pipeline was used  test for differential expression.  A general linear model (GLM) of
+the form $\sim\;Group$ was fitted, according to the keyfile shown in listing
+\ref{lst:txv-mth-kmhonsglm}. Statistical tests for differential expression between contrasts shown
+in \autoref{tab:txv-res-desummary}.
 
 \begin{landscape}
   \kminputcode
@@ -248,7 +232,7 @@ arbitrary unit of quantification suitable for relative quantification.  Quantifi
 PP2AA3 was then calculated sample-wise for all primer sets analysed, using custom analysis code in R
 (see \autoref{subsec:apx-code-qpcr}). An ANOVA model was fitted to relative quantification, with
 Tukey's honest significant differences post-hoc testing to determine specific effects.
-\todo{tukey ref}   
+
 
 \begin{landscape}
   \kmdefaulttable
@@ -268,18 +252,9 @@ Tukey's honest significant differences post-hoc testing to determine specific ef
 \section{Results}
 \label{sec:txv-res}
 
-\subsection{QTL mapping datasets}
-
-Many RIX lines exhibited very poor germination or survival rates, Because of this, only 40 to 60 RIX
-lines had at least one plant survive to harvesting, a reduction in statistical power for
-mapping.
-
-\todo{paragraph about RIX mapping dataset. keep it brief.}
-
 \subsection{Quantification of Transcriptome-wide Responses to Altered Light Intensity Under Novel
 Growth Conditions}
 \label{subsec:txv-res-rnaseq}
-
 
 \subsubsection{Successful Preparation of RNAseq Libraries}
 \label{subsubsec:txv-res-libprep}
@@ -330,7 +305,7 @@ all samples have a RIN of at least 6, indicating acceptable quality.}
     \label{fig:txv-res-finalpcr}
   \end{figure}
 \end{landscape}
-%\todo{point to each feature and refence this in caption bioanalyser}
+
 
 \begin{figure}[p]
   \begin{center}
@@ -346,7 +321,6 @@ all samples have a RIN of at least 6, indicating acceptable quality.}
 
 \subsubsection{Obtaining a High Quality RNAseq Dataset}
 \label{subsubsec:txv-res-libqual}
-\todo{better word for obtaining}
 
 To quantify global gene expression accurately, it is important to ensure the quality of raw
 sequencing data is acceptable. Ensuring approximately even sequencing depth across  libraries
@@ -481,15 +455,15 @@ warrant further --- albeit cautious --- investigation of this dataset.
     trend is preserved across samples from plants grown under both dynamic and static growth
     conditions. Replicates within the rapid recovery gene silencing dataset (Static 0h and Static
     1hHL) cluster together tightly compared with replicates from the dynamic growth condition
-    dataset (Excess, Fluctuating and Sufficient 0h and 1hHL).  Note the meaning of axes is arbitrary;
+    dataset (Excess, Fluctuating and Sufficient 0h and 1hHL). Additionally, the is a trend towards
+    higher growth condition light intensities towards negative values of axis 1. Note the meaning of axes is arbitrary;
     they are pseudo-variables that selected to separate samples based upon log-fold-changes between
     samples. Goodness of Fit (GOF) indicates that together, these two axes account for 90\% of
     variation between samples, indicating that the majority of difference across entire
     transcriptomes between samples is described within this plot.}
   \label{fig:txv-res-plotmds}
 \end{figure}
-\todo{mention distance between samples in mds}
-\todo{fix fig sizes}
+
 
 \subsubsection{Differential expression between dynamic growth conditions}
 \label{subsubsec:txv-res-diffexp}
@@ -521,9 +495,10 @@ expressed after one hour of hot high light treatment in plants grown under stati
   {\cn=Contrast, \cdef=Definition, \down=nDown, \up=nUp}
   {\cn & \cdef & \down & \up}
   {Summary of differential expression between contrasts. The number of genes induced (up-regulated)
-  or repressed (down-regulated) in each contrast with a false discovery rate of below 0.05.}
+  or repressed (down-regulated) in each contrast with a false discovery rate of below 0.05 is
+  described.}
 \end{landscape}
-\todo{table captions}
+
 
 \begin{figure}[p]
   \begin{center}
@@ -574,9 +549,9 @@ most significantly enriched GO terms in all differential expression tests are de
 {\t}
 {Gene Ontology terms significantly enriched in genes differentially expressed after treatment with
 one hour of hot excess light in all dynamic growth conditions and static growth conditions. These
-terms are those preserved across all conditions.}
+terms are those preserved across all conditions, and describe a commonality of response involving
+genes known to be involved in abiotic stress response}
 
-\todo{another table catption}
 
 \subsection{Expression Patterns of Excess Light Marker Genes}
 \label{subsec:txv-res-markergenes}
@@ -603,9 +578,9 @@ expression are summarised in \autoref{fig:txv-res-qpcrfc}.
     \includegraphics[width=\textwidth]{img/txv-res-qpcrfc.png}
   \end{center}
   \caption{Differential induction of excess light marker genes by one hour of hot excess light.
-    Statstically signficant differential induction between static and dynamic growth condtitions is
-    observed for \textit{APX2} and \textit{ELIP1}; similar non-signficant patterns are observed for
-    \textit{ELIP2}. No signficant or qualatative difference in LHCB repression by hot excess light is
+    Statistically significant differential induction between static and dynamic growth conditions is
+    observed for \textit{APX2} and \textit{ELIP1}; similar non-significant patterns are observed for
+    \textit{ELIP2}. No significant or qualitative difference in LHCB repression by hot excess light is
     observed.}
   \label{fig:txv-res-qpcrfc}
 \end{figure}
