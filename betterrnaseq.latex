@@ -127,8 +127,7 @@ summarise the computational cost of these four pipelines across five identical, 
 non-simultaneous runs. Four time-points of the RRGS timecourse dataset were sub-sampled to 500,000
 reads by running \texttt{\justify seqtk sample -s 10 500000} on both forward and reverse read files,
 which extracts 500000 random read pairs preserving read pairing. An ANOVA analysis was performed to
-find significant differences in runtime and CPU utilisation between analysis pipelines (see
-\autoref{subsec:appendix-misccode-pltimes}).
+find significant differences in runtime and CPU utilisation between analysis pipelines.
 
 To ensure that the \texttt{\justify subread} aligner and \texttt{\justify featureCounts} produced
 comparable results to the analysis pipeline of \textcite{van_verk_rna-seq:_2013}, several diagnostic
@@ -154,7 +153,7 @@ For each subsampled dataset, the \texttt{\justify km\_subread} pipeline followed
 \texttt{\justify de\_pairwise} pipeline were applied  to find differential expression between the
 control and 30 minute excess light timepoints (these pipelines are described in
 \autoref{subsec:br-res-pipeline}). Several metrics were then used to summarise the effect of
-sequencing depth on the statiscial power of differential expression analysis. The number of genes
+sequencing depth on the statistical power of differential expression analysis. The number of genes
 called as differentially expressed at each sequencing depth was calculated, as was the common
 biological coefficient of variation. A third measure, the log-transformed mean expression level of
 the least-expressed differentially expressed gene and the overall least-expressed gene were
@@ -188,39 +187,37 @@ bioinformatics, and ensured the reproducibility of results obtained.
 
 \subsection{An Improved Analysis Pipeline for Large Plant RNAseq Datasets}
 \label{subsec:br-res-pipeline}
-
 A series of two-step pipelines to analyse RNAseq datasets have been developed. Step one
 (\texttt{\justify aln\_subread}, \texttt{\justify aln\_subjunc} and \texttt{\justify aln\_tophat})
 taking raw sequence reads and produces summarised gene-wise counts. Step two (\texttt{\justify
-de\_pairwise} and \texttt{\justify de\_pairwise}) applies statistical normalisation techniques and
-tests for differential expression. When applied combinatorially, these pipelines allow for different
+de\_glm} or \texttt{\justify de\_pairwise}) applies statistical normalisation techniques and tests
+for differential expression. When applied combinatorially, these pipelines allow for different
 experimental designs to be analysed. \autoref{tab:br-mth-programs} describes each software element
 of these pipelines, reasons for their selection, and references to literature describing each
-component. 
+component.
 
 \subsubsection{The \texttt{\justify aln\_subread} pipeline}
 \label{subsubsec:br-res-alnsubread}
-In this pipeline, quality of sequencing
-data is checked using \texttt{\justify fastqc} \autocite{andrews_fastqc_2013},
-sequencing adaptors are removed with \texttt{\justify scythe} \autocite{buffalo_scythe_2013}, and
-\texttt{\justify seqtk} removes low quality sequences, before the quality is again checked using
-\texttt{\justify fastqc}. The \texttt{\justify subread} aligner, a very fast RNAseq-compatible
-short read aligner, then aligns reads to the current TAIR10 \textit{A. thaliana} reference genome. Gene expression is summarised gene-wise by counting the number of reads which align
-to genic loci with \texttt{\justify featureCounts}, completing the pipeline.
+In this pipeline, quality of sequencing data is checked using \texttt{\justify fastqc}
+\autocite{andrews_fastqc_2013}, sequencing adaptors are removed with \texttt{\justify scythe}
+\autocite{buffalo_scythe_2013}, and \texttt{\justify seqtk} removes low quality sequences, before
+the quality is again checked using \texttt{\justify fastqc}. The \texttt{\justify subread} aligner,
+a very fast RNAseq-compatible short read aligner, then aligns reads to the current TAIR10 \textit{A.
+thaliana} reference genome. Gene expression is summarised gene-wise by counting the number of reads
+which align to genic loci with \texttt{\justify featureCounts}, completing the pipeline.
 
 \subsubsection{The  \texttt{\justify aln\_tophat} pipelines}
 \label{subsubsec:br-res-alnsplicing}
 For studies examining alternative splicing of mRNA transcripts, an aligner able to detect splicing
-\textit{de novo} is required \autocite{kim_tophat2:_2013}. \texttt{\justify Tophat2}, one of the most
-popular RNAseq aligners, is able to align short reads while detecting slicing isoforms
-\autocite{kim_tophat2:_2013}. \texttt{\justify aln\_tophat} is identical to the \texttt{\justify aln\_subread}
-pipeline, except it uses the \texttt{\justify Tophat2} aligner, allowing study of
+\textit{de novo} is required \autocite{kim_tophat2:_2013}. \texttt{\justify Tophat2}, one of the
+most popular RNAseq aligners, is able to align short reads while detecting slicing isoforms
+\autocite{kim_tophat2:_2013}. \texttt{\justify aln\_tophat} is identical to the \texttt{\justify
+aln\_subread} pipeline, except it uses the \texttt{\justify Tophat2} aligner, allowing study of
 alternative splicing. However, this \textit{de novo} detection of splicing comes at a performance
 cost, and is not necessary for simple quantitation of gene expression.
 
 \subsubsection{\texttt{\justify de\_pairwise}}
 \label{subsubsec:br-res-depairwise}
-
 For paired experimental designs, pairwise statistical tests can be performed between samples. The
 \texttt{\justify de\_pairwise} pipeline implements these tests using the \texttt{\justify edgeR} R
 package. This pipeline first reads count files, removes loci not detected above statistical noise
@@ -316,8 +313,7 @@ increases in biological coefficient of variation (data not shown). For the exper
 in this experiment, I would recommend an optimal sequencing depth of approximately 5 million reads
 (or read pairs) to balance statistical power against additional sequencing cost. Budget permitting,
 more biological replicates or treatments should be included before sequencing is performed. These
-results have important implications for experimental design of current and future experiments
-underway.
+results have important implications for experimental design of future experiments.
 
 
 \begin{figure}[p]
