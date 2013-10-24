@@ -195,4 +195,27 @@ length of the library reduced almost imperceptibly (Figure \ref{fig:txv-res-fast
   \label{fig:txv-res-fastqc-before-sld}
 \end{figure}
 
+\subsection{Sequencing Depth Effect on Biological Coefficient of Variation}
+\label{apx-plots-bcvcoverage}
+
+BCV plots across all sequening depths in the experiment outlined in \autoref{subsec:br-res-coverage}
+
+\subsection{Gene ontology term enrichment between differential expression contrasts}
+\label{subsec:apx-tabs-go}
+
+
+  \kmdefaulttable
+  {txv-res-topgoterms}
+  {tables/txv-res-gosteady.csv}
+  {cp{2cm}ccp{3cm}ccp{3cm}ccp{3cm}c}
+  {\multicolumn{6}{c}{Excess vs Sufficient} & \multicolumn{6}{c}{Fluctuating vs Sufficient} \\
+  \multicolumn{3}{c}{Differentially Expressed} & \multicolumn{3}{c}{Differentially induced} &
+  \multicolumn{3}{c}{Differentially Expressed} & \multicolumn{3}{c}{Differentially induced} \\
+  Term & $p$ & Category &  Term & $p$ & Category & Term & $p$ & Category & Term & $p$ & Category\\}
+  {\dest=Esterm, \desp=Esp, \desc=Escat, \iest=Esiterm, \iesp=Esip, \iesc=Esicat, 
+  \dfst=Fsterm, \dfsp=Fsp, \dfsc=Fscat, \ifst=Fsiterm, \ifsp=Fsip, \ifsc=Fsicat}
+  {\dest & \desp & \desc & \iest & \iesp & \iesc & \dfst & \dfsp & \dfsc & \ifst & \ifsp & \ifsc\\}
+  {Go terms signficicantly enriched in differentially expressed}
+
+
 
