@@ -22,19 +22,6 @@ mimic field-like combinations of light, temperature and humidity.  Specifically,
 effect of light intensity on global gene expression, within the framework of growth conditions whose
 temperature, humidity and light follow trends that approximate those observed in regional climates.
 
-%the quality or quantity of light a plant receives is not optimal. Excess light is particularly
-%damaging, causing both reductions in photosynthetic ability (photoinhibition) and cellular or
-%tissue damage and death. Thus, plants have evolved mechanisms by which the detrimental effects of
-%excess light can be minimised. These mechanisms, collectively termed photoprotection, work to
-%dissipate excess energy, reduce the amount of light absorbed, or prevent or repair any damage
-%caused \autocite{niyogi_photoprotection_1999}.
-%\todo{Get some measure of the global cost of photodamgage}
-%\todo{make this less mechanistic, more borevitzy - subtle changes is the key}
-
-%  Although difficult to quantify on a global scale, the
-%  cost of the  detrimental effects of excess light on primary productivity is high
-%  \autocite{raven_cost_2011}.
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Stress and Coping Mechanisms   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Abiotic Stress: A limit to Plant Productivity}
@@ -53,27 +40,23 @@ stresses limit plant productivity through their detrimental effects upon the abi
 assimilate biomass, and coping mechanisms that plants have evolved generally come at a yield penalty
 \autocite{mittler_abiotic_2006}. As a result, enormous effort has been directed towards the
 elucidation and improvement of these coping mechanisms. In particular, the mechanisms by which
-excess light impact on plants, and how plants respond to this stress, have been major foci of
-research in the past decade.
+excess light impacts upon plants, and how plants respond to this stress, have been major foci of
+research.
 
 \todo{blurry comment from Barry}
 
-Plants respond to abiotic stress via a myriad of mechanisms
-\autocite{demmig-adams_photoprotection_1992}, therefore responses to abiotic stress must be studied
-via a variety of techniques. Studies of photosynthetic characteristics by chlorophyll fluorescence
-\autocite[reviewed in][]{baker_chlorophyll_2008} have illustrated the negative effects of abiotic
-stress on photosynthesis \autocite{kulheim_rapid_2002, mishra_arabidopsis_2012,
-alter_acclimatory_2012, tikkanen_regulation_2012}. Phenotypic analysis, particularly of plant
-morphology, has given insight into the effects of abiotic stress
-\autocite{wituszynska_multivariable_2013, armstrong_assessing_2007}. Studies of the transcriptome,
-or global cellular pool of expressed genes, have provided insight into plant responses to many
-abiotic stresses and combinations thereof \autocite{rossel_global_2002, kimura_identification_2003,
-seki_monitoring_2001, atkinson_identification_2013}.
+Plants respond to abiotic stress via a myriad of mechanisms, therefore responses to abiotic stress
+must be studied via a variety of techniques \autocite{demmig-adams_photoprotection_1992}. Studies of
+photosynthetic characteristics by chlorophyll fluorescence \autocite[reviewed
+in][]{baker_chlorophyll_2008} have illustrated the negative effects of abiotic stress on
+photosynthesis \autocite{kulheim_rapid_2002, mishra_arabidopsis_2012, alter_acclimatory_2012,
+tikkanen_regulation_2012}. Phenotypic analysis, particularly of plant morphology, has given insight
+into the effects of abiotic stress \autocite{armstrong_assessing_2007,wituszynska_multivariable_2013}.
+Studies of the transcriptome, or global cellular pool of expressed genes,
+have provided insight into plant responses to many abiotic stresses and combinations thereof
+\autocite{seki_monitoring_2001, rossel_global_2002, kimura_identification_2003,
+atkinson_identification_2013}.
 
-\todo{better papers JB ADD SOMETHING ABOUT HOW DIFFERENT PLANTS (SPECIES AND GENOTYPES) ARE MORE SUITED FOR DIFFERENT AMOUNTS OF LIGHT
-EG SHADE VS SUN PLANTS, FOREST, WOODLAND, SAVANA TYPES, TROPIC VS TEMPERATE, WHAT IS THE GENETIC BASIS OF THIS DIFFERENTIATION IN LIGHT SENSITIVITY? SOME PATHWAYS ARE HYPOTHESIZED, KEY GENES IDENTFIED, PHYA CRY2}
-%(cite paper/review describing effects, paper showing constitutive expression of some HSF, or
-%other stress mitigator)
 \todo{genetic variation}
 
 
@@ -134,7 +117,7 @@ reduce the photo-oxidative damage of cells and tissues due to excess light.
     in light intensity.}
   \label{fig:intro-ps}
 \end{figure}
-
+\todo{citration}
 
 \subsection{Transcriptional Responses to Light Stress}
 \label{subsec:intro-resp-txome}
@@ -151,7 +134,7 @@ chloroplastic stress signals (\textit{APX2}) \autocite{karpinski_systemic_1999},
 photoreceptor-dependent induction of \textit{ELIP1} \autocite{kleine_genome-wide_2007} and
 ROS-induced, heat shock transcription factor (HSF) mediated induction of HSPs
 \autocite{miller_could_2006}. The light induced down-regulation of \textit{\underline{L}IGHT
-HARVESTING \underline{C}HLOROPHYLL a/b \underline{B}INDING} \textit{LHCB} family genes is also well
+HARVESTING \underline{C}HLOROPHYLL a/b \underline{B}INDING} (\textit{LHCB}) family genes is also well
 established \autocite{rossel_global_2002, mishra_arabidopsis_2012}. Therefore, these genes are used
 in this thesis as markers of transcriptional response to excess light, allowing comparison of
 transcriptional responses observed in this thesis to be compared to relevant previous works.
@@ -168,27 +151,27 @@ expression of single genes, \textcite{gordon_systemic_2013} have show that repea
 treatments lead to acclimation and reduced induction of high light responsive transcripts. These
 transcriptomic responses to light overlap with response to drought, pathogen or oxidative stresses
 as well as hormone response, reiterating the requirement of stresses to be considered in
-combination. No genome-wide study of transcriptional response to altered light intensity in
-combination with other abiotic stresses has, to my knowledge, been published.  \todo{kimura, other
-Pogson microarrays}
+combination.
+%No genome-wide study of transcriptional response to altered light intensity in
+%combination with other abiotic stresses has, to my knowledge, been published.
 
 In addition to light quantity, plants perceive alterations in light quality, or the spectral
 composition of light. \textcite{gordon_systemic_2013} demonstrate that excess light induced
-expression of \textit{RRTF1} and \textit{ZAT10} was dependent on wavelength of excess light in
-\textit{Arabidopsis}. Light quality is particularly important in studies of photo-oxidative damage,
-as the extent of photosystem II damage is not consistent across the visible spectrum
-\autocite{takahashi_solar_2010}, and photo-oxidative damage is relatively more severe under light of
-wavelengths between 580-620nm than in the remainder of the visible spectrum, which overlaps with a
-density peak in the spectral power density of fluorescent lamps (see
-\autoref{fig:dc-res-spectra-norm}). The integration of light quality into assays which test plant
-responses to altered light intensity is lacking in the vast majority of works on the topic.
-\todo{perhaps spruik the SPC here also. LED lights are arriving, studies emerging, and you with SPC are in the lead}
+expression was dependent on wavelength of excess light in \textit{Arabidopsis}. Light quality is
+particularly important in studies of photo-oxidative damage, as the extent of photosystem II damage
+is not consistent across the visible spectrum \autocite{takahashi_solar_2010}, and photo-oxidative
+damage is relatively more severe under light of wavelengths between 580-620nm than in the remainder
+of the visible spectrum, which overlaps with a density peak in the spectral power density of
+fluorescent lamps (see \autoref{fig:dc-res-spectra-norm}). The integration of light quality into
+assays which test plant responses to altered light intensity is lacking in the vast majority of
+works on the topic.  \todo{perhaps spruik the SPC here also. LED lights are arriving, studies
+emerging, and you with SPC are in the lead}
 
 \subsection{Plant Growth Under Field Conditions}
 \label{subsec:intro-resp-field}
 
 Plants grown in the field show markedly different phenotypes and responses to those grown in the
-lab.  Under field conditions, plants respond to the combination of stresses they encounter in
+laboratory. Under field conditions, plants respond to the combination of stresses they encounter in
 complex, natural environments. However, in the laboratory plants are exposed to pre-determined
 stresses (or combinations thereof) hypothesised to provoke a mechanism or response. This includes
 metabolic profiles \autocite{jankanpaa_metabolic_2012}, transcript abundances
@@ -204,40 +187,36 @@ wituszynska_multivariable_2013}.  \todo{more field constitutive expression paper
 \section{Abiotic Stresses: Studied Individually, Encountered Combinatorially}
 \label{sec:intro-combstress}
 
-Despite the large body of published works elucidating responses to
-abiotic stresses, the majority of works focus on an abiotic stress in isolation
-\autocite{atkinson_interaction_2012, mittler_abiotic_2006}. While there is much merit to this
-reductionist approach, in natural or agricultural
-situations, plants rarely experience an abiotic stress in isolation. Unfortunately, this
-reductionist approach contributes to
-the difficulty in translating stress-tolerant lines of plants developed in labs to agricultural
-crops that are  more field hardy \autocite{mittler_abiotic_2006, mittler_genetic_2010}. 
+Despite the large body of published works elucidating responses to abiotic stresses, the majority of
+works focus on an abiotic stress in isolation \autocite{atkinson_interaction_2012,
+mittler_abiotic_2006}. While there is much merit to this reductionist approach, in natural or
+agricultural situations, plants rarely experience an abiotic stress in isolation. Unfortunately,
+this reductionist approach contributes to the difficulty in translating stress-tolerant lines of
+plants developed in labs to agricultural crops that are  more field hardy
+\autocite{mittler_abiotic_2006, mittler_genetic_2010}.
 
-%\autocite{mittler_abiotic_2006}.
 Recent laboratory studies have demonstrated temperature interacts with light stress in a detrimental
 fashion.  At cold temperatures, unacclimated plants are less able to dissipate excess energy to
 avoid photo-oxidative damage, leading to altered PS I/PS II redox poise
 \autocite{armstrong_assessing_2007}. Many authors demonstrate temperature dependence on the
-transcriptional response to excess light \autocite{rossel_global_2002, jung_subsets_2013}.
+transcriptional response to excess light \autocite{rossel_global_2002, jung_subset_2013}.
 Interactions with temperature have been observed in the transcriptional response to drought
 \autocite{seki_monitoring_2001, seki_molecular_2003, rizhsky_combined_2002, rizhsky_when_2004}.
-Additionally, interactions between biotic and abiotic stresses exist \autocite{mittler_abiotic_2006,
-atkinson_interaction_2012, atkinson_identification_2013}. The data these authors present warrants a
-paradigm shift towards the study of abiotic stresses in combination, as advocated by
-\textcite{mittler_abiotic_2006}.
-
-\todo{find something more convincing than that paper of Owen's}.
+Additionally, interactions between biotic and abiotic stresses exist, but are beyond the scope of
+this thesis \autocite{mittler_abiotic_2006, atkinson_interaction_2012,
+atkinson_identification_2013}. The data these authors present warrants a paradigm shift towards the
+study of abiotic stresses in combination, as advocated by \textcite{mittler_abiotic_2006}.
 
 Field-grown plants tend to demonstrate reduced survival, reproduction and altered transcriptional
-responses compared to those grown in supposedly comparable lab conditions. For example, in
+responses compared to those grown in supposedly comparable laboratory conditions. For example, in
 \textit{Arabidopsis thaliana} the reduction in reproductive success caused by the \textit{npq1} and
 \textit{npq4} mutations was severe in the field but had no impact under static sufficient light in
-the lab \autocite{kulheim_rapid_2002}.  Similarly, photoinhibition, physiological symptoms of
+the laboratory \autocite{kulheim_rapid_2002}.  Similarly, photoinhibition, physiological symptoms of
 abiotic stress and expression of high light-induced transcripts were more severe in field-grown
-\textit{Solidago altissima} than those grown in comparable lab conditions
+\textit{Solidago altissima} than those grown in comparable laboratory conditions
 \autocite{barua_interactive_2006}. Furthermore, \textcite{wituszynska_multivariable_2013} observe
 increased steady-state expression of genes involved in response to excess light and photo-oxidative
-damage under field conditions compared to lab-grown plants, and concomitant physiological
+damage under field conditions compared to laboratory-grown plants, and concomitant physiological
 acclimation to variable light intensity. Similar findings are presented by
 \textcite{mishra_arabidopsis_2012}, who found increased NPQ and expression of ELIP proteins and
 decreased LHC-associated protein abundances in field-grown \textit{Arabidopsis}. These field studies
