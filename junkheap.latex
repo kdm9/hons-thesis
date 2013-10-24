@@ -219,3 +219,70 @@ BCV plots across all sequening depths in the experiment outlined in \autoref{sub
 
 
 
+%the quality or quantity of light a plant receives is not optimal. Excess light is particularly
+%damaging, causing both reductions in photosynthetic ability (photoinhibition) and cellular or
+%tissue damage and death. Thus, plants have evolved mechanisms by which the detrimental effects of
+%excess light can be minimised. These mechanisms, collectively termed photoprotection, work to
+%dissipate excess energy, reduce the amount of light absorbed, or prevent or repair any damage
+%caused \autocite{niyogi_photoprotection_1999}.
+%\todo{Get some measure of the global cost of photodamgage}
+%\todo{make this less mechanistic, more borevitzy - subtle changes is the key}
+
+%  Although difficult to quantify on a global scale, the
+%  cost of the  detrimental effects of excess light on primary productivity is high
+%  \autocite{raven_cost_2011}.
+
+\todo{better papers JB ADD SOMETHING ABOUT HOW DIFFERENT PLANTS (SPECIES AND GENOTYPES) ARE MORE SUITED FOR DIFFERENT AMOUNTS OF LIGHT
+EG SHADE VS SUN PLANTS, FOREST, WOODLAND, SAVANA TYPES, TROPIC VS TEMPERATE, WHAT IS THE GENETIC BASIS OF THIS DIFFERENTIATION IN LIGHT SENSITIVITY? SOME PATHWAYS ARE HYPOTHESIZED, KEY GENES IDENTFIED, PHYA CRY2}
+%(cite paper/review describing effects, paper showing constitutive expression of some HSF, or
+%other stress mitigator)
+
+To quantify global gene expression accurately, it is important to ensure the quality of raw
+sequencing data is acceptable. Ensuring approximately even sequencing depth across  libraries
+ensures sequencing depth does not confound differential expression analysis. As detailed in
+\autoref{tab:txv-res-libcoverage}, library depth variation was within an order of magnitude across
+both lanes sequenced. The two lanes of sequencing yielded 153 and 143 million reads respectively,
+averaging 15.3 $\pm$ 2.7 million and 11.9 $\pm$ 1.0 million reads per sample respectively (means
+$\pm$ standard deviation). Coverage in lane 1 is expected to be lower, as its overall coverage is
+lower and it contained 12 samples compared with 10 in lane 2. Low-level sequence quality as gauged
+by \texttt{fastqc} was high \autocite{andrews_fastqc_2012}. The 25th percentile PHRED quality score
+exceeded 28 at every base in all sequence libraries before any quality control (see
+\autoref{fig:txv-res-fastqc-pbq}). Following sequence quality control, the minimal 25th percentile
+PHRED score increased to 30.  These basic statistics show the sequencing of RNAseq libraries was
+successful and the resulting data suitable for further analysis.
+
+\kmdefaulttable
+{txv-res-libcoverage}
+{./tables/txv-res-libcoverage.csv}
+{ccc}
+{\multirow{2}{*}{Library} & \multicolumn{2}{c}{Reads per Library (Millions)}\\
+& Pre QC & Post QC}
+{\lib=Library, \pre=MreadsPreQC, \post=LibSize}
+{\lib & \pre & \post}
+{RNAseq library sequencing depth. Reads per library before and after quality control refer to the
+length of raw sequence data, and to the size of the libraries immediately before statistical analysis
+of differential expression, after sparse tags and non-protein coding loci were removed. Libraries
+19-22 were sequenced on behalf of a colleague, and do not form part of this thesis, thus have not
+been analysed for differential expression.}
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{img/txv-res-fastqc-before-per_base_quality.png}
+    \includegraphics[width=\textwidth]{img/txv-res-fastqc-after-per_base_quality.png}
+  \end{center}
+  \caption{Per-base quality before (top) and after (bottom) quality control. These box-plots
+    describe, per-position in each read (x-axis), quartiles and medians of PHRED quality score,
+    which is related to probability of sequencing error at each position. PHRED scores of greater
+    than 30 are considered good, and scores are expected to be lower towards the 3' end of read
+    sequences, due to sequencing technology \autocite{andrews_fastqc_2013}}
+  \label{fig:txv-res-fastqc-pbq}
+\end{figure}
+
+The very high proportion of sequence reads which aligned to the genome, and moreover to protein
+coding loci, is a further indicator of dataset integrity. \autoref{tab:txv-res-mappingstats}
+describes the sample-wise percentages of reads which map to the genome and transcriptome. Over 99
+percent of reads map to the genome in all samples, the vast majority of which align to
+protein-coding genes (97-99\%). Ribosomal RNA depletion during library preparation was successful,
+with between 0.08\% and 1.6\% rRNA contamination across all libraries.
+
+
