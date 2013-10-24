@@ -29,9 +29,6 @@ creation of pipelines by non-expert bioinformaticians with limited programming e
 use this framework to create high-performance pipelines suited to analysis of high-throughput RNAseq
 experiments.
 
-\todo{WHY: a pgf here explaining this is a framework, and that it is generalisable, and that it aims
-to detect subtle differences in high throughput experiments}
-
 Additionally, I have conducted an \textit{in silico} experiment to test the effect of sequencing
 depth on statistical power of RNAseq experiments. Despite the rapid and continuing reduction in the
 cost of high throughput sequencing, it is still a very large component of the overall cost of RNAseq
@@ -44,7 +41,7 @@ reads per sample for Chicken tissue samples \autocite{wang_evaluation_2011}. How
 smaller transcriptome size, I hypothesise that the optimal sequencing depth for \textit{Arabidopsis}
 will be smaller, specifically between 2 and 5 million reads, or between 48 and 96 libraries per
 Illumina HiSeq 2500 sequencing lane (that yield 200 million reads apiece,
-\autocite{glenn_field_2011, illumina_brochure}).
+\autocite{glenn_field_2011}).
 
 
 %KEVIN, CONRAD AND OTHER GOOD STATS FOLKS HAVE LOOKED INTO THIS, BECAUSE OF BIOLOGICAL VARIATION THE OPTIMUM IS
@@ -106,7 +103,7 @@ against a published best-practice pipeline \autocite{van_verk_rna-seq:_2013}. Sp
 computational speed and efficiency, and the results obtained with these newer programs were compared
 to the analysis pipeline of \textcite{van_verk_rna-seq:_2013}. This enables the development of
 higher-performance analysis pipelines suitable to high throughput experiments, with no cost to the
-quality of results obtained. A summary of programs selections is described in
+quality of results obtained. A summary of program selections is described in
 \autoref{tab:br-mth-programs}.
 
 \begin{landscape}
@@ -117,9 +114,9 @@ quality of results obtained. A summary of programs selections is described in
   {Program & Program's Role & Reasons for Selection & References}
   {\pr=prog, \rl=role, \rs=reason, \rf=refs}
   {\texttt{\pr} & \rl & \rs & \rf}
-  {Selection of pipeline componets and their roles in an RNAseq analysis pipeline. These programs
+  {Selection of pipeline components and their roles in an RNAseq analysis pipeline. These programs
   were selected by review of relevant literature (References). Brief reasons for selection are
-  given. }
+  given, along with references that describe the implementation and validation of these software.}
 \end{landscape}
 
 Comparisons between the computational cost of four pipelines were conducted using a sub-sampled
@@ -228,7 +225,7 @@ For paired experimental designs, pairwise statistical tests can be performed bet
 \texttt{\justify de\_pairwise} pipeline implements these tests using the \texttt{\justify edgeR} R
 package. This pipeline first reads count files, removes loci not detected above statistical noise
 and non-protein coding loci, normalises counts using the trimmed Mean of M values normalisation
-method of \textcite{robinson_scaling_2010}. Transcritptome-wide and gene-wise dispersion are then
+method of \textcite{robinson_scaling_2010}. Transcriptome-wide and gene-wise dispersion are then
 calculated and tests are conducted between groups described in a keyfile. Tables of differential
 expression and diagnostic plots are also created.
 
@@ -237,16 +234,16 @@ expression and diagnostic plots are also created.
 % for example if experimental factors such as starting growth condition, treatment, genotype, and replicated block exist,
 If the experimental design is multi-factorial, pairwise analysis is inadequate and Generalised
 Linear Model-based hypothesis testing functions of \texttt{\justify edgeR} are required. This
-pipeline fits such models, and tests user-defined contrasts for differential expression. Proceses
+pipeline fits such models, and tests user-defined contrasts for differential expression. Processes
 analogous to those in the \texttt{\justify de\_pairwise} pipeline are performed, yielding similar
-tabular and graphical descritpionsof differential expression.
+tabular and graphical descriptions of differential expression.
 
 \subsection{Comparison of Differential Expression Pipelines}
 \label{subsec:br-res-plcommpare}
 
 A large difference in computational cost between four pipelines (\texttt{\justify aln\_subread},
 \texttt{\justify aln\_tophat}, \texttt{\justify aln\_tophat\_htseq} and \texttt{\justify \justify
-aln\_subread\_htseq}). These differnces were significant (ANOVA, 3 degrees of freedom (DF), F=15738
+aln\_subread\_htseq}). These differences were significant (ANOVA, 3 degrees of freedom (DF), F=15738
 p<2e-16) As is shown graphically in \autoref{fig:br-res-pltimes}, the \texttt{\justify aln\_subread}
 is the fastest, followed by the \texttt{\justify aln\_subread\_htseq} pipeline, the \texttt{\justify
 aln\_tophat} and the \texttt{\justify aln\_tophat\_htseq}. The computational time can become a
@@ -285,7 +282,7 @@ transcriptome, when compared to the \texttt{\justify aln\_tophat} pipeline.
     effect, all points (genes) would fall exactly on the $y=x$ line. There are off-diagonal points,
     however these occur mostly at low expression levels and are likely due to the required log
     transformation of count data. Note that there are almost 18,000 genes plotted here, and
-    off-diagonal scatter may, by eye, appear exadurated.}
+    off-diagonal scatter may, by eye, appear exaggerated.}
   \label{fig:br-res-srvsthcount}
 \end{figure}
 
@@ -300,7 +297,7 @@ transcriptome, when compared to the \texttt{\justify aln\_tophat} pipeline.
 {Percentage of mapped reads to genome and transcriptome. The \texttt{\justify aln\_subread} pipeline
 is able to map a slightly higher percentage of reads to both the genome and to the transcriptome
 when compared to the \texttt{\justify aln\_tophat} pipeline. This indicates it's increased
-sensititvity, and echoes findings by its authors \autoref{liao_subread_2013}}
+sensitivity, and echoes findings by its authors \autocite{liao_subread_2013}}
 
 
 \subsection{Substantial reduction of RNAseq coverage is possible}
@@ -322,7 +319,6 @@ more biological replicates or treatments should be included before sequencing is
 results have important implications for experimental design of current and future experiments
 underway.
 
-\todo{may need a polish}
 
 \begin{figure}[p]
   \begin{center}
@@ -340,7 +336,6 @@ underway.
 
 \section{Summary and Technical Discussion}
 \label{sec:br-summ}
-\todo{summary of br chapter}
 
 In this chapter, I have implemented a framework allowing easier creation and optimisation of RNAseq
 analysis pipelines. Via literature review and brief experimental validation, I have selected
@@ -350,7 +345,5 @@ designs. Subtle transcriptional variation requires software to be optimised for 
 statistical rigour, while optimising software for performance allows end users to conduct their own
 analyses, ensuring and end-to-end understanding of their experiments. Emphasis has been placed on
 reproducible analysis of RNAseq, ensuring the validity and reproducibility of results obtained. These
-advances allow for the examination of subtle transcriptome variation, such as between subtly
-different growth conditions.
-
-\todo{CRUCIAL: needs linking sentence}
+advances allow for the examination of subtle transcriptome variation, such as between
+different growth conditions or subtle genetic variation.
