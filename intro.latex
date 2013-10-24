@@ -15,12 +15,11 @@ functional plant ecology in a changing climate.
 Central to increasing the understanding of plant-environment interactions is the development of
 laboratory study systems that allow classical mechanistic studies of abiotic stress response to be
 placed in the context of the conditions plants experience in natural or cultivated environments
-outside laboratories. Several techniques and approaches that have been developed over the past
-decade aid the study of plant stress response. In this thesis, I discuss, develop and apply novel
+outside laboratories. In this thesis, I discuss, develop and apply novel
 techniques that enable the global study of gene expression in laboratory growth conditions which
-mimic field-like combinations of light, temperature and humidity.  Specifically, I examine the
+mimic field-like combinations of light, temperature and humidity. I examine the
 effect of light intensity on global gene expression, within the framework of growth conditions whose
-temperature, humidity and light follow trends that approximate those observed in regional climates.
+temperature, humidity and light follow trends approximating those observed in regional climates.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Stress and Coping Mechanisms   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -35,7 +34,7 @@ and obtain inorganic carbon vital to photosynthesis \autocite{seki_molecular_200
 mittler_abiotic_2006}. Excess light creates harmful reactive oxygen species (ROS) that damage the
 delicate photosynthetic apparatus \autocite{niyogi_photoprotection_1999, apel_reactive_2004,
 asada_production_2006, li_sensing_2009, foyer_redox_2009, mubarakshina_production_2010}. Extremes of
-temperature impair and  damage to many enzymes, particularly those involved in metabolism
+temperature impair and damage many enzymes, particularly those involved in metabolism
 \autocite{atkin_thermal_2003}. Together, abiotic stresses limit plant productivity through their
 detrimental effects upon the ability of plants to assimilate biomass, and secondarily via coping
 mechanisms which some plants have evolved \autocite{mittler_abiotic_2006}. As a result, enormous
@@ -60,16 +59,15 @@ responses exists, and allows for mechanistic study of such responses \autocite{l
 \subsection{Coping with Detrimental Effects of Excess Light: Photo-oxidative damage and Photoprotection}
 \label{subsec:intro-stress-photodamage}
 
-The ability of plants to utilise energy from light to fix inorganic carbon into organic biomass is
-reduced when the quality or quantity of light a plant receives is not optimal. The quantity of light
-a plant receives is in excess when plants are unable to utilise energy obtained from absorbed photos
-to fix carbon \autocite{li_sensing_2009}. Excess light is particularly damaging, causing both
-reductions in photosynthetic ability, termed photoinhibition, , and cellular or tissue damage and
-death \autocite{niyogi_photoprotection_1999, asada_production_2006, li_sensing_2009, suzuki_ros_2012}. The
-indispensability of photosynthesis has caused the evolution of mechanisms by which the detrimental
-effects of excess light can be minimised. These mechanisms, collectively termed photoprotection,
-work to dissipate excess energy, reduce the amount of light absorbed, and prevent and repair any
-damage caused \autocite{niyogi_photoprotection_1999, takahashi_photoprotection_2011}.
+The quantity of light a plant receives is in excess when plants are unable to utilise energy
+obtained from absorbed photos to fix carbon \autocite{li_sensing_2009}. Excess light is particularly
+damaging, causing both reductions in photosynthetic ability, termed photoinhibition, and cellular or
+tissue damage and death \autocite{niyogi_photoprotection_1999, asada_production_2006,
+li_sensing_2009, suzuki_ros_2012}. The indispensability of photosynthesis has caused the evolution
+of mechanisms by which the detrimental effects of excess light can be minimised. These mechanisms,
+collectively termed photoprotection, work to dissipate excess energy, reduce the amount of light
+absorbed, and prevent and repair any damage caused \autocite{niyogi_photoprotection_1999,
+takahashi_photoprotection_2011}.
 
 
 \subsection{Physiological Responses to Excess Light}
@@ -125,8 +123,8 @@ genes including \textit{\underline{A}SCORBATE \underline{P}ERO\underline{X}IDASE
 \autocite{rossel_global_2002, muhlenbock_chloroplast_2008}, \textit{\underline{E}ARLY
 \underline{L}IGHT \underline{I}NDUCED \underline{P}ROTEINS 1} and \textit{2} (\textit{ELIP1} and
 \textit{ELIP2}) \autocite{adamska_elips_1997, rossel_global_2002}, and various heat shock proteins
-(HSPs) \autocite{rossel_global_2002} is well established. These proteins are induced by alternative
-putative mechanisms, allowing for differentiation between oxidative induction of retrograde
+(HSPs) \autocite{rossel_global_2002} is well established. These proteins are induced by discrete but
+overlapping mechanisms, allowing for differentiation between oxidative induction of retrograde
 chloroplastic stress signals (\textit{APX2}) \autocite{karpinski_systemic_1999}, ROS-mediated but
 photoreceptor-dependent induction of \textit{ELIP1} \autocite{kleine_genome-wide_2007} and
 ROS-induced, heat shock transcription factor (HSF) mediated induction of HSPs
